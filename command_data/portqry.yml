@@ -1,0 +1,38 @@
+- command: portqry -local
+  description: Threat Actors sometimes may abuse the Port Query utility to identify open ports on local or remote systems.
+  executable:
+    - N/A
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Discovery:
+      - T1049
+  os:
+    - Windows
+  references:
+    - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/PortQry
+    - https://docs.microsoft.com/en-us/troubleshoot/windows-server/networking/portqry-exe-command-line-utility
+  risk: Low
+  fidelity: High
+  threatactors:
+    N/A:
+      - N/A
+- command: portqry -n [IP Address] -e [Port]
+  description: Threat Actors sometimes may abuse the Port Query utility to identify open ports on local or remote systems.
+  executable:
+    - N/A
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Discovery:
+      - T1049
+  os:
+    - Windows
+  references:
+    - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/PortQry
+    - https://docs.microsoft.com/en-us/troubleshoot/windows-server/networking/portqry-exe-command-line-utility
+  risk: Low
+  fidelity: High
+  threatactors:
+    N/A:
+      - N/A
