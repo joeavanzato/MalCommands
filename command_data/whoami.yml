@@ -1,0 +1,21 @@
+- command: whoami /all
+  description: Cyber Threats often utilize variants of whoami with flags such as /groups, /priv, /user or /upn to retrieve various pieces of information about the current domain user.
+  executable:
+    - C:\Windows\System32\whoami.exe
+    - C:\Windows\SysWOW64\whoami.exe
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Discovery:
+      - T1033
+      - T1059.003
+  os:
+    - Windows
+  references:
+    - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/whoami
+  risk: Low
+  fidelity: Low
+  threatactors:
+    G0049:
+      - https://securelist.com/oilrigs-poison-frog/95490/
+
