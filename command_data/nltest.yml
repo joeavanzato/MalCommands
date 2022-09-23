@@ -1,0 +1,60 @@
+- command: nltest /domain_trusts
+  description: Used to obtain a list of trusted domains - abused by threat actors for reconnaissance purposes.
+  executable:
+    - C:\Windows\System32\nltest.exe
+    - C:\Windows\SysWOW64\nltest.exe
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Discovery:
+      - T1482
+  os:
+    - Windows
+  references:
+    - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Nltest
+    - https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731935(v=ws.11)
+  risk: Low
+  fidelity: High
+  threatactors:
+    N/A:
+      - N/A
+- command: nltest /dclist:"[DOMAIN NAME]"
+  description: Used to list all Domain Controllers active in the target domain - abused by threat actors to obtain domain information for reconnaissance purposes.
+  executable:
+    - C:\Windows\System32\nltest.exe
+    - C:\Windows\SysWOW64\nltest.exe
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Discovery:
+      - T1018
+  os:
+    - Windows
+  references:
+    - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Nltest
+    - https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731935(v=ws.11)
+  risk: Low
+  fidelity: High
+  threatactors:
+    N/A:
+      - N/A
+- command: nltest /dsgetdc:"[DOMAIN NAME]"
+  description: Used to list all Domain Controllers active in the target domain via DNS Queries - abused by threat actors to obtain domain information for reconnaissance purposes.
+  executable:
+    - C:\Windows\System32\nltest.exe
+    - C:\Windows\SysWOW64\nltest.exe
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Discovery:
+      - T1018
+  os:
+    - Windows
+  references:
+    - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Nltest
+    - https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731935(v=ws.11)
+  risk: Low
+  fidelity: High
+  threatactors:
+    N/A:
+      - N/A
