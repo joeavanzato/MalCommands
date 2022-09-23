@@ -1,0 +1,21 @@
+- command: systeminfo /s [COMPUTER] /u [DOMAIN\USERNAME] /p [PASSWORD]
+  description: Systeminfo allows a cyber threat to gather detailed information from both local and remote hosts, often used for system reconnaissance.
+  executable:
+    - C:\Windows\System32\systeminfo.exe
+    - C:\Windows\SysWOW64\systeminfo.exe
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Discovery:
+      - T1082
+  os:
+    - Windows
+  references:
+    - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/systeminfo
+    - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Systeminfo#documentation
+  risk: Low
+  fidelity: Low
+  threatactors:
+    N/A:
+      - N/A
+
