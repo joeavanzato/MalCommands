@@ -1,0 +1,41 @@
+- command: wbadmin delete catalog -quiet
+  description: Cyber Threats may abuse wbadmin to delete backup catalog data, impairing system recovery operations.
+  executable:
+    - C:\Windows\System32\wbadmin.exe
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Impact:
+      - T1490
+  os:
+    - Windows
+  references:
+    - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Wbadmin
+    - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/wbadmin
+    - https://www.welivesecurity.com/2019/04/30/buhtrap-backdoor-ransomware-advertising-platform/
+  risk: Critical
+  fidelity: High
+  threatactors:
+    N/A:
+      - N/A
+- command: wbadmin delete systemstatebackup -keepversions:0
+  description: Cyber Threats may abuse wbadmin to delete system backup information, impairing system recovery operations.
+  executable:
+    - C:\Windows\System32\wbadmin.exe
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Impact:
+      - T1490
+  os:
+    - Windows
+  references:
+    - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Wbadmin
+    - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/wbadmin
+    - https://www.welivesecurity.com/2019/04/30/buhtrap-backdoor-ransomware-advertising-platform/
+  risk: Critical
+  fidelity: High
+  threatactors:
+    N/A:
+      - N/A
+
