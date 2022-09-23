@@ -1,0 +1,21 @@
+- command: netstat -anob
+  description: Used to gather information about network connections on the local machine.
+  executable:
+    - C:\Windows\System32\netstat.exe
+    - C:\Windows\SysWOW64\netstat.exe
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Discovery:
+      - T1049
+  os:
+    - windows
+  references:
+    - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Netstat
+    - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/netstat
+  risk: Low
+  fidelity: Low
+  threatactors:
+    G0049:
+      - https://unit42.paloaltonetworks.com/the-oilrig-campaign-attacks-on-saudi-arabian-organizations-deliver-helminth-backdoor/
+

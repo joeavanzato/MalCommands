@@ -1,0 +1,114 @@
+- command: 'dsquery subnet -limit 0'
+  description: 'DSQuery is a Windows utility for querying Active Directory - threat actors often abuse this to discover information about the enterprise domain.'
+  executable:
+    - 'C:\Windows\System32\dsquery.exe'
+  killchain:
+    - 'Actions on Objectives'
+  mitre:
+    Discovery:
+      - T1016
+  os:
+    - windows
+  references:
+    - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Dsquery'
+    - 'https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732952(v=ws.11)'
+  risk: Low
+  fidelity: Low
+  threatactors:
+    N/A:
+      - N/A
+- command: 'dsquery computer -limit 0'
+  description: 'DSQuery is a Windows utility for querying Active Directory - threat actors often abuse this to discover information about the enterprise domain.'
+  executable:
+    - 'C:\Windows\System32\dsquery.exe'
+  killchain:
+    - 'Actions on Objectives'
+  mitre:
+    Discovery:
+      - T1018
+  os:
+    - windows
+  references:
+    - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Dsquery'
+    - 'https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732952(v=ws.11)'
+  risk: Low
+  fidelity: Low
+  threatactors:
+    N/A:
+      - N/A
+- command: 'dsquery user -limit 0'
+  description: 'DSQuery is a Windows utility for querying Active Directory - threat actors often abuse this to discover information about the enterprise domain.'
+  executable:
+    - 'C:\Windows\System32\dsquery.exe'
+  killchain:
+    - 'Actions on Objectives'
+  mitre:
+    Discovery:
+      - T1087.002
+  os:
+    - windows
+  references:
+    - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Dsquery'
+    - 'https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732952(v=ws.11)'
+  risk: Low
+  fidelity: Low
+  threatactors:
+    N/A:
+      - N/A
+- command: 'dsquery group -limit 0'
+  description: 'DSQuery is a Windows utility for querying Active Directory - threat actors often abuse this to discover information about the enterprise domain.'
+  executable:
+    - 'C:\Windows\System32\dsquery.exe'
+  killchain:
+    - 'Actions on Objectives'
+  mitre:
+    Discovery:
+      - T1069.002
+  os:
+    - windows
+  references:
+    - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Dsquery'
+    - 'https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732952(v=ws.11)'
+  risk: Low
+  fidelity: Low
+  threatactors:
+    N/A:
+      - N/A
+- command: 'dsquery * -filter "(objectClass=trustedDomain)" -attr *'
+  description: 'DSQuery is a Windows utility for querying Active Directory - threat actors often abuse this to discover information about the enterprise domain.'
+  executable:
+    - 'C:\Windows\System32\dsquery.exe'
+  killchain:
+    - 'Actions on Objectives'
+  mitre:
+    Discovery:
+      - T1482
+  os:
+    - windows
+  references:
+    - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Dsquery'
+    - 'https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732952(v=ws.11)'
+  risk: Low
+  fidelity: Low
+  threatactors:
+    N/A:
+      - N/A
+- command: 'dsquery group -name "Domain Admins"'
+  description: 'DSQuery is a Windows utility for querying Active Directory - threat actors often abuse this to discover information about the enterprise domain.'
+  executable:
+    - 'C:\Windows\System32\dsquery.exe'
+  killchain:
+    - 'Actions on Objectives'
+  mitre:
+    Discovery:
+      - T1069.002
+  os:
+    - windows
+  references:
+    - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Dsquery'
+    - 'https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732952(v=ws.11)'
+  risk: Low
+  fidelity: High
+  threatactors:
+    N/A:
+      - N/A

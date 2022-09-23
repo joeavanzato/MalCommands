@@ -1,0 +1,114 @@
+- command: 'certutil -urlcache -f [URL] [DestinationPath]'
+  description: 'CertUtil is often abused by cyber threats tot download remote files over the Internet.'
+  executable:
+    - 'C:\Windows\System32\certutil.exe'
+    - 'C:\Windows\SysWOW64\certutil.exe'
+  killchain:
+    - Delivery
+  mitre:
+    Command and Control:
+      - T1105
+  os:
+    - windows
+  references:
+    - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Certutil'
+  risk: Medium
+  fidelity: High
+  threatactors:
+    N/A:
+      - N/A
+- command: 'certutil -urlcache -split -f [URL] [DestinationPath]'
+  description: 'CertUtil is often abused by cyber threats tot download remote files over the Internet.'
+  executable:
+    - 'C:\Windows\System32\certutil.exe'
+    - 'C:\Windows\SysWOW64\certutil.exe'
+  killchain:
+    - Delivery
+  mitre:
+    Command and Control:
+      - T1105
+  os:
+    - windows
+  references:
+    - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Certutil'
+  risk: Medium
+  fidelity: High
+  threatactors:
+    N/A:
+      - N/A
+- command: 'certutil -verifyctl -split -f [URL]'
+  description: 'CertUtil is often abused by cyber threats tot download remote files over the Internet.'
+  executable:
+    - 'C:\Windows\System32\certutil.exe'
+    - 'C:\Windows\SysWOW64\certutil.exe'
+  killchain:
+    - Delivery
+  mitre:
+    Command and Control:
+      - T1105
+  os:
+    - windows
+  references:
+    - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Certutil'
+  risk: Medium
+  fidelity: High
+  threatactors:
+    N/A:
+      - N/A
+- command: 'certutil -addstore -f -user [certificatestorename] [file]'
+  description: "CertUtil is often abused by cyber threats to add new certificates on the targeted host."
+  executable:
+    - 'C:\Windows\System32\certutil.exe'
+    - 'C:\Windows\SysWOW64\certutil.exe'
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - 'T1553.004'
+  os:
+    - windows
+  references:
+    - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Certutil'
+  risk: High
+  fidelity: High
+  threatactors:
+    N/A:
+      - N/A
+- command: 'certutil -decode -f [EncodedFile] [DestinationPath]'
+  description: "CertUtil is often abused by cyber threats to decode Base64 data or files."
+  executable:
+    - 'C:\Windows\System32\certutil.exe'
+    - 'C:\Windows\SysWOW64\certutil.exe'
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - 'T1140'
+  os:
+    - windows
+  references:
+    - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Certutil'
+  risk: High
+  fidelity: High
+  threatactors:
+    OilRig:
+      - 'https://unit42.paloaltonetworks.com/unit42-oopsie-oilrig-uses-threedollars-deliver-new-trojan'
+- command: 'certutil -encode [Input] [Output]'
+  description: "CertUtil is often abused by cyber threats to encode Base64 data or files."
+  executable:
+    - 'C:\Windows\System32\certutil.exe'
+    - 'C:\Windows\SysWOW64\certutil.exe'
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - 'T1140'
+  os:
+    - windows
+  references:
+    - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Certutil'
+  risk: High
+  fidelity: High
+  threatactors:
+    N/A:
+      - N/A
