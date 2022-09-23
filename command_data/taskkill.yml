@@ -1,0 +1,42 @@
+- command: taskkill /IM [IMAGENAME] /F
+  description: Taskkill is often abused by cyber threats to impair the functionality of various blue-team applications such as AV, EDR, DLP, Monitoring Applications, Backup Utilities, etc.
+  executable:
+    - C:\Windows\System32\taskkill.exe
+    - C:\Windows\SysWOW64\taskkill.exe
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1562.001
+  os:
+    - Windows
+  references:
+    - https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/taskkill
+    - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Taskkill
+  risk: High
+  fidelity: High
+  threatactors:
+    N/A:
+      - N/A
+- command: taskkill [/s <computer> [/u [<domain>\]<username> [/p [<password>]]]] {[/fi <filter>] [...] [/pid <processID> | /im <imagename>]} [/f] [/t]
+  description: Taskkill is often abused by cyber threats to impair the functionality of various blue-team applications such as AV, EDR, DLP, Monitoring Applications, Backup Utilities, etc.
+  executable:
+    - C:\Windows\System32\taskkill.exe
+    - C:\Windows\SysWOW64\taskkill.exe
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1562.001
+  os:
+    - Windows
+  references:
+    - https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/taskkill
+    - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Taskkill
+  risk: High
+  fidelity: High
+  threatactors:
+    N/A:
+      - N/A
+
+
