@@ -1,0 +1,64 @@
+- command: wevtutil clear-log [LOGNAME]
+  description: Cyber Threats may abuse the wevtutil functionality to clear Event Logs, removing critical indicators from compromised systems.
+  executable:
+    - C:\Windows\System32\wevtutil.exe
+    - C:\Windows\SysWOW64\wevtutil.exe
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1562.002
+      - T1070
+  os:
+    - Windows
+  references:
+    - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/wevtutil
+    - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Wevtutil
+  risk:
+  fidelity:
+  threatactors:
+    N/A:
+      - N/A
+- command: wevtutil cl [LOGNAME]
+  description: Cyber Threats may abuse the wevtutil functionality to clear Event Logs, removing critical indicators from compromised systems.
+  executable:
+    - C:\Windows\System32\wevtutil.exe
+    - C:\Windows\SysWOW64\wevtutil.exe
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1562.002
+      - T1070
+  os:
+    - Windows
+  references:
+    - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/wevtutil
+    - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Wevtutil
+  risk:
+  fidelity:
+  threatactors:
+    N/A:
+      - N/A
+- command: wevtutil sl [LOGNAME] /e:false
+  description: Cyber Threats may abuse the wevtutil functionality to disable specific Event Logs, removing critical indicators from compromised systems.
+  executable:
+    - C:\Windows\System32\wevtutil.exe
+    - C:\Windows\SysWOW64\wevtutil.exe
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1562.002
+      - T1070
+  os:
+    - Windows
+  references:
+    - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/wevtutil
+    - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Wevtutil
+  risk:
+  fidelity:
+  threatactors:
+    N/A:
+      - N/A
+
