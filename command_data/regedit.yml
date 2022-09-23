@@ -1,0 +1,41 @@
+- command: regedit /e [OutputPath] [RegPath]
+  description: RegEdit can be abused to export some or all of the registry to disk and then taken offline for analysis by cyber threats.
+  executable:
+    - C:\Windows\regedit.exe
+    - C:\Windows\SysWOW64\regedit.exe
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Discovery:
+      - T1012
+  os:
+    - Windows
+  references:
+    - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Regedit
+    - https://ss64.com/nt/regedit.html
+  risk: High
+  fidelity: High
+  threatactors:
+    N/A:
+      - N/A
+- command: regedit /s [Path to .REG file]
+  description: RegEdit can be abused to import some or all of the registry from a previously created .reg file, overwriting parts of the existing registry.  This can be abused for many functions by cyber threats.
+  executable:
+    - C:\Windows\regedit.exe
+    - C:\Windows\SysWOW64\regedit.exe
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1112
+  os:
+    - Windows
+  references:
+    - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Regedit
+    - https://ss64.com/nt/regedit.html
+  risk: High
+  fidelity: High
+  threatactors:
+    N/A:
+      - N/A
+
