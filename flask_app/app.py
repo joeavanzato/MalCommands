@@ -2,6 +2,8 @@ from flask import Flask, render_template, request, url_for, redirect
 from pymongo import MongoClient
 from bson.objectid import ObjectId
 
+# https://paletton.com/#uid=53w0u0kllllxE6Pv4btbBvda7G-
+
 app = Flask(__name__, template_folder='templates')
 client = MongoClient()
 db = client.malcommands_dev
@@ -26,8 +28,8 @@ def commands(obj_id):
     return render_template('command_pop.html', command=list(command))
 @app.route('/faq', methods=['GET'])
 def faq():
-    return render_template('index.html')
+    return render_template('faq.html')
 @app.route('/contribute', methods=['GET'])
 def contribute():
-    return render_template('index.html')
+    return render_template('contribute.html')
 

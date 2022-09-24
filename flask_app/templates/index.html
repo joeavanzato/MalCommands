@@ -13,11 +13,11 @@
 <section class="layout">
   <div class="header">
     <a class="header_link" href="{{ url_for('index') }}">MalCommands</a>
-    <a class="header_link" href="{{ url_for('faq') }}">FAQ</a>
+    <a class="header_link" id="faq_button">FAQ</a>
     <a class="header_link" href="{{ url_for('contribute') }}">Contribute</a>
   </div>
   <div class="main" id="table_content">
-      <table id="data" class="table row-border hover">
+      <table id="data" class="table row-border hover table-hover">
         <thead>
           <tr>
             <th class="row_header">Command</th>
@@ -31,7 +31,7 @@
         </thead>
         <tbody>
           {% for cmd in commands %}
-            <tr>
+            <tr class="whole_row">
               <td class="row_all command_row">{{ cmd.command }}</td>
               <td class="row_all">{{ cmd.id }}</td>
               <td class="row_all">{{ cmd.tool }}</td>
@@ -46,6 +46,9 @@
   </div>
   <div class="main" id="command_content">
   </div>
+  <div class="main" id="faq_content">
+  </div>
+
 </section>
 <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
@@ -59,6 +62,7 @@
 <script>
 $(document).ready(function () {
     var table = $('#data').DataTable({
+    "pageLength": 50,
     autoWidth: false,
     lengthChange: true,
     scroller: true,
@@ -99,15 +103,27 @@ $(document).ready(function () {
           var command_content = document.getElementById("command_content");
           $('#command_content').html(data);
           command_content.style.display = "block";
+          var faq_content = document.getElementById("faq_content");
+          faq_content.style.display = "none";
 
       }});
 
     });
-    $('#back_button').on('click', function() {
-        var table_content = document.getElementById("table_content");
-        table_content.style.display = "block";
-        var command_content = document.getElementById("command_content");
-        command_content.style.display = "none";
+
+    $('#faq_button').on('click', function() {
+      $.ajax({
+        url: "/faq",
+        dataType: "html",
+        context: document.body,
+        success: function( data ){
+            var table_content = document.getElementById("table_content");
+            table_content.style.display = "none";
+            var command_content = document.getElementById("command_content");
+            command_content.style.display = "none";
+            var faq_content = document.getElementById("faq_content");
+            $('#faq_content').html(data);
+            faq_content.style.display = "block";
+      }});
       });
 
 

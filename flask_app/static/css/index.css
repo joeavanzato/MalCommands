@@ -12,7 +12,46 @@
 
 .body {
   background-color: #050626;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+}
 
+#faq_content_inner {
+  margin: 1%;
+
+}
+/* Command Content Details */
+#command_content_inner {
+  margin: 1%;
+}
+.code_block {
+  background-color: #130C22;
+  font-size: 16px;
+}
+#back_button {
+  margin: 2px;
+  cursor: pointer;
+}
+#back_banner {
+  cursor: pointer;
+  border-style: solid solid solid solid;
+  border-color: #8CCDAF;
+  border-width: 1px;
+  padding: 1%;
+}
+#back_banner:hover {
+  background-color: #7879AD;
+  color: white;
+}
+#mitre_attack {
+  border-style: solid solid solid solid;
+  border-color: #023F23;
+  border-width: 0px;
+}
+#each_mitre_tech {
+  border-style: solid solid solid solid;
+  border-color: #8CCDAF;
+  border-width: 1px;
+  padding: 1%;
 }
 
 .main {
@@ -24,6 +63,14 @@
 }
 .row_header {
     color: #8CCDAF;
+}
+
+.command_row {
+    cursor: pointer;
+}
+
+#data tr:hover {
+      background-color: #0B0C40;
 }
 
 .header {
@@ -47,4 +94,8 @@
   color: white;
 }
 
-.main { grid-area: main; }
+.main {
+  grid-area: main;
+  padding: 1%;
+
+}
