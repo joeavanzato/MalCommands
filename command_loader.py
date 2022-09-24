@@ -3,13 +3,17 @@ import pymongo
 import os
 
 def import_to_mongo():
-    files = os.listdir('command_data')
+    files = []
+    for root, dir, f in os.walk("command_data"):
+        for i in f:
+            p = os.path.join(root, i)
+            files.append(p)
     client = pymongo.MongoClient()
     db = client.malcommands_dev
     command_collection = db.command_collection
     for f in files:
         print(f"Loading: {f}")
-        with open(f'command_data\\{f}', 'r') as f:
+        with open(f, 'r') as f:
             data = yaml.safe_load(f)
         if data is not None:
             for i in data:
