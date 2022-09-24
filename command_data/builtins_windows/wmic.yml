@@ -165,3 +165,5 @@
   threatactors:
     N/A:
       - N/A
+
+# TODO - https://kwcsec.gitbook.io/the-red-team-handbook/techniques/enumeration/recon-commands/wmic-commands
