@@ -1,0 +1,108 @@
+- command: adfind -f objectcategory=computer
+  description: Use ADFind to discover computer accounts in the active domain.
+  executable:
+    - N/A
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Discovery:
+      - T1018
+      - T1087.002
+  os:
+    - Windows
+  references:
+    - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Other/AdFind
+    - http://www.joeware.net/freetools/tools/adfind/
+    - https://social.technet.microsoft.com/wiki/contents/articles/7535.adfind-command-examples.aspx
+  risk: High
+  fidelity: High
+  tool: ADFind
+  threatactors:
+    N/A:
+      - N/A
+- command: adfind -f objectcategory=person
+  description: Use ADFind to discover human accounts in the active domain.
+  executable:
+    - N/A
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Discovery:
+      - T1018
+      - T1087.002
+  os:
+    - Windows
+  references:
+    - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Other/AdFind
+    - http://www.joeware.net/freetools/tools/adfind/
+    - https://social.technet.microsoft.com/wiki/contents/articles/7535.adfind-command-examples.aspx
+  risk: High
+  fidelity: High
+  tool: ADFind
+  threatactors:
+    N/A:
+      - N/A
+- command: adfind -subnets -f objectCategory=subnet
+  description: Use ADFind to list discovered subnets.
+  executable:
+    - N/A
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Discovery:
+      - T1016
+  os:
+    - Windows
+  references:
+    - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Other/AdFind
+    - http://www.joeware.net/freetools/tools/adfind/
+    - https://social.technet.microsoft.com/wiki/contents/articles/7535.adfind-command-examples.aspx
+  risk: High
+  fidelity: High
+  tool: ADFind
+  threatactors:
+    N/A:
+      - N/A
+- command: adfind -gcb -sc trustdmp
+  description: Use ADFind to dump trust objects from the current domain.
+  executable:
+    - N/A
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Discovery:
+      - T1018
+      - T1482
+  os:
+    - Windows
+  references:
+    - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Other/AdFind
+    - http://www.joeware.net/freetools/tools/adfind/
+    - https://social.technet.microsoft.com/wiki/contents/articles/7535.adfind-command-examples.aspx
+  risk: High
+  fidelity: High
+  tool: ADFind
+  threatactors:
+    N/A:
+      - N/A
+- command: adfind -sc computers_pwdnotreqd
+  description: Use ADFind to dump a list of computers where password is not required to authenticate in GPO.
+  executable:
+    - N/A
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Discovery:
+      - T1018
+  os:
+    - Windows
+  references:
+    - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Other/AdFind
+    - http://www.joeware.net/freetools/tools/adfind/
+    - https://social.technet.microsoft.com/wiki/contents/articles/7535.adfind-command-examples.aspx
+  risk: High
+  fidelity: High
+  tool: ADFind
+  threatactors:
+    N/A:
+      - N/A
