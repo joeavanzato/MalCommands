@@ -12,8 +12,10 @@
     - windows
   references:
     - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Certutil'
+    - https://attack.mitre.org/software/S0160/
   risk: Medium
   fidelity: High
+  tool: certutil
   threatactors:
     N/A:
       - N/A
@@ -31,8 +33,10 @@
     - windows
   references:
     - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Certutil'
+    - https://attack.mitre.org/software/S0160/
   risk: Medium
   fidelity: High
+  tool: certutil
   threatactors:
     N/A:
       - N/A
@@ -50,8 +54,10 @@
     - windows
   references:
     - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Certutil'
+    - https://attack.mitre.org/software/S0160/
   risk: Medium
   fidelity: High
+  tool: certutil
   threatactors:
     N/A:
       - N/A
@@ -69,8 +75,10 @@
     - windows
   references:
     - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Certutil'
+    - https://attack.mitre.org/software/S0160/
   risk: High
   fidelity: High
+  tool: certutil
   threatactors:
     N/A:
       - N/A
@@ -88,8 +96,10 @@
     - windows
   references:
     - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Certutil'
+    - https://attack.mitre.org/software/S0160/
   risk: High
   fidelity: High
+  tool: certutil
   threatactors:
     OilRig:
       - 'https://unit42.paloaltonetworks.com/unit42-oopsie-oilrig-uses-threedollars-deliver-new-trojan'
@@ -107,8 +117,10 @@
     - windows
   references:
     - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Certutil'
+    - https://attack.mitre.org/software/S0160/
   risk: High
   fidelity: High
+  tool: certutil
   threatactors:
     N/A:
       - N/A

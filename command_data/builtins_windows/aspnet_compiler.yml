@@ -1,0 +1,26 @@
+- command: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\aspnet_compiler.exe -v none -p C:\users\cpl.internal\desktop\asptest\ -f C:\users\cpl.internal\desktop\asptest\none -u
+  description: Cyber threats may utilize aspnet_compiler to run arbitrary C# code, potentially evading certain detection mechanisms.
+  executable:
+    - C:\Windows\Microsoft.NET\Framework\v4.0.30319\aspnet_compiler.exe
+    - C:\Windows\Microsoft.NET\Framework64\v4.0.30319\aspnet_compiler.exe
+  killchain:
+    - Actions on Objectives
+    - Exploitation
+    - Installation
+  mitre:
+    Defense Evasion:
+      - T1127
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Aspnet_Compiler/
+    - https://ijustwannared.team/2020/08/01/the-curious-case-of-aspnet_compiler-exe/
+    - https://docs.microsoft.com/en-us/dotnet/api/system.web.compilation.buildprovider.generatecode?view=netframework-4.8
+  risk: High
+  risk_reason: This type of usage is fairly uncommon (except for potential developer groups) - seeing a normal user execute a commandline involving aspnet_compiler is suspicious.
+  fidelity: High
+  fidelity_reason: Alerting on the usage of this utility should not cause a significant amount of false positives once appropriate tuning is performed to exclude developer-type users.
+  tool: aspnet_compiler
+  threatactors:
+    N/A:
+      - N/A

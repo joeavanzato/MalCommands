@@ -1,0 +1,26 @@
+- command: at.exe at 09:00 /interactive /every:m,t,w,th,f,s,su C:\Windows\System32\revshell.exe
+  description: Create a recurring scheduled task which will trigger every day at 9 AM, launching the target executable - often abused by cyber threats to achieve persistence in scheduled task format.
+  executable:
+    - C:\WINDOWS\System32\At.exe
+    - C:\WINDOWS\SysWOW64\At.exe
+  killchain:
+    - Installation
+  mitre:
+    Execution:
+      - T1053.002
+    Persistence:
+      - T1053.002
+    Privilege Escalation:
+      - T1053.002
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/At/
+  risk: Medium
+  risk_reason: AT is typically not used in a normal user capacity and will only be utilized by system administrators or IT operators - seeing an executable triggered for regular execution should be investigated to determine the legitimacy.
+  fidelity: Medium
+  fidelity_reason: AT or similar utilities are often invoked automatically during software deployments, updates, etc - as such, this type of alerting cannot often be used as a critical.
+  tool: at
+  threatactors:
+    N/A:
+      - N/A

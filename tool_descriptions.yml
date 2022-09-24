@@ -1,0 +1,25 @@
+- tool: sharpshares
+  tool_description: SharpShares is a C#-based script which can enumerate network share information from all reachable machines in the current domain and determine whether the level of access available to the current user (read/write/none).
+  tool_arguments:
+    - /threads - Specifies the maximum number of parallel threads, defaulting to 25.
+    - /dc - Specified the Domain Controller to use if not executed on a domain-joined host.
+    - /ldap - Query hosts from specific LDAP filters, default=all (dc, exclude-dc, servers, server-exclude-dc)
+    - /ou - Specify the LDAP OU to query for enabled Computer objects
+    - /stealth - List Shares without checking read/write access
+    - /filter - List of comma-separated shares to exclude from enumeration (SYSVOL,NETLOGON,etc)
+    - /outfile - Specify file for writing output
+    - /verbose - Return unauthorized shares in addition to those with access.
+  tool_url: https://github.com/mitchmoser/SharpShares
+- tool: adfind
+  tool_description: ADFind is a tool developed to query Active Directory - it utilizes a mixture of ldapsearch, search.vbs, ldp, dsquery and dsget along with other features.  It was developed prior to dsquery/dsget/etc by multiple years but adopts many of the same features.  The tool is written in C++ and is often used in some form by cyber threats during the information gathering phase of a compromise.
+  tool_arguments:
+    - basedn - Base DN to search on - defaults to NC
+    - filter - LDAP filter to use for query.
+    - attr list - List of specific attributes to return, defaults to * set.
+    - -h host:port - Host and port to use for a connection, defaults to 389 on default LDAP server.
+    - -gc - Search the Global Catalog on port 3268
+    - -p - Alternate port to connect on.
+    - -s - Scope of search base.
+    - -t - Timeout value for query, default of 120 seconds.
+    - See http://www.joeware.net/freetools/tools/adfind/usage.htm for all arguments.
+  tool_url: http://www.joeware.net/freetools/tools/adfind/

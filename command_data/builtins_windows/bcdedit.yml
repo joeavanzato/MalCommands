@@ -13,6 +13,7 @@
     - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Bcdedit'
   risk: Medium
   fidelity: Medium
+  tool: bcdedit
   threatactors:
     N/A:
       - N/A
@@ -31,6 +32,7 @@
     - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Bcdedit'
   risk: Medium
   fidelity: Medium
+  tool: bcdedit
   threatactors:
     N/A:
       - N/A
@@ -49,6 +51,7 @@
     - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Bcdedit'
   risk: Medium
   fidelity: Medium
+  tool: bcdedit
   threatactors:
     N/A:
       - N/A
@@ -67,6 +70,7 @@
     - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Bcdedit'
   risk: Medium
   fidelity: Medium
+  tool: bcdedit
   threatactors:
     N/A:
       - N/A
@@ -85,6 +89,7 @@
     - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Bcdedit'
   risk: Medium
   fidelity: Medium
+  tool: bcdedit
   threatactors:
     N/A:
       - N/A
@@ -103,6 +108,7 @@
     - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Bcdedit'
   risk: Medium
   fidelity: Medium
+  tool: bcdedit
   threatactors:
     N/A:
       - N/A
@@ -121,6 +127,7 @@
     - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Bcdedit'
   risk: Medium
   fidelity: Medium
+  tool: bcdedit
   threatactors:
     N/A:
       - N/A

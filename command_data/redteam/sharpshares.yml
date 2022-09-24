@@ -1,0 +1,21 @@
+- command: sharpshares.exe /threads 50 /ldap:all /filter:sysvol,netlogon,ipc$,print$ /outfile:test.txt
+  description: SharpShare is a utility for enumerating network shares - the above example will check all domain computer objects and will not look for shares with the given names in the /filter argument.
+  executable:
+    - N/A
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Discovery:
+      - T1135
+  os:
+    - Windows
+  references:
+    - https://labs.withsecure.com/publications/attack-detection-fundamentals-discovery-and-lateral-movement-lab-2
+  risk: High
+  risk_reason: SharpShares is very commonly used immediately after compromising an initial foot-hold - these types of commandline arguments are extremely suspicious.
+  fidelity: High
+  fidelity_reason:  It would be extremely uncommon to find these filenames or arguments used in a benign way.
+  tool: sharpshares
+  threatactors:
+    N/A:
+      - N/A

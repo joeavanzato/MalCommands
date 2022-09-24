@@ -14,8 +14,10 @@
   references:
     - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/wevtutil
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Wevtutil
-  risk:
-  fidelity:
+  risk: High
+  risk_reason: It is extremely abnormal to see this type of commandline used in the course of normal computer usage as there is effectively 0 reason for this to be used for legitimate operations.
+  fidelity: High
+  fidelity_reason: This is an extremely uncommon command which is unlikely to be used in normal operations, either by regular users or IT operators.
   tool: wevtutil
   threatactors:
     N/A:
@@ -36,8 +38,10 @@
   references:
     - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/wevtutil
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Wevtutil
-  risk:
-  fidelity:
+  risk: High
+  risk_reason: It is extremely abnormal to see this type of commandline used in the course of normal computer usage as there is effectively 0 reason for this to be used for legitimate operations.
+  fidelity: High
+  fidelity_reason: This is an extremely uncommon command which is unlikely to be used in normal operations, either by regular users or IT operators.
   tool: wevtutil
   threatactors:
     N/A:
@@ -58,8 +62,10 @@
   references:
     - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/wevtutil
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Wevtutil
-  risk:
-  fidelity:
+  risk: High
+  risk_reason: It is extremely abnormal to see this type of commandline used in the course of normal computer usage as there is effectively 0 reason for this to be used for legitimate operations.
+  fidelity: High
+  fidelity_reason: This is an extremely uncommon command which is unlikely to be used in normal operations, either by regular users or IT operators.
   tool: wevtutil
   threatactors:
     N/A:

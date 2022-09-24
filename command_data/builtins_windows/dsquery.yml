@@ -14,6 +14,7 @@
     - 'https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732952(v=ws.11)'
   risk: Low
   fidelity: Low
+  tool: dsquery
   threatactors:
     N/A:
       - N/A
@@ -33,6 +34,7 @@
     - 'https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732952(v=ws.11)'
   risk: Low
   fidelity: Low
+  tool: dsquery
   threatactors:
     N/A:
       - N/A
@@ -52,6 +54,7 @@
     - 'https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732952(v=ws.11)'
   risk: Low
   fidelity: Low
+  tool: dsquery
   threatactors:
     N/A:
       - N/A
@@ -71,6 +74,7 @@
     - 'https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732952(v=ws.11)'
   risk: Low
   fidelity: Low
+  tool: dsquery
   threatactors:
     N/A:
       - N/A
@@ -90,6 +94,7 @@
     - 'https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732952(v=ws.11)'
   risk: Low
   fidelity: Low
+  tool: dsquery
   threatactors:
     N/A:
       - N/A
@@ -109,6 +114,7 @@
     - 'https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732952(v=ws.11)'
   risk: Low
   fidelity: High
+  tool: dsquery
   threatactors:
     N/A:
       - N/A
