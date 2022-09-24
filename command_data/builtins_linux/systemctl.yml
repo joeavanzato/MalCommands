@@ -1,0 +1,39 @@
+- command: systemctl stop [SERVICE]
+  description: Used by cyber threats to stop running services on the victim machine via systemd.
+  executable:
+    - /lib/systemd/systemd
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Impact:
+      - T1489
+  os:
+    - Linux
+  references:
+    - https://threatpost.com/six-malicious-linux-shell-scripts-how-to-stop-them/168127/
+  risk: Medium
+  fidelity: Medium
+  tool: systemctl
+  threatactors:
+    N/A:
+      - N/A
+- command: systemctl disable [SERVICE]
+  description: Used by cyber threats to disable services on the victim machine via systemd.
+  executable:
+    - /lib/systemd/systemd
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Impact:
+      - T1489
+  os:
+    - Linux
+  references:
+    - https://threatpost.com/six-malicious-linux-shell-scripts-how-to-stop-them/168127/
+  risk: Medium
+  fidelity: Medium
+  tool: systemctl
+  threatactors:
+    N/A:
+      - N/A
+

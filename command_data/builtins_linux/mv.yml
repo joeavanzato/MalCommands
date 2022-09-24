@@ -1,0 +1,20 @@
+- command: mv /usr/bin/[FILE] /usr/bin/[NEWNAME]
+  description: Attackers will often utilize mv to copy and rename executables in attempts to avoid string-based detection solutions using the original file name.
+  executable:
+    - /usr/bin/mv
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1036.003
+  os:
+    - Linux
+  references:
+    - https://threatpost.com/six-malicious-linux-shell-scripts-how-to-stop-them/168127/
+  risk: Low
+  fidelity: Low
+  tool: mv
+  threatactors:
+    N/A:
+      - N/A
+

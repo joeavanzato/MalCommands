@@ -1,0 +1,19 @@
+- command: iptables -F
+  description: Cyber threats may try to clear iptables rules in attempts to ease or relax policies surrounding network communications.
+  executable:
+    - N/A
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1562.004
+  os:
+    - Linux
+  references:
+    - https://threatpost.com/six-malicious-linux-shell-scripts-how-to-stop-them/168127/
+  risk: High
+  fidelity: High
+  tool: iptables
+  threatactors:
+    N/A:
+      - N/A

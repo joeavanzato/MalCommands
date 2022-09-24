@@ -1,0 +1,20 @@
+- command: arp -a
+  description: Cyber threats may utilize built-in utilities to gather network-based information.
+  executable:
+    - N/A
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Discovery:
+      - T1018
+  os:
+    - Linux
+  references:
+    - https://www.uptycs.com/blog/linux-commands-and-utilities-commonly-used-by-attackers
+  risk: Low
+  fidelity: Low
+  tool: arp
+  threatactors:
+    N/A:
+      - N/A
+
