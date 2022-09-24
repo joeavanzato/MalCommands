@@ -1,16 +1,63 @@
 
 {% for object in command %}
 <div id="command_content_inner">
+ <div id="back_banner">
 <span class="material-symbols-outlined" id="back_button">
 keyboard_double_arrow_left Back
 </span>
+ </div>
 <p></p>
-<p><b>Command Line:</b> {{object.command}}</p>
+<p><b>Command Line:</b> <code class="code_block">{{object.command}}</code></p>
 <p><b>Description:</b> {{object.description}}</p>
+<p><b>Risk:</b> {{object.risk}}</p>
+<p><b>Risk Reason:</b> {{object.risk_reason}}</p>
+<p><b>Fidelity:</b> {{object.fidelity}}</p>
+<p><b>Fidelity Reason:</b> {{object.fidelity_reason}}</p>
+<p><b>Operating Systems:</b></p>
+<ul>
+{% for os in object.os %}
+ <li>{{os}}</li>
+{% endfor %}
+</ul>
+<p><b>Binary Default Locations:</b></p>
+<ul>
+{% for loc in object.executable %}
+ <li>{{loc}}</li>
+{% endfor %}
+</ul>
+<p><b>Killchain Phases:</b></p>
+<ul>
+{% for p in object.killchain %}
+ <li>{{p}}</li>
+{% endfor %}
+</ul>
+<p><b>References:</b></p>
+<ul>
+{% for r in object.references %}
+ <li><a href="{{r}}">{{r}}</a></li>
+{% endfor %}
+</ul>
+ <div id="mitre_attack">
+<p><b>MITRE ATT&CK:</b></p>
+{% for obj in object.mitre_long %}
+  <div id="each_mitre_tech">
+ <p><b>Technique: </b>{{obj.technique_id}} - {{obj.name}}</p>
+ <p><b>URL: </b><a href="{{obj.url}}">{{obj.url}}</a></p>
+ <p><b>Description: </b>{{obj.description|safe}}</p>
+<p><b>Tactics:</b></p>
+ <ul>
+ {% for t in obj.tactics %}
+  <li>{{t}}</li>
+ {% endfor %}
+ </ul>
+</div>
+{% endfor %}
+ </div>
+
 </div>
 
 <script>
-        $('#back_button').on('click', function() {
+        $('#back_banner').on('click', function() {
         var command_content = document.getElementById("command_content");
         $('#command_content').html('');
         command_content.style.display = "none";
