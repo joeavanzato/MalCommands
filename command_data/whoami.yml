@@ -15,6 +15,7 @@
     - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/whoami
   risk: Low
   fidelity: Low
+  tool: whoami
   threatactors:
     G0049:
       - https://securelist.com/oilrigs-poison-frog/95490/

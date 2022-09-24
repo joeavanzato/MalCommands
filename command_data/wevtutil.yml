@@ -16,6 +16,7 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Wevtutil
   risk:
   fidelity:
+  tool: wevtutil
   threatactors:
     N/A:
       - N/A
@@ -37,6 +38,7 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Wevtutil
   risk:
   fidelity:
+  tool: wevtutil
   threatactors:
     N/A:
       - N/A
@@ -58,6 +60,7 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Wevtutil
   risk:
   fidelity:
+  tool: wevtutil
   threatactors:
     N/A:
       - N/A
