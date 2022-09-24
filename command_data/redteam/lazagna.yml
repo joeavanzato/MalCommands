@@ -1,0 +1,31 @@
+- command: laZagne.exe all -oA -output [FILE]
+  description: Execute all internal modules of laZange - a tool designed to assist in OS credential dumping from local machines.
+  executable:
+    - N/A
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Credential Access:
+      - T1555
+      - T1555.001
+      - T1555.003
+      - T1555.004
+      - T1003.001
+      - T1003.004
+      - T1003.005
+      - T1003.007
+      - T1003.008
+      - T1552.001
+  os:
+    - Windows
+  references:
+    - https://attack.mitre.org/software/S0349/
+    - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Other/LaZagne
+  risk: High
+  fidelity: High
+  tool: laZagne
+  threatactors:
+    N/A:
+      - N/A
+      -
+

@@ -1,0 +1,47 @@
+- command: advanced_ip_scanner.exe /r:[IP-RANGE]
+  description: Execute Advanced IP Scanner utility against a range of IP Addresses.
+  executable:
+    - C:\Program Files (x86)\Advanced IP Scanner\advanced_ip_scanner.exe
+    - C:\Users\[user]\AppData\Local\Temp\Advanced IP Scanner 2\advanced_ip_scanner.exe
+    - C:\Users\[user]\AppData\Local\Programs\Advanced IP Scanner Portable\advanced_ip_scanner.exe
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Discovery:
+      - T1018
+      - T1135
+      - T1046
+  os:
+    - Windows
+  references:
+    - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Other/Advanced%20IP%20Scanner
+  risk: Low
+  fidelity: High
+  tool: Advanced IP Scanner
+  threatactors:
+    N/A:
+      - N/A
+- command: advanced_ip_scanner.exe /s:ipranges.txt /f:results.txt
+  description: Execute Advanced IP Scanner utility against a range of IP Addresses provided in a file and output to a separate file.
+  executable:
+    - C:\Program Files (x86)\Advanced IP Scanner\advanced_ip_scanner.exe
+    - C:\Users\[user]\AppData\Local\Temp\Advanced IP Scanner 2\advanced_ip_scanner.exe
+    - C:\Users\[user]\AppData\Local\Programs\Advanced IP Scanner Portable\advanced_ip_scanner.exe
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Discovery:
+      - T1018
+      - T1135
+      - T1046
+  os:
+    - Windows
+  references:
+    - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Other/Advanced%20IP%20Scanner
+  risk: Low
+  fidelity: High
+  tool: Advanced IP Scanner
+  threatactors:
+    N/A:
+      - N/A
+
