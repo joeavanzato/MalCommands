@@ -13,32 +13,32 @@
  </div>
 <p></p>
 
-<h5 class="command_data_header"><b>Command Line:</b></h5> <p><code class="code_block">{{object.command}}</code></p>
-<h5 class="command_data_header"><b>Description:</b></h5> <p>{{object.description}}</p>
-<h5 class="command_data_header"><b>Risk:</b></h5> <p>{{object.risk}}</p>
-<h5 class="command_data_header"><b>Risk Reason:</b></h5> <p>{{object.risk_reason}}</p>
-<h5 class="command_data_header"><b>Fidelity:</b></h5> <p>{{object.fidelity}}</p>
-<h5 class="command_data_header"><b>Fidelity Reason:</b></h5> <p>{{object.fidelity_reason}}</p>
-<h5 class="command_data_header"><b>Operating Systems:</b></h5>
+<h5 class="command_data_header"><b>Command Line</b></h5> <p><code class="code_block">{{object.command}}</code></p>
+<h5 class="command_data_header"><b>Description</b></h5> <p>{{object.description}}</p>
+<h5 class="command_data_header"><b>Risk</b></h5> <p>{{object.risk}}</p>
+<h5 class="command_data_header"><b>Risk Reason</b></h5> <p>{{object.risk_reason}}</p>
+<h5 class="command_data_header"><b>Fidelity</b></h5> <p>{{object.fidelity}}</p>
+<h5 class="command_data_header"><b>Fidelity Reason</b></h5> <p>{{object.fidelity_reason}}</p>
+<h5 class="command_data_header"><b>Operating Systems</b></h5>
 <ul>
 {% for os in object.os %}
  <li>{{os}}</li>
 {% endfor %}
 </ul>
-<h5 class="command_data_header"><b>Killchain Phases:</b></h5>
+<h5 class="command_data_header"><b>Killchain Phases</b></h5>
 <ul>
 {% for p in object.killchain %}
  <li>{{p}}</li>
 {% endfor %}
 </ul>
-<h5 class="command_data_header"><b>References:</b></h5>
+<h5 class="command_data_header"><b>References</b></h5>
 <ul>
 {% for r in object.references %}
  <li><a href="{{r}}">{{r}}</a></li>
 {% endfor %}
 </ul>
 <div id="tool_box">
-<h5 class="command_data_header"><b>TOOL DATA:</b></h5>
+<h5 class="command_data_header"><b>TOOL DATA</b></h5>
 <p><b>Tool Name:</b> {{object.tool}}</p>
 <p><b>Tool URL:</b> <a href="{{object.tool_data.tool_url}}">{{object.tool_data.tool_url}}</a></p>
 <p><b>Tool Description:</b> {{object.tool_data.tool_description}}</p>
