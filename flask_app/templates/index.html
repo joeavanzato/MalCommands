@@ -12,9 +12,9 @@
 <body class="body" id="body">
 <section class="layout">
   <div class="header">
-    <a class="header_link" href="{{ url_for('index') }}">MalCommands</a>
+    <a class="header_link" id="home_button">MalCommands</a>
     <a class="header_link" id="faq_button">FAQ</a>
-    <a class="header_link" href="{{ url_for('contribute') }}">Contribute</a>
+    <a class="header_link" id="contribute_button">Contribute</a>
   </div>
   <div class="main" id="table_content">
       <table id="data" class="table row-border hover table-hover">
@@ -48,6 +48,8 @@
   </div>
   <div class="main" id="faq_content">
   </div>
+  <div class="main" id="contribute_content">
+  </div>
 
 </section>
 <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -60,34 +62,65 @@
 
 
 <script>
+
 $(document).ready(function () {
+    //Prepare/Set the DataTable after the page is loaded.
     var table = $('#data').DataTable({
-    "pageLength": 50,
-    autoWidth: false,
-    lengthChange: true,
-    scroller: true,
-    scrollY: 700,
-    columns: [
-      {searchable: true},
-      {searchable: false},
-      {orderable: true, searchable: true},
-      {orderable: true, searchable: true},
-      {orderable: true, searchable: true},
-      {orderable: true, searchable: true},
-      null],
-    columnDefs: [ {
-             targets: 0,
-             render: $.fn.dataTable.render.ellipsis( 80, true )
-                },
-            {
-            targets: 1,
-            visible: false,
-            searchable: false,
-            },],
-    buttons: ['csvHtml5']
-  });
+      "pageLength": 50,
+      autoWidth: false,
+      //Allow users to modify the items per page setting defined in pageLength above?
+      lengthChange: true,
+      scroller: true,
+      //How much vertical space should the DT occupy at a maximum?
+      scrollY: 600,
+      //Set, in order, properties on the various columns (could also be defined in columnDefs below on a per-target basis)
+      columns: [
+        {searchable: true},
+        {searchable: false},
+        {orderable: true, searchable: true},
+        {orderable: true, searchable: true},
+        {orderable: true, searchable: true},
+        {orderable: true, searchable: true},
+        null],
+      columnDefs: [
+              {
+               targets: 0,
+               render: $.fn.dataTable.render.ellipsis( 80, true )
+              },
+              {
+              targets: 1,
+              visible: false,
+              searchable: false,
+              },
+      ],
+      //Why won't this button work?
+      buttons: ['csvHtml5'],
+      initComplete: function () {
+          this.api()
+              .columns([2,5,6])
+              .every(function () {
+                  var column = this;
+                  var select = $('<select><option value=""></option></select>')
+                      .appendTo($(column.header()))
+                      .on('change', function () {
+                          var val = $.fn.dataTable.util.escapeRegex($(this).val());
+
+                          column.search(val ? '^' + val + '$' : '', true, false).draw();
+                      });
+
+                  column
+                      .data()
+                      .unique()
+                      .sort()
+                      .each(function (d, j) {
+                          select.append('<option value="' + d + '">' + d + '</option>');
+                      });
+              });
+        },
+    });
     $('#data').dataTable().fnAdjustColumnSizing();
 
+    //When we click a CommandLine Item, retrieve the data via AJAX, append to command_content, hide the main table and pop the command_content div (and hide faq_content in case it is not hidden)
     $('#data').on('click', '.command_row', function() {
       var data = table.row($(this).parents('tr')).data();
       //console.log(data);
@@ -100,16 +133,15 @@ $(document).ready(function () {
       success: function( data ){
           var table_content = document.getElementById("table_content");
           table_content.style.display = "none";
+          var contribute_content = document.getElementById("contribute_content");
+          contribute_content.style.display = "none";
           var command_content = document.getElementById("command_content");
           $('#command_content').html(data);
           command_content.style.display = "block";
           var faq_content = document.getElementById("faq_content");
           faq_content.style.display = "none";
-
       }});
-
     });
-
     $('#faq_button').on('click', function() {
       $.ajax({
         url: "/faq",
@@ -120,13 +152,40 @@ $(document).ready(function () {
             table_content.style.display = "none";
             var command_content = document.getElementById("command_content");
             command_content.style.display = "none";
+            var contribute_content = document.getElementById("contribute_content");
+            contribute_content.style.display = "none";
             var faq_content = document.getElementById("faq_content");
             $('#faq_content').html(data);
             faq_content.style.display = "block";
-      }});
+        }});
       });
-
-
+    $('#contribute_button').on('click', function() {
+      $.ajax({
+        url: "/contribute",
+        dataType: "html",
+        context: document.body,
+        success: function( data ){
+            var table_content = document.getElementById("table_content");
+            table_content.style.display = "none";
+            var command_content = document.getElementById("command_content");
+            command_content.style.display = "none";
+            var faq_content = document.getElementById("faq_content");
+            faq_content.style.display = "none";
+            var contribute_content = document.getElementById("contribute_content");
+            contribute_content.style.display = "block";
+            $('#contribute_content').html(data);
+        }});
+      });
+    $('#home_button').on('click', function() {
+          var table_content = document.getElementById("table_content");
+          table_content.style.display = "block";
+          var command_content = document.getElementById("command_content");
+          command_content.style.display = "none";
+          var faq_content = document.getElementById("faq_content");
+          faq_content.style.display = "none";
+          var contribute_content = document.getElementById("contribute_content");
+          contribute_content.style.display = "none";
+        });
 });
 </script>
 </body>

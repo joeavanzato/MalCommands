@@ -7,52 +7,65 @@ keyboard_double_arrow_left Back
 </span>
  </div>
 <p></p>
-<p><b>Command Line:</b> <code class="code_block">{{object.command}}</code></p>
-<p><b>Description:</b> {{object.description}}</p>
-<p><b>Risk:</b> {{object.risk}}</p>
-<p><b>Risk Reason:</b> {{object.risk_reason}}</p>
-<p><b>Fidelity:</b> {{object.fidelity}}</p>
-<p><b>Fidelity Reason:</b> {{object.fidelity_reason}}</p>
-<p><b>Operating Systems:</b></p>
+
+<h5 class="command_data_header"><b>Command Line:</b></h5> <p><code class="code_block">{{object.command}}</code></p>
+<h5 class="command_data_header"><b>Description:</b></h5> <p>{{object.description}}</p>
+<h5 class="command_data_header"><b>Risk:</b></h5> <p>{{object.risk}}</p>
+<h5 class="command_data_header"><b>Risk Reason:</b></h5> <p>{{object.risk_reason}}</p>
+<h5 class="command_data_header"><b>Fidelity:</b></h5> <p>{{object.fidelity}}</p>
+<h5 class="command_data_header"><b>Fidelity Reason:</b></h5> <p>{{object.fidelity_reason}}</p>
+<h5 class="command_data_header"><b>Operating Systems:</b></h5>
 <ul>
 {% for os in object.os %}
  <li>{{os}}</li>
 {% endfor %}
 </ul>
-<p><b>Binary Default Locations:</b></p>
+<h5 class="command_data_header"><b>Binary Default Locations:</b></h5>
 <ul>
 {% for loc in object.executable %}
  <li>{{loc}}</li>
 {% endfor %}
 </ul>
-<p><b>Killchain Phases:</b></p>
+<h5 class="command_data_header"><b>Killchain Phases:</b></h5>
 <ul>
 {% for p in object.killchain %}
  <li>{{p}}</li>
 {% endfor %}
 </ul>
-<p><b>References:</b></p>
+<h5 class="command_data_header"><b>References:</b></h5>
 <ul>
 {% for r in object.references %}
  <li><a href="{{r}}">{{r}}</a></li>
 {% endfor %}
 </ul>
- <div id="mitre_attack">
-<p><b>MITRE ATT&CK:</b></p>
+<div id="tool_box">
+<h5 class="command_data_header"><b>TOOL DATA:</b></h5>
+<p><b>Tool Name:</b> {{object.tool}}</p>
+<p><b>Tool URL:</b> <a href="{{object.tool_data.tool_url}}">{{object.tool_data.tool_url}}</a></p>
+<p><b>Tool Description:</b> {{object.tool_data.tool_description}}</p>
+<p><b>Common Tool Arguments</b></p>
+{% for arg in object.tool_data.tool_arguments %}
+<li>{{arg}}</li>
+{% endfor %}
+<p></p>
+</div>
+ <p></p>
+<div id="mitre_attack">
+<h3 class="command_data_header"><b>MITRE ATT&CK TECHNIQUES</b></h3>
 {% for obj in object.mitre_long %}
-  <div id="each_mitre_tech">
- <p><b>Technique: </b>{{obj.technique_id}} - {{obj.name}}</p>
- <p><b>URL: </b><a href="{{obj.url}}">{{obj.url}}</a></p>
- <p><b>Description: </b>{{obj.description|safe}}</p>
+<div id="each_mitre_tech">
+<p><b>Technique: </b>{{obj.technique_id}} - {{obj.name}}</p>
+<p><b>URL: </b><a href="{{obj.url}}">{{obj.url}}</a></p>
+<p><b>Description: </b>{{obj.description|safe}}</p>
 <p><b>Tactics:</b></p>
- <ul>
- {% for t in obj.tactics %}
-  <li>{{t}}</li>
- {% endfor %}
- </ul>
+<ul>
+{% for t in obj.tactics %}
+<li>{{t}}</li>
+{% endfor %}
+</ul>
 </div>
 {% endfor %}
- </div>
+</div>
 
 </div>
 

@@ -16,10 +16,14 @@
 }
 
 #faq_content_inner {
+  font-family: 'Helvetica', 'Arial', sans-serif;
   margin: 1%;
-
 }
 /* Command Content Details */
+.command_data_header {
+  color: #8AACC5;
+}
+
 #command_content_inner {
   margin: 1%;
 }
@@ -53,7 +57,12 @@
   border-width: 1px;
   padding: 1%;
 }
-
+#tool_box {
+  border-style: solid solid solid solid;
+  border-color: #8CCDAF;
+  border-width: 1px;
+  padding: 1%;
+}
 .main {
   color: #8CCDAF;
 }
@@ -68,9 +77,12 @@
 .command_row {
     cursor: pointer;
 }
+#data {
+    font-size: 12px;
+}
 
 #data tr:hover {
-      background-color: #0B0C40;
+    background-color: #0B0C40;
 }
 
 .header {
@@ -80,13 +92,24 @@
   display: flex;
   flex-direction: row;
   min-height: 30px;
+  background-color: #0B0C40;
+  background-size:contain;
+  background-image: url('../images/header_galaxy.PNG');
 }
-
+#home_button {
+      cursor: pointer;
+}
+#contribute_button {
+      cursor: pointer;
+}
+#faq_button {
+      cursor: pointer;
+}
 .header_link {
   color: #8CCDAF;
-  margin: 0px;
+  margin: 0px 2px 0px 2px;
   padding: 5px;
-  border-style: none solid none none;
+  border-style: none none none none;
   border-color: #9698CE;
 }
 .header_link:hover {
