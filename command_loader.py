@@ -37,10 +37,14 @@ def import_to_mongo():
                             tech_req = technique_collection.find_one({'technique_id' : technique})
                             techs.append(tech_req)
                 if "tool" in i.keys():
-                    if db.tool_collection.count_documents({"tool":i['tool']}) > 0:
-                        filter = {"tool":i['tool']}
+                    if db.tool_collection.count_documents({"tool":i['tool'].lower()}) > 0:
+                        filter = {"tool":i['tool'].lower()}
                         s = tool_collection.find_one(filter, {})
                         i["tool_data"] = s
+                    else:
+                        print(f"ERROR - No Tool!: {i['command']}")
+                else:
+                    print(f"ERROR - No Tool!: {i['command']}")
                 tactics = list(dict.fromkeys(tactics))
                 techniques = list(dict.fromkeys(techniques))
                 i['mitre_long'] = techs
