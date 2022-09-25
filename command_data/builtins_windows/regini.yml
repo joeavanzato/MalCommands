@@ -1,8 +1,5 @@
 - command: regini [ConfigFile]
   description: RegIni can be abused by cyber threats to modify local or remote registries based upon a previously created configuration file.
-  executable:
-    - C:\Windows\System32\regini.exe
-    - C:\Windows\SysWOW64\regini.exe
   killchain:
     - Actions on Objectives
     - Installation
@@ -24,9 +21,6 @@
       - N/A
 - command: regini -m [\\ComputerName] [ConfigFile]
   description: RegIni can be abused by cyber threats to modify local or remote registries based upon a previously created configuration file.
-  executable:
-    - C:\Windows\System32\regini.exe
-    - C:\Windows\SysWOW64\regini.exe
   killchain:
     - Actions on Objectives
     - Installation

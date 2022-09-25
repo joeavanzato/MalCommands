@@ -1,0 +1,20 @@
+- command: ATBroker.exe /start [MALWARE]
+  description: Utilize ATBroker to launch code posing as an Assistive Technology (AT) previously installed to SOFTWARE\Microsoft\Windows NT\CurrentVersion\Accessibility\ATs
+  killchain:
+    - Installation
+  mitre:
+    Defense Evasion:
+      - T1218
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Atbroker/
+    - http://www.hexacorn.com/blog/2016/07/22/beyond-good-ol-run-key-part-42/
+  risk: High
+  risk_reason: This command-line can lead to immediate negative consequences if malware is allowed to run in this manner.
+  fidelity: High
+  fidelity_reason: It is extremely uncommon for normal users, software or IT users to be deploying code in this manner.
+  tool: ATBroker
+  threatactors:
+    N/A:
+      - N/A

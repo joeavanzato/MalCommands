@@ -1,0 +1,19 @@
+- command: pslist -accepteula \\[COMPUTER]
+  description: Use pslist.exe to list running processes on a remote computer.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Discovery:
+      - T1057
+  os:
+    - Windows
+  references:
+    - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Sysinternals/PsList
+  risk: Low
+  risk_reason: This type of discovery action does not immediately lead to negative consequences.
+  fidelity: Medium
+  fidelity_reason: It is typically uncommon for even IT operators to be regularly running this type of command and is often used for troubleshooting problems or verifying health.
+  tool: pslist
+  threatactors:
+    N/A:
+      - N/A

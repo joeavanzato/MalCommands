@@ -1,9 +1,5 @@
 - command: advanced_ip_scanner.exe /r:[IP-RANGE]
   description: Execute Advanced IP Scanner utility against a range of IP Addresses.
-  executable:
-    - C:\Program Files (x86)\Advanced IP Scanner\advanced_ip_scanner.exe
-    - C:\Users\[user]\AppData\Local\Temp\Advanced IP Scanner 2\advanced_ip_scanner.exe
-    - C:\Users\[user]\AppData\Local\Programs\Advanced IP Scanner Portable\advanced_ip_scanner.exe
   killchain:
     - Actions on Objectives
   mitre:
@@ -16,17 +12,15 @@
   references:
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Other/Advanced%20IP%20Scanner
   risk: Low
+  risk_reason: This action does not incur any immediate negative consequences in the environment but the derived information can and will be used by cyber-threats for recon purposes.
   fidelity: High
+  fidelity_reason: This utility is often uncommonly seen in most environments and it's use should be validated.
   tool: Advanced IP Scanner
   threatactors:
     N/A:
       - N/A
 - command: advanced_ip_scanner.exe /s:ipranges.txt /f:results.txt
   description: Execute Advanced IP Scanner utility against a range of IP Addresses provided in a file and output to a separate file.
-  executable:
-    - C:\Program Files (x86)\Advanced IP Scanner\advanced_ip_scanner.exe
-    - C:\Users\[user]\AppData\Local\Temp\Advanced IP Scanner 2\advanced_ip_scanner.exe
-    - C:\Users\[user]\AppData\Local\Programs\Advanced IP Scanner Portable\advanced_ip_scanner.exe
   killchain:
     - Actions on Objectives
   mitre:
@@ -39,7 +33,9 @@
   references:
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Other/Advanced%20IP%20Scanner
   risk: Low
+  risk_reason: This action does not incur any immediate negative consequences in the environment but the derived information can and will be used by cyber-threats for recon purposes.
   fidelity: High
+  fidelity_reason: This utility is often uncommonly seen in most environments and it's use should be validated.
   tool: Advanced IP Scanner
   threatactors:
     N/A:

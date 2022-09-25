@@ -1,7 +1,5 @@
 - command: yum remove [APP] -y
   description: Cyber threats may attempt to uninstall or remove security or backup related applications.
-  executable:
-    - N/A
   killchain:
     - Actions on Objectives
   mitre:

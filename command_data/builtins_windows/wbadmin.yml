@@ -1,7 +1,5 @@
 - command: wbadmin delete catalog -quiet
   description: Cyber Threats may abuse wbadmin to delete backup catalog data, impairing system recovery operations.
-  executable:
-    - C:\Windows\System32\wbadmin.exe
   killchain:
     - Actions on Objectives
   mitre:
@@ -23,8 +21,6 @@
       - N/A
 - command: wbadmin delete systemstatebackup -keepversions:0
   description: Cyber Threats may abuse wbadmin to delete system backup information, impairing system recovery operations.
-  executable:
-    - C:\Windows\System32\wbadmin.exe
   killchain:
     - Actions on Objectives
   mitre:

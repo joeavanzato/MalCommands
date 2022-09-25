@@ -1,8 +1,5 @@
 - command: at.exe at 09:00 /interactive /every:m,t,w,th,f,s,su C:\Windows\System32\revshell.exe
   description: Create a recurring scheduled task which will trigger every day at 9 AM, launching the target executable - often abused by cyber threats to achieve persistence in scheduled task format.
-  executable:
-    - C:\WINDOWS\System32\At.exe
-    - C:\WINDOWS\SysWOW64\At.exe
   killchain:
     - Installation
   mitre:

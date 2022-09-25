@@ -1,7 +1,5 @@
 - command: adfind -f objectcategory=computer
   description: Use ADFind to discover computer accounts in the active domain.
-  executable:
-    - N/A
   killchain:
     - Actions on Objectives
   mitre:
@@ -22,8 +20,6 @@
       - N/A
 - command: adfind -f objectcategory=person
   description: Use ADFind to discover human accounts in the active domain.
-  executable:
-    - N/A
   killchain:
     - Actions on Objectives
   mitre:
@@ -44,8 +40,6 @@
       - N/A
 - command: adfind -subnets -f objectCategory=subnet
   description: Use ADFind to list discovered subnets.
-  executable:
-    - N/A
   killchain:
     - Actions on Objectives
   mitre:
@@ -65,8 +59,6 @@
       - N/A
 - command: adfind -gcb -sc trustdmp
   description: Use ADFind to dump trust objects from the current domain.
-  executable:
-    - N/A
   killchain:
     - Actions on Objectives
   mitre:
@@ -87,8 +79,6 @@
       - N/A
 - command: adfind -sc computers_pwdnotreqd
   description: Use ADFind to dump a list of computers where password is not required to authenticate in GPO.
-  executable:
-    - N/A
   killchain:
     - Actions on Objectives
   mitre:

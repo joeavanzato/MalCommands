@@ -1,8 +1,5 @@
 - command: 'auditpol /set /category:"Detailed Tracking" /success:disable /failure:disable'
   description: 'Utilize auditpol.exe to disable Detailed Tracking, often used immediately prior to additional malicious activities to hide threat activity.'
-  executable:
-    - 'C:\Windows\System32\auditpol.exe'
-    - 'C:\Windows\SysWOW64\auditpol.exe'
   killchain:
     - Actions on Objectives
   mitre:
@@ -21,9 +18,6 @@
       - N/A
 - command: 'auditpol /remove /allusers'
   description: 'Utilize auditpol.exe to disable Detailed Tracking for all users, often used immediately prior to additional malicious activities to hide threat activity.'
-  executable:
-    - 'C:\Windows\System32\auditpol.exe'
-    - 'C:\Windows\SysWOW64\auditpol.exe'
   killchain:
     - Actions on Objectives
   mitre:
@@ -42,9 +36,6 @@
       - N/A
 - command: 'auditpol /restore /file:[RestoreFile]'
   description: 'Utilize auditpol.exe to modify settings via a targeted restore from file, often used immediately prior to additional malicious activities to hide threat activity.'
-  executable:
-    - 'C:\Windows\System32\auditpol.exe'
-    - 'C:\Windows\SysWOW64\auditpol.exe'
   killchain:
     - Actions on Objectives
   mitre:
@@ -63,9 +54,6 @@
       - N/A
 - command: 'auditpol /clear /y'
   description: 'Utilize auditpol.exe to clear per-user settings, often used immediately prior to additional malicious activities to hide threat activity.'
-  executable:
-    - 'C:\Windows\System32\auditpol.exe'
-    - 'C:\Windows\SysWOW64\auditpol.exe'
   killchain:
     - Actions on Objectives
   mitre:

@@ -1,7 +1,5 @@
 - command: iptables -F
   description: Cyber threats may try to clear iptables rules in attempts to ease or relax policies surrounding network communications.
-  executable:
-    - N/A
   killchain:
     - Actions on Objectives
   mitre:

@@ -1,7 +1,5 @@
 - command: ufw disable
   description: Cyber threats may disable the uninterrupted firewall (UFW) in attempts to ease or relax policies surrounding network communications.
-  executable:
-    - N/A
   killchain:
     - Actions on Objectives
   mitre:

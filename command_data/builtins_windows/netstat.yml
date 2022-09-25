@@ -1,8 +1,5 @@
 - command: netstat -anob
   description: Used to gather information about network connections on the local machine.
-  executable:
-    - C:\Windows\System32\netstat.exe
-    - C:\Windows\SysWOW64\netstat.exe
   killchain:
     - Actions on Objectives
   mitre:

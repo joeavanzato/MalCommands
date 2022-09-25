@@ -1,8 +1,5 @@
 - command: reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v [Value] /t [REG_SZ/REG_DWORD] /d [Data] /f
   description: Add a registry value to the specific path - typically abused by cyber threats to achieve persistence on a victim device.
-  executable:
-    - C:\Windows\System32\reg.exe
-    - C:\Windows\SysWOW64\reg.exe
   killchain:
     - Installation
     - Actions on Objectives
@@ -28,9 +25,6 @@
       - N/A
 - command: reg add HKCU\Software\Microsoft\Windows\CurrentVersion\RunOnce /v [Value] /t [REG_SZ/REG_DWORD] /d [Data] /f
   description: Add a registry value to the specific path - typically abused by cyber threats to achieve persistence on a victim device.
-  executable:
-    - C:\Windows\System32\reg.exe
-    - C:\Windows\SysWOW64\reg.exe
   killchain:
     - Installation
     - Actions on Objectives
@@ -56,9 +50,6 @@
       - N/A
 - command: reg add HKCU\Software\Microsoft\Windows\CurrentVersion\RunServices /v [Value] /t [REG_SZ/REG_DWORD] /d [Data] /f
   description: Add a registry value to the specific path - typically abused by cyber threats to achieve persistence on a victim device.
-  executable:
-    - C:\Windows\System32\reg.exe
-    - C:\Windows\SysWOW64\reg.exe
   killchain:
     - Installation
     - Actions on Objectives
@@ -84,9 +75,6 @@
       - N/A
 - command: reg add HKCU\Software\Microsoft\Windows\CurrentVersion\RunServicesOnce /v [Value] /t [REG_SZ/REG_DWORD] /d [Data] /f
   description: Add a registry value to the specific path - typically abused by cyber threats to achieve persistence on a victim device.
-  executable:
-    - C:\Windows\System32\reg.exe
-    - C:\Windows\SysWOW64\reg.exe
   killchain:
     - Installation
     - Actions on Objectives
@@ -112,9 +100,6 @@
       - N/A
 - command: reg add HKCU\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\RunOnce /v [Value] /t [REG_SZ/REG_DWORD] /d [Data] /f
   description: Add a registry value to the specific path - typically abused by cyber threats to achieve persistence on a victim device.
-  executable:
-    - C:\Windows\System32\reg.exe
-    - C:\Windows\SysWOW64\reg.exe
   killchain:
     - Installation
     - Actions on Objectives
@@ -140,9 +125,6 @@
       - N/A
 - command: reg add HKCU\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Run /v [Value] /t [REG_SZ/REG_DWORD] /d [Data] /f
   description: Add a registry value to the specific path - typically abused by cyber threats to achieve persistence on a victim device.
-  executable:
-    - C:\Windows\System32\reg.exe
-    - C:\Windows\SysWOW64\reg.exe
   killchain:
     - Installation
     - Actions on Objectives
@@ -168,9 +150,6 @@
       - N/A
 - command: reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders" /v [Value] /t [REG_SZ/REG_DWORD] /d [Data] /f
   description: Add a registry value to the specific path - typically abused by cyber threats to achieve persistence on a victim device.
-  executable:
-    - C:\Windows\System32\reg.exe
-    - C:\Windows\SysWOW64\reg.exe
   killchain:
     - Installation
     - Actions on Objectives
@@ -196,9 +175,6 @@
       - N/A
 - command: reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v [Value] /t [REG_SZ/REG_DWORD] /d [Data] /f
   description: Add a registry value to the specific path - typically abused by cyber threats to achieve persistence on a victim device.
-  executable:
-    - C:\Windows\System32\reg.exe
-    - C:\Windows\SysWOW64\reg.exe
   killchain:
     - Installation
     - Actions on Objectives
@@ -224,9 +200,6 @@
       - N/A
 - command: reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\Run" /v [Value] /t [REG_SZ/REG_DWORD] /d [Data] /f
   description: Add a registry value to the specific path - typically abused by cyber threats to achieve persistence on a victim device.
-  executable:
-    - C:\Windows\System32\reg.exe
-    - C:\Windows\SysWOW64\reg.exe
   killchain:
     - Installation
     - Actions on Objectives
@@ -252,9 +225,6 @@
       - N/A
 - command: reg add "HKCU\Software\Microsoft\Windows NT\CurrentVersion\Windows" /v [Value] /t [REG_SZ/REG_DWORD] /d [Data] /f
   description: Add a registry value to the specific path - typically abused by cyber threats to achieve persistence on a victim device.
-  executable:
-    - C:\Windows\System32\reg.exe
-    - C:\Windows\SysWOW64\reg.exe
   killchain:
     - Installation
     - Actions on Objectives
@@ -280,9 +250,6 @@
       - N/A
 - command: reg add "HKCU\Software\Microsoft\Active Setup\Installed Components" /v [Value] /t [REG_SZ/REG_DWORD] /d [Data] /f
   description: Add a registry value to the specific path - typically abused by cyber threats to achieve persistence on a victim device.
-  executable:
-    - C:\Windows\System32\reg.exe
-    - C:\Windows\SysWOW64\reg.exe
   killchain:
     - Installation
     - Actions on Objectives
@@ -308,9 +275,6 @@
       - N/A
 - command: reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Run" /v [Value] /t [REG_SZ/REG_DWORD] /d [Data] /f
   description: Add a registry value to the specific path - typically abused by cyber threats to achieve persistence on a victim device.
-  executable:
-    - C:\Windows\System32\reg.exe
-    - C:\Windows\SysWOW64\reg.exe
   killchain:
     - Installation
     - Actions on Objectives
@@ -336,9 +300,6 @@
       - N/A
 - command: reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\RunOnce" /v [Value] /t [REG_SZ/REG_DWORD] /d [Data] /f
   description: Add a registry value to the specific path - typically abused by cyber threats to achieve persistence on a victim device.
-  executable:
-    - C:\Windows\System32\reg.exe
-    - C:\Windows\SysWOW64\reg.exe
   killchain:
     - Installation
     - Actions on Objectives
@@ -364,9 +325,6 @@
       - N/A
 - command: reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\RunServices" /v [Value] /t [REG_SZ/REG_DWORD] /d [Data] /f
   description: Add a registry value to the specific path - typically abused by cyber threats to achieve persistence on a victim device.
-  executable:
-    - C:\Windows\System32\reg.exe
-    - C:\Windows\SysWOW64\reg.exe
   killchain:
     - Installation
     - Actions on Objectives
@@ -392,9 +350,6 @@
       - N/A
 - command: reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\RunServicesOnce" /v [Value] /t [REG_SZ/REG_DWORD] /d [Data] /f
   description: Add a registry value to the specific path - typically abused by cyber threats to achieve persistence on a victim device.
-  executable:
-    - C:\Windows\System32\reg.exe
-    - C:\Windows\SysWOW64\reg.exe
   killchain:
     - Installation
     - Actions on Objectives
@@ -420,9 +375,6 @@
       - N/A
 - command: reg add "HKLM\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Run" /v [Value] /t [REG_SZ/REG_DWORD] /d [Data] /f
   description: Add a registry value to the specific path - typically abused by cyber threats to achieve persistence on a victim device.
-  executable:
-    - C:\Windows\System32\reg.exe
-    - C:\Windows\SysWOW64\reg.exe
   killchain:
     - Installation
     - Actions on Objectives
@@ -448,9 +400,6 @@
       - N/A
 - command: reg add "HKLM\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\RunOnce" /v [Value] /t [REG_SZ/REG_DWORD] /d [Data] /f
   description: Add a registry value to the specific path - typically abused by cyber threats to achieve persistence on a victim device.
-  executable:
-    - C:\Windows\System32\reg.exe
-    - C:\Windows\SysWOW64\reg.exe
   killchain:
     - Installation
     - Actions on Objectives
@@ -476,9 +425,6 @@
       - N/A
 - command: reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders" /v [Value] /t [REG_SZ/REG_DWORD] /d [Data] /f
   description: Add a registry value to the specific path - typically abused by cyber threats to achieve persistence on a victim device.
-  executable:
-    - C:\Windows\System32\reg.exe
-    - C:\Windows\SysWOW64\reg.exe
   killchain:
     - Installation
     - Actions on Objectives
@@ -504,9 +450,6 @@
       - N/A
 - command: reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v [Value] /t [REG_SZ/REG_DWORD] /d [Data] /f
   description: Add a registry value to the specific path - typically abused by cyber threats to achieve persistence on a victim device.
-  executable:
-    - C:\Windows\System32\reg.exe
-    - C:\Windows\SysWOW64\reg.exe
   killchain:
     - Installation
     - Actions on Objectives
@@ -532,9 +475,6 @@
       - N/A
 - command: reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\Run" /v [Value] /t [REG_SZ/REG_DWORD] /d [Data] /f
   description: Add a registry value to the specific path - typically abused by cyber threats to achieve persistence on a victim device.
-  executable:
-    - C:\Windows\System32\reg.exe
-    - C:\Windows\SysWOW64\reg.exe
   killchain:
     - Installation
     - Actions on Objectives
@@ -560,9 +500,6 @@
       - N/A
 - command: reg add "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\Userinit" /v [Value] /t [REG_SZ/REG_DWORD] /d [Data] /f
   description: Add a registry value to the specific path - typically abused by cyber threats to achieve persistence on a victim device.
-  executable:
-    - C:\Windows\System32\reg.exe
-    - C:\Windows\SysWOW64\reg.exe
   killchain:
     - Installation
     - Actions on Objectives
@@ -588,9 +525,6 @@
       - N/A
 - command: reg add "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\Shell" /v [Value] /t [REG_SZ/REG_DWORD] /d [Data] /f
   description: Add a registry value to the specific path - typically abused by cyber threats to achieve persistence on a victim device.
-  executable:
-    - C:\Windows\System32\reg.exe
-    - C:\Windows\SysWOW64\reg.exe
   killchain:
     - Installation
     - Actions on Objectives
@@ -616,9 +550,6 @@
       - N/A
 - command: reg add "HKLM\System\CurrentControlSet\Control\Terminal Server\fDenyTSConnections" /v [Value] /t [REG_SZ/REG_DWORD] /d [Data] /f
   description: Add a registry value to the specific path - typically abused by cyber threats to achieve persistence on a victim device.
-  executable:
-    - C:\Windows\System32\reg.exe
-    - C:\Windows\SysWOW64\reg.exe
   killchain:
     - Installation
     - Actions on Objectives
@@ -644,9 +575,6 @@
       - N/A
 - command: reg add "HKLM\System\CurrentControlSet\Control\Terminal Server\fSingleSessionPerUser" /v [Value] /t [REG_SZ/REG_DWORD] /d [Data] /f
   description: Add a registry value to the specific path - typically abused by cyber threats to achieve persistence on a victim device.
-  executable:
-    - C:\Windows\System32\reg.exe
-    - C:\Windows\SysWOW64\reg.exe
   killchain:
     - Installation
     - Actions on Objectives
@@ -672,9 +600,6 @@
       - N/A
 - command: reg add "HKLM\System\CurrentControlSet\Control\Terminal Server\Licensing Core\EnableConcurrentSessions" /v [Value] /t [REG_SZ/REG_DWORD] /d [Data] /f
   description: Add a registry value to the specific path - typically abused by cyber threats to achieve persistence on a victim device.
-  executable:
-    - C:\Windows\System32\reg.exe
-    - C:\Windows\SysWOW64\reg.exe
   killchain:
     - Installation
     - Actions on Objectives
@@ -700,9 +625,6 @@
       - N/A
 - command: reg add "HKLM\System\CurrentControlSet\Services\Ntds\Parameters" /v [Value] /t [REG_SZ/REG_DWORD] /d [Data] /f
   description: Add a registry value to the specific path - typically abused by cyber threats to achieve persistence on a victim device.
-  executable:
-    - C:\Windows\System32\reg.exe
-    - C:\Windows\SysWOW64\reg.exe
   killchain:
     - Installation
     - Actions on Objectives
@@ -728,9 +650,6 @@
       - N/A
 - command: reg add "HKLM\System\CurrentControlSet\Control\SecurityProviders\WDigest\UseLogonCredential" /v [Value] /t [REG_SZ/REG_DWORD] /d [Data] /f
   description: Add a registry value to the specific path - typically abused by cyber threats to achieve persistence on a victim device.
-  executable:
-    - C:\Windows\System32\reg.exe
-    - C:\Windows\SysWOW64\reg.exe
   killchain:
     - Installation
     - Actions on Objectives
@@ -756,9 +675,6 @@
       - N/A
 - command: reg add "HKLM\Security\Policy\Secrets" /v [Value] /t [REG_SZ/REG_DWORD] /d [Data] /f
   description: Add a registry value to the specific path - typically abused by cyber threats to achieve persistence on a victim device.
-  executable:
-    - C:\Windows\System32\reg.exe
-    - C:\Windows\SysWOW64\reg.exe
   killchain:
     - Installation
     - Actions on Objectives

@@ -1,7 +1,5 @@
 - command: portqry -local
   description: Threat Actors sometimes may abuse the Port Query utility to identify open ports on local or remote systems.
-  executable:
-    - N/A
   killchain:
     - Actions on Objectives
   mitre:
@@ -22,8 +20,6 @@
       - N/A
 - command: portqry -n [IP Address] -e [Port]
   description: Threat Actors sometimes may abuse the Port Query utility to identify open ports on local or remote systems.
-  executable:
-    - N/A
   killchain:
     - Actions on Objectives
   mitre:

@@ -1,0 +1,38 @@
+- command: procdump64 -accepteula -ma [LSASS_PID] [OUTPUT_FILE]
+  description: Use procdump to perform a full dump of a given process ID - often abused to target LSASS or other critical processes for credential access objectives.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Credential Access:
+      - T1003.001
+  os:
+    - Windows
+  references:
+    - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Sysinternals/ProcDump
+  risk: High
+  risk_reason: Dumping the LSASS process is an extremely suspicious activity that can lead to immediate negative consequences for an organization depending on the target machine.
+  fidelity: High
+  fidelity_reason: This is typically an abnormal operation for normal users, even IT power users.
+  tool: ProcDump
+  threatactors:
+    N/A:
+      - N/A
+- command: procdump64 -accepteula -r -ma [LSASS_PID] [OUTPUT_FILE]
+  description: Use procdump to perform a full dump of a given process ID using a cloned process - often abused to target LSASS or other critical processes for credential access objectives.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Credential Access:
+      - T1003.001
+  os:
+    - Windows
+  references:
+    - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Sysinternals/ProcDump
+  risk: High
+  risk_reason: Dumping the LSASS process is an extremely suspicious activity that can lead to immediate negative consequences for an organization depending on the target machine.
+  fidelity: High
+  fidelity_reason: This is typically an abnormal operation for normal users, even IT power users.
+  tool: ProcDump
+  threatactors:
+    N/A:
+      - N/A

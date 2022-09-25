@@ -1,8 +1,5 @@
 - command: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\aspnet_compiler.exe -v none -p C:\users\cpl.internal\desktop\asptest\ -f C:\users\cpl.internal\desktop\asptest\none -u
   description: Cyber threats may utilize aspnet_compiler to run arbitrary C# code, potentially evading certain detection mechanisms.
-  executable:
-    - C:\Windows\Microsoft.NET\Framework\v4.0.30319\aspnet_compiler.exe
-    - C:\Windows\Microsoft.NET\Framework64\v4.0.30319\aspnet_compiler.exe
   killchain:
     - Actions on Objectives
     - Exploitation

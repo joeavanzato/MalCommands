@@ -1,8 +1,5 @@
 - command: tasklist [/s <computer> [/u [<domain>\]<username> [/p <password>]]] [{/m <module> | /svc | /v}] [/fo {table | list | csv}] [/nh] [/fi <filter> [/fi <filter> [ ... ]]]
   description: Cyber Threats often utilize tasklist functionality to identify running security products or other services for various reasons.
-  executable:
-    - C:\Windows\System32\tasklist.exe
-    - C:\Windows\SysWOW64\tasklist.exe
   killchain:
     - Actions on Objectives
   mitre:

@@ -1,7 +1,5 @@
 - command: 'bcdedit /set {default} bootstatuspolicy ignoreallfailures'
   description: 'BCDEdit is often abused by cyber threats to modify boot policy in an attempt to inhibit system defenses.'
-  executable:
-    - 'C:\Windows\System32\bcdedit.exe'
   killchain:
     - Actions on Objectives
   mitre:
@@ -19,8 +17,6 @@
       - N/A
 - command: 'bcdedit /set {default} recoveryenabled no'
   description: 'BCDEdit is often abused by cyber threats to modify boot policy in an attempt to inhibit system defenses.'
-  executable:
-    - 'C:\Windows\System32\bcdedit.exe'
   killchain:
     - Actions on Objectives
   mitre:
@@ -38,8 +34,6 @@
       - N/A
 - command: 'bcdedit /set {default} safeboot minimal'
   description: 'BCDEdit is often abused by cyber threats to modify boot policy in an attempt to inhibit system defenses.'
-  executable:
-    - 'C:\Windows\System32\bcdedit.exe'
   killchain:
     - Actions on Objectives
   mitre:
@@ -57,8 +51,6 @@
       - N/A
 - command: 'bcdedit /set {current} safeboot minimal'
   description: 'BCDEdit is often abused by cyber threats to modify boot policy in an attempt to inhibit system defenses.'
-  executable:
-    - 'C:\Windows\System32\bcdedit.exe'
   killchain:
     - Actions on Objectives
   mitre:
@@ -76,8 +68,6 @@
       - N/A
 - command: 'bcdedit /set {default} safeboot network'
   description: 'BCDEdit is often abused by cyber threats to modify boot policy in an attempt to inhibit system defenses.'
-  executable:
-    - 'C:\Windows\System32\bcdedit.exe'
   killchain:
     - Actions on Objectives
   mitre:
@@ -95,8 +85,6 @@
       - N/A
 - command: 'bcdedit /set {current} safeboot network'
   description: 'BCDEdit is often abused by cyber threats to modify boot policy in an attempt to inhibit system defenses.'
-  executable:
-    - 'C:\Windows\System32\bcdedit.exe'
   killchain:
     - Actions on Objectives
   mitre:
@@ -114,8 +102,6 @@
       - N/A
 - command: 'bcdedit /set {globalsettings} advancedoptions false'
   description: 'BCDEdit is often abused by cyber threats to modify boot policy in an attempt to inhibit system defenses.'
-  executable:
-    - 'C:\Windows\System32\bcdedit.exe'
   killchain:
     - Actions on Objectives
   mitre:

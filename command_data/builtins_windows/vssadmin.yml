@@ -1,7 +1,5 @@
 - command: vssadmin delete shadows /all /quiet
   description: Cyber Threats often abuse vssadmin in an attempt to diminish backup capacity prior to events such as ransomware on the local device.
-  executable:
-    - C:\Windows\System32\vssadmin.exe
   killchain:
     - Actions on Objectives
   mitre:
@@ -22,8 +20,6 @@
       - N/A
 - command: vssadmin.exe create shadow /for=#{drive_letter}
   description: Cyber Threats may abuse shadow copy creation and access in attempts to access locked system files or other sensitive data which may not normally be accessible.
-  executable:
-    - C:\Windows\System32\vssadmin.exe
   killchain:
     - Actions on Objectives
   mitre:

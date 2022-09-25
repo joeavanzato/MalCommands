@@ -1,0 +1,69 @@
+- command: bitsadmin /create 1 bitsadmin /addfile 1 c:\windows\system32\cmd.exe c:\data\playfolder\cmd.exe bitsadmin /SetNotifyCmdLine 1 c:\data\playfolder\1.txt:cmd.exe NULL bitsadmin /RESUME 1 bitsadmin /complete 1
+  description: Create a BITS job named '1', add cmd.exe, configure the job to run a target command from an Alternate Data Stream then resume and complete the job.
+  killchain:
+    - Installation
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+      - T1564.004
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Bitsadmin/
+  risk: High
+  risk_reason: BITS jobs are typically predictable and used for regular update tasks or other functions - their use with cmd.exe directly is uncommon and suspicious.
+  fidelity: High
+  fidelity_reason: While alerting on BITS activity alone would not be useful, alerting on more specific properties of the command and on anomalous or one-off BITS commandlines should yield effective results.
+  tool: BITSAdmin
+  threatactors:
+    N/A:
+      - N/A
+- command: bitsadmin /create 1 bitsadmin /addfile 1 https://live.sysinternals.com/autoruns.exe c:\data\playfolder\autoruns.exe bitsadmin /RESUME 1 bitsadmin /complete 1
+  description: Create a BITS job named 1, add cmd.exe to the job, configure it to run the target command then resume and complete the job - which in this case will download autoruns.exe.
+  killchain:
+    - Installation
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+      - T1564.004
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Bitsadmin/
+  risk: High
+  risk_reason: BITS jobs are typically predictable and used for regular update tasks or other functions - their use with cmd.exe directly is uncommon and suspicious.
+  fidelity: High
+  fidelity_reason: While alerting on BITS activity alone would not be useful, alerting on more specific properties of the command and on anomalous or one-off BITS commandlines should yield effective results.
+  tool: BITSAdmin
+  threatactors:
+    N/A:
+      - N/A
+- command: bitsadmin /create 1 & bitsadmin /addfile 1 c:\windows\system32\cmd.exe c:\data\playfolder\cmd.exe & bitsadmin /SetNotifyCmdLine 1 c:\data\playfolder\cmd.exe NULL & bitsadmin /RESUME 1 & bitsadmin /Reset
+  description: Create a BITS job named 1, add cmd.exe to the job, configure it to run the target command then resume and complete the job - which in this case will execute cmd.exe.
+  killchain:
+    - Installation
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+      - T1564.004
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Bitsadmin/
+  risk: High
+  risk_reason: BITS jobs are typically predictable and used for regular update tasks or other functions - their use with cmd.exe directly is uncommon and suspicious.
+  fidelity: High
+  fidelity_reason: While alerting on BITS activity alone would not be useful, alerting on more specific properties of the command and on anomalous or one-off BITS commandlines should yield effective results.
+  tool: BITSAdmin
+  threatactors:
+    N/A:
+      - N/A

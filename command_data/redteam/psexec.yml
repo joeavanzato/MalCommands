@@ -1,0 +1,60 @@
+- command: psexec -accepteula \\* -r [SERVICE_NAME] -s -d [EXECUTABLE] -u [USER] -p [PASSWORD]
+  description: Launch an executable as the SYSTEM account on all domain users, authenticating with a given username and password and hiding the remote service as the given name
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Lateral Movement:
+      - T1021.002
+      - T1570
+    Persistence:
+      - T1543.003
+    Privilege Escalation:
+      - T1543.003
+    Execution:
+      - T1569.002
+  os:
+    - Windows
+  references:
+    - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Sysinternals/PsExec
+    - https://attack.mitre.org/software/S0029/
+  risk: High
+  risk_reason: Launching an executable on all domain devices, especially as SYSTEM, is an extremely suspicious activity.
+  fidelity: High
+  fidelity_reason: This type of task is typically uncommon for IT operators to perform, especially when considering it is against all computers as the SYSTEM user.
+  tool: PsExec
+  threatactors:
+    G0076:
+      - https://www.symantec.com/blogs/threat-intelligence/thrip-hits-satellite-telecoms-defense-targets
+    G0102:
+      - https://www.crowdstrike.com/blog/timelining-grim-spiders-big-game-hunting-tactics/
+      - https://www.fireeye.com/blog/threat-research/2020/10/kegtap-and-singlemalt-with-a-ransomware-chaser.html
+- command: psexec -accepteula @[File Containing Remote Hosts] -d cmd /c [CommandString]
+  description: Launch a command or series of commands across an array of remote devices read from a file.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Lateral Movement:
+      - T1021.002
+      - T1570
+    Persistence:
+      - T1543.003
+    Privilege Escalation:
+      - T1543.003
+    Execution:
+      - T1569.002
+  os:
+    - Windows
+  references:
+    - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Sysinternals/PsExec
+    - https://attack.mitre.org/software/S0029/
+  risk: High
+  risk_reason: PSExec usage is generally high-risk and should be audited to ensure it is legitimate due to the prevalent usage by threat actors.
+  fidelity: Medium
+  fidelity_reason: PSExec usage should always be audited to ensure it is legitimate, although it is often used by IT operators so there can be a large dynamic volume depending on the organization.
+  tool: PsExec
+  threatactors:
+    G0076:
+      - https://www.symantec.com/blogs/threat-intelligence/thrip-hits-satellite-telecoms-defense-targets
+    G0102:
+      - https://www.crowdstrike.com/blog/timelining-grim-spiders-big-game-hunting-tactics/
+      - https://www.fireeye.com/blog/threat-research/2020/10/kegtap-and-singlemalt-with-a-ransomware-chaser.html

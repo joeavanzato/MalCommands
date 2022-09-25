@@ -1,0 +1,40 @@
+- command: rar.exe a -r -[PASS] [OUTPUT.RAR] [FILES TO ZIP]
+  description: Utilize WinRar to encrypt multiple tiles into a password protected .rar file, often used prior to exfiltration.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Collection:
+      - T1560
+      - T1560.001
+  os:
+    - Windows
+  references:
+    - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Other/Winrar
+  risk: Low
+  risk_reason: WinRar is a commonly utilized binary for both normal and IT users, as well as being abused by cyber-threats prior to exfiltration.
+  fidelity: Low
+  fidelity_reason: Due to the high-prevalence of usage, alerting on this type of command requires additional context to improve the fidelity.
+  tool: winrar
+  threatactors:
+    N/A:
+      - N/A
+- command: rar.exe a -k -r -s -m1 -[PASS] [OUTPUT.RAR] [FILES TO ZIP]
+  description: Utilize WinRar to encrypt multiple tiles into a password protected .rar file, often used prior to exfiltration.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Collection:
+      - T1560
+      - T1560.001
+  os:
+    - Windows
+  references:
+    - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Other/Winrar
+  risk: Low
+  risk_reason: WinRar is a commonly utilized binary for both normal and IT users, as well as being abused by cyber-threats prior to exfiltration.
+  fidelity: Low
+  fidelity_reason: Due to the high-prevalence of usage, alerting on this type of command requires additional context to improve the fidelity.
+  tool: winrar
+  threatactors:
+    N/A:
+      - N/A

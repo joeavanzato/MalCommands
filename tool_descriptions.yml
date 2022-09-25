@@ -10,7 +10,9 @@
     - /outfile - Specify file for writing output
     - /verbose - Return unauthorized shares in addition to those with access.
   tool_url: https://github.com/mitchmoser/SharpShares
-- tool: ADFind
+  tool_locations:
+    - Varies
+- tool: adfind
   tool_description: ADFind is a tool developed to query Active Directory - it utilizes a mixture of ldapsearch, search.vbs, ldp, dsquery and dsget along with other features.  It was developed prior to dsquery/dsget/etc by multiple years but adopts many of the same features.  The tool is written in C++ and is often used in some form by cyber threats during the information gathering phase of a compromise.
   tool_arguments:
     - basedn - Base DN to search on - defaults to NC
@@ -23,11 +25,15 @@
     - -t - Timeout value for query, default of 120 seconds.
     - See http://www.joeware.net/freetools/tools/adfind/usage.htm for all arguments.
   tool_url: http://www.joeware.net/freetools/tools/adfind/
+  tool_locations:
+    - Varies
 - tool: appinstaller
   tool_description: Microsoft App Installer is a utility which aids in the ability to sideload Windows 10 apps, removing certain difficulties and making libraries more easily available and standardized across applications.  It is typically used to deploy AppX/MSIX file types.
   tool_arguments:
     - N/A
   tool_url: https://learn.microsoft.com/en-us/windows/msix/app-installer/app-installer-file-overview
+  tool_locations:
+    - C:\Program Files\WindowsApps\Microsoft.DesktopAppInstaller_*\AppInstaller.exe
 - tool: aspnet_compiler
   tool_description: The ASP.NET Compilation Tool (aspnet_compiler.exe) enables teams to compile an ASP.NET web application.  This can help to improve performance but also can be abused by threat actors for on-the-fly execution of C# source code.
   tool_arguments:
@@ -37,6 +43,9 @@
     - targetDir - Network or Local disk that will contain the compiled application.
     - c - Specifies that the application should be fully rebuilt.
   tool_url: https://learn.microsoft.com/en-us/previous-versions/ms229863(v=vs.140)?redirectedfrom=MSDN
+  tool_locations:
+    - C:\Windows\Microsoft.NET\Framework\v4.0.30319\aspnet_compiler.exe
+    - C:\Windows\Microsoft.NET\Framework64\v4.0.30319\aspnet_compiler.exe
 - tool: at
   tool_description: AT is a tool which comes pre-deployed on older versions of Windows and aids in the creation and modification of scheduled tasks on local and remote devices.  It is often abused by cyber threats to achieve persistence and execution objectives.
   tool_arguments:
@@ -47,158 +56,381 @@
     - command - Used to specify the program (.exe, .bat, .com, .cmd) which will run.
     - /yes - Force a 'yes' answer to all queries from the system in response to cancelling scheduled tasks.
   tool_url: https://learn.microsoft.com/en-us/troubleshoot/windows-client/system-management-components/use-at-command-to-schedule-tasks
+  tool_locations:
+    - C:\WINDOWS\System32\At.exe
+    - C:\WINDOWS\SysWOW64\At.exe
 - tool: auditpol
-  tool_description:
+  tool_description: AuditPol helps IT operators to perform various actions around audit policies, including setting or querying system-wide/per-user policies, auditing options, security descriptors, exporting data to a CSV, loading data from a CSV and configuring global resource System Access Control Lists (SACLs)
   tool_arguments:
-    -
-  tool_url:
+    - /get - Displays the current audit policy
+    - /set - Sets an audit policy
+    - /list - Displays selectable policy elements
+    - /backup - Save audit policy to a file
+    - /restore - Restore audit policy from a previously created backup
+    - /clear - Clears the current audit policy
+    - /remove - Removes all per-user policy settings and disables all system policy settings
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/auditpol
+  tool_locations:
+    - 'C:\Windows\System32\auditpol.exe'
+    - 'C:\Windows\SysWOW64\auditpol.exe'
 - tool: bcdedit
-  tool_description:
+  tool_description: Boot Configuration Data (BCD) files describe boot applications and relevant settings - BCDEdit is used to manage these data stores, including creation, modification, etc.
   tool_arguments:
-    -
-  tool_url:
+    - /createstore - Creates a new empty boot configuration data store
+    - /export - Exports the contents of the system store to file.
+    - /import - Restores the state of the system store using previously exported data.
+    - /store - Specify the store to be used.
+    - /enum - List entries in a given store
+    - /create - Creates a new entry in the specified store
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/bcdedit
+  tool_locations:
+    - 'C:\Windows\System32\bcdedit.exe'
 - tool: certutil
-  tool_description:
+  tool_description: Certutil is included as part of Certificate Services on Windows to dump and display Certification Authority configuration information, configure Certificate Services, backup or restore CA components and to verify certificates, key pairs and certificate chains.
   tool_arguments:
-    -
-  tool_url:
+    - -dump - Export configuration information or files
+    - -decodehex - Decode a hexadecimal-encoded file
+    - -decode - Decode a Base64-encoded files
+    - -encode - Encode a file to Base64
+    - -installcert - Installs a CA Certificate
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/certutil
+  tool_locations:
+    - 'C:\Windows\System32\certutil.exe'
+    - 'C:\Windows\SysWOW64\certutil.exe'
 - tool: dsquery
-  tool_description:
+  tool_description: DSQuery provides a mechanism to query Active Directory and is built into Server 2008 and later if the AD DS server role is installed.
   tool_arguments:
-    -
-  tool_url:
+    - computer - Finds computers in the directory matching specified search criteria.
+    - group - Finds groups in the directory matching specified search criteria.
+    - user - Finds users in the directory matching specified search criteria.
+    - Many More - Follow Tool URL to discover usage capabilities with respect to filtering, searching, etc.
+  tool_url: https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732952(v=ws.11)
+  tool_locations:
+    - 'C:\Windows\System32\dsquery.exe'
 - tool: mshta
-  tool_description:
+  tool_description: Mshta is a Microsoft utility designed to execute Microsoft HTML Application (HTA) files - IT operators and administrators may create these files for various automation or configuration purposes.  Mshta can execute both local and remotely hosted files - it's use also bypasses standard Internet Explorer security context settings.
   tool_arguments:
-    -
-  tool_url:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - 'C:\Windows\System32\mshta.exe'
+    - 'C:\Windows\SysWOW64\mshta.exe'
 - tool: net
-  tool_description:
+  tool_description: Net is an extremely robust utility developed by Microsoft and is commonly used by both IT operators and cyber-threats.  It allows for querying of many pieces of environment information as well as configuring, creating or otherwise modifying items such as shares, services, users, etc.
   tool_arguments:
-    -
-  tool_url:
+    - localgroup - Discover the members of a specific local group
+    - computer - Add or Delete computers to or from Active Directory.
+    - use - Connect or Disconnect a computer to or from a shared resource.
+    - view - Display a list of domains, computers or resources being shared by the current or specified computer.
+  tool_url: https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc754340(v=ws.11)#n
+  tool_locations:
+    - C:\Windows\System32\net.exe
+    - C:\Windows\System32\net1.exe
+    - C:\Windows\SysWOW64\net.exe
+    - C:\Windows\SysWOW64\net1.exe
 - tool: netstat
-  tool_description:
+  tool_description:  Netstat is a Microsoft utility which displays information on TCP connections, listening ports, routing table, ethernet statistics and other information.
   tool_arguments:
-    -
-  tool_url:
+    - -a - Displays all active TCP connections and TCP/UDP ports which are actively listening.
+    - -b - Displays the executable involved in creating each connection or listening port, along with relevant components of each process.
+    - -n - Displays active TCP connections without name resolution.
+    - -o - Displays active TCP connections with the Process ID (PID) for each connections
+    - -r - Displays the contents of the IP Routing table, equivalent to 'route print'
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/netstat
+  tool_locations:
+    - C:\Windows\System32\netstat.exe
+    - C:\Windows\SysWOW64\netstat.exe
 - tool: nltest
-  tool_description:
+  tool_description: Nltest is a Microsoft-developed server utility available if either the AD DS or AD LDS roles are installed or as part of the Remote Server AAdministration Tools (RSAT) package. It can be used to perform functions such as list Domain Controllers, force remote shutdowns, query trust status, test trust relationships, etc.
   tool_arguments:
-    -
-  tool_url:
+    - /repl - Forces synchronization with the primary Domain Controller
+    - /dclist:[DOMAIN] - Lists all Domain Controllers in a domain
+    - /dcname:[DOMAIN] - Lists the primary domain controller.
+    - /dsgetdc:[DOMAIN] - Queries DNS for a list of Domain Controllers and corresponding IP addresses.
+  tool_url: https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731935(v=ws.11)
+  tool_locations:
+    - C:\Windows\System32\nltest.exe
+    - C:\Windows\SysWOW64\nltest.exe
 - tool: portqry
-  tool_description:
+  tool_description: PortQry is a Microsoft-developed utility which can be used to troubleshoot and report on TCP/IP connectivity issues - in particular assisting with determining which ports are open on remote hosts.
   tool_arguments:
-    -
-  tool_url:
+    - -n - Query the specific Host or IP address
+    - -p - Use the specified protocol (tcp, udp, both)
+    - -e - Query specific target port
+    - -o - Query the specific target ports (80,443,139)
+    - -r - Specify a range of target ports (80:443)
+  tool_url: https://learn.microsoft.com/en-us/troubleshoot/windows-server/networking/portqry-command-line-port-scanner-v2
+  tool_locations:
+    - Varies
 - tool: powershell
-  tool_description:
+  tool_description: PowerShell is a powerful .NET framework based solution that is in common-use by vendors, IT administrators, developers, security personnel and cyber-threats.  Monitoring PowerShell activity and alerting on abnormal or suspicious script-blocks or commands should be a priority for all security teams.
   tool_arguments:
-    -
-  tool_url:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/powershell
+  tool_locations:
+    - C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+    - C:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell.exe
 - tool: reg
-  tool_description:
+  tool_description: reg is a Microsoft-developed utility which provides users low-level access to the various registry stores contained in Windows.  This includes the capability to add, compare, copy, delete, export, import, load, unload, query, save and restore data in the various hives.
   tool_arguments:
-    -
-  tool_url:
+    - reg add - Adds a new subkey to the registry
+    - reg export - Copies specified subkeys, entries and values into a file.
+    - reg import - Copies the contents of a file containing a reg export into the registry of the target.
+    - See the tool URL for all relevant commandlines and usage.
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/reg
+  tool_locations:
+    - C:\Windows\System32\reg.exe
+    - C:\Windows\SysWOW64\reg.exe
 - tool: regedit
-  tool_description:
+  tool_description: RegEdit is a Microsoft-developed GUI utility which aids in the querying, editing, importing and exporting of registry data on local and remote devices.
   tool_arguments:
-    -
-  tool_url:
+    - N/A
+  tool_url: https://support.microsoft.com/en-us/windows/how-to-open-registry-editor-in-windows-10-deab38e6-91d6-e0aa-4b7c-8878d9e07b11
+  tool_locations:
+    - C:\Windows\regedit.exe
+    - C:\Windows\SysWOW64\regedit.exe
 - tool: regini
-  tool_description:
+  tool_description: Regini is a Microsoft utility designed to allow registry modifications based on a command-line or script, applying changes preset in one or more text files. Keys and Permissions can be created, modified or deleted using this tool.
   tool_arguments:
-    -
-  tool_url:
+    - -m - Specify the computer name to operate on
+    - -h - Specify the registry hive to modify
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/regini
+  tool_locations:
+    - C:\Windows\System32\regini.exe
+    - C:\Windows\SysWOW64\regini.exe
 - tool: systeminfo
-  tool_description:
+  tool_description: Systeminfo is a Microsoft utility which provides information about a local or remote computers Operating System, Configuration, Security Information, Product ID and other hardware properties.
   tool_arguments:
-    -
-  tool_url:
+    - /s - Specify the name or IP of a remote computer to target.
+    - /u - Specify the domain and username for a remote connection.
+    - /p - Specify the password to use.
+    - /fo - Specify the output format (TABLE, LIST, CSV)
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/systeminfo
+  tool_locations:
+    - C:\Windows\System32\systeminfo.exe
+    - C:\Windows\SysWOW64\systeminfo.exe
 - tool: taskkill
-  tool_description:
+  tool_description: Taskkill is a Microsoft utility which can be used to terminate processes on local or remote computers
   tool_arguments:
-    -
-  tool_url:
+    - /s - Specify the name or IP address of a target computer.
+    - /fi - Applies a filter to select a set of tasks, use wildcard (*) to filter by process Status, ImageName, PID, Session, User, Window Title, etc
+    - /pid - Specify a Process ID to target
+    - /im - Specify an imagename to terminate.
+    - /f - Forcefully end the target processes, ignored for remote processes which are always forcefully ended.
+    - /t - Ends the specified process and any child processes started by it.
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/taskkill
+  tool_locations:
+    - C:\Windows\System32\taskkill.exe
+    - C:\Windows\SysWOW64\taskkill.exe
 - tool: tasklist
-  tool_description:
+  tool_description: Tasklist is a Microsoft utility that can be used to display the currently running processes on a local or remote device.
   tool_arguments:
-    -
-  tool_url:
+    - /s - Specify the name or IP address of a target computer.
+    - /m - Lists tasks with DLL modules loaded that match the given pattern.
+    - svc - Lists the service information for each process without truncation.
+    - /v - Displays verbose task information.
+    - /fi - Filter types of processes in the query.
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/tasklist
+  tool_locations:
+    - C:\Windows\System32\tasklist.exe
+    - C:\Windows\SysWOW64\tasklist.exe
 - tool: vssadmin
-  tool_description:
+  tool_description: VssAdmin is uses to view, create, delete and otherwise modify Volume Shadow Copy backups, shadow-copy writer and shadow-copy providers.
   tool_arguments:
-    -
-  tool_url:
+    - delete shadows - Deletes Volume Shadow Copies
+    - list shadows - Lists Volume Shadow Copies
+    - resize shadowstorage - Resizes maximum size for shadow copy storage.
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/vssadmin
+  tool_locations:
+    - C:\Windows\System32\vssadmin.exe
 - tool: wbadmin
-  tool_description:
+  tool_description: WBAdmin is a Microsoft utility for backing up and restoring Windows, Drive Volumes, Files, Folders and Applications, in both an adhoc or scheduled manner.
   tool_arguments:
-    -
-  tool_url:
+    - disable backup - Disables daily backups.
+    - get items - List items included in a backup.
+    - delete catalog - Deletes the backup catalog on a local computer.
+    - stop job - Stops a currently running backup or recovery operation.
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/wbadmin
+  tool_locations:
+    - C:\Windows\System32\wbadmin.exe
 - tool: wevtutil
-  tool_description:
+  tool_description: Wevtutil is a Microsoft utility for interacting with Windows Event logs, including information retrieval, installing or uninstalling event manifests and querying, exporting, archiving or clearing Event Logs.
   tool_arguments:
-    -
-  tool_url:
+    - enum-logs - Displays the names of all logs.
+    - set-log - Modifies the configuration of a specified log.
+    - query-events - Reads events from an event log
+    - clear-log - Clears events from a specified event log.
+    - Many other arguments available via tool URL.
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/wevtutil
+  tool_locations:
+    - C:\Windows\System32\wevtutil.exe
+    - C:\Windows\SysWOW64\wevtutil.exe
 - tool: whoami
-  tool_description:
+  tool_description: Whoami is a Microsoft utility which can display information about the current user, group memberships and user privileges.
   tool_arguments:
-    -
-  tool_url:
+    - /all - Displays all information in current access token
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/whoami
+  tool_locations:
+    - C:\Windows\System32\whoami.exe
+    - C:\Windows\SysWOW64\whoami.exe
 - tool: wmic
-  tool_description:
+  tool_description: WMIC is a Microsoft command-line utility which can be used to query Windows Management Instrumentation (WMI) data stores on local and remote devices.
   tool_arguments:
-    -
-  tool_url:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/wmic
+  tool_locations:
+    - C:\Windows\System32\wbem\wmic.exe
+    - C:\Windows\SysWOW64\wbem\wmic.exe
 - tool: apt-get
-  tool_description:
+  tool_description: Apt-Get is a common package management utility available on many Linux distributions.  It can be used to install, uninstall or otherwise modify application 'packages' on a device.
   tool_arguments:
-    -
-  tool_url:
+    - upgrade - Upgrade to the newest version of all currently installed packages.
+    - update - Re-synchronize package index files from configured sources.
+    - install - Install one or more packages from repositories.
+    - remove - Remove one or more currently installed packages.
+  tool_url: https://linux.die.net/man/8/apt-get
+  tool_locations:
+    - Varies
 - tool: arp
-  tool_description:
+  tool_description: Arp is a Microsoft utility which can be used to display and modify entries in the Address Resolution Protocol (ARP) cache.
+  tool_arguments:
+    - /a - Displays current arp cache tables for all interfaces
+    - /d - Deletes an entry with a specified IP address
+    - /s - Adds a static entry to the arp cache.
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/arp
+  tool_locations:
+    - Varies
+- tool: arp_linux
+  tool_description: Arp is a utility which can be used to display and modify entries in the Address Resolution Protocol (ARP) cache.
   tool_arguments:
     -
-  tool_url:
+  tool_url: N/A
+  tool_locations:
+    - Varies
 - tool: iptables
-  tool_description:
+  tool_description: IPTables is a commonly-used package for configuring packet-filter rules within the Linux kernel.  It is often used in addition to a firewall to drop unwanted external traffic.
   tool_arguments:
-    -
-  tool_url:
+    - N/A
+  tool_url: https://man7.org/linux/man-pages/man8/iptables.8.html
+  tool_locations:
+    - Varies
 - tool: mv
-  tool_description:
+  tool_description: MV is a linux utility which is used to move and/or rename files on the target device.
   tool_arguments:
-    -
-  tool_url:
+    - -f - Don't prompt before overwriting existing files.
+    - -n - Don't overwrite existing files.
+    - -i - Prompt before overwriting existing files.
+    - -v - Verbose Mode.
+  tool_url: https://man7.org/linux/man-pages/man1/mv.1.html
+  tool_locations:
+    - /usr/bin/mv
 - tool: systemctl
-  tool_description:
+  tool_description: SystemCtl is used on Linux devices to control the systemd sub-system and the service manager.  It can be used to control the state of individual services.
   tool_arguments:
-    -
-  tool_url:
+    - start [APP] - Starts all *.service files associated with the given application
+    - restart [APP.SERVICE] - Restarts a given service for an application.
+    - disable [APP.SERVICE] - Disables a given service for an application.
+  tool_url: https://man7.org/linux/man-pages/man1/systemctl.1.html
+  tool_locations:
+    - /lib/systemd/systemd
 - tool: ufw
-  tool_description:
+  tool_description: Uncomplicated Firewall (UFW) is a frontend management utility for firewall rules in Arch, Debian or Ubuntu based Linux distributions.
   tool_arguments:
-    -
-  tool_url:
+    - enable - Reloads firewall and enables it on boot.
+    - disable - Unloads the firewall and disables it on boot.
+    - show - Shows a report on the current running firewall.
+    - allow - Adds an allow-rule.
+    - allow [PORT] - Allows TCP/UDP from any address to [PORT]
+  tool_url: https://manpages.ubuntu.com/manpages/bionic/man8/ufw.8.html
+  tool_locations:
+    - Varies
 - tool: yum
-  tool_description:
+  tool_description: Yum is a package management utility for RPM-based Linux distributions.  It can be used to install, uninstall or otherwise modify application 'packages' on a device.
   tool_arguments:
-    -
-  tool_url:
+    - upgrade - Upgrade to the newest version of all currently installed packages.
+    - update - Re-synchronize package index files from configured sources.
+    - install - Install one or more packages from repositories.
+    - remove - Remove one or more currently installed packages.
+  tool_url: https://man7.org/linux/man-pages/man8/yum.8.html
+  tool_locations:
+    - Varies
 - tool: advanced ip scanner
-  tool_description:
+  tool_description: Advanced IP Scanner is a network scanning utility which is often used by both IT operators as well as cyber-threats for understanding network configurations and performing active reconnaissance operations.  If offers a GUI for ease of use as well as command-line arguments.
   tool_arguments:
-    -
-  tool_url:
+    - /r - IP Range to Scan (10.10.10.0-253)
+    - /f - File to output scan information.
+    - /v - Verbose Mode
+  tool_url: https://www.advanced-ip-scanner.com/
+  tool_locations:
+    - C:\Program Files (x86)\Advanced IP Scanner\advanced_ip_scanner.exe
+    - C:\Users\[user]\AppData\Local\Temp\Advanced IP Scanner 2\advanced_ip_scanner.exe
+    - C:\Users\[user]\AppData\Local\Programs\Advanced IP Scanner Portable\advanced_ip_scanner.exe
 - tool: lazagne
-  tool_description:
+  tool_description: LaZagne is a utility for accessing and retrieving a wide variety of credential material on a local host.  It supports a wide-variety of credential stores such as Browsers, Chat Apps, Databases, Git, Mail Clients, WiFi and internal Windows mechanisms among others.
   tool_arguments:
-    -
-  tool_url:
+    - all - Launch all contained modules
+    - browsers - Launch only the browsers module.
+    - browsers -firefox - Launch only a specific software script.
+    - -quiet - Launch in Quiet mode with no stdout.
+  tool_url: https://github.com/AlessandroZ/LaZagne
+  tool_locations:
+    - Varies
 - tool: psexec
-  tool_description:
+  tool_description: PsExec is a Microsoft developed utility which allows for the execution of processes on remote systems including full-shell establishment.  It is in common use among IT operators as well as cyber-threats due to the light-weight and portable nature.
   tool_arguments:
-    -
-  tool_url:
+    - \\[COMPUTER(S)] - The target computer(s) - using \\* indicates to run the command on all computers in the current domain.
+    - -c - Copy the specified executable to the target
+    - -d - Don't wait for the process to terminate
+    - -i - Allow interaction with the desktop of the specified session
+    - -s - Run the remote process as the SYSTEM account.
+  tool_url: https://learn.microsoft.com/en-us/sysinternals/downloads/psexec
+  tool_locations:
+    - C:\Program Files\WindowsApps\Microsoft.SysinternalsSuite_[Version]\Tools\psexec.exe (Windows Store Install)
+    - Varies
+- tool: procdump
+  tool_description: ProcDump is a Microsoft utility which can be used for monitoring an application as well as generating process memory dump files.
+  tool_arguments:
+    - -r - Dump using a cloned process
+    - -ma - Write a dump file with all process memory
+    - -mm - Write a mini dump file (default)
+  tool_url: https://learn.microsoft.com/en-us/sysinternals/downloads/procdump
+  tool_locations:
+    - C:\Program Files\WindowsApps\Microsoft.SysinternalsSuite_[Version]\Tools\procdump.exe (Windows Store Install)
+    - Varies
+- tool: pslist
+  tool_description: PsList is a Microsoft utility which can list running processes on both local and remote devices, including filter capability, process trees, thread and memory details, etc.
+  tool_arguments:
+    - -x - Show processes, memory information and threads.
+    - \\[COMPUTER] - Specify a target computer
+    - -e - Match a given process name exactly
+  tool_url: https://learn.microsoft.com/en-us/sysinternals/downloads/pslist
+  tool_locations:
+    - C:\Program Files\WindowsApps\Microsoft.SysinternalsSuite_[Version]\Tools\PsList.exe (Windows Store Install)
+    - Varies
+- tool: winrar
+  tool_description: WinRar is a windows utility designed to create, manage and control archive files, supporting many different formats and features as well as a GUI and command-line version.
+  tool_arguments:
+    - -a - Add files to an archive
+    - -k - Lock an Archive
+  tool_url: https://www.rarlab.com/
+  tool_locations:
+    - C:\Program Files\WinRAR\rar.exe
+    - Varies
+- tool: atbroker
+  tool_description: ATBroker is used to help install and start Assistive Technologies (AT), software which can aid computer usage for individuals who may be impaired or disabled.
+  tool_arguments:
+    - start - Start a specified Assistive Technology
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\System32\Atbroker.exe
+    - C:\Windows\SysWOW64\Atbroker.exe
+- tool: bitsadmin
+  tool_description: Background Intelligent Transfer Services (BITS) Administration is a utility which allows for the creation, modification and deletion of BITS jobs as required.  It is often used for application update services but can also be abused by cyber-threats for tool transfer or execution.
+  tool_arguments:
+    - /create - Create a job with the specified name
+    - /addfile - Add files to the created job
+    - /resume - Resume the specified job.
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/bitsadmin
+  tool_locations:
+    - C:\Windows\System32\bitsadmin.exe
+    - C:\Windows\SysWOW64\bitsadmin.exe

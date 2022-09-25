@@ -1,8 +1,5 @@
 - command: 'certutil -urlcache -f [URL] [DestinationPath]'
   description: 'CertUtil is often abused by cyber threats tot download remote files over the Internet.'
-  executable:
-    - 'C:\Windows\System32\certutil.exe'
-    - 'C:\Windows\SysWOW64\certutil.exe'
   killchain:
     - Delivery
   mitre:
@@ -21,9 +18,6 @@
       - N/A
 - command: 'certutil -urlcache -split -f [URL] [DestinationPath]'
   description: 'CertUtil is often abused by cyber threats tot download remote files over the Internet.'
-  executable:
-    - 'C:\Windows\System32\certutil.exe'
-    - 'C:\Windows\SysWOW64\certutil.exe'
   killchain:
     - Delivery
   mitre:
@@ -42,9 +36,6 @@
       - N/A
 - command: 'certutil -verifyctl -split -f [URL]'
   description: 'CertUtil is often abused by cyber threats tot download remote files over the Internet.'
-  executable:
-    - 'C:\Windows\System32\certutil.exe'
-    - 'C:\Windows\SysWOW64\certutil.exe'
   killchain:
     - Delivery
   mitre:
@@ -63,9 +54,6 @@
       - N/A
 - command: 'certutil -addstore -f -user [certificatestorename] [file]'
   description: "CertUtil is often abused by cyber threats to add new certificates on the targeted host."
-  executable:
-    - 'C:\Windows\System32\certutil.exe'
-    - 'C:\Windows\SysWOW64\certutil.exe'
   killchain:
     - Actions on Objectives
   mitre:
@@ -84,9 +72,6 @@
       - N/A
 - command: 'certutil -decode -f [EncodedFile] [DestinationPath]'
   description: "CertUtil is often abused by cyber threats to decode Base64 data or files."
-  executable:
-    - 'C:\Windows\System32\certutil.exe'
-    - 'C:\Windows\SysWOW64\certutil.exe'
   killchain:
     - Actions on Objectives
   mitre:
@@ -105,9 +90,6 @@
       - 'https://unit42.paloaltonetworks.com/unit42-oopsie-oilrig-uses-threedollars-deliver-new-trojan'
 - command: 'certutil -encode [Input] [Output]'
   description: "CertUtil is often abused by cyber threats to encode Base64 data or files."
-  executable:
-    - 'C:\Windows\System32\certutil.exe'
-    - 'C:\Windows\SysWOW64\certutil.exe'
   killchain:
     - Actions on Objectives
   mitre:

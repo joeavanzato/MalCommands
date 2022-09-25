@@ -1,10 +1,5 @@
 - command: net user
   description: 'View details about user accounts on the current machine.'
-  executable:
-    - C:\Windows\System32\net.exe
-    - C:\Windows\System32\net1.exe
-    - C:\Windows\SysWOW64\net.exe
-    - C:\Windows\SysWOW64\net1.exe
   killchain:
     - Actions on Objectives
   mitre:
@@ -25,11 +20,6 @@
       - N/A
 - command: net user [username] [password] /add
   description: 'Creates a new user with the given username and password.'
-  executable:
-    - C:\Windows\System32\net.exe
-    - C:\Windows\System32\net1.exe
-    - C:\Windows\SysWOW64\net.exe
-    - C:\Windows\SysWOW64\net1.exe
   killchain:
     - Actions on Objectives
   mitre:
@@ -55,11 +45,6 @@
       - https://www.intezer.com/blog/cloud-security/attackers-abusing-legitimate-cloud-monitoring-tools-to-conduct-cyber-attacks/
 - command: net group "Domain Admins" /domain
   description: 'View details about a specific Active Directory Group to identify critical users.'
-  executable:
-    - C:\Windows\System32\net.exe
-    - C:\Windows\System32\net1.exe
-    - C:\Windows\SysWOW64\net.exe
-    - C:\Windows\SysWOW64\net1.exe
   killchain:
     - Actions on Objectives
   mitre:
@@ -82,11 +67,6 @@
       - http://researchcenter.paloaltonetworks.com/2016/05/the-oilrig-campaign-attacks-on-saudi-arabian-organizations-deliver-helminth-backdoor/
 - command: net group "Enterprise Admins" /domain
   description: 'View details about a specific Active Directory Group to identify critical users.'
-  executable:
-    - C:\Windows\System32\net.exe
-    - C:\Windows\System32\net1.exe
-    - C:\Windows\SysWOW64\net.exe
-    - C:\Windows\SysWOW64\net1.exe
   killchain:
     - Actions on Objectives
   mitre:
@@ -107,11 +87,6 @@
       - N/A
 - command: net group "Domain Users" /domain
   description: 'Retrieve a list of all current users in the active domain.  Often used to enumerate users in an enterprise environment.'
-  executable:
-    - C:\Windows\System32\net.exe
-    - C:\Windows\System32\net1.exe
-    - C:\Windows\SysWOW64\net.exe
-    - C:\Windows\SysWOW64\net1.exe
   killchain:
     - Actions on Objectives
   mitre:
@@ -132,11 +107,6 @@
       - N/A
 - command: net group "Domain Computers" /domain
   description: 'Retrieve a list of all computer accounts in the active domain.  Often used to enumerate devices in an enterprise environment.'
-  executable:
-    - C:\Windows\System32\net.exe
-    - C:\Windows\System32\net1.exe
-    - C:\Windows\SysWOW64\net.exe
-    - C:\Windows\SysWOW64\net1.exe
   killchain:
     - Actions on Objectives
   mitre:
@@ -157,11 +127,6 @@
       - N/A
 - command: net start [Service]
   description: 'Start a local Windows Service - often used to install persistence mechanisms or other forms of malicious code.'
-  executable:
-    - C:\Windows\System32\net.exe
-    - C:\Windows\System32\net1.exe
-    - C:\Windows\SysWOW64\net.exe
-    - C:\Windows\SysWOW64\net1.exe
   killchain:
     - Installation
   mitre:
@@ -182,11 +147,6 @@
       - N/A
 - command: net stop [Service]
   description: 'Stop a local Windows Service - often used to disable or impair backup, antivirus or remote management functionality.'
-  executable:
-    - C:\Windows\System32\net.exe
-    - C:\Windows\System32\net1.exe
-    - C:\Windows\SysWOW64\net.exe
-    - C:\Windows\SysWOW64\net1.exe
   killchain:
     - Actions on Objectives
   mitre:
@@ -207,11 +167,6 @@
       - N/A
 - command: net share
   description: 'Display details on all current local shares, including the actual directory being shared.  Often used by threat actors to enumerate host-based information.'
-  executable:
-    - C:\Windows\System32\net.exe
-    - C:\Windows\System32\net1.exe
-    - C:\Windows\SysWOW64\net.exe
-    - C:\Windows\SysWOW64\net1.exe
   killchain:
     - Actions on Objectives
   mitre:
@@ -232,11 +187,6 @@
       - N/A
 - command: net use \\[SERVER\SHARE] /user:[USERNAME] [PASSWORD]
   description: Used to map a remote share to the local computer - often abused by threat actors for reconnaissance of remote shares.
-  executable:
-    - C:\Windows\System32\net.exe
-    - C:\Windows\System32\net1.exe
-    - C:\Windows\SysWOW64\net.exe
-    - C:\Windows\SysWOW64\net1.exe
   killchain:
     - Actions on Objectives
   mitre:
@@ -259,11 +209,6 @@
       - N/A
 - command: net config workstation
   description: Used to enumerate details about the current workstation and active domain.
-  executable:
-    - C:\Windows\System32\net.exe
-    - C:\Windows\System32\net1.exe
-    - C:\Windows\SysWOW64\net.exe
-    - C:\Windows\SysWOW64\net1.exe
   killchain:
     - Actions on Objectives
   mitre:
@@ -284,11 +229,6 @@
       - N/A
 - command: net accounts
   description: Used to gather information about domain user lockout and password policies.
-  executable:
-    - C:\Windows\System32\net.exe
-    - C:\Windows\System32\net1.exe
-    - C:\Windows\SysWOW64\net.exe
-    - C:\Windows\SysWOW64\net1.exe
   killchain:
     - Actions on Objectives
   mitre:
@@ -309,11 +249,6 @@
       - N/A
 - command: net time /domain
   description: Used to gather information about the current system time for the active Domain Controller.
-  executable:
-    - C:\Windows\System32\net.exe
-    - C:\Windows\System32\net1.exe
-    - C:\Windows\SysWOW64\net.exe
-    - C:\Windows\SysWOW64\net1.exe
   killchain:
     - Actions on Objectives
   mitre:
@@ -334,11 +269,6 @@
       - N/A
 - command: net localgroup Administrators
   description: Used to gather information about local administrators on the current machine.
-  executable:
-    - C:\Windows\System32\net.exe
-    - C:\Windows\System32\net1.exe
-    - C:\Windows\SysWOW64\net.exe
-    - C:\Windows\SysWOW64\net1.exe
   killchain:
     - Actions on Objectives
   mitre:
@@ -359,11 +289,6 @@
       - N/A
 - command: net localgroup Administrators [USER] /add
   description: Used to add a new local administrator to the current machine.
-  executable:
-    - C:\Windows\System32\net.exe
-    - C:\Windows\System32\net1.exe
-    - C:\Windows\SysWOW64\net.exe
-    - C:\Windows\SysWOW64\net1.exe
   killchain:
     - Actions on Objectives
   mitre:
@@ -384,11 +309,6 @@
       - N/A
 - command: net view /all /domain
   description: Used to gather information about domains, computers or resources in the current domain.
-  executable:
-    - C:\Windows\System32\net.exe
-    - C:\Windows\System32\net1.exe
-    - C:\Windows\SysWOW64\net.exe
-    - C:\Windows\SysWOW64\net1.exe
   killchain:
     - Actions on Objectives
   mitre:
