@@ -10,7 +10,9 @@
   references:
     - https://threatpost.com/six-malicious-linux-shell-scripts-how-to-stop-them/168127/
   risk: Low
+  risk_reason: This is an extremely common activity with little negative impact other than recon purposes.
   fidelity: Low
+  fidelity_reason: It would be extremely difficult to alert on this type of activity with a high fidelity - perhaps alerting just on the rename of system files.
   tool: mv
   threatactors:
     N/A:

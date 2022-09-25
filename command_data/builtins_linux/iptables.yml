@@ -1,5 +1,5 @@
 - command: iptables -F
-  description: Cyber threats may try to clear iptables rules in attempts to ease or relax policies surrounding network communications.
+  description: Use iptables to delete all chains in the filter table, equivalent to deleting all packet filtering rules one by one.
   killchain:
     - Actions on Objectives
   mitre:
@@ -10,7 +10,9 @@
   references:
     - https://threatpost.com/six-malicious-linux-shell-scripts-how-to-stop-them/168127/
   risk: High
+  risk_reason: If using iptables for packet filtering in an organization, this command will typically only be used by network engineers and should be regarded as suspicious for most users.
   fidelity: High
+  fidelity_reason: This is typically a rare command for most users.
   tool: iptables
   threatactors:
     N/A:

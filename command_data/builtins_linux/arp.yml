@@ -10,7 +10,9 @@
   references:
     - https://www.uptycs.com/blog/linux-commands-and-utilities-commonly-used-by-attackers
   risk: Low
+  risk_reason: This is an extremely common activity with little negative impact other than recon purposes.
   fidelity: Low
+  fidelity_reason: It would be extremely difficult to alert on this type of activity with a high fidelity.
   tool: arp_linux
   threatactors:
     N/A:

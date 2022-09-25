@@ -11,7 +11,9 @@
     - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/AuditPol'
     - 'https://www.microsoft.com/security/blog/2021/01/20/deep-dive-into-the-solorigate-second-stage-activation-from-sunburst-to-teardrop-and-raindrop/'
   risk: Medium
+  risk_reason: Disabling 'Detailed Tracking' is not typically done by IT operators and can lead to major visibility impacts for blue-teams.
   fidelity: High
+  fidelity_reason: Seeing commandline activity such as the above is typically a very rare event in most organizations.
   tool: auditpol
   threatactors:
     N/A:
@@ -29,7 +31,9 @@
     - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/AuditPol'
     - 'https://www.microsoft.com/security/blog/2021/01/20/deep-dive-into-the-solorigate-second-stage-activation-from-sunburst-to-teardrop-and-raindrop/'
   risk: Medium
+  risk_reason: Removing the audit policy for all users is not typically done by IT operators and can lead to major visibility impacts for blue-teams.
   fidelity: High
+  fidelity_reason: Seeing commandline activity such as the above is typically a very rare event in most organizations.
   tool: auditpol
   threatactors:
     N/A:
@@ -47,7 +51,9 @@
     - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/AuditPol'
     - 'https://www.microsoft.com/security/blog/2021/01/20/deep-dive-into-the-solorigate-second-stage-activation-from-sunburst-to-teardrop-and-raindrop/'
   risk: Medium
+  risk_reason: Restoring the audit policy from file is not commonly performed, if at all, depending on the organization.  An incorrect restore or modifications by a cyber-threat can lead to major visibility issues if abused.
   fidelity: High
+  fidelity_reason: Seeing commandline activity such as the above is typically a very rare event in most organizations.
   tool: auditpol
   threatactors:
     N/A:
@@ -65,7 +71,9 @@
     - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/AuditPol'
     - 'https://www.microsoft.com/security/blog/2021/01/20/deep-dive-into-the-solorigate-second-stage-activation-from-sunburst-to-teardrop-and-raindrop/'
   risk: Medium
+  risk_reason: Clearing the audit policy for all users is not typically done by IT operators and can lead to major visibility impacts for blue-teams.
   fidelity: High
+  fidelity_reason: Seeing commandline activity such as the above is typically a very rare event in most organizations.
   tool: auditpol
   threatactors:
     N/A:

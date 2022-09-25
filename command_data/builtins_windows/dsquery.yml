@@ -1,107 +1,119 @@
-- command: 'dsquery subnet -limit 0'
-  description: 'DSQuery is a Windows utility for querying Active Directory - threat actors often abuse this to discover information about the enterprise domain.'
+- command: dsquery subnet -limit 0
+  description: Utilize DSQuery to discover subnet-related information contained in Active Directory, granting high-level network knowledge.
   killchain:
-    - 'Actions on Objectives'
+    - Actions on Objectives
   mitre:
     Discovery:
       - T1016
   os:
     - windows
   references:
-    - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Dsquery'
-    - 'https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732952(v=ws.11)'
+    - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Dsquery
+    - https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732952(v=ws.11)
   risk: Low
-  fidelity: Low
+  risk_reason: On it's own this command doesn't have immediate negative consequences but it's use should be audited if possible to detect potential threats.
+  fidelity: Medium
+  fidelity_reason: Depending on the organization, it's possible that this is an infrequently used command and it's use may be regularly audited.
   tool: dsquery
   threatactors:
     N/A:
       - N/A
-- command: 'dsquery computer -limit 0'
-  description: 'DSQuery is a Windows utility for querying Active Directory - threat actors often abuse this to discover information about the enterprise domain.'
+- command: dsquery computer -limit 0
+  description: Utilize DSQuery to retrieve information about computer account objects in Active Directory.
   killchain:
-    - 'Actions on Objectives'
+    - Actions on Objectives
   mitre:
     Discovery:
       - T1018
   os:
     - windows
   references:
-    - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Dsquery'
-    - 'https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732952(v=ws.11)'
+    - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Dsquery
+    - https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732952(v=ws.11)
   risk: Low
-  fidelity: Low
+  risk_reason: On it's own this command doesn't have immediate negative consequences but it's use should be audited if possible to detect potential threats.
+  fidelity: Medium
+  fidelity_reason: Depending on the organization, it's possible that this is an infrequently used command and it's use may be regularly audited.
   tool: dsquery
   threatactors:
     N/A:
       - N/A
-- command: 'dsquery user -limit 0'
-  description: 'DSQuery is a Windows utility for querying Active Directory - threat actors often abuse this to discover information about the enterprise domain.'
+- command: dsquery user -limit 0
+  description: Utilize DSQuery to retrieve information about users in Active Directory.
   killchain:
-    - 'Actions on Objectives'
+    - Actions on Objectives
   mitre:
     Discovery:
       - T1087.002
   os:
     - windows
   references:
-    - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Dsquery'
-    - 'https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732952(v=ws.11)'
+    - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Dsquery
+    - https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732952(v=ws.11)
   risk: Low
-  fidelity: Low
+  risk_reason: On it's own this command doesn't have immediate negative consequences but it's use should be audited if possible to detect potential threats.
+  fidelity: Medium
+  fidelity_reason: Depending on the organization, it's possible that this is an infrequently used command and it's use may be regularly audited.
   tool: dsquery
   threatactors:
     N/A:
       - N/A
-- command: 'dsquery group -limit 0'
-  description: 'DSQuery is a Windows utility for querying Active Directory - threat actors often abuse this to discover information about the enterprise domain.'
+- command: dsquery group -limit 0
+  description: Utilize DSQuery to retrieve information about groups in Active Directory.
   killchain:
-    - 'Actions on Objectives'
+    - Actions on Objectives
   mitre:
     Discovery:
       - T1069.002
   os:
     - windows
   references:
-    - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Dsquery'
-    - 'https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732952(v=ws.11)'
+    - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Dsquery
+    - https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732952(v=ws.11)
   risk: Low
-  fidelity: Low
+  risk_reason: On it's own this command doesn't have immediate negative consequences but it's use should be audited if possible to detect potential threats.
+  fidelity: Medium
+  fidelity_reason: Depending on the organization, it's possible that this is an infrequently used command and it's use may be regularly audited.
   tool: dsquery
   threatactors:
     N/A:
       - N/A
-- command: 'dsquery * -filter "(objectClass=trustedDomain)" -attr *'
-  description: 'DSQuery is a Windows utility for querying Active Directory - threat actors often abuse this to discover information about the enterprise domain.'
+- command: dsquery * -filter "(objectClass=trustedDomain)" -attr *
+  description: Utilize DSQuery to retrieve information about any objects matching the given LDAP filters with all available attributes from Active Directory.
   killchain:
-    - 'Actions on Objectives'
+    - Actions on Objectives
   mitre:
     Discovery:
       - T1482
   os:
     - windows
   references:
-    - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Dsquery'
-    - 'https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732952(v=ws.11)'
+    - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Dsquery
+    - https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732952(v=ws.11)
   risk: Low
-  fidelity: Low
+  risk_reason: On it's own this command doesn't have immediate negative consequences but it's use should be audited if possible to detect potential threats.
+  fidelity: Medium
+  fidelity_reason: Depending on the organization, it's possible that this is an infrequently used command and it's use may be regularly audited.
   tool: dsquery
   threatactors:
     N/A:
       - N/A
-- command: 'dsquery group -name "Domain Admins"'
-  description: 'DSQuery is a Windows utility for querying Active Directory - threat actors often abuse this to discover information about the enterprise domain.'
+- command: dsquery group -name "Domain Admins"
+  description: Utilize DSQuery to retrieve information about a specific group in Active Directory.
   killchain:
-    - 'Actions on Objectives'
+    - Actions on Objectives
   mitre:
     Discovery:
       - T1069.002
   os:
     - windows
   references:
-    - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Dsquery'
-    - 'https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732952(v=ws.11)'
+    - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Dsquery
+    - https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732952(v=ws.11)
   risk: Low
-  fidelity: High
+  risk_reason: On it's own this command doesn't have immediate negative consequences but it's use should be audited if possible to detect potential threats.
+  fidelity: Medium
+  fidelity_reason: Depending on the organization, it's possible that this is an infrequently used command and it's use may be regularly audited.
   tool: dsquery
   threatactors:
     N/A:

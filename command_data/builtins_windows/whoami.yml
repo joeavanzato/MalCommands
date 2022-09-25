@@ -11,7 +11,9 @@
   references:
     - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/whoami
   risk: Low
-  fidelity: Low
+  risk_reason: This command doesn't have any immediate consequences but is often seen in the early stages of a compromise.
+  fidelity: Medium
+  fidelity_reason: Use of this command is not typical amongst most users in any type of regular activity - review this event in context with other potential 'Discovery' related tactics.
   tool: whoami
   threatactors:
     G0049:

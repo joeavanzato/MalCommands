@@ -19,8 +19,10 @@
   references:
     - https://attack.mitre.org/software/S0349/
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Other/LaZagne
-  risk: High
+  risk: Critical
+  risk_reason: The observation of 'lazagne' in a commandline should raise immediate red-flags - the PE file is typically renamed - however the commandline arguments often remain the same.
   fidelity: High
+  fidelity_reason: Observing 'lazagne' with corresponding arguments in a commandline will typically only occur when a threat-actor is hands-on-keyboard.
   tool: lazagne
   threatactors:
     N/A:

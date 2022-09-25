@@ -16,13 +16,15 @@
     - https://kwcsec.gitbook.io/the-red-team-handbook/techniques/execution/one-liners
     - https://lolbas-project.github.io/lolbas/Binaries/Wmic/
   risk: High
-  fidelity: High
+  risk_reason: The use of wmic to retrieve a remote file, while possible for legitimate reasons, should be viewed as highly suspicious.
+  fidelity: Medium
+  fidelity_reason: This is a particularly uncommon way for IT Operators to download remote files and should be audited in context with other alerts or events.
   tool: wmic
   threatactors:
     N/A:
       - N/A
 - command: wmic.exe process call create "c:\ads\file.txt:program.exe"
-  description: Use wmic to execute a PE embedded in the alternate data stream of another file.
+  description: Use wmic to execute a PE embedded in the Alternate Data Stream of another file.
   killchain:
     - Actions on Objectives
   mitre:
@@ -36,7 +38,9 @@
   references:
     - https://lolbas-project.github.io/lolbas/Binaries/Wmic/
   risk: High
+  risk_reason: The use of wmic to launch a process from an ADS is extremely uncommon and highly suspicious.
   fidelity: High
+  fidelity_reason: Launching processes from ADS is an extremely suspicious activity and rare or not typically observed in IT operations.
   tool: wmic
   threatactors:
     N/A:
@@ -59,13 +63,15 @@
   references:
     - https://lolbas-project.github.io/lolbas/Binaries/Wmic/
   risk: High
+  risk_reason: Attaching files to debuggers is a high-risk activity that should only be performed by developers actively debugging their own software.
   fidelity: High
+  fidelity_reason: This is typically an uncommon activity - developers who actively debug software should potentially have different allow-listing in place to remove false positives.
   tool: wmic
   threatactors:
     N/A:
       - N/A
 - command: wmic.exe /node:"10.10.10.10" process call create "evil.exe"
-  description: Execute a binary on a remote host via wmic.
+  description: Execute binary 'evil.exe' on remote host '10.10.10.10' via wmic remote process creation..
   killchain:
     - Actions on Objectives
   mitre:
@@ -78,7 +84,9 @@
   references:
     - https://lolbas-project.github.io/lolbas/Binaries/Wmic/
   risk: High
+  risk_reason: Executing payloads on remote hosts in this manner is a suspicious activity and uncommon in IT operations - although possible depending on how the organization utilizes WMI for remote operations.
   fidelity: High
+  fidelity_reason: This type of activity should be limited to non-IT personnel to help reduce the false positive rate but should be rare for the majority of users.
   tool: wmic
   threatactors:
     N/A:
@@ -97,7 +105,9 @@
   references:
     - https://lolbas-project.github.io/lolbas/Binaries/Wmic/
   risk: High
+  risk_reason: Creating new scheduled tasks on remote devices, while a common practice, is typically done in ways other than using wmic.
   fidelity: High
+  fidelity_reason: This should be a rare activity for most users, even IT personnel.
   tool: wmic
   threatactors:
     N/A:
@@ -118,13 +128,15 @@
   references:
     - https://lolbas-project.github.io/lolbas/Binaries/Wmic/
   risk: High
+  risk_reason: Any activity involving NTDS.dit should be treated as extremely suspicious until determined otherwise due to the potential for large-scale Credential Access.
   fidelity: High
+  fidelity_reason: This specific type of activity, or any involving NTDS.dit on the commandline, are typically extremely rare.
   tool: wmic
   threatactors:
     N/A:
       - N/A
 - command: wmic.exe process get brief /format:"\\127.0.0.1\c$\Tools\pocremote.xsl"
-  description: Execute JScript / VBScript embedded in a remote XSL stylesheet.
+  description: Execute JScript / VBScript embedded in an XSL stylesheet.
   killchain:
     - Actions on Objectives
   mitre:
@@ -139,7 +151,9 @@
   references:
     - https://lolbas-project.github.io/lolbas/Binaries/Wmic/
   risk: High
+  risk_reason: Using WMIC to launch an XSL file in this manner is a rare activity that should be treated as suspicious due to the potential for abuse.
   fidelity: High
+  fidelity_reason: This type of activity is extremely rare for most users in typical organizations.
   tool: wmic
   threatactors:
     N/A:

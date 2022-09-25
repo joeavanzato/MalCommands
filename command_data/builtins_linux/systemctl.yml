@@ -9,8 +9,10 @@
     - Linux
   references:
     - https://threatpost.com/six-malicious-linux-shell-scripts-how-to-stop-them/168127/
-  risk: Medium
-  fidelity: Medium
+  risk: Low
+  risk_reason: Using systemctl to stop running services on it's own is a common activity - perhaps monitored only for security-related services.
+  fidelity: Low
+  fidelity_reason: This type of activity is fairly common in most organizations.
   tool: systemctl
   threatactors:
     N/A:
@@ -26,8 +28,10 @@
     - Linux
   references:
     - https://threatpost.com/six-malicious-linux-shell-scripts-how-to-stop-them/168127/
-  risk: Medium
-  fidelity: Medium
+  risk: Low
+  risk_reason: Using systemctl to disable services on it's own is a common activity - perhaps monitored only for security-related services.
+  fidelity: Low
+  fidelity_reason: This type of activity is fairly common in most organizations.
   tool: systemctl
   threatactors:
     N/A:

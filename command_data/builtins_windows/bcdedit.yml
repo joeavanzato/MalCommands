@@ -10,7 +10,9 @@
   references:
     - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Bcdedit'
   risk: Medium
+  risk_reason: Setting boot policy to ignore all failures can lead to potential issues on start-up and could be covering up potential errors arising from malicious modifications.
   fidelity: Medium
+  fidelity_reason: This type of commandline activity is typically very rare in most organizations.
   tool: bcdedit
   threatactors:
     N/A:
@@ -27,7 +29,9 @@
   references:
     - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Bcdedit'
   risk: Medium
+  risk_reason: Disabling recovery options in boot policy can lead to potential issues on start-up and could be preparing for a drive impact event (encryption).
   fidelity: Medium
+  fidelity_reason: This type of commandline activity is typically very rare in most organizations.
   tool: bcdedit
   threatactors:
     N/A:
@@ -44,7 +48,9 @@
   references:
     - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Bcdedit'
   risk: Medium
+  risk_reason: Disabling safeboot options in boot policy can lead to potential issues on start-up and could be preparing for additional malicious activity.
   fidelity: Medium
+  fidelity_reason: This type of commandline activity is typically very rare in most organizations.
   tool: bcdedit
   threatactors:
     N/A:
@@ -61,7 +67,9 @@
   references:
     - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Bcdedit'
   risk: Medium
+  risk_reason: Disabling safeboot options in boot policy can lead to potential issues on start-up and could be preparing for additional malicious activity.
   fidelity: Medium
+  fidelity_reason: This type of commandline activity is typically very rare in most organizations.
   tool: bcdedit
   threatactors:
     N/A:
@@ -78,7 +86,9 @@
   references:
     - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Bcdedit'
   risk: Medium
+  risk_reason: Disabling safeboot options in boot policy can lead to potential issues on start-up and could be preparing for additional malicious activity.
   fidelity: Medium
+  fidelity_reason: This type of commandline activity is typically very rare in most organizations.
   tool: bcdedit
   threatactors:
     N/A:
@@ -95,7 +105,9 @@
   references:
     - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Bcdedit'
   risk: Medium
+  risk_reason: Disabling safeboot options in boot policy can lead to potential issues on start-up and could be preparing for additional malicious activity.
   fidelity: Medium
+  fidelity_reason: This type of commandline activity is typically very rare in most organizations.
   tool: bcdedit
   threatactors:
     N/A:
@@ -112,7 +124,9 @@
   references:
     - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Bcdedit'
   risk: Medium
+  risk_reason: Disabling advanced options in boot policy can lead to potential issues on start-up and could be preparing for additional malicious activity.
   fidelity: Medium
+  fidelity_reason: This type of commandline activity is typically very rare in most organizations.
   tool: bcdedit
   threatactors:
     N/A:

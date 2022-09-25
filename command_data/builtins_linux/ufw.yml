@@ -10,7 +10,9 @@
   references:
     - https://threatpost.com/six-malicious-linux-shell-scripts-how-to-stop-them/168127/
   risk: High
+  risk_reason: If using UFW, disabling the firewall is likely a highly suspicious activity that only occurs for certain troubleshooting.
   fidelity: High
+  fidelity_reason: This alert on it's own is typically rare for most users to execute.
   tool: ufw
   threatactors:
     N/A:

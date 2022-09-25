@@ -10,7 +10,9 @@
   references:
     - https://threatpost.com/six-malicious-linux-shell-scripts-how-to-stop-them/168127/
   risk: Low
+  risk_reason: This is an extremely common activity - filtering for the removal of security products specifically could raise the level of suspicion as these are not typically meant to be removed.
   fidelity: Low
+  fidelity_reason: It is nearly impossible to alert on this type of activity unless you are filtering for very specific packages such as security software that is deployed in the domain.
   tool: yum
   threatactors:
     N/A:
