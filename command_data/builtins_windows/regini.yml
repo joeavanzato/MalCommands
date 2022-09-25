@@ -15,7 +15,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Regini
     - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/regini
   risk: High
+  risk_reason: RegIni is infrequently used in this manner other than potential server OS backups or initial configurations and this action should be scrutinized.
   fidelity: High
+  fidelity_reason:  This is typically an uncommonly used activity, occurring normally in limited situations.
+  tool: regini
   threatactors:
     N/A:
       - N/A
@@ -36,7 +39,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Regini
     - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/regini
   risk: High
+  risk_reason: RegIni is infrequently used in this manner other than potential server OS backups or initial configurations and this action should be scrutinized.
   fidelity: High
+  fidelity_reason:  This is typically an uncommonly used activity, occurring normally in limited situations.
+  tool: regini
   threatactors:
     N/A:
       - N/A

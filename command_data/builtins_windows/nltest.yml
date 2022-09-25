@@ -13,8 +13,11 @@
   references:
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Nltest
     - https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731935(v=ws.11)
-  risk: Low
+  risk: Medium
+  risk_reason: "Viewing a domain trust is an uncommon recon action which can lead an attacker to more valuable targets or attack paths."
   fidelity: High
+  fidelity_reason: "This type of command is typically very uncommon for IT operators to execute."
+  tool: nltest
   threatactors:
     N/A:
       - N/A
@@ -33,8 +36,11 @@
   references:
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Nltest
     - https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731935(v=ws.11)
-  risk: Low
+  risk: Medium
+  risk_reason: "Listing all Domain Controllers can provide an attacker knowledge of the infrastructure which can aid additional attack paths."
   fidelity: High
+  fidelity_reason: "This type of command is typically very uncommon for IT operators to execute."
+  tool: nltest
   threatactors:
     N/A:
       - N/A
@@ -53,8 +59,11 @@
   references:
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Nltest
     - https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731935(v=ws.11)
-  risk: Low
+  risk: Medium
+  risk_reason: "Listing all Domain Controllers can provide an attacker knowledge of the infrastructure which can aid additional attack paths."
   fidelity: High
+  fidelity_reason: "This type of command is typically very uncommon for IT operators to execute."
+  tool: nltest
   threatactors:
     N/A:
       - N/A

@@ -14,7 +14,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Regedit
     - https://ss64.com/nt/regedit.html
   risk: High
+  risk_reason: While regedit is a common utility, using the export function to capture an entire hive or large tree is a fairly uncommon operation.
   fidelity: High
+  fidelity_reason: In most organizations this is likely an extremely uncommon activity.
+  tool: regedit
   threatactors:
     N/A:
       - N/A
@@ -34,7 +37,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Regedit
     - https://ss64.com/nt/regedit.html
   risk: High
+  risk_reason: While regedit is a common utility, using the import function to replace an entire hive or large tree is a fairly uncommon operation.
   fidelity: High
+  fidelity_reason: In most organizations this is likely an extremely uncommon activity.
+  tool: regedit
   threatactors:
     N/A:
       - N/A

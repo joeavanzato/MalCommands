@@ -15,7 +15,9 @@
   references:
     - https://kwcsec.gitbook.io/the-red-team-handbook/techniques/execution/one-liners
   risk: High
+  risk_reason: Downloading and executing a remote PowerShell script straight to memory is sometimes performed by IT operators but is typically very abnormal for most users.
   fidelity: High
+  fidelity_reason: This is an activity that is typically very abnormal for the majority of users and should always be investigated.
   tool: PowerShell
   threatactors:
     N/A:
@@ -36,7 +38,9 @@
   references:
     - https://gist.github.com/MHaggis/df2de612615ef6bd01ea936cc8351ab2
   risk: High
+  risk_reason:
   fidelity: High
+  fidelity_reason:
   tool: PowerShell
   threatactors:
     N/A:

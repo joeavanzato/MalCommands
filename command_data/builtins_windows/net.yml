@@ -16,7 +16,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Net
     - https://attack.mitre.org/software/S0039/
   risk: Low
+  risk_reason: NET is commonly used to view details about a local or remote user, especially when troubleshooting permission or access issues.
   fidelity: Low
+  fidelity_reason: Alerting on general NET commands will typically yield a high-false positive rate due to normal IT operations.
+  tool: net
   threatactors:
     N/A:
       - N/A
@@ -39,7 +42,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Net
     - https://attack.mitre.org/software/S0039/
   risk: Low
+  risk_reason: NET is commonly used to view details about a local or remote user, especially when troubleshooting permission or access issues.
   fidelity: Low
+  fidelity_reason: Alerting on general NET commands will typically yield a high-false positive rate due to normal IT operations.
+  tool: net
   threatactors:
     G0094:
       - https://www.boho.or.kr/krcert/publicationView.do?bulletin_writing_sequence=35936
@@ -65,7 +71,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Net
     - https://attack.mitre.org/software/S0039/
   risk: Low
+  risk_reason: NET is commonly used to view details about a local or remote user, especially when troubleshooting permission or access issues.
   fidelity: High
+  fidelity_reason: Querying the membership of critical groups is an extremely common cyber-threat operation and not very likely for normal users to perform frequently - this should be audited.
+  tool: net
   threatactors:
     G0010:
       - https://www.welivesecurity.com/wp-content/uploads/2020/05/ESET_Turla_ComRAT.pdf
@@ -89,7 +98,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Net
     - https://attack.mitre.org/software/S0039/
   risk: Low
+  risk_reason: NET is commonly used to view details about a local or remote user, especially when troubleshooting permission or access issues.
   fidelity: High
+  fidelity_reason: Querying the membership of critical groups is an extremely common cyber-threat operation and not very likely for normal users to perform frequently - this should be audited.
+  tool: net
   threatactors:
     N/A:
       - N/A
@@ -111,7 +123,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Net
     - https://attack.mitre.org/software/S0039/
   risk: Low
+  risk_reason: NET is commonly used to view details about a local or remote user, especially when troubleshooting permission or access issues.
   fidelity: High
+  fidelity_reason: Querying all domain users is an extremely common cyber-threat operation and not very likely for normal users to perform frequently - this should be audited.
+  tool: net
   threatactors:
     N/A:
       - N/A
@@ -133,7 +148,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Net
     - https://attack.mitre.org/software/S0039/
   risk: Low
+  risk_reason: NET is commonly used to view details about a local or remote user, especially when troubleshooting permission or access issues.
   fidelity: High
+  fidelity_reason: Querying all domain computer objects is an extremely common cyber-threat operation and not very likely for normal users to perform frequently - this should be audited.
+  tool: net
   threatactors:
     N/A:
       - N/A
@@ -155,7 +173,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Net
     - https://attack.mitre.org/software/S0039/
   risk: Low
+  risk_reason: NET is commonly used to view details about a local or remote user, especially when troubleshooting permission or access issues.
   fidelity: High
+  fidelity_reason: Abusing net start to start services is unlikely for normal users to perform frequently - this should be audited.
+  tool: net
   threatactors:
     N/A:
       - N/A
@@ -177,7 +198,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Net
     - https://attack.mitre.org/software/S0039/
   risk: Low
+  risk_reason: NET is commonly used to view details about a local or remote user, especially when troubleshooting permission or access issues.
   fidelity: High
+  fidelity_reason: Abusing net start to stop services is unlikely for normal users to perform frequently - this should be audited.
+  tool: net
   threatactors:
     N/A:
       - N/A
@@ -199,7 +223,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Net
     - https://attack.mitre.org/software/S0039/
   risk: Low
+  risk_reason: NET is commonly used to view details about a local or remote user, especially when troubleshooting permission or access issues.
   fidelity: Low
+  fidelity_reason: Alerting on general NET commands will typically yield a high-false positive rate due to normal IT operations.
+  tool: net
   threatactors:
     N/A:
       - N/A
@@ -223,7 +250,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Net
     - https://attack.mitre.org/software/S0039/
   risk: Low
+  risk_reason: NET is commonly used to view details about a local or remote user, especially when troubleshooting permission or access issues.
   fidelity: Low
+  fidelity_reason: Alerting on general NET commands will typically yield a high-false positive rate due to normal IT operations.
+  tool: net
   threatactors:
     N/A:
       - N/A
@@ -245,7 +275,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Net
     - https://attack.mitre.org/software/S0039/
   risk: Low
+  risk_reason: NET is commonly used to view details about a local or remote user, especially when troubleshooting permission or access issues.
   fidelity: Low
+  fidelity_reason: Alerting on general NET commands will typically yield a high-false positive rate due to normal IT operations.
+  tool: net
   threatactors:
     N/A:
       - N/A
@@ -267,7 +300,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Net
     - https://attack.mitre.org/software/S0039/
   risk: Low
+  risk_reason: NET is commonly used to view details about a local or remote user, especially when troubleshooting permission or access issues.
   fidelity: Low
+  fidelity_reason: Alerting on general NET commands will typically yield a high-false positive rate due to normal IT operations.
+  tool: net
   threatactors:
     N/A:
       - N/A
@@ -289,7 +325,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Net
     - https://attack.mitre.org/software/S0039/
   risk: Low
+  risk_reason: NET is commonly used to view details about a local or remote user, especially when troubleshooting permission or access issues.
   fidelity: Low
+  fidelity_reason: Alerting on general NET commands will typically yield a high-false positive rate due to normal IT operations.
+  tool: net
   threatactors:
     N/A:
       - N/A
@@ -311,7 +350,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Net
     - https://attack.mitre.org/software/S0039/
   risk: Low
+  risk_reason: NET is commonly used to view details about a local or remote user, especially when troubleshooting permission or access issues.
   fidelity: Low
+  fidelity_reason: Alerting on general NET commands will typically yield a high-false positive rate due to normal IT operations.
+  tool: net
   threatactors:
     N/A:
       - N/A
@@ -333,7 +375,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Net
     - https://attack.mitre.org/software/S0039/
   risk: High
+  risk_reason: Adding a new local administrator is an action that can lead to immediate high-risk consequences if it is performed by a cyber-threat.
   fidelity: High
+  fidelity_reason: It is extremely uncommon for new local administrators to be added to workstations or servers and should be audited due to the frequent abuse by cyber-threats.
+  tool: net
   threatactors:
     N/A:
       - N/A
@@ -357,7 +402,10 @@
     - https://attack.mitre.org/software/S0039/
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Net
   risk: High
+  risk_reason: Querying information about all available domain resources can lead to immediate pivoting if resources are over-permissioned or other issues exist on remote devices.
   fidelity: High
+  fidelity_reason: This is an extremely uncommon operation for a normal user to be performing.
+  tool: net
   threatactors:
     N/A:
       - N/A

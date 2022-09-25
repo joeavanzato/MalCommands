@@ -13,7 +13,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/PortQry
     - https://docs.microsoft.com/en-us/troubleshoot/windows-server/networking/portqry-exe-command-line-utility
   risk: Low
-  fidelity: High
+  risk_reason: Querying open ports on it's own is a low-risk action often done by IT Operators, developers, etc.
+  fidelity: Low
+  fidelity_reason: PortQry itself is a relatively rare tool but the usage does not immediately indicate suspicious activity.
+  tool: portqry
   threatactors:
     N/A:
       - N/A
@@ -32,7 +35,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/PortQry
     - https://docs.microsoft.com/en-us/troubleshoot/windows-server/networking/portqry-exe-command-line-utility
   risk: Low
-  fidelity: High
+  risk_reason: Querying open ports on it's own is a low-risk action often done by IT Operators, developers, etc.
+  fidelity: Low
+  fidelity_reason: PortQry itself is a relatively rare tool but the usage does not immediately indicate suspicious activity.
+  tool: portqry
   threatactors:
     N/A:
       - N/A

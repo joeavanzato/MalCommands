@@ -1,5 +1,5 @@
 - command: sharpshares.exe /threads 50 /ldap:all /filter:sysvol,netlogon,ipc$,print$ /outfile:test.txt
-  description: SharpShare is a utility for enumerating network shares - the above example will check all domain computer objects and will not look for shares with the given names in the /filter argument.
+  description: SharpShares is a utility for enumerating network shares - the above example will check all domain computer objects and will not look for shares with the given names in the /filter argument.
   executable:
     - N/A
   killchain:

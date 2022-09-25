@@ -14,7 +14,10 @@
     - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/systeminfo
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Systeminfo#documentation
   risk: Low
+  risk_reason: This command poses little risk to an organization but is often seen in the early stages of a compromise.
   fidelity: Low
+  fidelity_reason: This command is executed commonly by software, IT Users, Power Users, etc for many reasons.
+  tool: systeminfo
   threatactors:
     N/A:
       - N/A

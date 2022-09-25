@@ -16,7 +16,10 @@
     - 'https://docs.microsoft.com/en-us/previous-versions/windows/embedded/aa940701(v=winembedded.5)'
     - 'https://docs.microsoft.com/en-us/previous-versions/ms536496(v=vs.85)'
   risk: High
+  risk_reason: MSHTA is not commonly used by normal users or IT operations personnel - as such, executions of arbitrary HTA Files or Scripts should be closely scrutinized for suspicious activity, especially remote file loads.
   fidelity: High
+  fidelity_reason: This type of activity appears very infrequently and can typically be regarded with a low false-positive rate, depending on the environments IT operations.
+  tool: mshta
   threatactors:
     OilRig:
       - 'https://unit42.paloaltonetworks.com/unit42-oilrig-deploys-alma-communicator-dns-tunneling-trojan/'
@@ -38,7 +41,10 @@
     - 'https://docs.microsoft.com/en-us/previous-versions/windows/embedded/aa940701(v=winembedded.5)'
     - 'https://docs.microsoft.com/en-us/previous-versions/ms536496(v=vs.85)'
   risk: High
+  risk_reason: MSHTA is not commonly used by normal users or IT operations personnel - as such, executions of arbitrary HTA Files or Scripts should be closely scrutinized for suspicious activity, especially remote file loads.
   fidelity: High
+  fidelity_reason: This type of activity appears very infrequently and can typically be regarded with a low false-positive rate, depending on the environments IT operations.
+  tool: mshta
   threatactors:
     N/A:
       - N/A
@@ -60,7 +66,10 @@
     - 'https://docs.microsoft.com/en-us/previous-versions/windows/embedded/aa940701(v=winembedded.5)'
     - 'https://docs.microsoft.com/en-us/previous-versions/ms536496(v=vs.85)'
   risk: High
+  risk_reason: MSHTA is not commonly used by normal users or IT operations personnel - as such, executions of arbitrary HTA Files or Scripts should be closely scrutinized for suspicious activity, especially remote file loads.
   fidelity: High
+  fidelity_reason: This type of activity appears very infrequently and can typically be regarded with a low false-positive rate, depending on the environments IT operations.
+  tool: mshta
   threatactors:
     N/A:
       - N/A
@@ -82,7 +91,10 @@
     - 'https://docs.microsoft.com/en-us/previous-versions/windows/embedded/aa940701(v=winembedded.5)'
     - 'https://docs.microsoft.com/en-us/previous-versions/ms536496(v=vs.85)'
   risk: High
+  risk_reason: MSHTA is not commonly used by normal users or IT operations personnel - as such, executions of arbitrary HTA Files or Scripts should be closely scrutinized for suspicious activity, especially remote file loads.
   fidelity: High
+  fidelity_reason: This type of activity appears very infrequently and can typically be regarded with a low false-positive rate, depending on the environments IT operations.
+  tool: mshta
   threatactors:
     N/A:
       - N/A
@@ -104,7 +116,10 @@
     - 'https://docs.microsoft.com/en-us/previous-versions/windows/embedded/aa940701(v=winembedded.5)'
     - 'https://docs.microsoft.com/en-us/previous-versions/ms536496(v=vs.85)'
   risk: High
+  risk_reason: MSHTA is not commonly used by normal users or IT operations personnel - as such, executions of arbitrary HTA Files or Scripts should be closely scrutinized for suspicious activity, especially remote file loads.
   fidelity: High
+  fidelity_reason: This type of activity appears very infrequently and can typically be regarded with a low false-positive rate, depending on the environments IT operations.
+  tool: mshta
   threatactors:
     N/A:
       - N/A
@@ -132,7 +147,10 @@
     - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Mshta'
     - 'https://unit42.paloaltonetworks.com/aggah-campaign-bit-ly-blogspot-and-pastebin-used-for-c2-in-large-scale-campaign/'
   risk: High
+  risk_reason: MSHTA is not commonly used by normal users or IT operations personnel - as such, executions of arbitrary HTA Files or Scripts should be closely scrutinized for suspicious activity, especially remote file loads.
   fidelity: High
+  fidelity_reason: This type of activity appears very infrequently and can typically be regarded with a low false-positive rate, depending on the environments IT operations.
+  tool: mshta
   threatactors:
     N/A:
       - N/A
@@ -157,7 +175,10 @@
     - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Mshta'
     - 'https://unit42.paloaltonetworks.com/aggah-campaign-bit-ly-blogspot-and-pastebin-used-for-c2-in-large-scale-campaign/'
   risk: High
+  risk_reason: MSHTA is not commonly used by normal users or IT operations personnel - as such, executions of arbitrary HTA Files or Scripts should be closely scrutinized for suspicious activity, especially remote file loads.
   fidelity: High
+  fidelity_reason: This type of activity appears very infrequently and can typically be regarded with a low false-positive rate, depending on the environments IT operations.
+  tool: mshta
   threatactors:
     N/A:
       - N/A

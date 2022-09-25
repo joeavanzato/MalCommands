@@ -23,7 +23,7 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Other/LaZagne
   risk: High
   fidelity: High
-  tool: laZagne
+  tool: lazagne
   threatactors:
     N/A:
       - N/A

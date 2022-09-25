@@ -15,7 +15,10 @@
   references:
     - https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/tasklist
   risk: Low
+  risk_reason: tasklist is a common utility among IT operators or developers and poses little risk to an organization but is used by cyber-threats for recon purposes.
   fidelity: Low
+  fidelity_reason: This command is commonly used by enterprise IT operators or developers and is not of enough value to generate alerts without additional context.
+  tool: tasklist
   threatactors:
     N/A:
       - N/A

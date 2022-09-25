@@ -14,7 +14,10 @@
     - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/wbadmin
     - https://www.welivesecurity.com/2019/04/30/buhtrap-backdoor-ransomware-advertising-platform/
   risk: Critical
+  risk_reason: Deleting backup data is an uncommon IT activity but an extremely common cyber-threat activity, typically directly preceeding ransomware attacks.
   fidelity: High
+  fidelity_reason: This is a very uncommon activity for normal IT personnel and typically indicates suspicious activity.
+  tool: wbadmin
   threatactors:
     N/A:
       - N/A
@@ -34,7 +37,10 @@
     - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/wbadmin
     - https://www.welivesecurity.com/2019/04/30/buhtrap-backdoor-ransomware-advertising-platform/
   risk: Critical
+  risk_reason: Deleting backup data is an uncommon IT activity but an extremely common cyber-threat activity, typically directly preceeding ransomware attacks.
   fidelity: High
+  fidelity_reason: This is a very uncommon activity for normal IT personnel and typically indicates suspicious activity.
+  tool: wbadmin
   threatactors:
     N/A:
       - N/A

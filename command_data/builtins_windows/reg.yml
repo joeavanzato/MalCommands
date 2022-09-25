@@ -19,7 +19,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Reg
     - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg
   risk: Medium
-  fidelity: Medium
+  risk_reason: Modifying startup-related registry keys can provide a cyber-threat with a strong persistence mechanism if not remediated.
+  fidelity: Low
+  fidelity_reason: This is a relatively common occurrence depending upon organization policy - if volume allows, these should be vetted to ensure abuse is not occurring.
+  tool: reg
   threatactors:
     N/A:
       - N/A
@@ -44,7 +47,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Reg
     - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg
   risk: Medium
-  fidelity: Medium
+  risk_reason: Modifying startup-related registry keys can provide a cyber-threat with a strong persistence mechanism if not remediated.
+  fidelity: Low
+  fidelity_reason: This is a relatively common occurrence depending upon organization policy - if volume allows, these should be vetted to ensure abuse is not occurring.
+  tool: reg
   threatactors:
     N/A:
       - N/A
@@ -69,7 +75,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Reg
     - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg
   risk: Medium
-  fidelity: Medium
+  risk_reason: Modifying startup-related registry keys can provide a cyber-threat with a strong persistence mechanism if not remediated.
+  fidelity: Low
+  fidelity_reason: This is a relatively common occurrence depending upon organization policy - if volume allows, these should be vetted to ensure abuse is not occurring.
+  tool: reg
   threatactors:
     N/A:
       - N/A
@@ -94,7 +103,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Reg
     - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg
   risk: Medium
-  fidelity: Medium
+  risk_reason: Modifying startup-related registry keys can provide a cyber-threat with a strong persistence mechanism if not remediated.
+  fidelity: Low
+  fidelity_reason: This is a relatively common occurrence depending upon organization policy - if volume allows, these should be vetted to ensure abuse is not occurring.
+  tool: reg
   threatactors:
     N/A:
       - N/A
@@ -119,7 +131,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Reg
     - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg
   risk: Medium
-  fidelity: Medium
+  risk_reason: Modifying startup-related registry keys can provide a cyber-threat with a strong persistence mechanism if not remediated.
+  fidelity: Low
+  fidelity_reason: This is a relatively common occurrence depending upon organization policy - if volume allows, these should be vetted to ensure abuse is not occurring.
+  tool: reg
   threatactors:
     N/A:
       - N/A
@@ -144,7 +159,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Reg
     - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg
   risk: Medium
-  fidelity: Medium
+  risk_reason: Modifying startup-related registry keys can provide a cyber-threat with a strong persistence mechanism if not remediated.
+  fidelity: Low
+  fidelity_reason: This is a relatively common occurrence depending upon organization policy - if volume allows, these should be vetted to ensure abuse is not occurring.
+  tool: reg
   threatactors:
     N/A:
       - N/A
@@ -169,7 +187,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Reg
     - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg
   risk: Medium
-  fidelity: Medium
+  risk_reason: Modifying startup-related registry keys can provide a cyber-threat with a strong persistence mechanism if not remediated.
+  fidelity: Low
+  fidelity_reason: This is a relatively common occurrence depending upon organization policy - if volume allows, these should be vetted to ensure abuse is not occurring.
+  tool: reg
   threatactors:
     N/A:
       - N/A
@@ -194,7 +215,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Reg
     - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg
   risk: Medium
-  fidelity: Medium
+  risk_reason: Modifying startup-related registry keys can provide a cyber-threat with a strong persistence mechanism if not remediated.
+  fidelity: Low
+  fidelity_reason: This is a relatively common occurrence depending upon organization policy - if volume allows, these should be vetted to ensure abuse is not occurring.
+  tool: reg
   threatactors:
     N/A:
       - N/A
@@ -219,7 +243,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Reg
     - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg
   risk: Medium
-  fidelity: Medium
+  risk_reason: Modifying startup-related registry keys can provide a cyber-threat with a strong persistence mechanism if not remediated.
+  fidelity: Low
+  fidelity_reason: This is a relatively common occurrence depending upon organization policy - if volume allows, these should be vetted to ensure abuse is not occurring.
+  tool: reg
   threatactors:
     N/A:
       - N/A
@@ -244,7 +271,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Reg
     - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg
   risk: Medium
-  fidelity: Medium
+  risk_reason: Modifying startup-related registry keys can provide a cyber-threat with a strong persistence mechanism if not remediated.
+  fidelity: Low
+  fidelity_reason: This is a relatively common occurrence depending upon organization policy - if volume allows, these should be vetted to ensure abuse is not occurring.
+  tool: reg
   threatactors:
     N/A:
       - N/A
@@ -269,7 +299,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Reg
     - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg
   risk: Medium
-  fidelity: Medium
+  risk_reason: Modifying startup-related registry keys can provide a cyber-threat with a strong persistence mechanism if not remediated.
+  fidelity: Low
+  fidelity_reason: This is a relatively common occurrence depending upon organization policy - if volume allows, these should be vetted to ensure abuse is not occurring.
+  tool: reg
   threatactors:
     N/A:
       - N/A
@@ -294,7 +327,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Reg
     - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg
   risk: Medium
-  fidelity: Medium
+  risk_reason: Modifying startup-related registry keys can provide a cyber-threat with a strong persistence mechanism if not remediated.
+  fidelity: Low
+  fidelity_reason: This is a relatively common occurrence depending upon organization policy - if volume allows, these should be vetted to ensure abuse is not occurring.
+  tool: reg
   threatactors:
     N/A:
       - N/A
@@ -319,7 +355,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Reg
     - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg
   risk: Medium
-  fidelity: Medium
+  risk_reason: Modifying startup-related registry keys can provide a cyber-threat with a strong persistence mechanism if not remediated.
+  fidelity: Low
+  fidelity_reason: This is a relatively common occurrence depending upon organization policy - if volume allows, these should be vetted to ensure abuse is not occurring.
+  tool: reg
   threatactors:
     N/A:
       - N/A
@@ -344,7 +383,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Reg
     - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg
   risk: Medium
-  fidelity: Medium
+  risk_reason: Modifying startup-related registry keys can provide a cyber-threat with a strong persistence mechanism if not remediated.
+  fidelity: Low
+  fidelity_reason: This is a relatively common occurrence depending upon organization policy - if volume allows, these should be vetted to ensure abuse is not occurring.
+  tool: reg
   threatactors:
     N/A:
       - N/A
@@ -369,7 +411,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Reg
     - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg
   risk: Medium
-  fidelity: Medium
+  risk_reason: Modifying startup-related registry keys can provide a cyber-threat with a strong persistence mechanism if not remediated.
+  fidelity: Low
+  fidelity_reason: This is a relatively common occurrence depending upon organization policy - if volume allows, these should be vetted to ensure abuse is not occurring.
+  tool: reg
   threatactors:
     N/A:
       - N/A
@@ -394,7 +439,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Reg
     - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg
   risk: Medium
-  fidelity: Medium
+  risk_reason: Modifying startup-related registry keys can provide a cyber-threat with a strong persistence mechanism if not remediated.
+  fidelity: Low
+  fidelity_reason: This is a relatively common occurrence depending upon organization policy - if volume allows, these should be vetted to ensure abuse is not occurring.
+  tool: reg
   threatactors:
     N/A:
       - N/A
@@ -419,7 +467,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Reg
     - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg
   risk: Medium
-  fidelity: Medium
+  risk_reason: Modifying startup-related registry keys can provide a cyber-threat with a strong persistence mechanism if not remediated.
+  fidelity: Low
+  fidelity_reason: This is a relatively common occurrence depending upon organization policy - if volume allows, these should be vetted to ensure abuse is not occurring.
+  tool: reg
   threatactors:
     N/A:
       - N/A
@@ -444,7 +495,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Reg
     - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg
   risk: Medium
-  fidelity: Medium
+  risk_reason: Modifying startup-related registry keys can provide a cyber-threat with a strong persistence mechanism if not remediated.
+  fidelity: Low
+  fidelity_reason: This is a relatively common occurrence depending upon organization policy - if volume allows, these should be vetted to ensure abuse is not occurring.
+  tool: reg
   threatactors:
     N/A:
       - N/A
@@ -469,7 +523,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Reg
     - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg
   risk: Medium
-  fidelity: Medium
+  risk_reason: Modifying startup-related registry keys can provide a cyber-threat with a strong persistence mechanism if not remediated.
+  fidelity: Low
+  fidelity_reason: This is a relatively common occurrence depending upon organization policy - if volume allows, these should be vetted to ensure abuse is not occurring.
+  tool: reg
   threatactors:
     N/A:
       - N/A
@@ -494,7 +551,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Reg
     - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg
   risk: Medium
-  fidelity: Medium
+  risk_reason: Modifying startup-related registry keys can provide a cyber-threat with a strong persistence mechanism if not remediated.
+  fidelity: Low
+  fidelity_reason: This is a relatively common occurrence depending upon organization policy - if volume allows, these should be vetted to ensure abuse is not occurring.
+  tool: reg
   threatactors:
     N/A:
       - N/A
@@ -519,7 +579,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Reg
     - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg
   risk: Medium
-  fidelity: Medium
+  risk_reason: Modifying startup-related registry keys can provide a cyber-threat with a strong persistence mechanism if not remediated.
+  fidelity: Low
+  fidelity_reason: This is a relatively common occurrence depending upon organization policy - if volume allows, these should be vetted to ensure abuse is not occurring.
+  tool: reg
   threatactors:
     N/A:
       - N/A
@@ -544,7 +607,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Reg
     - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg
   risk: Medium
-  fidelity: Medium
+  risk_reason: Modifying startup-related registry keys can provide a cyber-threat with a strong persistence mechanism if not remediated.
+  fidelity: Low
+  fidelity_reason: This is a relatively common occurrence depending upon organization policy - if volume allows, these should be vetted to ensure abuse is not occurring.
+  tool: reg
   threatactors:
     N/A:
       - N/A
@@ -569,7 +635,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Reg
     - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg
   risk: Medium
-  fidelity: Medium
+  risk_reason: Modifying startup-related registry keys can provide a cyber-threat with a strong persistence mechanism if not remediated.
+  fidelity: Low
+  fidelity_reason: This is a relatively common occurrence depending upon organization policy - if volume allows, these should be vetted to ensure abuse is not occurring.
+  tool: reg
   threatactors:
     N/A:
       - N/A
@@ -594,7 +663,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Reg
     - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg
   risk: Medium
-  fidelity: Medium
+  risk_reason: Modifying startup-related registry keys can provide a cyber-threat with a strong persistence mechanism if not remediated.
+  fidelity: Low
+  fidelity_reason: This is a relatively common occurrence depending upon organization policy - if volume allows, these should be vetted to ensure abuse is not occurring.
+  tool: reg
   threatactors:
     N/A:
       - N/A
@@ -619,7 +691,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Reg
     - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg
   risk: Medium
-  fidelity: Medium
+  risk_reason: Modifying startup-related registry keys can provide a cyber-threat with a strong persistence mechanism if not remediated.
+  fidelity: Low
+  fidelity_reason: This is a relatively common occurrence depending upon organization policy - if volume allows, these should be vetted to ensure abuse is not occurring.
+  tool: reg
   threatactors:
     N/A:
       - N/A
@@ -644,7 +719,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Reg
     - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg
   risk: Medium
-  fidelity: Medium
+  risk_reason: Modifying startup-related registry keys can provide a cyber-threat with a strong persistence mechanism if not remediated.
+  fidelity: Low
+  fidelity_reason: This is a relatively common occurrence depending upon organization policy - if volume allows, these should be vetted to ensure abuse is not occurring.
+  tool: reg
   threatactors:
     N/A:
       - N/A
@@ -669,7 +747,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Reg
     - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg
   risk: Medium
-  fidelity: Medium
+  risk_reason: Modifying startup-related registry keys can provide a cyber-threat with a strong persistence mechanism if not remediated.
+  fidelity: Low
+  fidelity_reason: This is a relatively common occurrence depending upon organization policy - if volume allows, these should be vetted to ensure abuse is not occurring.
+  tool: reg
   threatactors:
     N/A:
       - N/A
@@ -694,7 +775,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Reg
     - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg
   risk: Medium
-  fidelity: Medium
+  risk_reason: Modifying startup-related registry keys can provide a cyber-threat with a strong persistence mechanism if not remediated.
+  fidelity: Low
+  fidelity_reason: This is a relatively common occurrence depending upon organization policy - if volume allows, these should be vetted to ensure abuse is not occurring.
+  tool: reg
   threatactors:
     N/A:
       - N/A

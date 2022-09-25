@@ -14,7 +14,10 @@
     - https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/taskkill
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Taskkill
   risk: High
+  risk_reason: Taskkill is commonly used post-exploitation to kill security-application or backup processes, but will occasionally be invoked by IT operators or developers.
   fidelity: High
+  fidelity_reason: Taskkill is a relatively uncommon utility depending on the organization, especially for non-IT users.
+  tool: taskkill
   threatactors:
     N/A:
       - N/A
@@ -34,7 +37,10 @@
     - https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/taskkill
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Taskkill
   risk: High
+  risk_reason: Taskkill is commonly used post-exploitation to kill security-application or backup processes, but will occasionally be invoked by IT operators or developers.
   fidelity: High
+  fidelity_reason: Taskkill is a relatively uncommon utility depending on the organization, especially for non-IT users.
+  tool: taskkill
   threatactors:
     N/A:
       - N/A

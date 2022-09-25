@@ -13,7 +13,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Vssadmin
     - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/vssadmin
   risk: Critical
+  risk_reason: Deleting Shadow Copies is an uncommon IT activity but an extremely common cyber-threat activity, typically directly preceeding ransomware attacks.
   fidelity: High
+  fidelity_reason: This is a very uncommon activity for normal IT personnel and typically indicates suspicious activity.
+  tool: vssadmin
   threatactors:
     N/A:
       - N/A
@@ -32,7 +35,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Vssadmin
     - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/vssadmin
   risk: Critical
+  risk_reason: Creating Shadow Copies is an uncommon IT activity but an extremely common cyber-threat activity, typically directly preceeding ransomware attacks.
   fidelity: High
+  fidelity_reason: This is a very uncommon activity for normal IT personnel and typically indicates suspicious activity.
+  tool: vssadmin
   threatactors:
     N/A:
       - N/A

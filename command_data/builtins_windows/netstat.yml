@@ -14,7 +14,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Netstat
     - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/netstat
   risk: Low
+  risk_reason: "This command does not immediately raise red flags or lead to dangerous consequences but is often used by cyber threats to gather information on network connections."
   fidelity: Low
+  fidelity_reason: "This type of action is extremely common for power-users and IT operators, depending on the type of company."
+  tool: netstat
   threatactors:
     G0049:
       - https://unit42.paloaltonetworks.com/the-oilrig-campaign-attacks-on-saudi-arabian-organizations-deliver-helminth-backdoor/
