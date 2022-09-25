@@ -10,7 +10,7 @@
     - /outfile - Specify file for writing output
     - /verbose - Return unauthorized shares in addition to those with access.
   tool_url: https://github.com/mitchmoser/SharpShares
-- tool: adfind
+- tool: ADFind
   tool_description: ADFind is a tool developed to query Active Directory - it utilizes a mixture of ldapsearch, search.vbs, ldp, dsquery and dsget along with other features.  It was developed prior to dsquery/dsget/etc by multiple years but adopts many of the same features.  The tool is written in C++ and is often used in some form by cyber threats during the information gathering phase of a compromise.
   tool_arguments:
     - basedn - Base DN to search on - defaults to NC
@@ -23,3 +23,182 @@
     - -t - Timeout value for query, default of 120 seconds.
     - See http://www.joeware.net/freetools/tools/adfind/usage.htm for all arguments.
   tool_url: http://www.joeware.net/freetools/tools/adfind/
+- tool: appinstaller
+  tool_description: Microsoft App Installer is a utility which aids in the ability to sideload Windows 10 apps, removing certain difficulties and making libraries more easily available and standardized across applications.  It is typically used to deploy AppX/MSIX file types.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/windows/msix/app-installer/app-installer-file-overview
+- tool: aspnet_compiler
+  tool_description: The ASP.NET Compilation Tool (aspnet_compiler.exe) enables teams to compile an ASP.NET web application.  This can help to improve performance but also can be abused by threat actors for on-the-fly execution of C# source code.
+  tool_arguments:
+    - v - Specify the virtual path of the application to be compiled.
+    - p - Value of the accompanying physicalPath parameter to locate the to-be-compiled application.
+    - f - Overwrite existing files in targetDir
+    - targetDir - Network or Local disk that will contain the compiled application.
+    - c - Specifies that the application should be fully rebuilt.
+  tool_url: https://learn.microsoft.com/en-us/previous-versions/ms229863(v=vs.140)?redirectedfrom=MSDN
+- tool: at
+  tool_description: AT is a tool which comes pre-deployed on older versions of Windows and aids in the creation and modification of scheduled tasks on local and remote devices.  It is often abused by cyber threats to achieve persistence and execution objectives.
+  tool_arguments:
+    - \computername - The remote computer to target.
+    - time - Specify when the task should run, represented as hours:minutes
+    - /interactive - Allows the task to interact with the desktop of the user logged on when the task runs.
+    - /every:date - Scheduled the task to run on specific days of the week or month.
+    - command - Used to specify the program (.exe, .bat, .com, .cmd) which will run.
+    - /yes - Force a 'yes' answer to all queries from the system in response to cancelling scheduled tasks.
+  tool_url: https://learn.microsoft.com/en-us/troubleshoot/windows-client/system-management-components/use-at-command-to-schedule-tasks
+- tool: auditpol
+  tool_description:
+  tool_arguments:
+    -
+  tool_url:
+- tool: bcdedit
+  tool_description:
+  tool_arguments:
+    -
+  tool_url:
+- tool: certutil
+  tool_description:
+  tool_arguments:
+    -
+  tool_url:
+- tool: dsquery
+  tool_description:
+  tool_arguments:
+    -
+  tool_url:
+- tool: mshta
+  tool_description:
+  tool_arguments:
+    -
+  tool_url:
+- tool: net
+  tool_description:
+  tool_arguments:
+    -
+  tool_url:
+- tool: netstat
+  tool_description:
+  tool_arguments:
+    -
+  tool_url:
+- tool: nltest
+  tool_description:
+  tool_arguments:
+    -
+  tool_url:
+- tool: portqry
+  tool_description:
+  tool_arguments:
+    -
+  tool_url:
+- tool: powershell
+  tool_description:
+  tool_arguments:
+    -
+  tool_url:
+- tool: reg
+  tool_description:
+  tool_arguments:
+    -
+  tool_url:
+- tool: regedit
+  tool_description:
+  tool_arguments:
+    -
+  tool_url:
+- tool: regini
+  tool_description:
+  tool_arguments:
+    -
+  tool_url:
+- tool: systeminfo
+  tool_description:
+  tool_arguments:
+    -
+  tool_url:
+- tool: taskkill
+  tool_description:
+  tool_arguments:
+    -
+  tool_url:
+- tool: tasklist
+  tool_description:
+  tool_arguments:
+    -
+  tool_url:
+- tool: vssadmin
+  tool_description:
+  tool_arguments:
+    -
+  tool_url:
+- tool: wbadmin
+  tool_description:
+  tool_arguments:
+    -
+  tool_url:
+- tool: wevtutil
+  tool_description:
+  tool_arguments:
+    -
+  tool_url:
+- tool: whoami
+  tool_description:
+  tool_arguments:
+    -
+  tool_url:
+- tool: wmic
+  tool_description:
+  tool_arguments:
+    -
+  tool_url:
+- tool: apt-get
+  tool_description:
+  tool_arguments:
+    -
+  tool_url:
+- tool: arp
+  tool_description:
+  tool_arguments:
+    -
+  tool_url:
+- tool: iptables
+  tool_description:
+  tool_arguments:
+    -
+  tool_url:
+- tool: mv
+  tool_description:
+  tool_arguments:
+    -
+  tool_url:
+- tool: systemctl
+  tool_description:
+  tool_arguments:
+    -
+  tool_url:
+- tool: ufw
+  tool_description:
+  tool_arguments:
+    -
+  tool_url:
+- tool: yum
+  tool_description:
+  tool_arguments:
+    -
+  tool_url:
+- tool: advanced ip scanner
+  tool_description:
+  tool_arguments:
+    -
+  tool_url:
+- tool: lazagne
+  tool_description:
+  tool_arguments:
+    -
+  tool_url:
+- tool: psexec
+  tool_description:
+  tool_arguments:
+    -
+  tool_url:
