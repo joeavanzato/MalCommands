@@ -12,8 +12,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Other/AdFind
     - http://www.joeware.net/freetools/tools/adfind/
     - https://social.technet.microsoft.com/wiki/contents/articles/7535.adfind-command-examples.aspx
-  risk: High
+  risk: Medium
+  risk_reason: The use of 'adfind' in general is uncommon, especially when combined with relevant arguments and should be treated as suspicious.
   fidelity: High
+  fidelity_reason: This type of commandline activity is likely rare in most organizations.
   tool: ADFind
   threatactors:
     N/A:
@@ -32,8 +34,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Other/AdFind
     - http://www.joeware.net/freetools/tools/adfind/
     - https://social.technet.microsoft.com/wiki/contents/articles/7535.adfind-command-examples.aspx
-  risk: High
+  risk: Medium
+  risk_reason: The use of 'adfind' in general is uncommon, especially when combined with relevant arguments and should be treated as suspicious.
   fidelity: High
+  fidelity_reason: This type of commandline activity is likely rare in most organizations.
   tool: ADFind
   threatactors:
     N/A:
@@ -51,8 +55,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Other/AdFind
     - http://www.joeware.net/freetools/tools/adfind/
     - https://social.technet.microsoft.com/wiki/contents/articles/7535.adfind-command-examples.aspx
-  risk: High
+  risk: Medium
+  risk_reason: The use of 'adfind' in general is uncommon, especially when combined with relevant arguments and should be treated as suspicious.
   fidelity: High
+  fidelity_reason: This type of commandline activity is likely rare in most organizations.
   tool: ADFind
   threatactors:
     N/A:
@@ -71,8 +77,10 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Other/AdFind
     - http://www.joeware.net/freetools/tools/adfind/
     - https://social.technet.microsoft.com/wiki/contents/articles/7535.adfind-command-examples.aspx
-  risk: High
+  risk: Medium
+  risk_reason: The use of 'adfind' to dump trust objects from the domain should be treated as suspicious.
   fidelity: High
+  fidelity_reason: This type of commandline activity is likely rare in most organizations.
   tool: ADFind
   threatactors:
     N/A:
@@ -91,7 +99,9 @@
     - http://www.joeware.net/freetools/tools/adfind/
     - https://social.technet.microsoft.com/wiki/contents/articles/7535.adfind-command-examples.aspx
   risk: High
+  risk_reason: This activity should always be audited and should only be occurring from IT personnel, if that.
   fidelity: High
+  fidelity_reason: This type of commandline activity is rare in most organizations.
   tool: ADFind
   threatactors:
     N/A:
