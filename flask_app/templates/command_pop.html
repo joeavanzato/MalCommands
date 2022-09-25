@@ -1,10 +1,15 @@
 
 {% for object in command %}
 <div id="command_content_inner">
- <div id="back_banner">
+<div id="back_banner">
+<div>
 <span class="material-symbols-outlined" id="back_button">
-keyboard_double_arrow_left Back
+<i class="material-icons" style="font-size:48px;">keyboard_double_arrow_left</i>
 </span>
+ </div>
+ <div>
+ <h3>BACK</h3>
+ </div>
  </div>
 <p></p>
 
@@ -18,12 +23,6 @@ keyboard_double_arrow_left Back
 <ul>
 {% for os in object.os %}
  <li>{{os}}</li>
-{% endfor %}
-</ul>
-<h5 class="command_data_header"><b>Binary Default Locations:</b></h5>
-<ul>
-{% for loc in object.executable %}
- <li>{{loc}}</li>
 {% endfor %}
 </ul>
 <h5 class="command_data_header"><b>Killchain Phases:</b></h5>
@@ -43,6 +42,11 @@ keyboard_double_arrow_left Back
 <p><b>Tool Name:</b> {{object.tool}}</p>
 <p><b>Tool URL:</b> <a href="{{object.tool_data.tool_url}}">{{object.tool_data.tool_url}}</a></p>
 <p><b>Tool Description:</b> {{object.tool_data.tool_description}}</p>
+<p><b>Common Tool Locations</b></p>
+{% for loc in object.tool_data.tool_locations %}
+<li>{{loc}}</li>
+{% endfor %}
+<p></p>
 <p><b>Common Tool Arguments</b></p>
 {% for arg in object.tool_data.tool_arguments %}
 <li>{{arg}}</li>

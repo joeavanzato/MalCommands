@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, url_for, redirect
+from flask import abort, Flask, render_template, request, url_for, redirect
 from pymongo import MongoClient
 from bson.objectid import ObjectId
 
@@ -23,7 +23,10 @@ def index():
     return render_template('index.html', commands=list(command_list))
 @app.route('/commands/<obj_id>', methods=['GET'])
 def commands(obj_id):
-    object = ObjectId(obj_id)
+    try:
+        object = ObjectId(obj_id)
+    except:
+        abort(404)
     command = command_collection.find({'_id': object}, {})
     return render_template('command_pop.html', command=list(command))
 @app.route('/faq', methods=['GET'])

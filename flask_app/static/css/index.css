@@ -9,19 +9,35 @@
   gap: 5px;
 }
 
-.body {
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
   /*background-color: #050626; */
   background: linear-gradient( #050626, #021523);
   background-repeat: repeat-x;
   font-family: 'Helvetica', 'Arial', sans-serif;
   height: 100%;
-
+}
+.main {
+  color: #8CCDAF;
+  grid-area: main;
+  padding: 1%;
+  height: 100%;
+  background: linear-gradient( #050626, #021523);
+  background-repeat: repeat-x;
 }
 
 #faq_content_inner {
   font-family: 'Helvetica', 'Arial', sans-serif;
   margin: 1%;
 }
+#faq_content_inner h4 {
+    color: #8AACC5;
+}
+
 /* Command Content Details */
 .command_data_header {
   color: #8AACC5;
@@ -34,21 +50,23 @@
   background-color: #130C22;
   font-size: 16px;
 }
-#back_button {
-  margin: 2px;
-  cursor: pointer;
-}
+
 #back_banner {
   cursor: pointer;
   border-style: solid solid solid solid;
   border-color: #8CCDAF;
-  border-width: 1px;
-  padding: 1%;
+  border-width: 1px;;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 #back_banner:hover {
   background-color: #7879AD;
   color: white;
 }
+
+/* Style the MITRE and Tool data windows in Command_pop.html */
 #mitre_attack {
   border-style: solid solid solid solid;
   border-color: #023F23;
@@ -66,20 +84,13 @@
   border-width: 1px;
   padding: 1%;
 }
-.main {
-  color: #8CCDAF;
-  grid-area: main;
-  padding: 1%;
-  height: 100%;
-  min-height: 96vh;
-  overflow: hidden;
-}
 
+/* Style the main datatable */
 .row_all {
     color: #8CCDAF;
 }
 .row_header {
-    color: #8CCDAF;
+    color: #8AACC5;
 }
 
 .command_row {
@@ -93,6 +104,7 @@
     background-color: #0B0C40;
 }
 
+/* Header styling and background */
 .header {
   grid-area: header;
   border-style: none none solid none;
@@ -102,8 +114,8 @@
   flex-direction: row;
   min-height: 30px;
   background-color: #0B0C40;
-  background-size:contain;
-  background-image: url('../images/header_galaxy.PNG');
+  /*background-size:contain;
+  background-image: url('../images/header_galaxy.PNG'); */
 }
 #home_button {
       cursor: pointer;
@@ -118,13 +130,14 @@
   color: #8CCDAF;
   margin: 0px 2px 0px 2px;
   padding: 5px;
-  border-style: none none none none;
-  border-color: #9698CE;
+
+
 }
 .header_link:hover {
   background-color: #7879AD;
   color: white;
 }
+
 
 #table_content {
 }
@@ -132,6 +145,7 @@
 #command_content {
 
 }
+
 
 #contribute_content {
     display: flex;
@@ -141,4 +155,7 @@
 
 #contribute_content_inner {
     min-height: 100%;
+}
+#contribute_content_inner h4{
+    color: #8AACC5;
 }

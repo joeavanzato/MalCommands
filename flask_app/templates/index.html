@@ -7,7 +7,8 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap5.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
 </head>
 <body class="body" id="body">
 <section class="layout">
@@ -72,7 +73,7 @@ $(document).ready(function () {
       lengthChange: true,
       scroller: true,
       //How much vertical space should the DT occupy at a maximum?
-      scrollY: 600,
+      scrollY: 800,
       //Set, in order, properties on the various columns (could also be defined in columnDefs below on a per-target basis)
       columns: [
         {searchable: true},
@@ -118,14 +119,15 @@ $(document).ready(function () {
               });
         },
     });
+    $(window).resize( function () {
     $('#data').dataTable().fnAdjustColumnSizing();
-
+    });
     //When we click a CommandLine Item, retrieve the data via AJAX, append to command_content, hide the main table and pop the command_content div (and hide faq_content in case it is not hidden)
     $('#data').on('click', '.command_row', function() {
       var data = table.row($(this).parents('tr')).data();
       //console.log(data);
       var current_command=data[1];
-      console.log(current_command);
+      //console.log(current_command);
     $.ajax({
       url: "/commands/"+current_command,
       dataType: "html",
