@@ -85,6 +85,27 @@ body {
   border-width: 1px;
   padding: 1%;
 }
+
+.active, .mitre_technique_header:hover {
+  background-color: #0B0C40;
+  cursor: pointer;
+}
+.mitre_technique_header:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+.active:after {
+  content: "\2212";
+}
+.mitre_technique_content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
 #tool_box {
   border-style: solid solid solid solid;
   border-color: #8CCDAF;

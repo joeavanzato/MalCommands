@@ -63,23 +63,38 @@
 <h3 class="command_data_header"><b>MITRE ATT&CK TECHNIQUES</b></h3>
 {% for obj in object.mitre_long %}
 <div id="each_mitre_tech">
-<p><b>Technique: </b>{{obj.technique_id}} - {{obj.name}}</p>
-<p><b>URL: </b><a href="{{obj.url}}">{{obj.url}}</a></p>
-<p><b>Description: </b>{{obj.description|safe}}</p>
-<p><b>Tactics:</b></p>
-<ul>
-{% for t in obj.tactics %}
-<li>{{t}}</li>
+<p class="mitre_technique_header"><b>Technique: </b>{{obj.technique_id}} - {{obj.name}}</p>
+  <div class="mitre_technique_content">
+    <p><b>URL: </b><a href="{{obj.url}}">{{obj.url}}</a></p>
+    <p><b>Description: </b>{{obj.description|safe}}</p>
+    <p><b>Tactics:</b></p>
+    <ul>
+    {% for t in obj.tactics %}
+    <li>{{t}}</li>
+    {% endfor %}
+    </ul>
+  </div>
+</div>
 {% endfor %}
-</ul>
 </div>
 {% endfor %}
 </div>
 
-</div>
-
-{% endfor %}
-</div>
+<script>
+ var coll = document.getElementsByClassName("mitre_technique_header");
+ var i;
+ for (i = 0; i < coll.length; i++) {
+   coll[i].addEventListener("click", function() {
+     this.classList.toggle("active");
+     var content = this.nextElementSibling;
+     if (content.style.maxHeight){
+       content.style.maxHeight = null;
+     } else {
+       content.style.maxHeight = content.scrollHeight + "px";
+     }
+   });
+ }
+</script>
 
 </section>
 </body>
