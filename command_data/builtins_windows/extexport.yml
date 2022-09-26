@@ -1,0 +1,20 @@
+- command: extexport.exe c:\test foo bar
+  description: Execute an arbitrary DLL from C:\test which is named 'mozcrt19', 'mozsqlite3' or 'sqlite'
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Extexport/
+    - http://www.hexacorn.com/blog/2018/04/24/extexport-yet-another-lolbin/
+  risk: High
+  risk_reason: This is a suspicious activity as this binary is not typically used in a standalone manner.
+  fidelity: High
+  fidelity_reason: This is typically extremely rare in most organizations.
+  tool: ExtExport
+  threatactors:
+    N/A:
+      - N/A

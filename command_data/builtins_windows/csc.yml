@@ -1,0 +1,38 @@
+- command: csc.exe -out:My.exe File.cs
+  description: Abuse of CSC to compile C# code stored in File.cs and output the compiled application to My.exe.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Execution:
+      - T1127
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Csc/
+  risk: High
+  risk_reason: Cyber Threats often abuse on-the-fly compilation of code to bypass security measures - but this is also often used by developers and can't always be assumed as suspicious activity.
+  fidelity: Medium
+  fidelity_reason: Depending on the size of the development organization, this may or may not be difficult to alert on with a high fidelity.
+  tool: csc
+  threatactors:
+    N/A:
+      - N/A
+- command: csc -target:library File.cs
+  description: Abuse of CSC to compile C# code stored in File.cs and output a DLL rather than an EXE.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Execution:
+      - T1127
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Csc/
+  risk: High
+  risk_reason: Cyber Threats often abuse on-the-fly compilation of code to bypass security measures - but this is also often used by developers and can't always be assumed as suspicious activity.
+  fidelity: Medium
+  fidelity_reason: Depending on the size of the development organization, this may or may not be difficult to alert on with a high fidelity.
+  tool: csc
+  threatactors:
+    N/A:
+      - N/A

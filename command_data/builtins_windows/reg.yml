@@ -698,6 +698,33 @@
   threatactors:
     N/A:
       - N/A
+- command: reg add "HKCU\Software\Classes\mscfile\shell\open\command" /v [Value] /t [REG_SZ/REG_DWORD] /d [Data] /f
+  description: Modifying the default mmc.exe location can cause a high-integrity arbitrary executable to be run without a UAC prompt when 'eventvwr.exe' is launched.
+  killchain:
+    - Installation
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1112
+    Persistence:
+      - T1547.001
+    Privilege Escalation:
+      - T1547.001
+  os:
+    - Windows
+  references:
+    - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Reg
+    - https://lolbas-project.github.io/lolbas/Binaries/Eventvwr/
+    - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg
+    - https://enigma0x3.net/2016/08/15/fileless-uac-bypass-using-eventvwr-exe-and-registry-hijacking/
+  risk: Medium
+  risk_reason: Modifying startup-related registry keys can provide a cyber-threat with a strong persistence mechanism if not remediated.
+  fidelity: High
+  fidelity_reason: This is a relatively uncommon occurrence depending upon organization policy.
+  tool: reg
+  threatactors:
+    N/A:
+      - N/A
 # TODO - reg query HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Installer, reg query HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer
 # Check Always Install Elevated
 

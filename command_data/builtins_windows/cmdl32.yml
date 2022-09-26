@@ -1,0 +1,20 @@
+- command: cmdl32 /vpn /lan %cd%\config
+  description: Abuse cmdl32 to download a remote file specified in the given configuration file - the file will exist in %TMP% under the name VPN*.tmp with random numbers and letters.
+  killchain:
+    - Installation
+    - Actions on Objectives
+  mitre:
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Cmdl32/
+  risk: High
+  risk_reason: Use of cmdl32 in this manner is extremely suspicious and should raise immediate red-flags.
+  fidelity: High
+  fidelity_reason: This command is typically executed very rarely in most organizations.
+  tool: cmdl32
+  threatactors:
+    N/A:
+      - N/A

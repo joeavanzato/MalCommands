@@ -1,0 +1,38 @@
+- command: diskshadow.exe /s c:\test\diskshadow.txt
+  description: Execute diskshadow commands from a prepared script, such as exfiltrating NTDS.dit from a shadow copy.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Credential Access:
+      - T1003.003
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Diskshadow/
+  risk: High
+  risk_reason: Diskshadow is an application which is rarely manually used in normal operations.
+  fidelity: High
+  fidelity_reason: This type of commandline is typically rare or very predictable in most organizations.
+  tool: DiskShadow
+  threatactors:
+    N/A:
+      - N/A
+- command: diskshadow exec calc.exe
+  description: Execute files on disk such as calc.exe
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1202
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Diskshadow/
+  risk: High
+  risk_reason: Diskshadow is an application which is rarely manually used in normal operations, especially when combined with other executables in the commandline.
+  fidelity: High
+  fidelity_reason: This type of commandline is typically rare or very predictable in most organizations.
+  tool: DiskShadow
+  threatactors:
+    N/A:
+      - N/A

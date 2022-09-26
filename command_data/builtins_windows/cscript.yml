@@ -1,0 +1,22 @@
+- command: cscript c:\ads\file.txt:script.vbs
+  description: Launch a VBS script contained in an Alternate Data Stream (ADS) of another file.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1564.004
+      - T1216
+    Execution:
+      - T1059.005
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Cscript/
+  risk: High
+  risk_reason: Manual cscript usage is typically uncommon for most users and combined with ADS usage would be extremely rare and suspicious.
+  fidelity: High
+  fidelity_reason: This type of commandline activity is typically extremely rare in most organizations.
+  tool: cscript
+  threatactors:
+    N/A:
+      - N/A

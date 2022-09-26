@@ -1,0 +1,42 @@
+- command: explorer.exe /root,"C:\Windows\System32\calc.exe"
+  description: Execute calc.exe with the parent process existing as a new instance of explorer.exe, breaking certain relationship-based detections.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1202
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Explorer/
+    - https://twitter.com/CyberRaiju/status/1273597319322058752?s=20
+    - https://twitter.com/bohops/status/1276356245541335048
+  risk: High
+  risk_reason: This type of commandline behavior is typically very abnormal for the majority of users.
+  fidelity: High
+  fidelity_reason: This type of behavior is typically rare in most organizations and would likely produce a low amount of false-positives.
+  tool: explorer
+  threatactors:
+    N/A:
+      - N/A
+- command: explorer.exe C:\Windows\System32\notepad.exe
+  description: Execute notepad.exe with the parent process existing as a new instance of explorer.exe, breaking certain relationship-based detections.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1202
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Explorer/
+    - https://twitter.com/CyberRaiju/status/1273597319322058752?s=20
+    - https://twitter.com/bohops/status/1276356245541335048
+  risk: High
+  risk_reason: This type of commandline behavior is typically very abnormal for the majority of users.
+  fidelity: High
+  fidelity_reason: This type of behavior is typically rare in most organizations and would likely produce a low amount of false-positives.
+  tool: explorer
+  threatactors:
+    N/A:
+      - N/A

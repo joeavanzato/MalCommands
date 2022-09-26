@@ -1,0 +1,42 @@
+- command: diantz.exe c:\pathToFile\file.exe c:\destinationFolder\targetFile.txt:targetFile.cab
+  description: Abuse diantz.exe to add file.exe into a target .cab file embedded within the Alternate Data Stream (ADS) of a separate file.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1564.004
+    Collection:
+      - T1560
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Diantz/
+  risk: Medium
+  risk_reason: Embedding .cab files within another arbitrary file is, in general, a suspicious activity.
+  fidelity: High
+  fidelity_reason: This type of commandline activity is typically very rare in an organization, especially involving ADS.
+  tool: diantz
+  threatactors:
+    N/A:
+      - N/A
+- command: diantz.exe \\remotemachine\pathToFile\file.exe c:\destinationFolder\file.cab
+  description: Abuse diantz to copy and compress a remote file into a target .cab file.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Collection:
+      - T1560
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Diantz/
+  risk: Medium
+  risk_reason: Use of diantz to create local CABs from remote files is typically an anomalous activity.
+  fidelity: High
+  fidelity_reason: This type of commandline activity is typically rare in most organizations.
+  tool: diantz
+  threatactors:
+    N/A:
+      - N/A

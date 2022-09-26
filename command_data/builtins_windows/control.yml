@@ -1,0 +1,21 @@
+- command: control.exe c:\windows\tasks\file.txt:evil.dll
+  description: Abuse control.exe to launch a DLL stored in an Alternate Data Stream (ADS) of another file.
+  killchain:
+    - Installation
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1564.004
+      - T1218.002
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Control/
+  risk: High
+  risk_reason: Launching any files directly with control, let alone the use of ADS, is extremely suspicious and a rare activity for most users.
+  fidelity: High
+  fidelity_reason: This is typically an extremely rare commandline in most organizations.
+  tool: Control
+  threatactors:
+    N/A:
+      - N/A
