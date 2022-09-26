@@ -1,0 +1,38 @@
+- command:  fltmc.exe unload [DRIVER]
+  description: Abuse fltmc to unload a given driver, often abused by cyber-threats to remove security applications such as sysmon.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1562.001
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/FltMC/
+  risk: High
+  risk_reason: Use of fltmc in this manner is directly suspicious.
+  fidelity: High
+  fidelity_reason: Use of fltmc is typically rare in most organizations.
+  tool: fltmc
+  threatactors:
+    N/A:
+      - N/A
+- command:  fltmc.exe | findstr "385201"
+  description: Abuse fltmc and findstr to discover if sysmon is running on the target system using the default altitude register.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Discovery:
+      - T1007
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/FltMC/
+  risk: High
+  risk_reason: Use of fltmc in this manner is directly suspicious.
+  fidelity: High
+  fidelity_reason: Use of fltmc is typically rare in most organizations.
+  tool: fltmc
+  threatactors:
+    N/A:
+      - N/A

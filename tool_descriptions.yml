@@ -791,3 +791,13 @@
     - C:\windows\syswow64\finger.exe
   tool_os:
     - Windows
+- tool: fltmc
+  tool_description: fltmc is a Microsoft utility used for minifilter driver management operations.
+  tool_arguments:
+    - load - Loads a given driver by name
+    - unload - Unloads a given driver by name
+  tool_url: https://learn.microsoft.com/en-us/windows-hardware/drivers/ifs/development-and-testing-tools#fltmcexe-command
+  tool_locations:
+    - C:\Windows\System32\fltMC.exe
+  tool_os:
+    - Windows
