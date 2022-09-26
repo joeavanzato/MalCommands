@@ -765,3 +765,29 @@
     - C:\Windows\SysWOW64\extrac32.exe
   tool_os:
     - Windows
+- tool: findstr
+  tool_description: findstr.exe is a Microsoft utility for pattern-matching in text-based files.  It offers a significant amount of functionality and features to achieve this.
+  tool_arguments:
+    - /b - Matches the pattern if it is at the beginning of a line.
+    - /e - Matches the pattern if it is at the end of a line.
+    - /l - Processes search strings literally.
+    - /s - Searches the current directory and all subdirectories.
+    - /x - Prints lines that match exactly.
+    - /v - Prints only lines that don't contain a match
+    - /m - Prints only the file name of a file containing matches.
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/findstr
+  tool_locations:
+    - C:\Windows\System32\findstr.exe
+    - C:\Windows\SysWOW64\findstr.exe
+  tool_os:
+    - Windows
+- tool: finger
+  tool_description: finger is a Microsoft utility which can display information about users on a specified remote computer that is running the finger service/daemon.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/finger
+  tool_locations:
+    - C:\windows\system32\finger.exe
+    - C:\windows\syswow64\finger.exe
+  tool_os:
+    - Windows

