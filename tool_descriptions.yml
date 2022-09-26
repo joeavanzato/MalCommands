@@ -542,3 +542,226 @@
     - C:\Windows\SysWOW64\certreq.exe
   tool_os:
     - Windows
+- tool: cmd
+  tool_description: Cmd.exe is the main commandline interpreter in use within the Windows Operating System.
+  tool_arguments:
+    - /c - Carries out the command specified by the input string then stops.
+    - /k - Carries out the command specified by the input string then continues.
+    - /d - Disables execution of AutoRun commands
+    - /q - Turns echo off
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cmd
+  tool_locations:
+    - C:\Windows\System32\cmd.exe
+    - C:\Windows\SysWOW64\cmd.exe
+  tool_os:
+    - Windows
+- tool: cmdkey
+  tool_description: Commandkey is a Microsoft utility for servers which can be used to create, list and delete stored usernames, passwords and credentials.
+  tool_arguments:
+    - /add:[TARGET] - Add a username and password to the computer target.
+    - /generic:[TARGET] - Add a generic credential to the target cache list.
+    - /smartcard - Retrieve credentials from a currently-inserted smartcard.
+    - /list - List stored usernames and credentials
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cmdkey
+  tool_locations:
+    - C:\Windows\System32\cmdkey.exe
+    - C:\Windows\SysWOW64\cmdkey.exe
+  tool_os:
+      - Windows
+- tool: cmdl32
+  tool_description: Microsoft Connection Manager Auto-Download (cmdl32) is an undocumented Microsoft utility typically used to download VPN connection profiles.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\System32\cmdl32.exe
+    - C:\Windows\SysWOW64\cmdl32.exe
+  tool_os:
+    - Windows
+- tool: cmstp
+  tool_description: Cmstp is a Microsoft utility for installing or removing Connection Manager service profiles - without parameters it will install a service profile with default settings appropriate to the OS and current user permissions.
+  tool_arguments:
+    - /a:a - Specifies the profile should be installed without prompting the user.
+    - /nf - Specifies that support files should not be installed.
+    - /s - Specifies the profile should be installed or uninstalled silently.
+    - /u - Specifies the profile should be uninstalled.
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cmstp
+  tool_locations:
+    - C:\Windows\System32\cmstp.exe
+    - C:\Windows\SysWOW64\cmstp.exe
+  tool_os:
+    - Windows
+- tool: configsecuritypolicy
+  tool_description: Part of Microsoft Windows Defender, typically used to manage settings and configure collections in a granular way between different workloads.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.2008.9-0\ConfigSecurityPolicy.exe
+  tool_os:
+    - Windows
+- tool: conhost
+  tool_description: conhost is a Microsoft utility known as the Windows Console Host - the server application for all of the Windows Console APIs as well as the classic UI for commandline apiplications.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/windows/console/definitions
+  tool_locations:
+    - C:\windows\system32\conhost.exe
+  tool_os:
+    - Windows
+- tool: control
+  tool_description: Control.exe is a Microsoft Utility typically used to launch control-panel items in Windows.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\System32\control.exe
+    - C:\Windows\SysWOW64\control.exe
+  tool_os:
+      - Windows
+- tool: csc
+  tool_description: CSC is a Microsoft application designed to compile .NET framework applications and libraries.  It is often used both by developers and cyber-threats for rapid code compilation from file or command-line input.
+  tool_arguments:
+    - -target - Specifies the type of output assembly
+    - -platform - Specifies the target platform CPU
+    - -out - Specifies the output file
+    - -doc - Generates an XML doc file from /// comments
+  tool_url: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/
+  tool_locations:
+    - C:\Windows\Microsoft.NET\Framework\v4.0.30319\Csc.exe
+    - C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Csc.exe
+  tool_os:
+      - Windows
+- tool: cscript
+  tool_description: CScript is a command-line Microsoft utility which is used to launch various types of Windows Scripts.
+  tool_arguments:
+    - /d - Launch with debugger
+    - /e - Specifies engine to run script with
+    - /x - Starts script in the specified debugger
+    - /job:[identifier] - Runs the job identified by [identifier] in a specsified .wsf script file.
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cscript
+  tool_locations:
+    - C:\Windows\System32\cscript.exe
+    - C:\Windows\SysWOW64\cscript.exe
+  tool_os:
+    - Windows
+- tool: datasvcutil
+  tool_description: DataSvcUtil.exe is a Microsoft utility provided by WCF Data Services that typically consumes an Open Data Protocol (OData) feed and generates classes needed to access a service from a .NET client.
+  tool_arguments:
+    - /in - Specifies a .csdl or .edmx file or directory where the file is located
+    - /language - Specifies the generated source-code language - CSharp or VB
+    - /uri - The URI of the OData Feed to consume
+  tool_url: https://learn.microsoft.com/en-us/previous-versions/dotnet/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe
+  tool_locations:
+    - C:\Windows\Microsoft.NET\Framework64\v3.5\DataSvcUtil.exe
+  tool_os:
+    - Windows
+- tool: desktopimgdownldr
+  tool_description: DesktopImgDownldr is a Microsoft utility used to configure lockscreen and desktop images - it can also be abused to download arbitrary data.
+  tool_arguments:
+    - /lockscreenurl - Specifies the file to download for a lockscreen
+  tool_url: N/A
+  tool_locations:
+    - C:\windows\system32\desktopimgdownldr.exe
+  tool_os:
+    - Windows
+- tool: dfsvc
+  tool_description: Dfsvc.exe provides a library and mechanism to facilitate the launching of ClickOnce engine used in .NET framework.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/visualstudio/deployment/clickonce-reference?view=vs-2022
+  tool_locations:
+    - C:\Windows\Microsoft.NET\Framework\v2.0.50727\Dfsvc.exe
+    - C:\Windows\Microsoft.NET\Framework64\v2.0.50727\Dfsvc.exe
+    - C:\Windows\Microsoft.NET\Framework\v4.0.30319\Dfsvc.exe
+    - C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Dfsvc.exe
+  tool_os:
+    - Windows
+- tool: diantz
+  tool_description: Diantz is a Microsoft utility which is used to add arbitrary files into cabinet (.cab) files - functionality is identical to 'makecab' command.
+  tool_arguments:
+    - /f - Specify a diantz directives file
+    - /v - Set debugging verbosity level, 0-3
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/diantz
+  tool_locations:
+    - C:\windows\system32\diantz.exe
+    - C:\windows\syswow64\diantz.exe
+  tool_os:
+    - Windows
+- tool: diskshadow
+  tool_description: Diskshadow.exe is a Microsoft utility which exposes functionality offered by the Volume Shadow Copy Service (VSS).
+  tool_arguments:
+    - exec command - Executes a specified file.
+    - create command - Starts a shadow copy creation process using the current context and option settings.
+    - delete shadows command - Deletes shadow copies.
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/diskshadow
+  tool_locations:
+    - C:\Windows\System32\diskshadow.exe
+    - C:\Windows\SysWOW64\diskshadow.exe
+  tool_os:
+    - Windows
+- tool: dnscmd
+  tool_description: DNScmd.exe is a Microsoft utility designed to aid in the management of DNS Servers.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/dnscmd
+  tool_locations:
+    - C:\Windows\System32\Dnscmd.exe
+    - C:\Windows\SysWOW64\Dnscmd.exe
+  tool_os:
+    - Windows
+- tool: esentutl
+  tool_description: Esentutl is a Microsoft utility which provided database utilities for use with the Extensible Storage Engine (ESE).
+  tool_arguments:
+    - -recovery - Brings all databases to a clean-shutdown state.
+    - -copy - Copies a database or log file
+  tool_url: https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh875546(v=ws.11)
+  tool_locations:
+    - C:\Windows\System32\esentutl.exe
+    - C:\Windows\SysWOW64\esentutl.exe
+  tool_os:
+      - Windows
+- tool: expand
+  tool_description: Expand is a Microsoft utility which can be used to expand compressed files or retrieve compressed data from other disks.
+  tool_arguments:
+    - /r - Rename an expanded file.
+    - /d - Displays a list of files in the source location with no operations performed.
+    - /i - Renames expanded files but ignores directory structure.
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/expand
+  tool_locations:
+    - C:\Windows\System32\Expand.exe
+    - C:\Windows\SysWOW64\Expand.exe
+  tool_os:
+    - Windows
+- tool: explorer
+  tool_description: Explorer.exe is a Microsoft utility for managing files and system components within Windows.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\explorer.exe
+    - C:\Windows\SysWOW64\explorer.exe
+  tool_os:
+    - Windows
+- tool: extexport
+  tool_description: ExtExport is a part of Internet Explorer developed by Microsoft utility.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Program Files\Internet Explorer\Extexport.exe
+    - C:\Program Files (x86)\Internet Explorer\Extexport.exe
+  tool_os:
+    - Windows
+- tool: extrac32
+  tool_description: Extrac32.exe is a Microsoft utility designed to extract files from cabinet or source data - originally this was a part of Internet Explorer.
+  tool_arguments:
+    - /c - Copy source file to destination
+    - /d - Display cabinet directory
+    - /e - Extract Data
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/extract
+  tool_locations:
+    - C:\Windows\System32\extrac32.exe
+    - C:\Windows\SysWOW64\extrac32.exe
+  tool_os:
+    - Windows
