@@ -1,4 +1,6 @@
-
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 {% for object in command %}
 <div id="command_content_inner">
 <div id="back_banner">
@@ -12,7 +14,6 @@
  </div>
  </div>
 <p></p>
-
 <h5 class="command_data_header"><b>Command Line</b></h5> <p><code class="code_block">{{object.command}}</code></p>
 <h5 class="command_data_header"><b>Description</b></h5> <p>{{object.description}}</p>
 <h5 class="command_data_header"><b>Risk</b></h5> <p>{{object.risk}}</p>
@@ -68,6 +69,9 @@
 {% endfor %}
 </ul>
 </div>
+<script>
+window.history.pushState('', 'MalCommands: {{baseid}}', '/links/{{baseid}}');
+</script>
 {% endfor %}
 </div>
 
@@ -79,6 +83,7 @@
         $('#command_content').html('');
         command_content.style.display = "none";
         var table_content = document.getElementById("table_content");
+        window.history.pushState('', 'MalCommands', '/');
         table_content.style.display = "block";
       });
 </script>

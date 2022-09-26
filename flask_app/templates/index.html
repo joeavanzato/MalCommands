@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
 </head>
 <body class="body" id="body">
 <section class="layout">
@@ -63,7 +64,6 @@
 
 
 <script>
-
 $(document).ready(function () {
     //Prepare/Set the DataTable after the page is loaded.
     var table = $('#data').DataTable({
@@ -82,7 +82,7 @@ $(document).ready(function () {
         {orderable: true, searchable: true},
         {orderable: true, searchable: true},
         {orderable: true, searchable: true},
-        null],
+        {orderable: true, searchable: true},],
       columnDefs: [
               {
                targets: 0,
@@ -187,6 +187,7 @@ $(document).ready(function () {
           faq_content.style.display = "none";
           var contribute_content = document.getElementById("contribute_content");
           contribute_content.style.display = "none";
+          window.history.pushState('', 'MalCommands', '/');
         });
 });
 </script>
