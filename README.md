@@ -7,14 +7,24 @@ Designed to document and present in an easily searchable and filter-capable mann
 #### Commands are documented with the below attributes;
 * Commandline
 * Description
-* Executable Location[s]
 * Cyber Killchain Phases
 * MITRE Tactics and Techniques
 * Applicable OS[s]
 * Reference[s]
 * Risk [Low, Medium, High, Critical]
+* Risk Reason
 * Fidelity [Low, Medium, High]
+* Fidelity Reason
 * Threat Actors with Associated References
+
+#### Tools - included attributes
+* Tool Name
+* Tool Description
+* Common Arguments
+* Tool URL
+* Tool Operating Systems
+* ? - Threat Actor References
+
 
 
 #### Kill-Chain Phases Used in Command Mapping
@@ -28,25 +38,11 @@ Designed to document and present in an easily searchable and filter-capable mann
 
 
 ### TO DOCUMENT STILL
-* AT
-* PsExec
-* RDP
-* SCShell
-* AppInstaller
-* Aspnet_Compiler
-* Atbroker
-* Bitsadmin
-* CertOC
-* CertReq
-* cmdkey
-* cmd132
-* cmstp
-* configsecuritypolicy
-* etc
+* Lots...
 
 
 
-### Project References
+### Project References and Credits
 * https://github.com/3CORESec/MAL-CL
 * https://gist.github.com/MHaggis/df2de612615ef6bd01ea936cc8351ab2
 * https://lolbas-project.github.io/

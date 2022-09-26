@@ -47,8 +47,11 @@ body {
   margin: 1%;
 }
 .code_block {
-  background-color: #130C22;
   font-size: 16px;
+  background-color: #05080D;
+  border: 1px solid #999;
+  display: block;
+  padding: 5px;
 }
 
 #back_banner {
