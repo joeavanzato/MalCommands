@@ -22,6 +22,7 @@ body {
   background-repeat: repeat-x;
   font-family: 'Helvetica', 'Arial', sans-serif;
   height: 100%;
+  line-height: 1.2;
 }
 .main {
   color: #8CCDAF;
@@ -83,9 +84,12 @@ body {
   border-style: solid solid solid solid;
   border-color: #8CCDAF;
   border-width: 1px;
-  padding: 1%;
+  padding: 5px;
+  margin: 0;
 }
-
+.mitre_technique_header{
+    margin: 0;
+}
 .active, .mitre_technique_header:hover {
   background-color: #0B0C40;
   cursor: pointer;
@@ -101,6 +105,7 @@ body {
   content: "\2212";
 }
 .mitre_technique_content {
+  margin-top: 5px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
