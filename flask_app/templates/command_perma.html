@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MalCommands</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap5.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body class="body" id="body">
+<section class="layout">
+<div class="header">
+<a class="header_link" href="http://malcommands.com">MalCommands</a>
+</div>
+<div class="main" id="command_content">
+{% for object in command %}
+<div id="command_content_inner">
+<h5 class="command_data_header"><b>Command Line</b></h5> <p><code class="code_block">{{object.command}}</code></p>
+<h5 class="command_data_header"><b>Description</b></h5> <p>{{object.description}}</p>
+<h5 class="command_data_header"><b>Risk</b></h5> <p>{{object.risk}}</p>
+<h5 class="command_data_header"><b>Risk Reason</b></h5> <p>{{object.risk_reason}}</p>
+<h5 class="command_data_header"><b>Fidelity</b></h5> <p>{{object.fidelity}}</p>
+<h5 class="command_data_header"><b>Fidelity Reason</b></h5> <p>{{object.fidelity_reason}}</p>
+<h5 class="command_data_header"><b>Operating Systems</b></h5>
+<ul>
+{% for os in object.os %}
+ <li>{{os}}</li>
+{% endfor %}
+</ul>
+<h5 class="command_data_header"><b>Killchain Phases</b></h5>
+<ul>
+{% for p in object.killchain %}
+ <li>{{p}}</li>
+{% endfor %}
+</ul>
+<h5 class="command_data_header"><b>References</b></h5>
+<ul>
+{% for r in object.references %}
+ <li><a href="{{r}}">{{r}}</a></li>
+{% endfor %}
+</ul>
+<div id="tool_box">
+<h5 class="command_data_header"><b>TOOL DATA</b></h5>
+<p><b>Tool Name:</b> {{object.tool}}</p>
+<p><b>Tool URL:</b> <a href="{{object.tool_data.tool_url}}">{{object.tool_data.tool_url}}</a></p>
+<p><b>Tool Description:</b> {{object.tool_data.tool_description}}</p>
+<p><b>Common Tool Locations</b></p>
+{% for loc in object.tool_data.tool_locations %}
+<li>{{loc}}</li>
+{% endfor %}
+<p></p>
+<p><b>Common Tool Arguments</b></p>
+{% for arg in object.tool_data.tool_arguments %}
+<li>{{arg}}</li>
+{% endfor %}
+<p></p>
+</div>
+ <p></p>
+<div id="mitre_attack">
+<h3 class="command_data_header"><b>MITRE ATT&CK TECHNIQUES</b></h3>
+{% for obj in object.mitre_long %}
+<div id="each_mitre_tech">
+<p><b>Technique: </b>{{obj.technique_id}} - {{obj.name}}</p>
+<p><b>URL: </b><a href="{{obj.url}}">{{obj.url}}</a></p>
+<p><b>Description: </b>{{obj.description|safe}}</p>
+<p><b>Tactics:</b></p>
+<ul>
+{% for t in obj.tactics %}
+<li>{{t}}</li>
+{% endfor %}
+</ul>
+</div>
+{% endfor %}
+</div>
+
+</div>
+
+{% endfor %}
+</div>
+
+</section>
+</body>
+</html>
