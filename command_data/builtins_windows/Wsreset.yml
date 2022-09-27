@@ -1,0 +1,25 @@
+- command: wsreset.exe
+  description: WsReset.exe checks the registry value 'HKCU\Software\Classes\AppX82a6gwre4fdg3bt635tn5ctqjf8msdd2\Shell\open\command' - it will run the command stored there as a high-integrity process without a UAC prompt.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Privilege Escalation:
+      - T1548.002
+    Defense Evasion:
+      - T1548.002
+      - T1218
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Wsreset/
+    - https://www.activecyber.us/activelabs/windows-uac-bypass
+    - https://twitter.com/ihack4falafel/status/1106644790114947073
+    - https://github.com/hfiref0x/UACME/blob/master/README.md
+  risk: High
+  risk_reason: This is a suspicious activity for normal users.
+  fidelity: High
+  fidelity_reason: Execution of this binary is typically rare in most organizations.
+  tool: wsreset
+  threatactors:
+    N/A:
+      - N/A

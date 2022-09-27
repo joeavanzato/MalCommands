@@ -1387,3 +1387,66 @@
     - c:\windows\system32\wlrmdr.exe
   tool_os:
     - Windows
+- tool: WorkFolders
+  tool_description: WorkFolders is a service for file servers that provides a consistent way for users to access their work files from other devices.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/windows-server/storage/work-folders/work-folders-overview
+  tool_locations:
+    - C:\Windows\System32\WorkFolders.exe
+  tool_os:
+    - Windows
+- tool: Wscript
+  tool_description: Windows Script Host (wscript.exe) provides an execution environment for a variety of Windows scripting languages.
+  tool_arguments:
+    - /d - Starts the relevant debugger
+    - /e - Specifies the engine to use for running the target script
+    - /nologo - Suppresses the Windows Script Host banner
+    - /x - Starts target script in the debugger
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/wscript
+  tool_locations:
+    - C:\Windows\System32\wscript.exe
+    - C:\Windows\SysWOW64\wscript.exe
+  tool_os:
+    - Windows
+- tool: Wsreset
+  tool_description: WsReset.exe is a Microsoft utility for resetting Windows Store settings according to a given manifest file.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\System32\wsreset.exe
+  tool_os:
+    - Windows
+- tool: wuauclt
+  tool_description: WuAclt.exe is a Microsoft utility for controlling certain functions of the Windows Update Agent.
+  tool_arguments:
+    - /a - Initates background search for applicable updates
+    - /r - Sends all queued reporting events to the server
+  tool_url: https://learn.microsoft.com/fr-fr/security-updates/windowsupdateservices/21741556
+  tool_locations:
+    - C:\Windows\System32\wuauclt.exe
+  tool_os:
+    - Windows
+- tool: XWizard
+  tool_description: XWizard.exe is a Microsoft utility for executing custom classes added to the registry.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\System32\xwizard.exe
+    - C:\Windows\SysWOW64\xwizard.exe
+  tool_os:
+    - Windows
+- tool: fsutil
+  tool_description: File System Utility (fsutil.exe) is a Microsoft utility for performing tasks related to NTFS file systems and the File Allocation Table (FAT) such as managing reparse points, managing sparse files or dismounting volumes.
+  tool_arguments:
+    - usn - Manage the Update Sequence Journal (USN)
+    - volume - Manage a volume - dismount, query for space, find a file using a specified cluster.
+    - transaction - Commits a specified transaction
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/fsutil
+  tool_locations:
+    - C:\Windows\System32\fsutil.exe
+    - C:\Windows\SysWOW64\fsutil.exe
+  tool_os:
+    - Windows

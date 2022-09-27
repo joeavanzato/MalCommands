@@ -1,0 +1,42 @@
+- command: fsutil.exe file setZeroData offset=0 length=9999999999 C:\Windows\Temp\payload.dll
+  description: Abuse fsutil to completely 0 a target file, removing potential forensic evidence.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Impact:
+      - T1485
+    Defense Evasion:
+      - T1070.004
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/fsutil/
+  risk: High
+  risk_reason: This is an extremely suspicious action for any user with few-to-none legitimate usecases.
+  fidelity: High
+  fidelity_reason: This is typically a non-existing type of behavior in most organizations.
+  tool: fsutil
+  threatactors:
+    N/A:
+      - N/A
+- command: 'fsutil.exe usn deletejournal /d c:'
+  description: Abuse fsutil to delete the Update Sequence Journal (USN), destroying forensic evidence of file system activity.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Impact:
+      - T1485
+    Defense Evasion:
+      - T1070.004
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/fsutil/
+  risk: High
+  risk_reason: This is an extremely suspicious action for any user with few-to-none legitimate usecases.
+  fidelity: High
+  fidelity_reason: This is typically a non-existing type of behavior in most organizations.
+  tool: fsutil
+  threatactors:
+    N/A:
+      - N/A

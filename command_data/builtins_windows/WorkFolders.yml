@@ -1,0 +1,21 @@
+- command: WorkFolders
+  description: WorkFolders.exe will attempt to launch 'control.exe' from the current directory, leading to potential hijack scenarios.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/WorkFolders/
+    - https://www.ctus.io/2021/04/12/exploading/
+    - https://twitter.com/ElliotKillick/status/1449812843772227588
+  risk: High
+  risk_reason: Manual usage of this binary is typically rare for most or all users.
+  fidelity: High
+  fidelity_reason: This type of behavior will be very rare for most if not all users.
+  tool: WorkFolders
+  threatactors:
+    N/A:
+      - N/A

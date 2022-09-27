@@ -1,0 +1,20 @@
+- command: wuauclt.exe /UpdateDeploymentProvider [TARGETDLL] /RunHandlerComServer
+  description: Abuse wuaclt.exe to launch an arbitrary DLL and execute code on attach/detach.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Wuauclt/
+    - https://dtm.uk/wuauclt/
+  risk: High
+  risk_reason: This type of behavior is extremely suspicious for most users.
+  fidelity: High
+  fidelity_reason: This is typically an extremely rare activity in most organizations.
+  tool: wuauclt
+  threatactors:
+    N/A:
+      - N/A
