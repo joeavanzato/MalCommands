@@ -1,0 +1,19 @@
+- command: vbc.exe /target:exe c:\temp\vbs\run.vb
+  description: Abuse vbc.exe to compile run.vb into an executable format.  Use 'Microsoft.VisualBasic.dll' instead of 'exe' to create a DLL instead.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1127
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Vbc/
+  risk: Medium
+  risk_reason: For most users, this is a suspicious action.
+  fidelity: Medium
+  fidelity_reason: For most non-development users, this will be a rare or non-existent behavior.
+  tool: vbc
+  threatactors:
+    N/A:
+      - N/A

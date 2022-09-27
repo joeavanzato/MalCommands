@@ -1,0 +1,19 @@
+- command: runscripthelper.exe surfacecheck \\?\C:\Test\Microsoft\Diagnosis\scripts\test.txt C:\Test
+  description: Abuse runscripthelper to launch a PowerShell script named test.txt.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Runscripthelper/
+  risk: High
+  risk_reason: Manual usage of this binary is suspicious.
+  fidelity: High
+  fidelity_reason: Typically this is an abnormal behavior in most organizations.
+  tool: runscripthelper
+  threatactors:
+    N/A:
+      - N/A

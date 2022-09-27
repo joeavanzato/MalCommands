@@ -1148,7 +1148,7 @@
   tool_os:
     - Windows
 - tool: regasm
-  tool_description: Assembly Registration (regasm.exe) is a MIcrosoft utility which can scan assemblies and add necessary entities to the registry which enable COM clients to create .NET framework classes transparently.
+  tool_description: Assembly Registration (regasm.exe) is a Microsoft utility which can scan assemblies and add necessary entities to the registry which enable COM clients to create .NET framework classes transparently.
   tool_arguments:
     - /regfile - Generates the specified .reg file for the assembly.
     - /silent - Suppress success messages.
@@ -1169,5 +1169,221 @@
   tool_locations:
     - C:\Windows\System32\Register-cimprovider.exe
     - C:\Windows\SysWOW64\Register-cimprovider.exe
+  tool_os:
+    - Windows
+- tool: regsvcs
+  tool_description: RegSvcs is a Microsoft utility used to register .NET Component Object Model (COM) assemblies as appropriate.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/dotnet/framework/tools/regsvcs-exe-net-services-installation-tool
+  tool_locations:
+    - C:\Windows\System32\regsvcs.exe
+    - C:\Windows\SysWOW64\regsvcs.exe
+  tool_os:
+    - Windows
+- tool: RegSvr32
+  tool_description: RegSvr32.exe is a Microsoft utility which enables the registering of .DLL files as command components in the Windows Registry.
+  tool_arguments:
+    - /u - Unregisters the target server
+    - /s - Prevents displaying messages
+    - /n - Prevents calling DllRegisterServer
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/regsvr32
+  tool_locations:
+    - C:\Windows\System32\regsvr32.exe
+    - C:\Windows\SysWOW64\regsvr32.exe
+  tool_os:
+    - Windows
+- tool: replace
+  tool_description: Replace is a Microsoft utility for replacing existing files in a given directory.
+  tool_arguments:
+    - /a - Adds new files instead of replacing existing ones.
+    - /r - Replaces read-only and unprotected files.
+    - /s - Searches all subdirectories in the destination for matching files.
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/replace
+  tool_locations:
+    - C:\Windows\System32\replace.exe
+    - C:\Windows\SysWOW64\replace.exe
+  tool_os:
+    - Windows
+- tool: rpcping
+  tool_description: RPCPing is a Microsoft utility for confirming RPC Connectivity between computers running Exchange Server and Clients on an enterprise network.
+  tool_arguments:
+    - /t - Specifies the protocol sequence to use
+    - /S - Specifies the server address - local machine is used if not specified.
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/rpcping
+  tool_locations:
+    - C:\Windows\System32\rpcping.exe
+    - C:\Windows\SysWOW64\rpcping.exe
+  tool_os:
+    - Windows
+- tool: rundll32
+  tool_description: RunDLL32 is a Microsoft utility for loading and executing 32-bit Dynamic Link Libraries (DLLs).
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/rundll32
+  tool_locations:
+    - C:\Windows\System32\rundll32.exe
+    - C:\Windows\SysWOW64\rundll32.exe
+  tool_os:
+    - Windows
+- tool: RunOnce
+  tool_description: RunOnce.exe is a Microsoft utility which will execute a previously configured registry entry stored in the appropriate key.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\System32\runonce.exe
+    - C:\Windows\SysWOW64\runonce.exe
+  tool_os:
+    - Windows
+- tool: RunScriptHelper
+  tool_description: RunScriptHelper.exe is a Microsoft utility designed to aid in the execution of scripts.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\WinSxS\amd64_microsoft-windows-u..ed-telemetry-client_31bf3856ad364e35_10.0.16299.15_none_c2df1bba78111118\Runscripthelper.exe
+    - C:\Windows\WinSxS\amd64_microsoft-windows-u..ed-telemetry-client_31bf3856ad364e35_10.0.16299.192_none_ad4699b571e00c4a\Runscripthelper.exe
+  tool_os:
+    - Windows
+- tool: sc
+  tool_description: SC.exe is a Microsoft utility designed for management and control of Windows Services.
+  tool_arguments:
+    - start - Start a Service
+    - stop - Stop a Service
+  tool_url: https://learn.microsoft.com/en-us/windows/win32/services/controlling-a-service-using-sc
+  tool_locations:
+    - C:\Windows\System32\sc.exe
+    - C:\Windows\SysWOW64\sc.exe
+  tool_os:
+    - Windows
+- tool: schtasks
+  tool_description: SchTasks.exe is a Microsoft utility enabling the creation, deletion, query, modification, run and ending of scheduled tasks on both local and remote devices.
+  tool_arguments:
+    - /RU - User context to run task under
+    - /SC - Schedule frequency specifications
+    - /TR - Path and File name of task to execute
+  tool_url: https://learn.microsoft.com/en-us/windows/win32/taskschd/schtasks
+  tool_locations:
+    - C:\windows\system32\schtasks.exe
+    - C:\windows\syswow64\schtasks.exe
+  tool_os:
+    - Windows
+- tool: scriptrunner
+  tool_description: ScriptRunner is a Microsoft utility designed to execute other files.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\System32\scriptrunner.exe
+    - C:\Windows\SysWOW64\scriptrunner.exe
+  tool_os:
+    - Windows
+- tool: SettingSyncHost
+  tool_description: SettingsSyncHost is a Microsoft utility used to aid synchronization processes.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\System32\SettingSyncHost.exe
+    - C:\Windows\SysWOW64\SettingSyncHost.exe
+  tool_os:
+    - Windows
+- tool: SSH
+  tool_description: OpenSSH (ssh.exe) comes bundled with Windows on certain versions and enables usage of the SSH protocol to encrypt traffic between clients and servers.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_overview
+  tool_locations:
+    - c:\windows\system32\OpenSSH\ssh.exe
+  tool_os:
+    - Windows
+- tool: StorDiag
+  tool_description: Stordiag is a Microsoft utility used for diagnosing certain storage problems.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - c:\windows\system32\stordiag.exe
+    - c:\windows\syswow64\stordiag.exe
+  tool_os:
+    - Windows
+- tool: SyncAppvPublishingServer
+  tool_description: SyncAppvPublisherServer.exe is a Microsoft utility used by App-V to get App-V server lists.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/powershell/module/appvclient/sync-appvpublishingserver?view=windowsserver2022-ps
+  tool_locations:
+    - C:\Windows\System32\SyncAppvPublishingServer.exe
+    - C:\Windows\SysWOW64\SyncAppvPublishingServer.exe
+  tool_os:
+    - Windows
+- tool: TTDInject
+  tool_description: TTDInject.exe is a Microsoft utility used in Windows 1809 and newer to debug time travel - tracing a process as it executes and replaying events forward and backwards to discover issues.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/time-travel-debugging-overview
+  tool_locations:
+    - C:\Windows\System32\ttdinject.exe
+    - C:\Windows\Syswow64\ttdinject.exe
+  tool_os:
+    - Windows
+- tool: TTTracer
+  tool_description: Tttracer.exe is a Microsoft utility used in Windows 1809 and newer to debug time travel - tracing a process as it executes and replaying events forward and backwards to discover issues.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/time-travel-debugging-overview
+  tool_locations:
+    - C:\Windows\System32\tttracer.exe
+    - C:\Windows\SysWOW64\tttracer.exe
+  tool_os:
+    - Windows
+- tool: Unregmp2
+  tool_description: Unregmp2 is a Microsoft Utility for setting up Microsoft Windows Media Player.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\System32\unregmp2.exe
+    - C:\Windows\SysWOW64\unregmp2.exe
+  tool_os:
+    - Windows
+- tool: vbc
+  tool_description: Visual Basic Compiler (vbc.exe) is a Microsoft utility used to produce .exe, .dll and .netmodule files from Visual Basic code.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/visualstudio/msbuild/vbc-task?view=vs-2022
+  tool_locations:
+    - C:\Windows\Microsoft.NET\Framework64\v4.0.30319\vbc.exe
+    - C:\Windows\Microsoft.NET\Framework64\v3.5\vbc.exe
+  tool_os:
+    - Windows
+- tool: Verclsid
+  tool_description: Verclsid.exe is a Microsoft utility used to verify COM objects before being instantiated by Windows Explorer.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\System32\verclsid.exe
+    - C:\Windows\SysWOW64\verclsid.exe
+  tool_os:
+    - Windows
+- tool: Wab
+  tool_description: Windows Address Book (wab.exe) manager allows for the management of contact entries, storing information, searching contacts, editing information, importing contacts, etc.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/previous-versions/windows/desktop/wab/-wab-overview
+  tool_locations:
+    - C:\Program Files\Windows Mail\wab.exe
+    - C:\Program Files (x86)\Windows Mail\wab.exe
+  tool_os:
+    - Windows
+- tool: Wlrmdr
+  tool_description: Windows Logon Reminder (wlrmdr.exe) is a Microsoft utility.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - c:\windows\system32\wlrmdr.exe
   tool_os:
     - Windows

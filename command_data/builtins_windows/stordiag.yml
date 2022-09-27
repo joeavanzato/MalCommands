@@ -1,0 +1,19 @@
+- command: stordiag.exe
+  description: Stordiag will subsequently launch schtasks.exe, systeminfo.exe and fltmc.exe - an attacker may copy this binary to an alternate folder and perform a search-order hijack with a renamed malicious executable and it will be launched by stordiag.exe.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Stordiag/
+  risk: Medium
+  risk_reason: Normal users will not typically utilize this binary.
+  fidelity: High
+  fidelity_reason: This is typically a rarely launched binary in most environments.
+  tool: Stordiag
+  threatactors:
+    N/A:
+      - N/A

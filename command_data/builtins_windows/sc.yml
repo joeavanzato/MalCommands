@@ -1,0 +1,21 @@
+- command: sc create evilservice binPath="\"c:\\ADS\\file.txt:cmd.exe\" /c echo works > \"c:\ADS\works.txt\"" DisplayName= "evilservice" start= auto\ & sc start evilservice
+  description: Create a new service which executes cmd.exe embedded within the ADS of file.txt.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1564.004
+    Execution:
+      - T1569.002
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Sc/
+  risk: High
+  risk_reason: Service Creation should be highly monitored, especially for non-IT users.
+  fidelity: Medium
+  fidelity_reason: Depending on the organizational policies, service creation could be extremely high-volume.
+  tool: sc
+  threatactors:
+    N/A:
+      - N/A

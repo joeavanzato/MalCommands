@@ -1,0 +1,19 @@
+- command: SettingSyncHost -LoadAndRunDiagScript anything
+  description: Executes the binary file specified in environment variable %COMSPEC%.  This could execute a .bat script with no visible window, see the LOLBAS reference for more information.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/SettingSyncHost/
+  risk: High
+  risk_reason: This binary is not typically launched by normal users.
+  fidelity: High
+  fidelity_reason: This is typically a rarely used binary, if at all.
+  tool: SettingSyncHost
+  threatactors:
+    N/A:
+      - N/A

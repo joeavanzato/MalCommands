@@ -1,0 +1,19 @@
+- command: Runonce.exe /AlternateShellStartup
+  description: Execute a previously-configured RunOnce Value - typically containing the path to a malicious binary.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Runonce/
+  risk: High
+  risk_reason: This type of behavior is suspicious and not executed by normal users.
+  fidelity: High
+  fidelity_reason: This is typically a rare behavior in most organizations.
+  tool: runonce
+  threatactors:
+    N/A:
+      - N/A

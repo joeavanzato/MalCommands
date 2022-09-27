@@ -1,0 +1,19 @@
+- command: wab.exe
+  description: wab will launch the DLL stored at HKLM\Software\Microsoft\WAB\DLLPath - attackers may abuse this to launch a malicious DLL.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Wab/
+  risk: High
+  risk_reason: Manual usage of WAB.exe is typically suspicious for most users.
+  fidelity: High
+  fidelity_reason: This binary is not typically used by most users.
+  tool: wab
+  threatactors:
+    N/A:
+      - N/A

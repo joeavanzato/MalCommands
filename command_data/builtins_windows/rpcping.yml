@@ -1,0 +1,40 @@
+- command: rpcping -s 127.0.0.1 -e 1234 -a privacy -u NTLM
+  description: Send a test connection to the target server and force an NTLM hash to also be sent.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Credential Access:
+      - T1003
+      - T1187
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Rpcping/
+  risk: Medium
+  risk_reason: Use of rpcping is typically a suspicious operation for most users.
+  fidelity: High
+  fidelity_reason: This is typically an abnormal operation in most organizations.
+  tool: rpcping
+  threatactors:
+    N/A:
+      - N/A
+- command: rpcping /s 10.0.0.35 /e 9997 /a connect /u NTLM
+  description: Send an authenticated RPC call to a target server which can then be relayed to another resource.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Credential Access:
+      - T1003
+      - T1187
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Rpcping/
+  risk: Medium
+  risk_reason: Use of rpcping is typically a suspicious operation for most users.
+  fidelity: High
+  fidelity_reason: This is typically an abnormal operation in most organizations.
+  tool: rpcping
+  threatactors:
+    N/A:
+      - N/A

@@ -1,0 +1,19 @@
+- command: wlrmdr.exe -s 3600 -f 0 -t _ -m _ -a 11 -u calc.exe
+  description: Abuse wlrmdr to launch calc.exe with wlrmdr as the parent process.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1202
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Wlrmdr/
+  risk: High
+  risk_reason: Launching other executables with wlrmdr is extremely suspicious.
+  fidelity: High
+  fidelity_reason: This type of behavior is typically rare for most users.
+  tool: wlrmdr
+  threatactors:
+    N/A:
+      - N/A

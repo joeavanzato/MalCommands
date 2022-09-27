@@ -1,0 +1,20 @@
+- command: ssh localhost calc.exe
+  description: Bypass Application Whitelisting and launch calc.exe using SSH for indirect command execution.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1202
+      - T1218
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Ssh/
+  risk: High
+  risk_reason: Executing SSH against a localhost referencing a binary is an extremely suspicious action.
+  fidelity: High
+  fidelity_reason: This is typically a rare operation in most organizations.
+  tool: ssh
+  threatactors:
+    N/A:
+      - N/A

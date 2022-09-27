@@ -1,0 +1,46 @@
+- command: schtasks /create /sc minute /mo 1 /tn "Reverse shell" /tr c:\some\directory\revshell.exe
+  description: Use schtasks to create a new task named 'Reverse shell' which will execute revshell.exe every minute.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Execution:
+      - T1053.005
+    Persistence:
+      - T1053.005
+    Privilege Escalation:
+      - T1053.005
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Schtasks/
+  risk: Medium
+  risk_reason: Scheduled Task creation is a commonly abused tactic by cyber-threats.
+  fidelity: Low
+  fidelity_reason: Creation of scheduled tasks is typically performed on a frequent basis by installed software, IT operators, etc - alerting on non-standard names or binary locations may yield good results.
+  tool: schtasks
+  threatactors:
+    N/A:
+      - N/A
+- command: schtasks /create /s targetmachine /tn "MyTask" /tr c:\some\directory\notevil.exe /sc daily
+  description: Use schtasks to create a new task named 'MyTask' which will execute notevil.exe daily on targetmachine.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Execution:
+      - T1053.005
+    Persistence:
+      - T1053.005
+    Privilege Escalation:
+      - T1053.005
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Schtasks/
+  risk: Medium
+  risk_reason: Scheduled Task creation is a commonly abused tactic by cyber-threats.
+  fidelity: Low
+  fidelity_reason: Creation of scheduled tasks is typically performed on a frequent basis by installed software, IT operators, etc - alerting on non-standard names or binary locations may yield good results.
+  tool: schtasks
+  threatactors:
+    N/A:
+      - N/A
