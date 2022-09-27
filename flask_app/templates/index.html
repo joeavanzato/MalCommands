@@ -52,6 +52,9 @@
   </div>
   <div class="main" id="contribute_content">
   </div>
+  <div class="main" id="loading_content" style="display:none;">
+      <img id="loading-image" src="{{ url_for('static', filename='images/loading_infinite.svg') }}"/>
+  </div>
 
 </section>
 <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -64,6 +67,12 @@
 
 
 <script>
+
+function sleepFor(sleepDuration){
+    var now = new Date().getTime();
+    while(new Date().getTime() < now + sleepDuration){ /* Do nothing */ }
+}
+
 $(document).ready(function () {
     //Prepare/Set the DataTable after the page is loaded.
     var table = $('#data').DataTable({
@@ -123,7 +132,7 @@ $(document).ready(function () {
     $('#data').dataTable().fnAdjustColumnSizing();
     });
     //When we click a CommandLine Item, retrieve the data via AJAX, append to command_content, hide the main table and pop the command_content div (and hide faq_content in case it is not hidden)
-    $('#data').on('click', '.command_row', function() {
+    $('#data').on('click', '.row_all', function() {
       var data = table.row($(this).parents('tr')).data();
       //console.log(data);
       var current_command=data[1];
@@ -132,11 +141,17 @@ $(document).ready(function () {
       url: "/commands/"+current_command,
       dataType: "html",
       context: document.body,
+      beforeSend: function() {
+        var loading_content = document.getElementById("loading_content");
+        loading_content.style.display = "block";
+       },
       success: function( data ){
-          var table_content = document.getElementById("table_content");
-          table_content.style.display = "none";
-          var contribute_content = document.getElementById("contribute_content");
-          contribute_content.style.display = "none";
+        var loading_content = document.getElementById("loading_content");
+        loading_content.style.display = "none";
+        var table_content = document.getElementById("table_content");
+        table_content.style.display = "none";
+        var contribute_content = document.getElementById("contribute_content");
+        contribute_content.style.display = "none";
           var command_content = document.getElementById("command_content");
           $('#command_content').html(data);
           command_content.style.display = "block";
