@@ -1,0 +1,19 @@
+- command: GfxDownloadWrapper.exe [URL] [FILE]
+  description: Downloads the content returned by the URL and saves it to the specified destination file.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/GfxDownloadWrapper/
+  risk: High
+  risk_reason: Seeing this tool in combination with any URL is an immediate suspicious indicator.
+  fidelity: High
+  fidelity_reason: Usage of this tool would be extremely rare in most organizations with non-standard URLs.
+  tool: gfxdownloadwrapper
+  threatactors:
+    N/A:
+      - N/A

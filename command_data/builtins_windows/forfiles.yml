@@ -1,0 +1,39 @@
+- command: forfiles /p c:\windows\system32 /m notepad.exe /c calc.exe
+  description: Executes calc.exe since forfiles found a file matching the pattern 'notepad.exe' in system32.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1202
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Forfiles/
+  risk: Medium
+  risk_reason: Launching binaries as a result of a forfiles run is an abnormal behavior that should be alerted on with other context.
+  fidelity: Medium
+  fidelity_reason: This is typically a rare type of command in most organizations, but it depends on how forfiles is being used by administrators.
+  tool: forfiles
+  threatactors:
+    N/A:
+      - N/A
+- command: forfiles /p c:\windows\system32 /m notepad.exe /c "c:\folder\normal.dll:evil.exe"
+  description: Executes evil.exe embedded within an Alternate Data Stream (ADS) of normal.dll since forfiles found a file matching the pattern 'notepad.exe' in system32.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1202
+      - T1564.004
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Forfiles/
+  risk: Medium
+  risk_reason: Launching binaries as a result of a forfiles run is an abnormal behavior that should be alerted on with other context.
+  fidelity: Medium
+  fidelity_reason: This is typically a rare type of command in most organizations, but it depends on how forfiles is being used by administrators.
+  tool: forfiles
+  threatactors:
+    N/A:
+      - N/A

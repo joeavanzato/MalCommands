@@ -1,0 +1,21 @@
+- command: InfDefaultInstall.exe Infdefaultinstall.inf
+  description: Execute an SCT script via scrobj.dll that from a prepared INF file.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Infdefaultinstall/
+    - https://blog.conscioushacker.io/index.php/2017/10/25/evading-microsofts-autoruns/
+    - https://bohops.com/2018/03/10/leveraging-inf-sct-fetch-execute-techniques-for-bypass-evasion-persistence-part-2/
+  risk: High
+  risk_reason: Direct usage of this binary on anomalous .inf files is a suspicious activity.
+  fidelity: High
+  fidelity_reason: General usage of this binary in most organizations is likely to be extremely limited.
+  tool: infdefaultinstall
+  threatactors:
+    N/A:
+      - N/A

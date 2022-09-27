@@ -1,0 +1,19 @@
+- command: ilasm.exe C:\public\test.txt /exe
+  description: Using ilasm to compile C# code directly to an EXE on a target machine (use /dll for DLL output)
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1127
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Ilasm/
+  risk: Medium
+  risk_reason: This type of activity is suspicious for the majority of users who are not developers but may be common for developer-type users.
+  fidelity: Medium
+  fidelity_reason: This is likely a rare activity for the majority of users in standard organizations.
+  tool: ilasm
+  threatactors:
+    N/A:
+      - N/A

