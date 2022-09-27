@@ -888,3 +888,119 @@
     - C:\Windows\SysWOW64\Infdefaultinstall.exe
   tool_os:
     - Windows
+- tool: installutil
+  tool_description: Installer Utility (installutil.exe) is a Microsoft utility which allows for the installation and uninstallation of server resources by executing components stored in targeted assemblies.  It is typically installed with Visual Studio.
+  tool_arguments:
+    - /u - Uninstall the specified assemblies
+  tool_url: https://learn.microsoft.com/en-us/dotnet/framework/tools/installutil-exe-installer-tool
+  tool_locations:
+    - C:\Windows\Microsoft.NET\Framework\v2.0.50727\InstallUtil.exe
+    - C:\Windows\Microsoft.NET\Framework64\v2.0.50727\InstallUtil.exe
+    - C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe
+    - C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe
+  tool_os:
+    - Windows
+- tool: jsc
+  tool_description: jsc.yml is a Microsoft utility used by the .NET Framework to compile JavaScript to .exe or .dll format.
+  tool_arguments:
+    - /t - Output type - use '/t:library' for a DLL instead of an EXE
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\Microsoft.NET\Framework\v4.0.30319\Jsc.exe
+    - C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Jsc.exe
+    - C:\Windows\Microsoft.NET\Framework\v2.0.50727\Jsc.exe
+    - C:\Windows\Microsoft.NET\Framework64\v2.0.50727\Jsc.exe
+  tool_os:
+    - Windows
+- tool: makecab
+  tool_description: Makecab.exe is a Microsoft utility used to package existing files into cabinet (.cab) files.
+  tool_arguments:
+    - /f - Specify a file with makecab directives.
+    - /l - Output directory.
+    - /v - Verbosity level (0, 1, 2, 3)
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/makecab
+  tool_locations:
+    - C:\Windows\System32\makecab.exe
+    - C:\Windows\SysWOW64\makecab.exe
+  tool_os:
+    - Windows
+- tool: MavInject
+  tool_description: MavInject is a Microsoft utility used by App-V in Windows.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\System32\mavinject.exe
+    - C:\Windows\SysWOW64\mavinject.exe
+  tool_os:
+    - Windows
+- tool: Microsoft.Workflow.Compiler
+  tool_description: Microsoft Workflow Compiler is a Microsoft .NET utility capable of compiling and executing C# or VisualBasic .NET source code.
+  tool_arguments:
+    - /target - Specify whether an assembly or exe should be created.
+    - /out - Output file name
+    - /debug - Emit full debugging information
+  tool_url: https://learn.microsoft.com/en-us/dotnet/framework/windows-workflow-foundation/wfc-exe-workflow-compiler-tool
+  tool_locations:
+    - C:\Windows\Microsoft.Net\Framework64\v4.0.30319\Microsoft.Workflow.Compiler.exe
+  tool_os:
+    - Windows
+- tool: mmc
+  tool_description: Microsoft Management Console (MMC.exe) is a Microsoft utility to create, save and open administrative consoles for managing hardware, software and network components of Windows.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/troubleshoot/windows-server/system-management-components/what-is-microsoft-management-console
+  tool_locations:
+    - C:\Windows\System32\mmc.exe
+    - C:\Windows\SysWOW64\mmc.exe
+  tool_os:
+    - Windows
+- tool: MpCmdRun
+  tool_description: MpCmdRun.exe is a part of Microsoft Defender Antivirus which can help with automating certain Defender Antivirus tasks.
+  tool_arguments:
+    - -Scan - Configure a Malware Scan
+    - -Trace - Starts diagnostic tracing
+    - -GetFiles - Collects support information
+    - -RemoveDefinitions -All - Restores Security Intelligence to a previous backup or to the default set.
+    - -ListAllDynamicSignatures - Lists the loaded dynamic Security Intelligence
+  tool_url: https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/command-line-arguments-microsoft-defender-antivirus?view=o365-worldwide
+  tool_locations:
+    - C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.2008.4-0\MpCmdRun.exe
+    - C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.2008.7-0\MpCmdRun.exe
+    - C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.2008.9-0\MpCmdRun.exe
+  tool_os:
+    - Windows
+- tool: MSBuild
+  tool_description: Microsoft Build Engine (MSBuild) is a Microsoft platform for building applications from source code - typically C, C# and C++.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/visualstudio/msbuild/msbuild?view=vs-2022
+  tool_locations:
+    - C:\Windows\Microsoft.NET\Framework\v2.0.50727\Msbuild.exe
+    - C:\Windows\Microsoft.NET\Framework64\v2.0.50727\Msbuild.exe
+    - C:\Windows\Microsoft.NET\Framework\v3.5\Msbuild.exe
+    - C:\Windows\Microsoft.NET\Framework64\v3.5\Msbuild.exe
+    - C:\Windows\Microsoft.NET\Framework\v4.0.30319\Msbuild.exe
+    - C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Msbuild.exe
+    - C:\Program Files (x86)\MSBuild\14.0\bin\MSBuild.exe
+  tool_os:
+      - Windows
+- tool: MSConfig
+  tool_description: MSConfig is a Microsoft utility used to temporarily disable or re-enable software, drivers or services launching during startup.
+  tool_arguments:
+    - N/A
+  tool_url: https://techcommunity.microsoft.com/t5/ask-the-performance-team/system-configuration-8211-aka-msconfig/ba-p/374932
+  tool_locations:
+    - C:\Windows\System32\msconfig.exe
+  tool_os:
+    - Windows
+- tool: Msdt
+  tool_description: Msdt.exe is a Microsoft utility which invokes troubleshooting packs for help resolve Windows OS and usage issues.
+  tool_arguments:
+    - /id - Specifies a diagnostic package to run.
+  tool_url: https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/ee424379(v=ws.11)
+  tool_locations:
+    - C:\Windows\System32\Msdt.exe
+    - C:\Windows\SysWOW64\Msdt.exe
+  tool_os:
+    - Windows

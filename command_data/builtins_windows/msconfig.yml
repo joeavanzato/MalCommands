@@ -1,0 +1,20 @@
+- command: Msconfig.exe -5
+  description: Launch a command previously embedded in a crafted C:\windows\system32\mscfgtlc.xml.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Msconfig/
+    - https://twitter.com/pabraeken/status/991314564896690177
+  risk: Medium
+  risk_reason: This is a rare and uncommon usage of msconfig but not immediately suspicious.
+  fidelity: Medium
+  fidelity_reason: Direct usage of this binary is typically rare for most users, depending on the organization.
+  tool: msconfig
+  threatactors:
+    N/A:
+      - N/A

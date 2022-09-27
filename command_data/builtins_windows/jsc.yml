@@ -1,0 +1,38 @@
+- command: jsc.exe scriptfile.js
+  description: Abuse JSC to compile scriptfile.js to EXE format, scriptfile.exe.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1127
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Jsc/
+  risk: High
+  risk_reason: For most users besides possibly developers, this would be a suspicious action.
+  fidelity: High
+  fidelity_reason: This is likely an extremely abnormal command for the majority of users in most organizations.
+  tool: jsc
+  threatactors:
+    N/A:
+      - N/A
+- command: jsc.exe /t:library Library.js
+  description: Abuse JSC to compile Library.js to DLL format, Library.dll.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1127
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Jsc/
+  risk: High
+  risk_reason: For most users besides possibly developers, this would be a suspicious action.
+  fidelity: High
+  fidelity_reason: This is likely an extremely abnormal command for the majority of users in most organizations.
+  tool: jsc
+  threatactors:
+    N/A:
+      - N/A

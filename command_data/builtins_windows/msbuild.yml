@@ -1,0 +1,66 @@
+- command: msbuild.exe pshell.xml
+  description: Build and execute a C# project stored in pshell.xml.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1127.001
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Msbuild/
+    - https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1127/T1127.md
+    - https://github.com/Cn33liz/MSBuildShell
+    - https://pentestlab.blog/2017/05/29/applocker-bypass-msbuild/
+  risk: Low
+  risk_reason: This is a common activity for developers and not immediately suspicious.
+  fidelity: Medium
+  fidelity_reason: This type of activity is typically uncommon for most users and would really only occur for developers.
+  tool: msbuild
+  threatactors:
+    N/A:
+      - N/A
+- command: msbuild.exe project.csproj
+  description: Build and execute a C# project stored in project.csproj.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1127.001
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Msbuild/
+    - https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1127/T1127.md
+    - https://github.com/Cn33liz/MSBuildShell
+    - https://pentestlab.blog/2017/05/29/applocker-bypass-msbuild/
+  risk: Low
+  risk_reason: This is a common activity for developers and not immediately suspicious.
+  fidelity: Medium
+  fidelity_reason: This type of activity is typically uncommon for most users and would really only occur for developers.
+  tool: msbuild
+  threatactors:
+    N/A:
+      - N/A
+- command: msbuild.exe /logger:TargetLogger,C:\Loggers\TargetLogger.dll;MyParameters,Foo
+  description: Executes a dynamically-generated DLL file.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1127.001
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Msbuild/
+    - https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1127/T1127.md
+    - https://github.com/Cn33liz/MSBuildShell
+    - https://pentestlab.blog/2017/05/29/applocker-bypass-msbuild/
+  risk: High
+  risk_reason: This is a rare activity, even for developers.
+  fidelity: High
+  fidelity_reason: This type of activity is typically uncommon for most users and would really only occur for developers.
+  tool: msbuild
+  threatactors:
+    N/A:
+      - N/A

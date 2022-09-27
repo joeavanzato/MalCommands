@@ -1,0 +1,22 @@
+- command: InstallUtil.exe /logfile= /LogToConsole=false /U AllTheThings.dll
+  description: Abuse installutil.exe to launch an arbitrary .NET-based DLL or EXE.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218.004
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Installutil/
+    - https://pentestlab.blog/2017/05/08/applocker-bypass-installutil/
+    - https://evi1cg.me/archives/AppLocker_Bypass_Techniques.html#menu_index_12
+    - https://www.blackhillsinfosec.com/powershell-without-powershell-how-to-bypass-application-whitelisting-environment-restrictions-av/
+  risk: High
+  risk_reason: Launching arbitrary DLL/EXE files via InstallUtil is a suspicious and abnormal activity.
+  fidelity: High
+  fidelity_reason: This type of commandline is typically rare in most organizations.
+  tool: InstallUtil
+  threatactors:
+    N/A:
+      - N/A

@@ -1,0 +1,20 @@
+- command: Microsoft.Workflow.Compiler.exe tests.xml results.xml
+  description: Abuse Microsoft Workflow Compiler to execute C# or VB.net code stored in an XOML file and referenced from within tests.xml.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1127
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Microsoft.Workflow.Compiler/
+    - https://posts.specterops.io/arbitrary-unsigned-code-execution-vector-in-microsoft-workflow-compiler-exe-3d9294bc5efb
+  risk: High
+  risk_reason: For most users except developers, this is a suspicious activity.
+  fidelity: High
+  fidelity_reason: For most users except developers, this is typically a very rare action.
+  tool: microsoft.workflow.compiler
+  threatactors:
+    N/A:
+      - N/A

