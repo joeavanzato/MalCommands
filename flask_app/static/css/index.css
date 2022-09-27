@@ -110,7 +110,8 @@ body {
   overflow: hidden;
 }
 #back_banner:hover {
-  box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+  /* box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px; */
+  box-shadow: rgba(255, 255, 255, 0.5) 0 1px 20px;
   transition-duration: .1s;
 
 }
