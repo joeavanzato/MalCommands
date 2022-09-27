@@ -801,3 +801,90 @@
     - C:\Windows\System32\fltMC.exe
   tool_os:
     - Windows
+- tool: forfiles
+  tool_description: forfiles is a Microsoft utility which can select and run a command on one or more files, often used in batch file operations.
+  tool_arguments:
+    - /P - Path to start the file search (default is current working directory)
+    - /M - Searches for files matching the specified search mask
+    - /S - Performs a recursive subdirectory search
+    - /C - Runs the specified command on each file
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/forfiles
+  tool_locations:
+    - C:\Windows\System32\forfiles.exe
+    - C:\Windows\SysWOW64\forfiles.exe
+  tool_os:
+      - Windows
+- tool: ftp
+  tool_description: ftp is a Microsoft utility for transferring data to and from a computer running the File Transfer Protocol (ftp) server service.
+  tool_arguments:
+    - -v - Suppress remote server responses.
+    - -d - Enable debugging.
+    - -n - Suppress auto-login.
+    - -s - Specify a text file containing ftp commands run automatically after ftp starts.
+    - -A - logon as Anonymous
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/ftp
+  tool_locations:
+    - C:\Windows\System32\ftp.exe
+    - C:\Windows\SysWOW64\ftp.exe
+  tool_os:
+    - Windows
+- tool: gfxdownloadwrapper
+  tool_description: GfxDownloadWrapper.exe is a file used by the Intel Graphics Control Panel to download JSON data, usually from https://gameplayapi.intel.com.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - c:\windows\system32\driverstore\filerepository\*.inf_amd64_fc915899816dbc5d\
+  tool_os:
+    - Windows
+- tool: hh
+  tool_description: HTML Help (hh.exe) is a Microsoft utility designed to run Compiled Help (.chm) files or menu items inside the Help Viewer utility using ActiveX.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/previous-versions/windows/desktop/htmlhelp/about-the-html-help-executable-program
+  tool_locations:
+    - C:\Windows\hh.exe
+    - C:\Windows\SysWOW64\hh.exe
+  tool_os:
+    - Windows
+- tool: imewdbld
+  tool_description: Microsoft IME Open Extended Dictionary Module (IMEWDBLD) is a tool that typically attempts to load dictionary files for Microsoft Office and other applications.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\System32\IME\SHARED\IMEWDBLD.exe
+  tool_os:
+    - Windows
+- tool: ieexec
+  tool_description: IEExec is an undocumented Microsoft .NET application.  Among other functions, it allows for the execution of remotely-stored managed applications.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\Microsoft.NET\Framework\v2.0.50727\ieexec.exe
+    - C:\Windows\Microsoft.NET\Framework64\v2.0.50727\ieexec.exe
+  tool_os:
+    - Windows
+- tool: ilasm
+  tool_description: IL Assembler (ilasm.exe) is a Microsoft utility which can generate Portable Executable (PE) files from Intermediate Language (IL) assembly (typically C#).
+  tool_arguments:
+    - /dll - Produce a DLL instead of an EXE
+    - /exe - Produce an EXE (default)
+    - /include - Sets a path to search for files included with ##include
+  tool_url: https://learn.microsoft.com/en-us/dotnet/framework/tools/ilasm-exe-il-assembler
+  tool_locations:
+    - C:\Windows\Microsoft.NET\Framework\v4.0.30319\ilasm.exe
+    - C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ilasm.exe
+  tool_os:
+    - Windows
+- tool: infdefaultinstall
+  tool_description: INF DefaultInstall is a Microsoft application which supports installation activities based on descriptors within INF formatted files.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/windows-hardware/drivers/install/inf-defaultinstall-section
+  tool_locations:
+    - C:\Windows\System32\Infdefaultinstall.exe
+    - C:\Windows\SysWOW64\Infdefaultinstall.exe
+  tool_os:
+    - Windows
