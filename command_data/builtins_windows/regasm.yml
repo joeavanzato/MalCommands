@@ -1,0 +1,38 @@
+- command: regasm.exe AllTheThingsx64.dll
+  description: Load a target .DLL file and execute a function named 'RegisterClass'.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218.009
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Regasm/
+  risk: High
+  risk_reason: Loading DLLs with regasm is typically a suspicious action.
+  fidelity: High
+  fidelity_reason: This is typically a rare operation in most organizations.
+  tool: regasm
+  threatactors:
+    N/A:
+      - N/A
+- command: regasm.exe /U AllTheThingsx64.dll
+  description: Load a target .DLL file and execute a function named 'UnRegisterClass'.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218.009
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Regasm/
+  risk: High
+  risk_reason: Loading DLLs with regasm is typically a suspicious action.
+  fidelity: High
+  fidelity_reason: This is typically a rare operation in most organizations.
+  tool: regasm
+  threatactors:
+    N/A:
+      - N/A

@@ -1,0 +1,42 @@
+- command: pktmon.exe start --etw
+  description: Start a packet capture and save the data to pktmon.etl.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Credential Access:
+      - T1040
+    Discovery:
+      - T1040
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Pktmon/
+  risk: High
+  risk_reason: Monitoring network traffic can lead attackers to secrets used for lateral movement or privilege escalation.
+  fidelity: Low
+  fidelity_reason: Monitoring network traffic is a common activity for many organizations and IT employees.
+  tool: pktmon
+  threatactors:
+    N/A:
+      - N/A
+- command: pktmon.exe filter add -p 445
+  description: Select specific ports for future network capture.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Credential Access:
+      - T1040
+    Discovery:
+      - T1040
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Pktmon/
+  risk: High
+  risk_reason: Monitoring network traffic can lead attackers to secrets used for lateral movement or privilege escalation.
+  fidelity: Low
+  fidelity_reason: Monitoring network traffic is a common activity for many organizations and IT employees.
+  tool: pktmon
+  threatactors:
+    N/A:
+      - N/A

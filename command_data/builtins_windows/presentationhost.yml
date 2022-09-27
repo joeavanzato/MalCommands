@@ -1,0 +1,20 @@
+- command: Presentationhost.exe C:\temp\Evil.xbap
+  description: Abuse presentationhost to launch an XAML Browser Application file containing malicious code.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Presentationhost/
+    - https://github.com/api0cradle/ShmooCon-2015/blob/master/ShmooCon-2015-Simple-WLEvasion.pdf
+  risk: High
+  risk_reason: Manual usage of this binary is highly suspicious.
+  fidelity: High
+  fidelity_reason: This type of commandline behavior is typically rare in most organizations.
+  tool: Presentationhost
+  threatactors:
+    N/A:
+      - N/A

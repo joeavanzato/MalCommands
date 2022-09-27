@@ -1,0 +1,42 @@
+- command: odbcconf -f file.rsp
+  description: Launch file.rsp which may contain a directive to load an arbitrary DLL
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218.008
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Odbcconf/
+    - https://gist.github.com/NickTyrer/6ef02ce3fd623483137b45f65017352b
+    - https://github.com/woanware/application-restriction-bypasses
+  risk: High
+  risk_reason: This is a suspicious action not typically performed by even IT users.
+  fidelity: High
+  fidelity_reason: This type of behavior is typically rare in most organizations.
+  tool: odbcconf
+  threatactors:
+    N/A:
+      - N/A
+- command: odbcconf /a {REGSVR c:\test\test.dll}
+  description: Directly launch a DLL via a directly specified action.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218.008
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Odbcconf/
+    - https://gist.github.com/NickTyrer/6ef02ce3fd623483137b45f65017352b
+    - https://github.com/woanware/application-restriction-bypasses
+  risk: High
+  risk_reason: This is a suspicious action not typically performed by even IT users.
+  fidelity: High
+  fidelity_reason: This type of behavior is typically rare in most organizations.
+  tool: odbcconf
+  threatactors:
+    N/A:
+      - N/A

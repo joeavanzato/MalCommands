@@ -725,6 +725,26 @@
   threatactors:
     N/A:
       - N/A
+- command: reg save HKLM\SECURITY c:\test\security.bak && reg save HKLM\SYSTEM c:\test\system.bak && reg save HKLM\SAM c:\test\sam.bak
+  description: Export and save various security-focused pieces of the registry to perform offline retrieval of hashes, key material, etc.
+  killchain:
+    - Installation
+    - Actions on Objectives
+  mitre:
+    Credential Access:
+      - T1003.002
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Reg/
+  risk: Critical
+  risk_reason: Exporting sensitive registry data typically has few to none legitimate explanations.
+  fidelity: High
+  fidelity_reason: This is a relatively rare type of behavior.
+  tool: reg
+  threatactors:
+    N/A:
+      - N/A
 # TODO - reg query HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Installer, reg query HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer
 # Check Always Install Elevated
 

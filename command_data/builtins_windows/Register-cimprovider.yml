@@ -1,0 +1,19 @@
+- command: Register-cimprovider -path "C:\folder\evil.dll"
+  description: Abuse register-cimprovider to load and execute a malicious DLL.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Register-cimprovider/
+  risk: High
+  risk_reason: This is a suspicious activity rarely performed by normal users.
+  fidelity: High
+  fidelity_reason: This is typically a rare operation in most organizations.
+  tool: Register-cimprovider
+  threatactors:
+    N/A:
+      - N/A

@@ -1,0 +1,24 @@
+- command: OfflineScannerShell.exe
+  description: Abuse the offline functionality offered by Windows Defender to launch 'mpclient.dll' from the current working directory.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+      - T1574.002
+    Persistence:
+      - T1574.002
+    Privilege Escalation:
+      - T1574.002
+  os:
+    - Windows
+  references:
+    - url1
+  risk: Medium
+  risk_reason: This is an abnormal command for normal or IT users to execute.
+  fidelity: Medium
+  fidelity_reason: In most organizations, this is likely a rare operation.
+  tool: OfflineScannerShell
+  threatactors:
+    N/A:
+      - N/A

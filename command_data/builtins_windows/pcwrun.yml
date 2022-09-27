@@ -1,0 +1,19 @@
+- command: Pcwrun.exe c:\temp\beacon.exe
+  description: Abuse pcwrun to launch a target binary via the Program Compatibility Wizard.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Pcwrun/
+  risk: High
+  risk_reason: Manual usage of this binary is typically suspicious.
+  fidelity: High
+  fidelity_reason: This type of behavior is typically rare in most organizations.
+  tool: pcwrun
+  threatactors:
+    N/A:
+      - N/A

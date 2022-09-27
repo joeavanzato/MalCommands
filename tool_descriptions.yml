@@ -1004,3 +1004,170 @@
     - C:\Windows\SysWOW64\Msdt.exe
   tool_os:
     - Windows
+- tool: MsiExec
+  tool_description: MsiExec is a Microsoft utility which enables users to install, modify and perform operations on Windows Installer files from the commandline.
+  tool_arguments:
+    - /i - Specifies normal installation.
+    - /a - Specifies administrative installation.
+    - /x - Uninstalls the package.
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/msiexec
+  tool_locations:
+    - C:\Windows\System32\msiexec.exe
+    - C:\Windows\SysWOW64\msiexec.exe
+  tool_os:
+      - Windows
+- tool: netsh
+  tool_description: Network Shell (netsh) is a Microsoft utility that allows for the configuration and display of various network communication server roles and components.
+  tool_arguments:
+    - add - Adds a configuration entry.
+    - exec - Runs a script file.
+    - firewall - Change to the netsh firewall context
+  tool_url: https://learn.microsoft.com/en-us/windows-server/networking/technologies/netsh/netsh
+  tool_locations:
+    - C:\WINDOWS\System32\Netsh.exe
+    - C:\WINDOWS\SysWOW64\Netsh.exe
+  tool_os:
+    - Windows
+- tool: odbcconf
+  tool_description: ODBCConf.exe is a Microsoft utility that provides functionality to configure ODBC drivers and data-source names.
+  tool_arguments:
+    - /C - Continue Processing if an action fails.
+    - /E - Erase the specified response file (/F) when processing is finished.
+    - /F - Use a response file such as test.rsp which may contain contents such as 'REGSVR C:\test.dll'
+    - /R - Perform specified action after a reboot
+    - /S - Silent Mode
+  tool_url: https://learn.microsoft.com/en-us/sql/odbc/odbcconf-exe?view=sql-server-ver16
+  tool_locations:
+    - C:\Windows\System32\odbcconf.exe
+    - C:\Windows\SysWOW64\odbcconf.exe
+  tool_os:
+      - Windows
+- tool: OfflineScannerShell
+  tool_description: Part of the Windows Defender program, designed to aid in the assistance of offline scanning functionality.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/microsoft-defender-offline?view=o365-worldwide
+  tool_locations:
+    - C:\Program Files\Windows Defender\Offline\OfflineScannerShell.exe
+  tool_os:
+    - Windows
+- tool: Pcalua
+  tool_description: Program Compatibility Assistant (Pcalua.exe) is a Microsoft utility designed to assist with enabling compatibility features for disabled or otherwise impaired users.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\System32\pcalua.exe
+  tool_os:
+    - Windows
+- tool: pcwrun
+  tool_description: Program Compatibility Wizard (pcwrun.exe) is a Microsoft utility which aids in enhancing cross-version software compatibility.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/windows/win32/w8cookbook/pca-scenarios-for-windows-8
+  tool_locations:
+    - C:\Windows\System32\pcwrun.exe
+  tool_os:
+      - Windows
+- tool: PktMon
+  tool_description: Packet Monitor is a Microsoft utility for capturing network data, available on certain newer OS versions.
+  tool_arguments:
+    - start - Start Packet Capturing
+    - stop - Stop Packet Capturing
+    - filter add -p [port] - Select Ports for Capture
+  tool_url: https://learn.microsoft.com/en-us/windows-server/networking/technologies/pktmon/pktmon
+  tool_locations:
+    - C:\windows\system32\pktmon.exe
+    - C:\windows\syswow64\pktmon.exe
+  tool_os:
+    - Windows
+- tool: PnPUtil
+  tool_description: Plug and Play Utility (PnPUtil.exe) is a Microsoft utility for performing administrative actions on driver packages such as installation, removal, enumeration, etc.
+  tool_arguments:
+    - /install - Install or Update matching drivers.
+    - /reboot - Reboot system if required to complete an operation.
+    - /force - Remove a driver even if it's in use by current devices.
+  tool_url: https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/pnputil
+  tool_locations:
+    - C:\Windows\system32\pnputil.exe
+  tool_os:
+      - Windows
+- tool: PresentationHost
+  tool_description: Windows Presentation Foundation (WPF) Host (PresentationHost.exe) is a Microsoft utility which enables WPF applications to be hosted in compatible browsers - typically utilizing .XAML or .XBAP data-types.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/dotnet/desktop/wpf/app-development/wpf-host-presentationhost-exe?view=netframeworkdesktop-4.8
+  tool_locations:
+    - C:\Windows\System32\Presentationhost.exe
+    - C:\Windows\SysWOW64\Presentationhost.exe
+  tool_os:
+      - Windows
+- tool: print
+  tool_description: Print is a Microsoft utility for sending text files to specified printers.
+  tool_arguments:
+    - /d - Specifies the printer for the current job
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/print
+  tool_locations:
+    - C:\Windows\System32\print.exe
+    - C:\Windows\SysWOW64\print.exe
+  tool_os:
+      - Windows
+- tool: PrintBrm
+  tool_description: Printer Migration is a Microsoft utility for migrating and backing up data related to printer services.
+  tool_arguments:
+    - -b - Backs up the server to a specified file
+    - -s - Specifies a destination server
+    - -o - Forces overwriting of existing objects
+    - -f - Specifies a backup file name
+  tool_url: https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134237(v=ws.11)
+  tool_locations:
+    - C:\Windows\System32\spool\tools\PrintBrm.exe
+  tool_os:
+    - Windows
+- tool: Psr
+  tool_description: Problem Steps Recorder (psr.exe) is a Microsoft utility used to record the active screen and clicks for troubleshooting assistance.
+  tool_arguments:
+    - /start - Start Recording
+    - /output - Provide an output file
+    - /gui - Enable or Disable GUI Creation
+  tool_url: https://learn.microsoft.com/en-us/office/troubleshoot/settings/how-to-use-problem-steps-recorder
+  tool_locations:
+    - C:\windows\system32\psr.exe
+    - C:\windows\syswow64\psr.exe
+  tool_os:
+    - Windows
+- tool: rdrleakdiag
+  tool_description: Resource Leak Diagnostic is a Microsoft utility for performing certain troubleshooting activities.
+  tool_arguments:
+    - /p - Target Process ID
+    - /o - Output Directory
+  tool_url: N/A
+  tool_locations:
+    - C:\windows\system32\rdrleakdiag.exe
+    - C:\Windows\SysWOW64\rdrleakdiag.exe
+  tool_os:
+    - Windows
+- tool: regasm
+  tool_description: Assembly Registration (regasm.exe) is a MIcrosoft utility which can scan assemblies and add necessary entities to the registry which enable COM clients to create .NET framework classes transparently.
+  tool_arguments:
+    - /regfile - Generates the specified .reg file for the assembly.
+    - /silent - Suppress success messages.
+    - /asmpath - Specifies a directory containing assembly references.
+  tool_url: https://learn.microsoft.com/en-us/dotnet/framework/tools/regasm-exe-assembly-registration-tool
+  tool_locations:
+    - C:\Windows\Microsoft.NET\Framework\v2.0.50727\regasm.exe
+    - C:\Windows\Microsoft.NET\Framework64\v2.0.50727\regasm.exe
+    - C:\Windows\Microsoft.NET\Framework\v4.0.30319\regasm.exe
+    - C:\Windows\Microsoft.NET\Framework64\v4.0.30319\regasm.exe
+  tool_os:
+      - Windows
+- tool: Register-cimprovider
+  tool_description: Register-CimProvider is a Microsoft utility used to register Windows Management Instrumentation (WMI) providers.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/previous-versions/windows/desktop/wmi_v2/how-to-register-an-mi-provider
+  tool_locations:
+    - C:\Windows\System32\Register-cimprovider.exe
+    - C:\Windows\SysWOW64\Register-cimprovider.exe
+  tool_os:
+    - Windows

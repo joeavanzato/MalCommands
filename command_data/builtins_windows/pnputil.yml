@@ -1,0 +1,21 @@
+- command: pnputil.exe -i -a C:\Users\hai\Desktop\mo.inf
+  description:
+  killchain:
+    - Installation
+  mitre:
+    Persistence:
+      - T1547
+    Privilege Escalation:
+      - T1547
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Pnputil/
+  risk: High
+  risk_reason: Cyber threats often abuse driver installation for persistence or privilege escalation activities.
+  fidelity: High
+  fidelity_reason: Installing drivers, especially with pnputil, is typically a rare operation in most organizations.
+  tool: pnputil
+  threatactors:
+    N/A:
+      - N/A

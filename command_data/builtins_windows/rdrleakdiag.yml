@@ -1,0 +1,21 @@
+- command: rdrleakdiag.exe /p [PID] /o c:\evil /fullmemdmp /wait 1
+  description: Dump PID [PID] to minidump .dmp files contained within C:\evil - typically targeting LSASS.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Credential Access:
+      - T1003
+      - T1003.001
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Rdrleakdiag/
+    - https://www.pureid.io/dumping-abusing-windows-credentials-part-1/
+  risk: High
+  risk_reason: Cyber-threats commonly seek to dump critical processes from the OS.
+  fidelity: High
+  fidelity_reason: This type of behavior is typically rare for most users in an organization.
+  tool: rdrleakdiag
+  threatactors:
+    N/A:
+      - N/A

@@ -1,0 +1,24 @@
+- command: netsh.exe add helper C:\Users\User\file.dll
+  description: Abuse netsh to add and execute a helper DLL which will be executed every time netsh is launched.
+  killchain:
+    - Installation
+    - Actions on Objectives
+  mitre:
+    Privilege Escalation:
+      - T1546.007
+    Persistence:
+      - T1546.007
+  os:
+    - Windows
+  references:
+    - https://attack.mitre.org/software/S0108/
+    - https://lolbas-project.github.io/lolbas/Binaries/Netsh/
+    - https://liberty-shell.com/sec/2018/07/28/netshlep/
+  risk: High
+  risk_reason: This is an extremely suspicious action that has few legitimate purposes.
+  fidelity: High
+  fidelity_reason: This is typically an extremely rare action in most organizations.
+  tool: netsh
+  threatactors:
+    N/A:
+      - N/A

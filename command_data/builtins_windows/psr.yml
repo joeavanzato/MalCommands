@@ -1,0 +1,19 @@
+- command: psr.exe /start /output D:\test.zip /sc 1 /gui 0
+  description: Use psr to start a screen-recording without a GUI and save the output to test.zip.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Collection:
+      - T1113
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Psr/
+  risk: High
+  risk_reason: This type of action can reveal sensitive information and is abnormal for most users to execute.
+  fidelity: Medium
+  fidelity_reason: If psr is in common use at an organization, this may be difficult to alert on.
+  tool: psr
+  threatactors:
+    N/A:
+      - N/A
