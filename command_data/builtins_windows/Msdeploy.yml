@@ -1,0 +1,20 @@
+- command: msdeploy.exe -verb:sync -source:RunCommand -dest:runCommand="c:\temp\calc.bat"
+  description: Abuse msdeploy.exe to launch an arbitrary batch file or other shell commands.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Msdeploy/
+    - https://twitter.com/pabraeken/status/995837734379032576
+  risk: High
+  risk_reason: Use of msedeploy with non-predictable or non-standard commands is a suspicious activity.
+  fidelity: High
+  fidelity_reason: Including additional commands and using msbuild in this manner is typically rare in most organizations.
+  tool: msdeploy
+  threatactors:
+    N/A:
+      - N/A

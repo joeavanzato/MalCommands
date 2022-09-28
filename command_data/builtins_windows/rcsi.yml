@@ -1,0 +1,20 @@
+- command: rcsi.exe bypass.csx
+  description: Abuse rcsi.exe to launch C# embedded within the .csx file.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1127
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Rcsi/
+    - https://enigma0x3.net/2016/11/21/bypassing-application-whitelisting-by-using-rcsi-exe/
+  risk: High
+  risk_reason: This is a suspicious activity that is not typically used by most people.
+  fidelity: High
+  fidelity_reason: This is typically an abnormal activity for most organizations.
+  tool: rcsi
+  threatactors:
+    N/A:
+      - N/A

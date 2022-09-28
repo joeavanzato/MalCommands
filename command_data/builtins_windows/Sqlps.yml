@@ -1,0 +1,19 @@
+- command: Sqlps.exe -noprofile
+  description: Launch a SQL Server PowerShell console without any module or ScriptBlock level logging.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Sqlps/
+  risk: High
+  risk_reason: This type of command is typically suspicious and not often used in a standalone scenario.
+  fidelity: High
+  fidelity_reason: This type of behavior is typically rare in most organizations.
+  tool: sqlps
+  threatactors:
+    N/A:
+      - N/A

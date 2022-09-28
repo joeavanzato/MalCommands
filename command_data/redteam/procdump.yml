@@ -1,4 +1,4 @@
-- command: procdump64 -accepteula -ma [LSASS_PID] [OUTPUT_FILE]
+- command: procdump -accepteula -ma [LSASS_PID] [OUTPUT_FILE]
   description: Use procdump to perform a full dump of a given process ID - often abused to target LSASS or other critical processes for credential access objectives.
   killchain:
     - Actions on Objectives
@@ -17,7 +17,7 @@
   threatactors:
     N/A:
       - N/A
-- command: procdump64 -accepteula -r -ma [LSASS_PID] [OUTPUT_FILE]
+- command: procdump -accepteula -r -ma [LSASS_PID] [OUTPUT_FILE]
   description: Use procdump to perform a full dump of a given process ID using a cloned process - often abused to target LSASS or other critical processes for credential access objectives.
   killchain:
     - Actions on Objectives
@@ -30,6 +30,44 @@
     - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Sysinternals/ProcDump
   risk: High
   risk_reason: Dumping the LSASS process is an extremely suspicious activity that can lead to immediate negative consequences for an organization depending on the target machine.
+  fidelity: High
+  fidelity_reason: This is typically an abnormal operation for normal users, even IT power users.
+  tool: ProcDump
+  threatactors:
+    N/A:
+      - N/A
+- command: procdump.exe -md calc.dll explorer.exe
+  description: Abuse procdump to load an arbitrary DLL which contains a 'MiniDumpCallbackRoutine' exported function that is executed.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1202
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Procdump/
+  risk: High
+  risk_reason: This is a rare and suspicious usage of procdump.
+  fidelity: High
+  fidelity_reason: This is typically an abnormal operation for normal users, even IT power users.
+  tool: ProcDump
+  threatactors:
+    N/A:
+      - N/A
+- command: procdump.exe -md calc.dll foobar
+  description: Abuse procdump to load an arbitrary DLL which contains a DLL_PROCESS_ATTACH routine that is executed.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1202
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Procdump/
+  risk: High
+  risk_reason: This is a rare and suspicious usage of procdump.
   fidelity: High
   fidelity_reason: This is typically an abnormal operation for normal users, even IT power users.
   tool: ProcDump

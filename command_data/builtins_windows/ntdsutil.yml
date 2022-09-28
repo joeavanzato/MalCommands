@@ -1,0 +1,19 @@
+- command: ntdsutil.exe "ac i ntds" "ifm" "create full c:\" q q
+  description: Abuse ntdsutil to dump the Active Directory database NTDS.dit.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Credential Access:
+      - T1003.003
+  os:
+    - Windows
+  references:
+    - url1
+  risk: Critical
+  risk_reason: This is an extremely suspicious action indicative of a hands-on-keyboard threat.
+  fidelity: High
+  fidelity_reason: This should typically never be occurring for normal users.
+  tool: ntdsutil
+  threatactors:
+    N/A:
+      - N/A

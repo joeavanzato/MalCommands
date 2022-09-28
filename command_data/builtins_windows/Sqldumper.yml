@@ -1,0 +1,41 @@
+- command: sqldumper.exe [PID] 0 0x0110
+  description: Dump a process identified by the given PID to a file named SQLDmpr*.mdmp.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Credential Access:
+      - T1003
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Sqldumper/
+    - https://support.microsoft.com/en-us/help/917825/how-to-use-the-sqldumper-exe-utility-to-generate-a-dump-file-in-sql-se
+  risk: High
+  risk_reason: Manual usage of sqldumper.exe is a suspicious activity that should be audited.
+  fidelity: High
+  fidelity_reason: This type of behavior is typically rare in most organizations.
+  tool: sqldumper
+  threatactors:
+    N/A:
+      - N/A
+- command: sqldumper.exe [LSASS_PID] 0 0x01100:40
+  description: Dump a process identified by the given PID to a file that is compatible with Mimikatz.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Credential Access:
+      - T1003
+      - T1003.001
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Sqldumper/
+    - https://support.microsoft.com/en-us/help/917825/how-to-use-the-sqldumper-exe-utility-to-generate-a-dump-file-in-sql-se
+  risk: High
+  risk_reason: Manual usage of sqldumper.exe is a suspicious activity that should be audited.
+  fidelity: High
+  fidelity_reason: This type of behavior is typically rare in most organizations.
+  tool: sqldumper
+  threatactors:
+    N/A:
+      - N/A

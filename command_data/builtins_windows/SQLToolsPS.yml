@@ -1,0 +1,19 @@
+- command: SQLToolsPS.exe -noprofile -command Start-Process [ANYTHING.exe]
+  description: Launch a SQL Server PowerShell console without Module or ScriptBlock logging.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Sqltoolsps/
+  risk: High
+  risk_reason: This type of activity is suspicious and not typically directly invoked.
+  fidelity: High
+  fidelity_reason: This type of behavior is typically rare for most users.
+  tool: SQLToolsPS
+  threatactors:
+    N/A:
+      - N/A

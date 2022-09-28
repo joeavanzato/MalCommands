@@ -1,0 +1,23 @@
+- command: fsi.exe c:\path\to\test.fsscript
+  description: Execute an arbitrary F# source-code files, bypassing WDAC policies for signed-binary execution.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Execution:
+      - T1059
+    Defense Evasion:
+      - T1218
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Fsi/
+    - https://bohops.com/2020/11/02/exploring-the-wdac-microsoft-recommended-block-rules-part-ii-wfc-fsi/
+    - https://twitter.com/NickTyrer/status/904273264385589248
+  risk: High
+  risk_reason: F# is suspicious on it's own for most users and is uncommon even for developers.
+  fidelity: High
+  fidelity_reason: This is unlikely to be a normal activity for most users, even developers.  Consider alerting on non-standard arguments.
+  tool: fsi
+  threatactors:
+    N/A:
+      - N/A

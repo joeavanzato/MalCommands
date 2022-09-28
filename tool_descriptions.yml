@@ -1894,4 +1894,205 @@
     - C:\Program Files\Microsoft Office\Office[VERSION]\Excel.exe
   tool_os:
       - Windows
+- tool: Fsi
+  tool_type: exe
+  tool_description: Fsi.exe is a Microsoft utility for interpreting 64bit FSharp (F#) source code and is included with Visual Studio and DotNet Core SDK.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/dotnet/fsharp/tools/fsharp-interactive/
+  tool_locations:
+    - C:\Program Files\dotnet\sdk\[sdk version]\FSharp\fsi.exe
+    - C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\FSharp\fsi.exe
+  tool_os:
+      - Windows
+- tool: FsiAnyCpu
+  tool_type: exe
+  tool_description: FsiAnyCpu.exe is a Microsoft utility for interpreting 32 or 64bit FSharp (F#) source code and is included with Visual Studio and DotNet Core SDK.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/dotnet/fsharp/tools/fsharp-interactive/
+  tool_locations:
+    - C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\FSharp\fsianycpu.exe
+  tool_os:
+      - Windows
+- tool: Mftrace
+  tool_type: exe
+  tool_description: Mftrace.exe is a Microsoft utility used for generating trace logs for Media Foundation applications.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/windows/win32/medfound/mftrace
+  tool_locations:
+    - C:\Program Files (x86)\Windows Kits\10\bin\10.0.16299.0\x86\mftrace.exe
+    - C:\Program Files (x86)\Windows Kits\10\bin\10.0.16299.0\x64\mftrace.exe
+    - C:\Program Files (x86)\Windows Kits\10\bin\x86\mftrace.exe
+    - C:\Program Files (x86)\Windows Kits\10\bin\x64\mftrace.exe
+  tool_os:
+      - Windows
+- tool: Msdeploy
+  tool_type: exe
+  tool_description: MsDeploy.exe (Web Deploy) is a Microsoft utility which simplifies deployment of Web applications and sites to IIS servers.
+  tool_arguments:
+    - N/A
+  tool_url: https://www.iis.net/downloads/microsoft/web-deploy
+  tool_locations:
+    - C:\Program Files (x86)\IIS\Microsoft Web Deploy V3\msdeploy.exe
+  tool_os:
+      - Windows
+- tool: msxsl
+  tool_type: exe
+  tool_description: MSXsl.exe is a Microsoft utility used to perform XSL-based transformations.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/dotnet/standard/data/xml/script-blocks-using-msxsl-script
+  tool_locations:
+    - Varies
+  tool_os:
+      - Windows
+- tool: ntdsutil
+  tool_type: exe
+  tool_description: NTDSUtil.exe is a Microsoft uutility which provides management capabilities for Active Directory Domain Services (AD DS) and Active Directory Lightweight Directory Services (AD LDS).
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc753343(v=ws.11)
+  tool_locations:
+    - C:\Windows\System32\ntdsutil.exe
+  tool_os:
+      - Windows
+- tool: Powerpnt
+  tool_type: exe
+  tool_description: PowerPoint is a Microsoft utility that is part of the Microsoft Office productivity suite of applications.
+  tool_arguments:
+    - N/A
+  tool_url: https://www.microsoft.com/en-us/microsoft-365/powerpoint
+  tool_locations:
+    - C:\Program Files (x86)\Microsoft Office [VERSION]\ClientX86\Root\Office[VERSION]\Powerpnt.exe
+    - C:\Program Files\Microsoft Office [VERSION]\ClientX64\Root\Office[VERSION]\Powerpnt.exe
+    - C:\Program Files (x86)\Microsoft Office\Office[VERSION]\Powerpnt.exe
+    - C:\Program Files\Microsoft Office\Office[VERSION]\Powerpnt.exe
+  tool_os:
+      - Windows
+- tool: rcsi
+  tool_type: exe
+  tool_description: rcsi.exe is a Microsoft utility that provides a non-interactive command line interface included with Visual Studio.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - Varies
+  tool_os:
+      - Windows
+- tool: remote
+  tool_type: exe
+  tool_description: Remote.exe is a Microsoft utility which provides the capability to run command-line software on remote systems through named-pipe STDIN and STDOUT redirections.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/the-remote-exe-utility
+  tool_locations:
+    - C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\remote.exe
+    - C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\remote.exe
+  tool_os:
+      - Windows
+- tool: Sqldumper
+  tool_type: exe
+  tool_description: Sqldumper.exe is a Microsoft utility included with Microsoft SQL for debugging purposes.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/troubleshoot/sql/tools/use-sqldumper-generate-dump-file
+  tool_locations:
+    - C:\Program Files\Microsoft SQL Server\90\Shared\SQLDumper.exe
+    - C:\Program Files (x86)\Microsoft Office\root\vfs\ProgramFilesX86\Microsoft Analysis\AS OLEDB\140\SQLDumper.exe
+  tool_os:
+      - Windows
+- tool: Sqlps
+  tool_type: exe
+  tool_description: Sqlps.exe is a Microsoft utility included with Microsoft SQL Server that is used to load SEL Server cmdlets - this is replaced by SQLToolsPS.exe in later versions.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/powershell/module/sqlps/?view=sqlserver-ps
+  tool_locations:
+    - C:\Program files (x86)\Microsoft SQL Server\[VERSION]\Tools\Binn\sqlps.exe
+  tool_os:
+      - Windows
+- tool: SQLToolsPS
+  tool_type: exe
+  tool_description: SQLToolsPS.exe is a Microsoft utility included with Microsoft SQL Server which enables the loading and usage of SQL Server Cmdlets.
+  tool_arguments:
+    - N/A
+  tool_url: https://docs.microsoft.com/en-us/sql/powershell/sql-server-powershell?view=sql-server-2017
+  tool_locations:
+    - C:\Program files (x86)\Microsoft SQL Server\130\Tools\Binn\sqlps.exe
+  tool_os:
+      - Windows
+- tool: Squirrel
+  tool_type: exe
+  tool_description: Squirrel.exe is a Microsoft utility used to update Nuget/Squirrel packages included in Microsoft Teams.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Users\*\AppData\Local\Microsoft\Teams\current\Squirrel.exe
+  tool_os:
+      - Windows
+- tool: te
+  tool_type: exe
+  tool_description: te.exe is a Microsoft utility which is included with the Microsoft Test Authoring and Execution Framework (TAEF).
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - Varies
+  tool_os:
+      - Windows
+- tool: Tracker
+  tool_type: exe
+  tool_description: Tracker is a Microsoft utility included with the .NET Framework.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - Varies
+  tool_os:
+      - Windows
+- tool: Update
+  tool_type: exe
+  tool_description: Update.exe is a Microsoft utility for updating installed Nuget/Squirrel packages as part of Microsoft Teams.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Users\*\AppData\Local\Microsoft\Teams\update.exe
+  tool_os:
+      - Windows
+- tool: VSIISExeLauncher
+  tool_type: exe
+  tool_description: VSIISExeLauncher is a Microsoft utility included as part of Visual Studio / Visual Studio Code installations.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Web Tools\ProjectSystem\VSIISExeLauncher.exe
+  tool_os:
+      - Windows
+- tool: VisualUiaVerifyNative
+  tool_type: exe
+  tool_description: VisualUiaVerifyNative.exe is a Microsoft utility that enables manual and automated testing of Microsoft UI Automation implementations and controls.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Program Files (x86)\Windows Kits\10\bin\[SDK version]\arm64\UIAVerify\VisualUiaVerifyNative.exe
+    - C:\Program Files (x86)\Windows Kits\10\bin\[SDK version]\x64\UIAVerify\VisualUiaVerifyNative.exe
+    - C:\Program Files (x86)\Windows Kits\10\bin\[SDK version]\UIAVerify\VisualUiaVerifyNative.exe
+  tool_os:
+      - Windows
+- tool: vsjitdebugger
+  tool_type: exe
+  tool_description: vsjitdebugger.exe is a Microsoft utility for Just-In-Time debugging included with Visual Studio.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\windows\system32\vsjitdebugger.exe
+  tool_os:
+      - Windows
 

