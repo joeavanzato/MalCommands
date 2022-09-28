@@ -1,0 +1,20 @@
+- command: powershell.exe -command "set-location -path C:\Windows\diagnostics\system\Audio; import-module .\CL_LoadAssembly.ps1; LoadAssemblyFromPath ..\..\..\..\testing\fun.dll;[Program]::Fun()"
+  description: Launch an arbitrary managed-code DLL with PowerShell and CL_LoadAssembly.ps1.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1216
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Scripts/CL_LoadAssembly/
+    - https://bohops.com/2018/01/07/executing-commands-and-bypassing-applocker-with-powershell-diagnostic-scripts/
+  risk: High
+  risk_reason: Manual usage of CL_LoadAssembly is typically suspicious.
+  fidelity: High
+  fidelity_reason: This type of behavior is typically rare in most organizations.
+  tool: CL_LoadAssembly
+  threatactors:
+    N/A:
+      - N/A

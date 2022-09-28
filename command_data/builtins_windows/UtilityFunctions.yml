@@ -1,0 +1,20 @@
+- command: powershell.exe -command "set-location -path c:\windows\diagnostics\system\networking; import-module .\UtilityFunctions.ps1; RegSnapin ..\..\..\..\temp\unsigned.dll;[Program.Class]::Main()”
+  description: Abuse powershell and UtilityFunctions.ps1 to launch an arbitrary managed-code DLL.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1216
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Scripts/UtilityFunctions/
+    - https://twitter.com/nickvangilder/status/1441003666274668546
+  risk: High
+  risk_reason: Manual usage of this script is typically suspicious.
+  fidelity: High
+  fidelity_reason: This is typically rare behavior in most organizations.
+  tool: UtilityFunctions
+  threatactors:
+    N/A:
+      - N/A

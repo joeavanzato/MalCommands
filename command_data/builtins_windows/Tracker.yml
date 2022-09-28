@@ -1,0 +1,22 @@
+- command: Tracker.exe /d .\calc.dll /c C:\Windows\write.exe
+  description: Abuse tracker.exe to launch write.exe and inject calc.dll into the running process.  Can also be used to bypass applpication whitelisting.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1127
+      - T1055.001
+    Privilege Escalation:
+      - T1055.001
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Tracker/
+  risk: High
+  risk_reason: Manual usage of tracker.exe with non-standard DLLs or Binaries is highly suspicious.
+  fidelity: High
+  fidelity_reason: This is typically a rare operation in most environments.
+  tool: tracker
+  threatactors:
+    N/A:
+      - N/A

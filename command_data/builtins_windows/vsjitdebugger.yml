@@ -1,0 +1,20 @@
+- command: Vsjitdebugger.exe calc.exe
+  description: Abuse vsjitdebugger.exe to launch an arbitrary binary as a child process of vsjitdebugger.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1127
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Vsjitdebugger/
+    - https://twitter.com/pabraeken/status/990758590020452353
+  risk: High
+  risk_reason: This is a suspicious activity for most users.
+  fidelity: High
+  fidelity_reason: This is typically a rare operation for most organizations.
+  tool: vsjitdebugger
+  threatactors:
+    N/A:
+      - N/A

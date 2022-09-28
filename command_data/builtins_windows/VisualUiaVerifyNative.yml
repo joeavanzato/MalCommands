@@ -1,0 +1,19 @@
+- command: VisualUiaVerifyNative.exe
+  description: Generate Serialized gadget and save to - C:\Users\[current user]\AppData\Roaminguiverify.config before executing.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/VisualUiaVerifyNative/
+  risk: Medium
+  risk_reason: Manual usage of this binary is suspicious.
+  fidelity: Medium
+  fidelity_reason: This binary is unlikely to be used in most organizations.
+  tool: VisualUiaVerifyNative
+  threatactors:
+    N/A:
+      - N/A

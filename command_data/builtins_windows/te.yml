@@ -1,0 +1,19 @@
+- command: te.exe bypass.wsc
+  description: Abuse te.exe to launch arbitrary COM Scriptlets (VBScript) through Windows Script Component (WSC) files.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1127
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Te/
+  risk: High
+  risk_reason: This is a suspicious activity for most users.
+  fidelity: High
+  fidelity_reason: This is typically a rare operation for most organizations.
+  tool: te
+  threatactors:
+    N/A:
+      - N/A

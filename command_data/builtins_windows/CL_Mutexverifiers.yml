@@ -1,0 +1,19 @@
+- command: powershell -command ". C:\\Windows\\diagnostics\\system\\AERO\\CL_Mutexverifiers.ps1   \nrunAfterCancelProcess calc.ps1"
+  description: Abuse CL_Mutexverifiers to call runAfterCancelProcess to launch an arbitrary executable.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1216
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Scripts/CL_mutexverifiers/
+  risk: High
+  risk_reason: Manual usage of CL_Mutexverifiers is typically suspicious.
+  fidelity: High
+  fidelity_reason: This type of behavior is typically rare in most organizations.
+  tool: CL_Mutexverifiers
+  threatactors:
+    N/A:
+      - N/A

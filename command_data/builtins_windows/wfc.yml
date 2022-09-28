@@ -1,0 +1,20 @@
+- command: wfc.exe c:\path\to\test.xoml
+  description: Abuse wfc.exe to launch arbitrary C# code embedded in test.xoml.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1127
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Wfc/
+    - https://bohops.com/2020/11/02/exploring-the-wdac-microsoft-recommended-block-rules-part-ii-wfc-fsi/
+  risk: High
+  risk_reason: Manual usage of this binary is suspicious.
+  fidelity: High
+  fidelity_reason: This type of behavior is typically rare for most organizations.
+  tool: wfc
+  threatactors:
+    N/A:
+      - N/A

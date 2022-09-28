@@ -1,0 +1,38 @@
+- command: Pester.bat [/help|?|-?|/?] "$null; notepad"
+  description: Abuse pester.bat to launch an arbitrary binary - in this case notepad.exe.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1216
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Scripts/pester/
+  risk: High
+  risk_reason: Manual usage of pester.bat in this manner is typically suspicious.
+  fidelity: High
+  fidelity_reason: This is typically rare behavior in most organizations.
+  tool: pester
+  threatactors:
+    N/A:
+      - N/A
+- command: Pester.bat ;calc.exe
+  description: Abuse pester.bat to launch an arbitrary binary - in this case calc.exe.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1216
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Scripts/pester/
+  risk: High
+  risk_reason: Manual usage of pester.bat in this manner is typically suspicious.
+  fidelity: High
+  fidelity_reason: This is typically rare behavior in most organizations.
+  tool: pester
+  threatactors:
+    N/A:
+      - N/A

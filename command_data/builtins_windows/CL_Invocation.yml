@@ -1,0 +1,19 @@
+- command: powershell -command ". C:\\Windows\\diagnostics\\system\\AERO\\CL_Invocation.ps1   \nSyncInvoke <executable> [args]"
+  description: Abuse CL_Invocation.ps1 to launch an arbitrary executable.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1216
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Scripts/Cl_invocation/
+  risk: High
+  risk_reason: Manual usage of CL_Invocation is typically suspicious.
+  fidelity: High
+  fidelity_reason: This type of behavior is typically rare in most organizations.
+  tool: CL_Invocation
+  threatactors:
+    N/A:
+      - N/A

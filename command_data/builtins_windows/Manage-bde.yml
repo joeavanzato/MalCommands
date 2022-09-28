@@ -1,0 +1,41 @@
+- command: set comspec=c:\windows\system32\calc.exe & cscript c:\windows\system32\manage-bde.wsf
+  description: Set the COMSPEC variable to an arbitrary binary and execute it via calling manage-bde.wsf.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1216
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Scripts/Manage-bde/
+    - https://gist.github.com/bohops/735edb7494fe1bd1010d67823842b712
+  risk: High
+  risk_reason: Manual usage of this script is suspicious in most situations.
+  fidelity: High
+  fidelity_reason: This type of behavior is typically rare for most organizations.
+  tool: manage-bde
+  threatactors:
+    N/A:
+      - N/A
+- command: copy c:\users\person\evil.exe c:\users\public\manage-bde.exe & cd c:\users\public\ & cscript.exe c:\windows\system32\manage-bde.wsf
+  description: Copy a payload named 'manage-bde.exe' in the same directory as msanage-bde.wsf to execute the renamed payload.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1216
+      - T1036.005
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Scripts/Manage-bde/
+    - https://gist.github.com/bohops/735edb7494fe1bd1010d67823842b712
+  risk: High
+  risk_reason: Manual usage of this script is suspicious in most situations.
+  fidelity: High
+  fidelity_reason: This type of behavior is typically rare for most organizations.
+  tool: manage-bde
+  threatactors:
+    N/A:
+      - N/A

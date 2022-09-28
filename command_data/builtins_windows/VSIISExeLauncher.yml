@@ -1,0 +1,19 @@
+- command: VSIISExeLauncher.exe -p [PATH_TO_BIN] -a "[ARGUMENTS]"
+  description: Abuse VSIISExeLauncher.exe to start an arbitrary binary file with relevant arguments.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/VSIISExeLauncher/
+  risk: High
+  risk_reason: Manual usage of VSIISExeLauncher is a suspicious activity in most situations.
+  fidelity: High
+  fidelity_reason: This type of behavior is typically rare in most organizations.
+  tool: VSIISExeLauncher
+  threatactors:
+    N/A:
+      - N/A

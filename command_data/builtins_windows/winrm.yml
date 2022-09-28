@@ -1,0 +1,63 @@
+- command: winrm invoke Create wmicimv2/Win32_Process @{CommandLine="notepad.exe"} -r:http://target:5985
+  description: Abuse WinRM to create a process on a remote computer.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1216
+    Lateral Movement:
+      - T1021.006
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Scripts/Winrm/
+  risk: High
+  risk_reason: This type of behavior should always be audited for legitimacy due to constant abuse by cyber-threats.
+  fidelity: Medium
+  fidelity_reason: Depending on the organization, remote process creation via WinRM may be common or rare.
+  tool: winrm
+  threatactors:
+    N/A:
+      - N/A
+- command: winrm invoke Create wmicimv2/Win32_Service @{Name="Evil";DisplayName="Evil";PathName="cmd.exe /k c:\windows\system32\notepad.exe"} -r:http://acmedc:5985   \nwinrm invoke StartService wmicimv2/Win32_Service?Name=Evil -r:http://acmedc:5985
+  description: Abuse WinRM to create a service on a remote computer.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1216
+    Lateral Movement:
+      - T1021.006
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Scripts/Winrm/
+  risk: High
+  risk_reason: This type of behavior should always be audited for legitimacy due to constant abuse by cyber-threats.
+  fidelity: Medium
+  fidelity_reason: Depending on the organization, remote service creation via WinRM may be common or rare.
+  tool: winrm
+  threatactors:
+    N/A:
+      - N/A
+- command: %SystemDrive%\BypassDir\cscript //nologo %windir%\System32\winrm.vbs get wmicimv2/Win32_Process?Handle=4 -format:pretty
+  description: Abuse WinRM to copy and execute cscript with malicious XSL documents from an attacker-controlled location.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1216
+    Lateral Movement:
+      - T1021.006
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Scripts/Winrm/
+  risk: High
+  risk_reason: This type of behavior should always be audited for legitimacy due to constant abuse by cyber-threats.
+  fidelity: High
+  fidelity_reason: This is typically rare behavior in most organizations.
+  tool: winrm
+  threatactors:
+    N/A:
+      - N/A

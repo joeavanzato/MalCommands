@@ -2095,4 +2095,134 @@
     - C:\windows\system32\vsjitdebugger.exe
   tool_os:
       - Windows
-
+- tool: Wfc
+  tool_type: exe
+  tool_description: Workflow Commandline Compiler (wfc.exe) is a Microsoft utility included with the Windows Software Development Kit (SDK).
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/dotnet/framework/windows-workflow-foundation/wfc-exe-workflow-compiler-tool
+  tool_locations:
+    - C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\wfc.exe
+  tool_os:
+      - Windows
+- tool: Winword
+  tool_type: exe
+  tool_description: Word is a Microsoft application that is part of the Office Productivity Suite of tools.
+  tool_arguments:
+    - N/A
+  tool_url: https://www.microsoft.com/en-us/microsoft-365/word
+  tool_locations:
+    - C:\Program Files (x86)\Microsoft Office [VERSION]\ClientX86\Root\Office[VERSION]\winword.exe
+    - C:\Program Files\Microsoft Office [VERSION]\ClientX64\Root\Office[VERSION]\winword.exe
+    - C:\Program Files (x86)\Microsoft Office\Office[VERSION]\winword.exe
+    - C:\Program Files\Microsoft Office\Office[VERSION]\winword.exe
+  tool_os:
+      - Windows
+- tool: wsl
+  tool_type: exe
+  tool_description: Windows Subsystem for Linux (wsl.exe) is a Microsoft utility which enables users to run GNU/Linux environments from within Windows.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/windows/wsl/about
+  tool_locations:
+    - C:\Windows\System32\wsl.exe
+  tool_os:
+      - Windows
+- tool: CL_LoadAssembly
+  tool_type: ps1
+  tool_description: CL_LoadAssembly.ps1 is a Microsoft PowerShell Diagnostic Script.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\diagnostics\system\Audio\CL_LoadAssembly.ps1
+  tool_os:
+      - Windows
+- tool: CL_Mutexverifiers
+  tool_type: ps1
+  tool_description: Built-in Microsoft PowerShell Script.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\diagnostics\system\WindowsUpdate\CL_Mutexverifiers.ps1
+    - C:\Windows\diagnostics\system\Audio\CL_Mutexverifiers.ps1
+    - C:\Windows\diagnostics\system\Video\CL_Mutexverifiers.ps1
+    - C:\Windows\diagnostics\system\Speech\CL_Mutexverifiers.ps1
+  tool_os:
+      - Windows
+- tool: CL_Invocation
+  tool_type: ps1
+  tool_description:  Built-in Microsoft PowerShell Script for diagnosing Aero problems.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\diagnostics\system\AERO\CL_Invocation.ps1
+    - C:\Windows\diagnostics\system\Audio\CL_Invocation.ps1
+    - C:\Windows\diagnostics\system\WindowsUpdate\CL_Invocation.ps1
+  tool_os:
+      - Windows
+- tool: Manage-bde
+  tool_type: wsf
+  tool_description: Manage-bde.wsf is a Microsoft script used for managing certain aspects of BitLocker.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\System32\manage-bde.wsf
+  tool_os:
+      - Windows
+- tool: Pubprn
+  tool_type: vbs
+  tool_description: Pubprn.vbs is a Microsoft script.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\System32\Printing_Admin_Scripts\en-US\pubprn.vbs
+    - C:\Windows\SysWOW64\Printing_Admin_Scripts\en-US\pubprn.vbs
+  tool_os:
+      - Windows
+- tool: Syncappvpublishingserver_vbs
+  tool_type: vbs
+  tool_description: Syncappvpublishingserver.vbs is a Microsoft script used for managing certain functions of App-V and Publishing Server associations.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\System32\SyncAppvPublishingServer.vbs
+  tool_os:
+      - Windows
+- tool: UtilityFunctions
+  tool_type: ps1
+  tool_description: UtilityFunctions.ps1 is a Microsoft PowerShell Diagnostic Script.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\diagnostics\system\Networking\UtilityFunctions.ps1
+  tool_os:
+    - Windows
+- tool: winrm
+  tool_type: vbs
+  tool_description: winrm.vbs is a Microsoft script used for managing Windows Remote Management (WinRM) settings.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\System32\winrm.vbs
+    - C:\Windows\SysWOW64\winrm.vbs
+  tool_os:
+      - Windows
+- tool: Pester
+  tool_type: bat
+  tool_description: Pester.bat is a Microsoft script used as part of the Pester test framework for PowerShell scripts.
+  tool_arguments:
+    - N/A
+  tool_url: https://devblogs.microsoft.com/scripting/what-is-pester-and-why-should-i-care/
+  tool_locations:
+    - C:\Program Files\WindowsPowerShell\Modules\Pester\3.4.0\bin\Pester.bat
+    - C:\Program Files\WindowsPowerShell\Modules\Pester\*\bin\Pester.bat
+  tool_os:
+      - Windows
