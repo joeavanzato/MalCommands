@@ -1,0 +1,46 @@
+- command: coregen.exe /L C:\folder\evil.dll dummy_assembly_name
+  description: Loads an arbitrary malicious DLL specified by /L.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1055
+      - T1218
+    Privilege Escalation:
+      - T1055
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Coregen/
+    - https://www.fireeye.com/blog/threat-research/2019/10/staying-hidden-on-the-endpoint-evading-detection-with-shellcode.html
+  risk: High
+  risk_reason: Manual usage of coregen.exe with non-standard DLLs is a suspicious activity.
+  fidelity: High
+  fidelity_reason: This type of behavior is typically rare for most organizations.
+  tool: coregen
+  threatactors:
+    N/A:
+      - N/A
+- command: coregen.exe dummy_assembly_name
+  description: Loads a coreclr.dll from the current directory, typically 'C:\Program Files\Microsoft Silverlight\5.1.50918.0'
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1055
+      - T1218
+    Privilege Escalation:
+      - T1055
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Coregen/
+    - https://www.fireeye.com/blog/threat-research/2019/10/staying-hidden-on-the-endpoint-evading-detection-with-shellcode.html
+  risk: High
+  risk_reason: Manual usage of coregen.exe is a suspicious activity.
+  fidelity: High
+  fidelity_reason: This type of behavior is typically rare for most organizations.
+  tool: coregen
+  threatactors:
+    N/A:
+      - N/A

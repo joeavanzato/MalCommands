@@ -1,0 +1,20 @@
+- command: csi.exe [TARGET FILE]
+  description: Abuse csi to run unsigned C# source code.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1127
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Csi/
+    - https://enigma0x3.net/2016/11/17/bypassing-application-whitelisting-by-using-dnx-exe/
+  risk: High
+  risk_reason: Manual usage of csi.exe is suspicious - look for abnormal file locations passed as an argument.
+  fidelity: Medium
+  fidelity_reason: Depending on the organization, this may be a noisy type of behavior for developers.
+  tool: csi
+  threatactors:
+    N/A:
+      - N/A

@@ -1,0 +1,19 @@
+- command: DefaultPack.exe /C:"process.exe args"
+  description: Abuse DefaultPack.exe to launch arbitrary binaries with argument-passing capabilities.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/DefaultPack/
+  risk: High
+  risk_reason: This is an abnormal and suspicious activity for most users.
+  fidelity: High
+  fidelity_reason: This is typically a rare behavior in most organizations.
+  tool: DefaultPack
+  threatactors:
+    N/A:
+      - N/A

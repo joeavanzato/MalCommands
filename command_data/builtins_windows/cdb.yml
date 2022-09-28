@@ -1,0 +1,40 @@
+- command: cdb.exe -cf x64_calc.wds -o notepad.exe
+  description: Abuse cdb.exe to launch 64-bit shellcode stored in the specified .wds file.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1127
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Cdb/
+    - http://www.exploit-monday.com/2016/08/windbg-cdb-shellcode-runner.html
+  risk: High
+  risk_reason: Manual usage of cdb.exe with a .wds file is highly suspicious.
+  fidelity: High
+  fidelity_reason: This type of behavior is typically rare for most organizations.
+  tool: cdb
+  threatactors:
+    N/A:
+      - N/A
+- command: cdb.exe -pd -pn <process_name> .shell <cmd>
+  description: Abuse cdb.exe to attach to an existing process and launch arbitrary shell commands.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1127
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Cdb/
+    - http://www.exploit-monday.com/2016/08/windbg-cdb-shellcode-runner.html
+  risk: High
+  risk_reason: Manual usage of cdb.exe with a .wds file is highly suspicious.
+  fidelity: High
+  fidelity_reason: This type of behavior is typically rare for most organizations.
+  tool: cdb
+  threatactors:
+    N/A:
+      - N/A

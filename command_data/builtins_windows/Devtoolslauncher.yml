@@ -1,0 +1,20 @@
+- command: devtoolslauncher.exe LaunchForDeploy [PATH_TO_BIN] "argument here" test
+  description: Abuse devtoolslauncher to launch an arbitrary binary with arguments.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1127
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Devtoolslauncher/
+    - https://twitter.com/_felamos/status/1179811992841797632
+  risk: Medium
+  risk_reason: This is not immediately suspicious but that would depend on the binary being launched.  For most users, this is suspicious.
+  fidelity: High
+  fidelity_reason: This is unlikely to be used heavily in most organizations.
+  tool: devtoolslauncher
+  threatactors:
+    N/A:
+      - N/A

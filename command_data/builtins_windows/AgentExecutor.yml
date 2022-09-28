@@ -1,0 +1,42 @@
+- command: AgentExecutor.exe -powershell "c:\temp\malicious.ps1" "c:\temp\test.log" "c:\temp\test1.log" "c:\temp\test2.log" 60000 "C:\Windows\SysWOW64\WindowsPowerShell\v1.0" 0 1
+  description: Abuse AgentExecutor to spawn powershell.exe and launch a malicious target script with the ExecutionPolicy Bypass argument.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+    Execution:
+      - T1059.001
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Agentexecutor/
+  risk: High
+  risk_reason: Manual usage of AgentExecutor, especially with non-standard PS1 script, is highly suspicious.
+  fidelity: High
+  fidelity_reason: This is typically a rare command in most organizations.
+  tool: AgentExecutor
+  threatactors:
+    N/A:
+      - N/A
+- command: AgentExecutor.exe -powershell "c:\temp\malicious.ps1" "c:\temp\test.log" "c:\temp\test1.log" "c:\temp\test2.log" 60000 "C:\temp\" 0 1
+  description: Abuse AgentExecutor to spawn a planted powershell.exe located in 'C:\temp' and launch a malicious target script with the ExecutionPolicy Bypass argument.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+    Execution:
+      - T1059.001
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Agentexecutor/
+  risk: High
+  risk_reason: Manual usage of AgentExecutor, especially with non-standard PS1 script, is highly suspicious.
+  fidelity: High
+  fidelity_reason: This is typically a rare command in most organizations.
+  tool: AgentExecutor
+  threatactors:
+    N/A:
+      - N/A

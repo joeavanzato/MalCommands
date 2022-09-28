@@ -1,0 +1,20 @@
+- command: rundll32.exe zipfldr.dll,RouteTheCall file://^C^:^/^W^i^n^d^o^w^s^/^s^y^s^t^e^m^3^2^/^c^a^l^c^.^e^x^e
+  description: Abuse rundll32 and zipfldr.dll to launch an obfuscated exe file payload.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218.011
+      - T1027
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Libraries/Zipfldr/
+  risk: High
+  risk_reason: Manual usage of rundll32 with zipfldr is a suspicious activity.
+  fidelity: High
+  fidelity_reason: This is typically a rare behavior for most organizations.
+  tool: zipfldr
+  threatactors:
+    N/A:
+      - N/A

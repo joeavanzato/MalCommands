@@ -1,0 +1,20 @@
+- command: adplus.exe -hang -pn lsass.exe -o c:\users\mr.d0x\output\folder -quiet
+  description: Abuse adplus.exe to create a memory dump of the LSASS process.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Credential Access:
+      - T1003.001
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Adplus/
+    - https://blog.thecybersecuritytutor.com/adplus-debugging-tool-lsass-dump/
+  risk: Critical
+  risk_reason: Abuse of adplus involving lsass is a critically suspicious activity indicating immediate credential access behavior.
+  fidelity: High
+  fidelity_reason: This is an extremely rare type of command for any user to execute.
+  tool: adplus
+  threatactors:
+    N/A:
+      - N/A

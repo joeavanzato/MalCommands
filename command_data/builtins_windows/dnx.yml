@@ -1,0 +1,20 @@
+- command: dnx.exe consoleapp
+  description: Abuse dnx.exe to launch C# code located in a directory named 'consoleapp' which contains both 'Program.cs' and 'Program.json'.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1127
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Dnx/
+    - https://enigma0x3.net/2016/11/17/bypassing-application-whitelisting-by-using-dnx-exe/
+  risk: High
+  risk_reason: Manual usage of this binary is likely suspicious.
+  fidelity: High
+  fidelity_reason: This is rare activity for most users and organizations, perhaps only being used, if at all, by certain developers.
+  tool: dnx
+  threatactors:
+    N/A:
+      - N/A

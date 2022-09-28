@@ -1,0 +1,40 @@
+- command: dotnet.exe [PATH_TO_DLL]
+  description: Abuse dotnet to launch an arbitrary DLL, even if AppLocker is enabled.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Dotnet/
+    - https://bohops.com/2019/08/19/dotnet-core-a-vector-for-awl-bypass-defense-evasion/
+  risk: High
+  risk_reason: This can lead to immediate negative consequences and is a suspicious activity.
+  fidelity: Medium
+  fidelity_reason: Depending on the organization, this may or may not be a common use of dotnet.exe - look for suspicious paths in argument.
+  tool: dotnet
+  threatactors:
+    N/A:
+      - N/A
+- command: dotnet.exe msbuild [Path_TO_XML_CSPROJ]
+  description: Abuse dotnet to launch an arbitrary unsigned managed code.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Dotnet/
+    - https://bohops.com/2019/08/19/dotnet-core-a-vector-for-awl-bypass-defense-evasion/
+  risk: High
+  risk_reason: This can lead to immediate negative consequences and is a suspicious activity.
+  fidelity: Medium
+  fidelity_reason: Depending on the organization, this may or may not be a common use of dotnet.exe.
+  tool: dotnet
+  threatactors:
+    N/A:
+      - N/A

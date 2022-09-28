@@ -1,0 +1,61 @@
+- command: rundll32.exe url.dll,OpenURL "C:\test\calc.hta"
+  description: Abuse rundll32 and url.dll to launch an HTA payload.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218.011
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Libraries/Url/
+    - https://bohops.com/2018/03/17/abusing-exported-functions-and-exposed-dcom-interfaces-for-pass-thru-command-execution-and-lateral-movement/
+  risk: High
+  risk_reason: Abuse of rundll32 with url.dll in this manner is highly suspicious, especially involving hta files.
+  fidelity: High
+  fidelity_reason: This is typically a rare behavior in most organizations.
+  tool: url
+  threatactors:
+    N/A:
+      - N/A
+- command: rundll32.exe url.dll,OpenURL file://^C^:^/^W^i^n^d^o^w^s^/^s^y^s^t^e^m^3^2^/^c^a^l^c^.^e^x^e
+  description: Abuse rundll32 and url.dll to launch an obfuscated binary payload.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218.011
+      - T1027
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Libraries/Url/
+    - https://bohops.com/2018/03/17/abusing-exported-functions-and-exposed-dcom-interfaces-for-pass-thru-command-execution-and-lateral-movement/
+  risk: High
+  risk_reason: Abuse of rundll32 with url.dll in this manner is highly suspicious, especially involving exe files.
+  fidelity: High
+  fidelity_reason: This is typically a rare behavior in most organizations.
+  tool: url
+  threatactors:
+    N/A:
+      - N/A
+- command: rundll32.exe url.dll,FileProtocolHandler calc.exe
+  description: Abuse rundll32 and url.dll to launch an obfuscated binary payload.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218.011
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Libraries/Url/
+    - https://bohops.com/2018/03/17/abusing-exported-functions-and-exposed-dcom-interfaces-for-pass-thru-command-execution-and-lateral-movement/
+  risk: High
+  risk_reason: Abuse of rundll32 with url.dll in this manner is highly suspicious, especially involving exe files.
+  fidelity: High
+  fidelity_reason: This is typically a rare behavior in most organizations.
+  tool: url
+  threatactors:
+    N/A:
+      - N/A

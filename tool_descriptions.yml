@@ -1699,3 +1699,199 @@
     - C:\windows\syswow64\syssetup.dll
   tool_os:
     - Windows
+- tool: Url
+  tool_type: dll
+  tool_description: Microsoft's Internet Shortcut Shell Extension Library
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\windows\system32\url.dll
+    - C:\windows\syswow64\url.dll
+  tool_os:
+    - Windows
+- tool: Zipfldr
+  tool_type: dll
+  tool_description: Microsoft's Compressed Folder Library
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\windows\system32\zipfldr.dll
+    - C:\windows\syswow64\zipfldr.dll
+  tool_os:
+    - Windows
+- tool: Comsvcs
+  tool_type: dll
+  tool_description: Microsoft's COM+ Services
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\windows\system32\comsvcs.dll
+  tool_os:
+    - Windows
+- tool: AccCheckConsole
+  tool_type: exe
+  tool_description: AccCheckConsole.exe is a Microsoft utility for verifying the accessibility implementation of an application's UI.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/windows/win32/winauto/the-accchecker-console
+  tool_locations:
+    - C:\Program Files (x86)\Windows Kits\10\bin\10.0.22000.0\x86\AccChecker\AccCheckConsole.exe
+    - C:\Program Files (x86)\Windows Kits\10\bin\10.0.22000.0\x64\AccChecker\AccCheckConsole.exe
+    - C:\Program Files (x86)\Windows Kits\10\bin\10.0.22000.0\arm\AccChecker\AccCheckConsole.exe
+    - C:\Program Files (x86)\Windows Kits\10\bin\10.0.22000.0\arm64\AccChecker\AccCheckConsole.exe
+  tool_os:
+    - Windows
+- tool: adplus
+  tool_type: exe
+  tool_description: ADPlus.exe is a Microsoft utility included with Windows Debugging Tools designed to aid in the debugging of certain operations on Windows.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/archive/msdn-magazine/2005/july/techniques-for-rooting-out-elusive-production-bugs-in-csharp-and-c
+  tool_locations:
+    - C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\adplus.exe
+    - C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\adplus.exe
+  tool_os:
+    - Windows
+- tool: AgentExecutor
+  tool_type: exe
+  tool_description: AgentExecutor.exe is a Microsoft Intune Management Extension software included in Intune-Managed devices.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Program Files (x86)\Microsoft Intune Management Extension
+  tool_os:
+    - Windows
+- tool: Appvlp
+  tool_type: exe
+  tool_description: Appvlp.exe is the Microsoft 'Application Virtualization' utility included with Office 2016.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Program Files\Microsoft Office\root\client\appvlp.exe
+    - C:\Program Files (x86)\Microsoft Office\root\client\appvlp.exe
+  tool_os:
+      - Windows
+- tool: Bginfo
+  tool_type: exe
+  tool_description: BInfo.exe is a Microsoft / SysInternals Suite utility which is used to display system information in the desktop, taskbar or popup windows for administrators.
+  tool_arguments:
+    - /taskbar - BGInfo places an icon in the taskbar without updating the desktop.
+    - /all - Specifies BGInfo should change the wallpaper for any and all logged in users.
+  tool_url: https://learn.microsoft.com/en-us/sysinternals/downloads/bginfo
+  tool_locations:
+    - Varies
+  tool_os:
+      - Windows
+- tool: Cdb
+  tool_type: exe
+  tool_description: Microsoft Console Debugger (Cdb.exe) is a Microsoft utility used for debugging purposes.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/cdb-command-line-options
+  tool_locations:
+    - C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\cdb.exe
+    - C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\cdb.exe
+  tool_os:
+      - Windows
+- tool: coregen
+  tool_type: exe
+  tool_description: CoreCLR Native Image Generator (coregen.exe) is a Microsoft utility used in conjunction with Silverlight.
+  tool_arguments:
+    - N/A
+  tool_url:
+  tool_locations:
+    - C:\Program Files\Microsoft Silverlight\5.1.50918.0\coregen.exe
+    - C:\Program Files (x86)\Microsoft Silverlight\5.1.50918.0\coregen.exe
+  tool_os:
+      - Windows
+- tool: csi
+  tool_type: exe
+  tool_description: CSI.exe is a Microsoft utility which provides a commandline interface included with Visual Studio.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/archive/msdn-magazine/2016/january/essential-net-csharp-scripting
+  tool_locations:
+    - C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Roslyn\csi.exe
+    - C:\Program Files (x86)\Microsoft Web Tools\Packages\Microsoft.Net.Compilers.X.Y.Z\tools\csi.exe
+  tool_os:
+      - Windows
+- tool: DefaultPack
+  tool_type: exe
+  tool_description: DefaultPack.exe is included on devices if a user has Bing set as a default search provider alongside certain other downloads on the Microsoft website.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Program Files (x86)\Microsoft\DefaultPack\DefaultPack.exe
+  tool_os:
+      - Windows
+- tool: Devtoolslauncher
+  tool_type: exe
+  tool_description: Devtoolslauncher.exe is a Microsoft utility which will execute a specified binary - it is typically installed as part of Visual Studio or Visual Studio Code installations.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\windows\system32\devtoolslauncher.exe
+  tool_os:
+      - Windows
+- tool: dnx
+  tool_type: exe
+  tool_description: DNX.exe is a Microsoft utility used with .NET execution and environment tasks.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - Varies
+  tool_os:
+      - Windows
+- tool: Dotnet
+  tool_type: exe
+  tool_description: dotnet.exe is a Microsoft utility which provides various functionality related to .NET Command Line Interface capabilities.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet
+  tool_locations:
+    - C:\Program Files\dotnet\dotnet.exe
+  tool_os:
+      - Windows
+- tool: Dump64
+  tool_type: exe
+  tool_description: Dump64.exe is a Microsoft utility installed with Visual Studio which provides process memory dump functionality.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Program Files (x86)\Microsoft Visual Studio\Installer\Feedback\dump64.exe
+  tool_os:
+      - Windows
+- tool: Dxcap
+  tool_type: exe
+  tool_description: DXcap.exe is a Microsoft utility included with Visual Studio designed to provide graphics diagnostics capture and playback functionality for debugging purposes.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/visualstudio/debugger/graphics/command-line-capture-tool?view=vs-2022
+  tool_locations:
+    - C:\Windows\System32\dxcap.exe
+    - C:\Windows\SysWOW64\dxcap.exe
+  tool_os:
+      - Windows
+- tool: Excel
+  tool_type: exe
+  tool_description: Excel.exe is part of the Microsoft Office suite of productivity applications.
+  tool_arguments:
+    - N/A
+  tool_url: https://www.microsoft.com/en-us/microsoft-365/excel
+  tool_locations:
+    - C:\Program Files (x86)\Microsoft Office [VERSION]\ClientX86\Root\Office[VERSION]\Excel.exe
+    - C:\Program Files\Microsoft Office [VERSION]\ClientX64\Root\Office[VERSION]\Excel.exe
+    - C:\Program Files (x86)\Microsoft Office\Office[VERSION]\Excel.exe
+    - C:\Program Files\Microsoft Office\Office[VERSION]\Excel.exe
+  tool_os:
+      - Windows
+

@@ -1,0 +1,20 @@
+- command: AccCheckConsole.exe -window "Untitled - Notepad" C:\path\to\your\lolbas.dll
+  description: Abuse AccCheckConsole to load a managed-code DLL.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/AccCheckConsole/
+    - https://gist.github.com/bohops/2444129419c8acf837aedda5f0e7f340
+  risk: High
+  risk_reason: Manual usage of AccCheckConsole with arbitrary or non-standard DLLs is a highly suspicious activity.
+  fidelity: High
+  fidelity_reason: This is typically a rare behavior in most organizations.
+  tool: AccCheckConsole
+  threatactors:
+    N/A:
+      - N/A

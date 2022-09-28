@@ -1,0 +1,20 @@
+- command: dump64.exe <pid> out.dmp
+  description: Abuse dump64.exe component of Visual Studio to dump the memory of a target process to a specified file.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Credential Access:
+      - T1003.001
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Dump64/
+    - https://twitter.com/mrd0x/status/1460597833917251595
+  risk: High
+  risk_reason: This is a suspicious activity for normal users but potentially common for developers or researchers.
+  fidelity: High
+  fidelity_reason: Use of this software is typically rare in most organizations.
+  tool: dump64
+  threatactors:
+    N/A:
+      - N/A

