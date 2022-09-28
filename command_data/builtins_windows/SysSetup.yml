@@ -1,0 +1,19 @@
+- command: rundll32.exe syssetup.dll,SetupInfObjectInstallAction DefaultInstall 128 c:\test\shady.inf
+  description: Abuse rundll32 and sysetup.dll to launch an executable or .wsh/.sct script.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218.011
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Libraries/Syssetup/
+  risk: High
+  risk_reason: Abuse of rundll32 with syssetup.dll in this manner is highly suspicious.
+  fidelity: High
+  fidelity_reason: This type of behavior is extremely rare for most organizations.
+  tool: syssetup
+  threatactors:
+    N/A:
+      - N/A

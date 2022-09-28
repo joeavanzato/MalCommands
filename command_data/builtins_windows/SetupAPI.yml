@@ -1,0 +1,22 @@
+- command: rundll32.exe setupapi.dll,InstallHinfSection DefaultInstall 128 C:\Tools\shady.inf
+  description: Execute a .wsh/.sct or executable via scrobj.dll that is defined in the named section of the target .inf file.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218.011
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Libraries/Setupapi/
+    - https://github.com/huntresslabs/evading-autoruns
+    - https://twitter.com/pabraeken/status/994742106852941825
+    - https://windows10dll.nirsoft.net/setupapi_dll.html
+  risk: High
+  risk_reason: Abuse of rundll32 with setupapi.dll in this manner is highly suspicious.
+  fidelity: High
+  fidelity_reason: This type of behavior is extremely rare for most organizations.
+  tool: setupapi
+  threatactors:
+    N/A:
+      - N/A

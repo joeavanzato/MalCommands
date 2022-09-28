@@ -1,0 +1,22 @@
+- command: rundll32.exe ieframe.dll,OpenURL "C:\test\calc.url"
+  description: Abuse rundll32 and ieframe.dll to launch an executable payload through a URL information file by calling OpenURL
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Command and Control:
+      - T1105
+    Defense Evasion:
+      - T1218.011
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Libraries/Ieframe/
+    - http://www.hexacorn.com/blog/2018/03/15/running-programs-via-proxy-jumping-on-a-edr-bypass-trampoline-part-5/
+  risk: High
+  risk_reason: Manual usage of rundll32 with ieframe.dll is a suspicious activity.
+  fidelity: High
+  fidelity_reason: There is almost no legitimate reason to be operating rundll32 with ieframe.dll in this manner.
+  tool: ieframe
+  threatactors:
+    N/A:
+      - N/A

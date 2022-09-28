@@ -1,0 +1,20 @@
+- command: rundll32.exe shell32.dll,Control_RunDLL [payload.dll | payload.exe | "cmd.exe" "/c echo test"]
+  description: Abuse rundll32 and shell32 to launch DLLs, EXEs or arbitrary commands.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218.011
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Libraries/Shell32/
+    - https://windows10dll.nirsoft.net/shell32_dll.html
+  risk: High
+  risk_reason: Abuse of rundll32 with setupapi.dll in this manner is highly suspicious.
+  fidelity: High
+  fidelity_reason: This type of behavior is extremely rare for most organizations.
+  tool: shell32
+  threatactors:
+    N/A:
+      - N/A

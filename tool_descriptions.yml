@@ -1626,10 +1626,76 @@
   tool_description: ieframe.dll is a Microsoft Library used for translation of HTML code.
   tool_type: dll
   tool_arguments:
-    -
-  tool_url:
+    - N/A
+  tool_url: N/A
   tool_locations:
     - C:\windows\system32\ieframe.dll
     - C:\windows\syswow64\ieframe.dll
+  tool_os:
+    - Windows
+- tool: mshtml
+  tool_type: dll
+  tool_description: Microsoft HTML Viewer Library
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/windows/win32/devnotes/mshtml2
+  tool_locations:
+    - C:\windows\system32\mshtml.dll
+    - C:\windows\syswow64\mshtml.dll
+  tool_os:
+    - Windows
+- tool: pcwutl
+  tool_type: dll
+  tool_description: N/A
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\windows\system32\pcwutl.dll
+    - C:\windows\syswow64\pcwutl.dll
+  tool_os:
+    - Windows
+- tool: setupapi
+  tool_type: dll
+  tool_description: Windows Setup Application Programming Interface Library
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/windows-hardware/drivers/install/setupapi
+  tool_locations:
+    - C:\windows\system32\setupapi.dll
+    - C:\windows\syswow64\setupapi.dll
+  tool_os:
+    - Windows
+- tool: Shdocvw
+  tool_type: dll
+  tool_description: Microsoft Shell Doc Object and Control Library
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\windows\system32\shdocvw.dll
+    - C:\windows\syswow64\shdocvw.dll
+  tool_os:
+    - Windows
+- tool: Shell32
+  tool_type: dll
+  tool_description: Microsoft Windows Shell Common Library
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\windows\system32\shell32.dll
+    - C:\windows\syswow64\shell32.dll
+  tool_os:
+    - Windows
+- tool: syssetup
+  tool_type: dll
+  tool_description: Microsoft Windows NT System Setup Library
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\windows\system32\syssetup.dll
+    - C:\windows\syswow64\syssetup.dll
   tool_os:
     - Windows

@@ -1,0 +1,21 @@
+- command: rundll32.exe pcwutl.dll,LaunchApplication calc.exe
+  description: Launch an exectauble through abuse of rundll32 and pcwutl.dll.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218.011
+  os:
+    - Windows
+  references:
+    - https://twitter.com/harr0ey/status/989617817849876488
+    - https://lolbas-project.github.io/lolbas/Libraries/Pcwutl/
+    - https://windows10dll.nirsoft.net/pcwutl_dll.html
+  risk: High
+  risk_reason: Abuse of rundll32 with pcwutl in this manner is highly suspicious.
+  fidelity: High
+  fidelity_reason: This type of behavior is typically rare in most organizations.
+  tool: pcwutl
+  threatactors:
+    N/A:
+      - N/A

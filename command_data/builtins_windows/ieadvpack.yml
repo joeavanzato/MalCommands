@@ -1,0 +1,80 @@
+- command: rundll32.exe ieadvpack.dll,LaunchINFSection c:\test.inf,DefaultInstall_SingleUser,1,
+  description: Execute a .sct or .wsh payload specified in test.info through abuse of ieadvpack.dll.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218.011
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Libraries/Ieadvpack/
+    - https://bohops.com/2018/03/10/leveraging-inf-sct-fetch-execute-techniques-for-bypass-evasion-persistence-part-2/
+  risk: High
+  risk_reason: Manual usage of rundll32 with ieadvpack.dll is a suspicious activity.
+  fidelity: High
+  fidelity_reason: This is typically a rare behavior in most organizations.
+  tool: ieadvpack
+  threatactors:
+    N/A:
+      - N/A
+- command: rundll32.exe ieadvpack.dll,RegisterOCX test.dll
+  description: Execute an arbitrary DLL through abuse of ieadvpack.dll.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218.011
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Libraries/Ieadvpack/
+    - https://bohops.com/2018/03/10/leveraging-inf-sct-fetch-execute-techniques-for-bypass-evasion-persistence-part-2/
+  risk: High
+  risk_reason: Manual usage of rundll32 with ieadvpack.dll is a suspicious activity.
+  fidelity: High
+  fidelity_reason: This is typically a rare behavior in most organizations.
+  tool: ieadvpack
+  threatactors:
+    N/A:
+      - N/A
+- command: rundll32.exe ieadvpack.dll,RegisterOCX calc.exe
+  description: Execute an arbitrary EXE through abuse of ieadvpack.dll.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218.011
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Libraries/Ieadvpack/
+    - https://bohops.com/2018/03/10/leveraging-inf-sct-fetch-execute-techniques-for-bypass-evasion-persistence-part-2/
+  risk: High
+  risk_reason: Manual usage of rundll32 with ieadvpack.dll is a suspicious activity.
+  fidelity: High
+  fidelity_reason: This is typically a rare behavior in most organizations.
+  tool: ieadvpack
+  threatactors:
+    N/A:
+      - N/A
+- command: rundll32 ieadvpack.dll, RegisterOCX "cmd.exe /c calc.exe"
+  description: Execute an arbitrary command through abuse of ieadvpack.dll.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218.011
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Libraries/Ieadvpack/
+    - https://bohops.com/2018/03/10/leveraging-inf-sct-fetch-execute-techniques-for-bypass-evasion-persistence-part-2/
+  risk: High
+  risk_reason: Manual usage of rundll32 with ieadvpack.dll is a suspicious activity.
+  fidelity: High
+  fidelity_reason: This is typically a rare behavior in most organizations.
+  tool: ieadvpack
+  threatactors:
+    N/A:
+      - N/A

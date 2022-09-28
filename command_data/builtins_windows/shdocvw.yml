@@ -1,0 +1,21 @@
+- command: rundll32.exe shdocvw.dll,OpenURL "C:\test\calc.url"
+  description: Abuse rundll32 and shdocvw.dll to launch an executable defined in a .URL file.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218.011
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Libraries/Shdocvw/
+    - https://windows10dll.nirsoft.net/shdocvw_dll.html
+    - https://bohops.com/2018/03/17/abusing-exported-functions-and-exposed-dcom-interfaces-for-pass-thru-command-execution-and-lateral-movement/
+  risk: High
+  risk_reason: Abuse of rundll32 with shdocvw.dll in this manner is highly suspicious.
+  fidelity: High
+  fidelity_reason: This type of behavior is extremely rare for most organizations.
+  tool: shdocvw
+  threatactors:
+    N/A:
+      - N/A

@@ -1,0 +1,20 @@
+- command: rundll32.exe Mshtml.dll,PrintHTML "C:\temp\calc.hta"
+  description: Start a malicious .HTA file via rundll32 abuse - this does pop a security warning/print dialogue box.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218.011
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Libraries/Mshtml/
+    - https://windows10dll.nirsoft.net/mshtml_dll.html
+  risk: High
+  risk_reason: Abuse of rundll32 with mshtml.dll in this manner is highly suspicious.
+  fidelity: High
+  fidelity_reason: This type of behavior is typically rare in most organizations.
+  tool: mshtml
+  threatactors:
+    N/A:
+      - N/A

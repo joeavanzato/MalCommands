@@ -1,0 +1,80 @@
+- command: rundll32.exe advpack.dll,LaunchINFSection c:\test.inf,DefaultInstall_SingleUser,1,
+  description: Execute a local or remote .wsh/.sct script via scrobj.dll which is specified in the target Information File Directive (.inf) file with a specified section name.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218.011
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Libraries/Advpack/
+    - https://bohops.com/2018/02/26/leveraging-inf-sct-fetch-execute-techniques-for-bypass-evasion-persistence/
+  risk: High
+  risk_reason: Manual usage of rundll32 with advpack is a suspicious activity.
+  fidelity: High
+  fidelity_reason: This type of behavior is typically rare in most organizations.
+  tool: advpack
+  threatactors:
+    N/A:
+      - N/A
+- command: rundll32.exe advpack.dll,RegisterOCX test.dll
+  description:  Launch a malicious DLL through advpack.dll functionality.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218.011
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Libraries/Advpack/
+    - https://bohops.com/2018/02/26/leveraging-inf-sct-fetch-execute-techniques-for-bypass-evasion-persistence/
+  risk: High
+  risk_reason: Manual usage of rundll32 with advpack is a suspicious activity.
+  fidelity: High
+  fidelity_reason: This type of behavior is typically rare in most organizations.
+  tool: advpack
+  threatactors:
+    N/A:
+      - N/A
+- command: rundll32.exe advpack.dll,RegisterOCX calc.exe
+  description:  Launch a malicious exe through advpack.dll functionality.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218.011
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Libraries/Advpack/
+    - https://bohops.com/2018/02/26/leveraging-inf-sct-fetch-execute-techniques-for-bypass-evasion-persistence/
+  risk: High
+  risk_reason: Manual usage of rundll32 with advpack is a suspicious activity.
+  fidelity: High
+  fidelity_reason: This type of behavior is typically rare in most organizations.
+  tool: advpack
+  threatactors:
+    N/A:
+      - N/A
+- command: rundll32 advpack.dll, RegisterOCX "cmd.exe /c calc.exe"
+  description:  Launch a malicious command-line through advpack.dll functionality.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218.011
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Libraries/Advpack/
+    - https://bohops.com/2018/02/26/leveraging-inf-sct-fetch-execute-techniques-for-bypass-evasion-persistence/
+  risk: High
+  risk_reason: Manual usage of rundll32 with advpack is a suspicious activity.
+  fidelity: High
+  fidelity_reason: This type of behavior is typically rare in most organizations.
+  tool: advpack
+  threatactors:
+    N/A:
+      - N/A
