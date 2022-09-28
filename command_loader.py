@@ -40,7 +40,7 @@ def import_commands_to_mongo():
     tool_collection = db.tool_collection
     for f in files:
         print(f"Loading: {f}")
-        with open(f, 'r') as f:
+        with open(f, 'r', encoding='utf8') as f:
             data = yaml.safe_load(f)
         if data is not None:
             for i in data:
