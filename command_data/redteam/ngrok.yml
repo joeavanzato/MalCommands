@@ -1,0 +1,42 @@
+- command: ngrok.exe config add-authtoken [AUTH TOKEN REACTED]
+  description: Needed on an initial configuration of ngrok - the binary is often renamed.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Command and Control:
+      - T1572
+      - T1102
+  os:
+    - Windows
+  references:
+    - https://go.crowdstrike.com/rs/281-OBQ-266/images/2022OverWatchThreatHuntingReport.pdf
+    - https://attack.mitre.org/software/S0508/
+  risk: High
+  risk_reason: ngrok usage can lead to immediate network access over the Internet and is a common cyber-threat activity.
+  fidelity: High
+  fidelity_reason: This type of behavior is typically rare for most users.
+  tool: ngrok
+  threatactors:
+    N/A:
+      - N/A
+- command: ssas.exe authtoken [AUTH TOKEN REDACTED]
+  description: Invoked each time ngrok.exe is executed.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Command and Control:
+      - T1572
+      - T1102
+  os:
+    - Windows
+  references:
+    - https://go.crowdstrike.com/rs/281-OBQ-266/images/2022OverWatchThreatHuntingReport.pdf
+    - https://attack.mitre.org/software/S0508/
+  risk: High
+  risk_reason: ngrok usage can lead to immediate network access over the Internet and is a common cyber-threat activity.
+  fidelity: High
+  fidelity_reason: This type of behavior is typically rare for most users.
+  tool: ngrok
+  threatactors:
+    N/A:
+      - N/A

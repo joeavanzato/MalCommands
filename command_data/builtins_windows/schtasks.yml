@@ -44,3 +44,28 @@
   threatactors:
     N/A:
       - N/A
+- command: C:\Windows\system32\schtasks.exe /create /tn “[ANY NAME]” /tr “\”[ANY BINARY]” --scheduler” /sc ONSTART /ru System
+  description: Abuse schtasks to create an arbitrary scheduled task which will run as SYSTEM at boot-time.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Execution:
+      - T1053.005
+    Persistence:
+      - T1053.005
+    Privilege Escalation:
+      - T1053.005
+    Impact:
+      - T1490
+  os:
+    - Windows
+  references:
+    - https://go.crowdstrike.com/rs/281-OBQ-266/images/2022OverWatchThreatHuntingReport.pdf
+  risk: High
+  risk_reason: Scheduled Task creation is a commonly abused tactic by cyber-threats and suspicious to run as SYSTEM.
+  fidelity: Medium
+  fidelity_reason: Creation of scheduled tasks is typically performed on a frequent basis by installed software, IT operators, etc - alerting on non-standard names or binary locations may yield good results, as well as items created to run as SYSTEM.
+  tool: schtasks
+  threatactors:
+    N/A:
+      - N/A

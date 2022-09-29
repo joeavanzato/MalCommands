@@ -1,0 +1,13 @@
+- tool: AnyDesk
+  tool_type: exe
+  tool_description: AnyDesk is a Remote Access Tool (RAT) often utilized for both legitimate and malicious activities.
+  tool_arguments:
+    - --start - Start the AnyDesk Servdice
+    - --remote-password - Remote the Unattended Access Password
+  tool_url: https://anydesk.com/en
+  tool_locations:
+    - C:\Program Files (x86)\AnyDesk\AnyDesk.exe
+  tool_os:
+      - Windows
+      - Mac
+      - Linux

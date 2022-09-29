@@ -1,0 +1,19 @@
+- command: nanodump.x64.exe -w "%temp%\nanodump.dmp"
+  description: Abuse nanodump to dump LSASS.exe process memory to the %TEMP% directory - typically the binary is renamed but the arguments remain the same.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    tactic1:
+      - technique1
+  os:
+    - Windows
+  references:
+    - https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.001/T1003.001.md
+  risk: Critical
+  risk_reason: Detection of nanodump in a commandline is a highly suspicious activity.
+  fidelity: High
+  fidelity_reason: This type of behavior is typically non-existent in most organizations.
+  tool: nanodump
+  threatactors:
+    N/A:
+      - N/A

@@ -745,6 +745,46 @@
   threatactors:
     N/A:
       - N/A
+- command: reg.exe ADD “HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server” /v fDenyTSConnections /t REG_DWORD /d 0 /f
+  description: Abuse reg to enable RDP connections on a local or remote target.
+  killchain:
+    - Installation
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1112
+  os:
+    - Windows
+  references:
+    - https://www.crowdstrike.com/wp-content/uploads/2022/09/2020-overwatch-threat-hunting-report.pdf
+  risk: High
+  risk_reason: Modifying this registry key is often done by cyber threats prior to lateral movement.
+  fidelity: High
+  fidelity_reason: This is a relatively rare type of behavior.
+  tool: reg
+  threatactors:
+    N/A:
+      - N/A
+- command: reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters /v MaxMpxCt /d 65535 /t REG_DWORD /f”
+  description: Abuse reg to alter the maximum number of concurrent outstanding network requests allowed by the local SMB server.
+  killchain:
+    - Installation
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1112
+  os:
+    - Windows
+  references:
+    - https://www.crowdstrike.com/wp-content/uploads/2022/09/2020-overwatch-threat-hunting-report.pdf
+  risk: High
+  risk_reason: Modifying this registry key is sometimes done by cyber threats prior to lateral distribution of malware.
+  fidelity: High
+  fidelity_reason: This is a relatively rare type of behavior.
+  tool: reg
+  threatactors:
+    N/A:
+      - N/A
 # TODO - reg query HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Installer, reg query HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer
 # Check Always Install Elevated
 

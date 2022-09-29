@@ -1,0 +1,2082 @@
+- tool: appinstaller
+  tool_type: exe
+  tool_description: Microsoft App Installer is a utility which aids in the ability to sideload Windows 10 apps, removing certain difficulties and making libraries more easily available and standardized across applications.  It is typically used to deploy AppX/MSIX file types.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/windows/msix/app-installer/app-installer-file-overview
+  tool_locations:
+    - C:\Program Files\WindowsApps\Microsoft.DesktopAppInstaller_*\AppInstaller.exe
+  tool_os:
+    - Windows
+- tool: aspnet_compiler
+  tool_type: exe
+  tool_description: The ASP.NET Compilation Tool (aspnet_compiler.exe) enables teams to compile an ASP.NET web application.  This can help to improve performance but also can be abused by threat actors for on-the-fly execution of C# source code.
+  tool_arguments:
+    - v - Specify the virtual path of the application to be compiled.
+    - p - Value of the accompanying physicalPath parameter to locate the to-be-compiled application.
+    - f - Overwrite existing files in targetDir
+    - targetDir - Network or Local disk that will contain the compiled application.
+    - c - Specifies that the application should be fully rebuilt.
+  tool_url: https://learn.microsoft.com/en-us/previous-versions/ms229863(v=vs.140)?redirectedfrom=MSDN
+  tool_locations:
+    - C:\Windows\Microsoft.NET\Framework\v4.0.30319\aspnet_compiler.exe
+    - C:\Windows\Microsoft.NET\Framework64\v4.0.30319\aspnet_compiler.exe
+  tool_os:
+    - Windows
+- tool: at
+  tool_type: exe
+  tool_description: AT is a tool which comes pre-deployed on older versions of Windows and aids in the creation and modification of scheduled tasks on local and remote devices.  It is often abused by cyber threats to achieve persistence and execution objectives.
+  tool_arguments:
+    - \computername - The remote computer to target.
+    - time - Specify when the task should run, represented as hours:minutes
+    - /interactive - Allows the task to interact with the desktop of the user logged on when the task runs.
+    - /every:date - Scheduled the task to run on specific days of the week or month.
+    - command - Used to specify the program (.exe, .bat, .com, .cmd) which will run.
+    - /yes - Force a 'yes' answer to all queries from the system in response to cancelling scheduled tasks.
+  tool_url: https://learn.microsoft.com/en-us/troubleshoot/windows-client/system-management-components/use-at-command-to-schedule-tasks
+  tool_locations:
+    - C:\WINDOWS\System32\At.exe
+    - C:\WINDOWS\SysWOW64\At.exe
+  tool_os:
+    - Windows
+- tool: auditpol
+  tool_type: exe
+  tool_description: AuditPol helps IT operators to perform various actions around audit policies, including setting or querying system-wide/per-user policies, auditing options, security descriptors, exporting data to a CSV, loading data from a CSV and configuring global resource System Access Control Lists (SACLs)
+  tool_arguments:
+    - /get - Displays the current audit policy
+    - /set - Sets an audit policy
+    - /list - Displays selectable policy elements
+    - /backup - Save audit policy to a file
+    - /restore - Restore audit policy from a previously created backup
+    - /clear - Clears the current audit policy
+    - /remove - Removes all per-user policy settings and disables all system policy settings
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/auditpol
+  tool_locations:
+    - 'C:\Windows\System32\auditpol.exe'
+    - 'C:\Windows\SysWOW64\auditpol.exe'
+  tool_os:
+    - Windows
+- tool: bcdedit
+  tool_type: exe
+  tool_description: Boot Configuration Data (BCD) files describe boot applications and relevant settings - BCDEdit is used to manage these data stores, including creation, modification, etc.
+  tool_arguments:
+    - /createstore - Creates a new empty boot configuration data store
+    - /export - Exports the contents of the system store to file.
+    - /import - Restores the state of the system store using previously exported data.
+    - /store - Specify the store to be used.
+    - /enum - List entries in a given store
+    - /create - Creates a new entry in the specified store
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/bcdedit
+  tool_locations:
+    - 'C:\Windows\System32\bcdedit.exe'
+  tool_os:
+    - Windows
+- tool: certutil
+  tool_type: exe
+  tool_description: Certutil is included as part of Certificate Services on Windows to dump and display Certification Authority configuration information, configure Certificate Services, backup or restore CA components and to verify certificates, key pairs and certificate chains.
+  tool_arguments:
+    - -dump - Export configuration information or files
+    - -decodehex - Decode a hexadecimal-encoded file
+    - -decode - Decode a Base64-encoded files
+    - -encode - Encode a file to Base64
+    - -installcert - Installs a CA Certificate
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/certutil
+  tool_locations:
+    - 'C:\Windows\System32\certutil.exe'
+    - 'C:\Windows\SysWOW64\certutil.exe'
+  tool_os:
+    - Windows
+- tool: dsquery
+  tool_type: exe
+  tool_description: DSQuery provides a mechanism to query Active Directory and is built into Server 2008 and later if the AD DS server role is installed.
+  tool_arguments:
+    - computer - Finds computers in the directory matching specified search criteria.
+    - group - Finds groups in the directory matching specified search criteria.
+    - user - Finds users in the directory matching specified search criteria.
+    - Many More - Follow Tool URL to discover usage capabilities with respect to filtering, searching, etc.
+  tool_url: https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732952(v=ws.11)
+  tool_locations:
+    - 'C:\Windows\System32\dsquery.exe'
+  tool_os:
+    - Windows
+- tool: mshta
+  tool_type: exe
+  tool_description: Mshta is a Microsoft utility designed to execute Microsoft HTML Application (HTA) files - IT operators and administrators may create these files for various automation or configuration purposes.  Mshta can execute both local and remotely hosted files - it's use also bypasses standard Internet Explorer security context settings.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - 'C:\Windows\System32\mshta.exe'
+    - 'C:\Windows\SysWOW64\mshta.exe'
+  tool_os:
+    - Windows
+- tool: net
+  tool_type: exe
+  tool_description: Net is an extremely robust utility developed by Microsoft and is commonly used by both IT operators and cyber-threats.  It allows for querying of many pieces of environment information as well as configuring, creating or otherwise modifying items such as shares, services, users, etc.
+  tool_arguments:
+    - localgroup - Discover the members of a specific local group
+    - computer - Add or Delete computers to or from Active Directory.
+    - use - Connect or Disconnect a computer to or from a shared resource.
+    - view - Display a list of domains, computers or resources being shared by the current or specified computer.
+  tool_url: https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc754340(v=ws.11)#n
+  tool_locations:
+    - C:\Windows\System32\net.exe
+    - C:\Windows\System32\net1.exe
+    - C:\Windows\SysWOW64\net.exe
+    - C:\Windows\SysWOW64\net1.exe
+  tool_os:
+    - Windows
+- tool: netstat
+  tool_type: exe
+  tool_description:  Netstat is a Microsoft utility which displays information on TCP connections, listening ports, routing table, ethernet statistics and other information.
+  tool_arguments:
+    - -a - Displays all active TCP connections and TCP/UDP ports which are actively listening.
+    - -b - Displays the executable involved in creating each connection or listening port, along with relevant components of each process.
+    - -n - Displays active TCP connections without name resolution.
+    - -o - Displays active TCP connections with the Process ID (PID) for each connections
+    - -r - Displays the contents of the IP Routing table, equivalent to 'route print'
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/netstat
+  tool_locations:
+    - C:\Windows\System32\netstat.exe
+    - C:\Windows\SysWOW64\netstat.exe
+  tool_os:
+    - Windows
+- tool: nltest
+  tool_type: exe
+  tool_description: Nltest is a Microsoft-developed server utility available if either the AD DS or AD LDS roles are installed or as part of the Remote Server AAdministration Tools (RSAT) package. It can be used to perform functions such as list Domain Controllers, force remote shutdowns, query trust status, test trust relationships, etc.
+  tool_arguments:
+    - /repl - Forces synchronization with the primary Domain Controller
+    - /dclist:[DOMAIN] - Lists all Domain Controllers in a domain
+    - /dcname:[DOMAIN] - Lists the primary domain controller.
+    - /dsgetdc:[DOMAIN] - Queries DNS for a list of Domain Controllers and corresponding IP addresses.
+  tool_url: https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731935(v=ws.11)
+  tool_locations:
+    - C:\Windows\System32\nltest.exe
+    - C:\Windows\SysWOW64\nltest.exe
+  tool_os:
+    - Windows
+- tool: portqry
+  tool_type: exe
+  tool_description: PortQry is a Microsoft-developed utility which can be used to troubleshoot and report on TCP/IP connectivity issues - in particular assisting with determining which ports are open on remote hosts.
+  tool_arguments:
+    - -n - Query the specific Host or IP address
+    - -p - Use the specified protocol (tcp, udp, both)
+    - -e - Query specific target port
+    - -o - Query the specific target ports (80,443,139)
+    - -r - Specify a range of target ports (80:443)
+  tool_url: https://learn.microsoft.com/en-us/troubleshoot/windows-server/networking/portqry-command-line-port-scanner-v2
+  tool_locations:
+    - Varies
+  tool_os:
+    - Windows
+- tool: powershell
+  tool_type: exe
+  tool_description: PowerShell is a powerful .NET framework based solution that is in common-use by vendors, IT administrators, developers, security personnel and cyber-threats.  Monitoring PowerShell activity and alerting on abnormal or suspicious script-blocks or commands should be a priority for all security teams.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/powershell
+  tool_locations:
+    - C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+    - C:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell.exe
+  tool_os:
+    - Windows
+- tool: reg
+  tool_type: exe
+  tool_description: reg is a Microsoft-developed utility which provides users low-level access to the various registry stores contained in Windows.  This includes the capability to add, compare, copy, delete, export, import, load, unload, query, save and restore data in the various hives.
+  tool_arguments:
+    - reg add - Adds a new subkey to the registry
+    - reg export - Copies specified subkeys, entries and values into a file.
+    - reg import - Copies the contents of a file containing a reg export into the registry of the target.
+    - See the tool URL for all relevant commandlines and usage.
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/reg
+  tool_locations:
+    - C:\Windows\System32\reg.exe
+    - C:\Windows\SysWOW64\reg.exe
+  tool_os:
+    - Windows
+- tool: regedit
+  tool_type: exe
+  tool_description: RegEdit is a Microsoft-developed GUI utility which aids in the querying, editing, importing and exporting of registry data on local and remote devices.
+  tool_arguments:
+    - N/A
+  tool_url: https://support.microsoft.com/en-us/windows/how-to-open-registry-editor-in-windows-10-deab38e6-91d6-e0aa-4b7c-8878d9e07b11
+  tool_locations:
+    - C:\Windows\regedit.exe
+    - C:\Windows\SysWOW64\regedit.exe
+  tool_os:
+    - Windows
+- tool: regini
+  tool_type: exe
+  tool_description: Regini is a Microsoft utility designed to allow registry modifications based on a command-line or script, applying changes preset in one or more text files. Keys and Permissions can be created, modified or deleted using this tool.
+  tool_arguments:
+    - -m - Specify the computer name to operate on
+    - -h - Specify the registry hive to modify
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/regini
+  tool_locations:
+    - C:\Windows\System32\regini.exe
+    - C:\Windows\SysWOW64\regini.exe
+  tool_os:
+    - Windows
+- tool: systeminfo
+  tool_type: exe
+  tool_description: Systeminfo is a Microsoft utility which provides information about a local or remote computers Operating System, Configuration, Security Information, Product ID and other hardware properties.
+  tool_arguments:
+    - /s - Specify the name or IP of a remote computer to target.
+    - /u - Specify the domain and username for a remote connection.
+    - /p - Specify the password to use.
+    - /fo - Specify the output format (TABLE, LIST, CSV)
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/systeminfo
+  tool_locations:
+    - C:\Windows\System32\systeminfo.exe
+    - C:\Windows\SysWOW64\systeminfo.exe
+  tool_os:
+    - Windows
+- tool: taskkill
+  tool_type: exe
+  tool_description: Taskkill is a Microsoft utility which can be used to terminate processes on local or remote computers
+  tool_arguments:
+    - /s - Specify the name or IP address of a target computer.
+    - /fi - Applies a filter to select a set of tasks, use wildcard (*) to filter by process Status, ImageName, PID, Session, User, Window Title, etc
+    - /pid - Specify a Process ID to target
+    - /im - Specify an imagename to terminate.
+    - /f - Forcefully end the target processes, ignored for remote processes which are always forcefully ended.
+    - /t - Ends the specified process and any child processes started by it.
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/taskkill
+  tool_locations:
+    - C:\Windows\System32\taskkill.exe
+    - C:\Windows\SysWOW64\taskkill.exe
+  tool_os:
+    - Windows
+- tool: tasklist
+  tool_type: exe
+  tool_description: Tasklist is a Microsoft utility that can be used to display the currently running processes on a local or remote device.
+  tool_arguments:
+    - /s - Specify the name or IP address of a target computer.
+    - /m - Lists tasks with DLL modules loaded that match the given pattern.
+    - svc - Lists the service information for each process without truncation.
+    - /v - Displays verbose task information.
+    - /fi - Filter types of processes in the query.
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/tasklist
+  tool_locations:
+    - C:\Windows\System32\tasklist.exe
+    - C:\Windows\SysWOW64\tasklist.exe
+  tool_os:
+    - Windows
+- tool: vssadmin
+  tool_type: exe
+  tool_description: VssAdmin is uses to view, create, delete and otherwise modify Volume Shadow Copy backups, shadow-copy writer and shadow-copy providers.
+  tool_arguments:
+    - delete shadows - Deletes Volume Shadow Copies
+    - list shadows - Lists Volume Shadow Copies
+    - resize shadowstorage - Resizes maximum size for shadow copy storage.
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/vssadmin
+  tool_locations:
+    - C:\Windows\System32\vssadmin.exe
+  tool_os:
+    - Windows
+- tool: wbadmin
+  tool_type: exe
+  tool_description: WBAdmin is a Microsoft utility for backing up and restoring Windows, Drive Volumes, Files, Folders and Applications, in both an adhoc or scheduled manner.
+  tool_arguments:
+    - disable backup - Disables daily backups.
+    - get items - List items included in a backup.
+    - delete catalog - Deletes the backup catalog on a local computer.
+    - stop job - Stops a currently running backup or recovery operation.
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/wbadmin
+  tool_locations:
+    - C:\Windows\System32\wbadmin.exe
+  tool_os:
+    - Windows
+- tool: wevtutil
+  tool_type: exe
+  tool_description: Wevtutil is a Microsoft utility for interacting with Windows Event logs, including information retrieval, installing or uninstalling event manifests and querying, exporting, archiving or clearing Event Logs.
+  tool_arguments:
+    - enum-logs - Displays the names of all logs.
+    - set-log - Modifies the configuration of a specified log.
+    - query-events - Reads events from an event log
+    - clear-log - Clears events from a specified event log.
+    - Many other arguments available via tool URL.
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/wevtutil
+  tool_locations:
+    - C:\Windows\System32\wevtutil.exe
+    - C:\Windows\SysWOW64\wevtutil.exe
+  tool_os:
+    - Windows
+- tool: whoami
+  tool_type: exe
+  tool_description: Whoami is a Microsoft utility which can display information about the current user, group memberships and user privileges.
+  tool_arguments:
+    - /all - Displays all information in current access token
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/whoami
+  tool_locations:
+    - C:\Windows\System32\whoami.exe
+    - C:\Windows\SysWOW64\whoami.exe
+  tool_os:
+    - Windows
+- tool: wmic
+  tool_type: exe
+  tool_description: WMIC is a Microsoft command-line utility which can be used to query Windows Management Instrumentation (WMI) data stores on local and remote devices.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/wmic
+  tool_locations:
+    - C:\Windows\System32\wbem\wmic.exe
+    - C:\Windows\SysWOW64\wbem\wmic.exe
+  tool_os:
+    - Windows
+- tool: arp
+  tool_type: exe
+  tool_description: Arp is a Microsoft utility which can be used to display and modify entries in the Address Resolution Protocol (ARP) cache.
+  tool_arguments:
+    - /a - Displays current arp cache tables for all interfaces
+    - /d - Deletes an entry with a specified IP address
+    - /s - Adds a static entry to the arp cache.
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/arp
+  tool_locations:
+    - Varies
+  tool_os:
+    - Windows
+- tool: psexec
+  tool_type: exe
+  tool_description: PsExec is a Microsoft developed utility which allows for the execution of processes on remote systems including full-shell establishment.  It is in common use among IT operators as well as cyber-threats due to the light-weight and portable nature.
+  tool_arguments:
+    - \\[COMPUTER(S)] - The target computer(s) - using \\* indicates to run the command on all computers in the current domain.
+    - -c - Copy the specified executable to the target
+    - -d - Don't wait for the process to terminate
+    - -i - Allow interaction with the desktop of the specified session
+    - -s - Run the remote process as the SYSTEM account.
+  tool_url: https://learn.microsoft.com/en-us/sysinternals/downloads/psexec
+  tool_locations:
+    - C:\Program Files\WindowsApps\Microsoft.SysinternalsSuite_[Version]\Tools\psexec.exe (Windows Store Install)
+    - Varies
+  tool_os:
+    - Windows
+- tool: procdump
+  tool_type: exe
+  tool_description: ProcDump is a Microsoft utility which can be used for monitoring an application as well as generating process memory dump files.
+  tool_arguments:
+    - -r - Dump using a cloned process
+    - -ma - Write a dump file with all process memory
+    - -mm - Write a mini dump file (default)
+  tool_url: https://learn.microsoft.com/en-us/sysinternals/downloads/procdump
+  tool_locations:
+    - C:\Program Files\WindowsApps\Microsoft.SysinternalsSuite_[Version]\Tools\procdump.exe (Windows Store Install)
+    - Varies
+  tool_os:
+    - Windows
+- tool: pslist
+  tool_type: exe
+  tool_description: PsList is a Microsoft utility which can list running processes on both local and remote devices, including filter capability, process trees, thread and memory details, etc.
+  tool_arguments:
+    - -x - Show processes, memory information and threads.
+    - \\[COMPUTER] - Specify a target computer
+    - -e - Match a given process name exactly
+  tool_url: https://learn.microsoft.com/en-us/sysinternals/downloads/pslist
+  tool_locations:
+    - C:\Program Files\WindowsApps\Microsoft.SysinternalsSuite_[Version]\Tools\PsList.exe (Windows Store Install)
+    - Varies
+  tool_os:
+    - Windows
+- tool: winrar
+  tool_type: exe
+  tool_description: WinRar is a windows utility designed to create, manage and control archive files, supporting many different formats and features as well as a GUI and command-line version.
+  tool_arguments:
+    - -a - Add files to an archive
+    - -k - Lock an Archive
+  tool_url: https://www.rarlab.com/
+  tool_locations:
+    - C:\Program Files\WinRAR\rar.exe
+    - Varies
+  tool_os:
+    - Windows
+- tool: atbroker
+  tool_type: exe
+  tool_description: ATBroker is used to help install and start Assistive Technologies (AT), software which can aid computer usage for individuals who may be impaired or disabled.
+  tool_arguments:
+    - start - Start a specified Assistive Technology
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\System32\Atbroker.exe
+    - C:\Windows\SysWOW64\Atbroker.exe
+  tool_os:
+    - Windows
+- tool: bitsadmin
+  tool_type: exe
+  tool_description: Background Intelligent Transfer Services (BITS) Administration is a utility which allows for the creation, modification and deletion of BITS jobs as required.  It is often used for application update services but can also be abused by cyber-threats for tool transfer or execution.
+  tool_arguments:
+    - /create - Create a job with the specified name
+    - /addfile - Add files to the created job
+    - /resume - Resume the specified job.
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/bitsadmin
+  tool_locations:
+    - C:\Windows\System32\bitsadmin.exe
+    - C:\Windows\SysWOW64\bitsadmin.exe
+  tool_os:
+    - Windows
+- tool: certoc
+  tool_type: exe
+  tool_description: CertOC is a Microsoft utility used for installing certificates on a target host.
+  tool_arguments:
+    - -LoadDLL - Load a specified DLL, executing arbitrary code contained within.
+    - -GetCACAPS - Download text-formatted files such as .ps1, etc.
+  tool_url: N/A
+  tool_locations:
+    - C:\windows\system32\certoc.exe
+    - C:\windows\syswow64\certoc.exe
+  tool_os:
+    - Windows
+- tool: certreq
+  tool_type: exe
+  tool_description: CertReq is a Microsoft utility that can be used to request certificates from a CA, retrieve responses to previous requests from a CA, create new requests from .inf files, accept and install a response to a request, construct cross-certification / qualified subordination requests from an existing CA certificate, etc.
+  tool_arguments:
+    - -submit - Submits a request to a certificate authority.
+    - -new - Creates a new request from a .inf file.
+    - -accept - Accepts and installs a response to a certificate request.
+    - -retrieve - Retrieves a response to a previous request from a certificate authority.
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/certreq_1
+  tool_locations:
+    - C:\Windows\System32\certreq.exe
+    - C:\Windows\SysWOW64\certreq.exe
+  tool_os:
+    - Windows
+- tool: cmd
+  tool_type: exe
+  tool_description: Cmd.exe is the main commandline interpreter in use within the Windows Operating System.
+  tool_arguments:
+    - /c - Carries out the command specified by the input string then stops.
+    - /k - Carries out the command specified by the input string then continues.
+    - /d - Disables execution of AutoRun commands
+    - /q - Turns echo off
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cmd
+  tool_locations:
+    - C:\Windows\System32\cmd.exe
+    - C:\Windows\SysWOW64\cmd.exe
+  tool_os:
+    - Windows
+- tool: cmdkey
+  tool_type: exe
+  tool_description: Commandkey is a Microsoft utility for servers which can be used to create, list and delete stored usernames, passwords and credentials.
+  tool_arguments:
+    - /add:[TARGET] - Add a username and password to the computer target.
+    - /generic:[TARGET] - Add a generic credential to the target cache list.
+    - /smartcard - Retrieve credentials from a currently-inserted smartcard.
+    - /list - List stored usernames and credentials
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cmdkey
+  tool_locations:
+    - C:\Windows\System32\cmdkey.exe
+    - C:\Windows\SysWOW64\cmdkey.exe
+  tool_os:
+      - Windows
+- tool: cmdl32
+  tool_type: exe
+  tool_description: Microsoft Connection Manager Auto-Download (cmdl32) is an undocumented Microsoft utility typically used to download VPN connection profiles.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\System32\cmdl32.exe
+    - C:\Windows\SysWOW64\cmdl32.exe
+  tool_os:
+    - Windows
+- tool: cmstp
+  tool_type: exe
+  tool_description: Cmstp is a Microsoft utility for installing or removing Connection Manager service profiles - without parameters it will install a service profile with default settings appropriate to the OS and current user permissions.
+  tool_arguments:
+    - /a:a - Specifies the profile should be installed without prompting the user.
+    - /nf - Specifies that support files should not be installed.
+    - /s - Specifies the profile should be installed or uninstalled silently.
+    - /u - Specifies the profile should be uninstalled.
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cmstp
+  tool_locations:
+    - C:\Windows\System32\cmstp.exe
+    - C:\Windows\SysWOW64\cmstp.exe
+  tool_os:
+    - Windows
+- tool: configsecuritypolicy
+  tool_type: exe
+  tool_description: Part of Microsoft Windows Defender, typically used to manage settings and configure collections in a granular way between different workloads.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.2008.9-0\ConfigSecurityPolicy.exe
+  tool_os:
+    - Windows
+- tool: conhost
+  tool_type: exe
+  tool_description: conhost is a Microsoft utility known as the Windows Console Host - the server application for all of the Windows Console APIs as well as the classic UI for commandline apiplications.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/windows/console/definitions
+  tool_locations:
+    - C:\windows\system32\conhost.exe
+  tool_os:
+    - Windows
+- tool: control
+  tool_type: exe
+  tool_description: Control.exe is a Microsoft Utility typically used to launch control-panel items in Windows.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\System32\control.exe
+    - C:\Windows\SysWOW64\control.exe
+  tool_os:
+      - Windows
+- tool: csc
+  tool_type: exe
+  tool_description: CSC is a Microsoft application designed to compile .NET framework applications and libraries.  It is often used both by developers and cyber-threats for rapid code compilation from file or command-line input.
+  tool_arguments:
+    - -target - Specifies the type of output assembly
+    - -platform - Specifies the target platform CPU
+    - -out - Specifies the output file
+    - -doc - Generates an XML doc file from /// comments
+  tool_url: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/
+  tool_locations:
+    - C:\Windows\Microsoft.NET\Framework\v4.0.30319\Csc.exe
+    - C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Csc.exe
+  tool_os:
+      - Windows
+- tool: cscript
+  tool_type: exe
+  tool_description: CScript is a command-line Microsoft utility which is used to launch various types of Windows Scripts.
+  tool_arguments:
+    - /d - Launch with debugger
+    - /e - Specifies engine to run script with
+    - /x - Starts script in the specified debugger
+    - /job:[identifier] - Runs the job identified by [identifier] in a specsified .wsf script file.
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cscript
+  tool_locations:
+    - C:\Windows\System32\cscript.exe
+    - C:\Windows\SysWOW64\cscript.exe
+  tool_os:
+    - Windows
+- tool: datasvcutil
+  tool_type: exe
+  tool_description: DataSvcUtil.exe is a Microsoft utility provided by WCF Data Services that typically consumes an Open Data Protocol (OData) feed and generates classes needed to access a service from a .NET client.
+  tool_arguments:
+    - /in - Specifies a .csdl or .edmx file or directory where the file is located
+    - /language - Specifies the generated source-code language - CSharp or VB
+    - /uri - The URI of the OData Feed to consume
+  tool_url: https://learn.microsoft.com/en-us/previous-versions/dotnet/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe
+  tool_locations:
+    - C:\Windows\Microsoft.NET\Framework64\v3.5\DataSvcUtil.exe
+  tool_os:
+    - Windows
+- tool: desktopimgdownldr
+  tool_type: exe
+  tool_description: DesktopImgDownldr is a Microsoft utility used to configure lockscreen and desktop images - it can also be abused to download arbitrary data.
+  tool_arguments:
+    - /lockscreenurl - Specifies the file to download for a lockscreen
+  tool_url: N/A
+  tool_locations:
+    - C:\windows\system32\desktopimgdownldr.exe
+  tool_os:
+    - Windows
+- tool: dfsvc
+  tool_type: exe
+  tool_description: Dfsvc.exe provides a library and mechanism to facilitate the launching of ClickOnce engine used in .NET framework.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/visualstudio/deployment/clickonce-reference?view=vs-2022
+  tool_locations:
+    - C:\Windows\Microsoft.NET\Framework\v2.0.50727\Dfsvc.exe
+    - C:\Windows\Microsoft.NET\Framework64\v2.0.50727\Dfsvc.exe
+    - C:\Windows\Microsoft.NET\Framework\v4.0.30319\Dfsvc.exe
+    - C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Dfsvc.exe
+  tool_os:
+    - Windows
+- tool: diantz
+  tool_type: exe
+  tool_description: Diantz is a Microsoft utility which is used to add arbitrary files into cabinet (.cab) files - functionality is identical to 'makecab' command.
+  tool_arguments:
+    - /f - Specify a diantz directives file
+    - /v - Set debugging verbosity level, 0-3
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/diantz
+  tool_locations:
+    - C:\windows\system32\diantz.exe
+    - C:\windows\syswow64\diantz.exe
+  tool_os:
+    - Windows
+- tool: diskshadow
+  tool_type: exe
+  tool_description: Diskshadow.exe is a Microsoft utility which exposes functionality offered by the Volume Shadow Copy Service (VSS).
+  tool_arguments:
+    - exec command - Executes a specified file.
+    - create command - Starts a shadow copy creation process using the current context and option settings.
+    - delete shadows command - Deletes shadow copies.
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/diskshadow
+  tool_locations:
+    - C:\Windows\System32\diskshadow.exe
+    - C:\Windows\SysWOW64\diskshadow.exe
+  tool_os:
+    - Windows
+- tool: dnscmd
+  tool_type: exe
+  tool_description: DNScmd.exe is a Microsoft utility designed to aid in the management of DNS Servers.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/dnscmd
+  tool_locations:
+    - C:\Windows\System32\Dnscmd.exe
+    - C:\Windows\SysWOW64\Dnscmd.exe
+  tool_os:
+    - Windows
+- tool: esentutl
+  tool_type: exe
+  tool_description: Esentutl is a Microsoft utility which provided database utilities for use with the Extensible Storage Engine (ESE).
+  tool_arguments:
+    - -recovery - Brings all databases to a clean-shutdown state.
+    - -copy - Copies a database or log file
+  tool_url: https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh875546(v=ws.11)
+  tool_locations:
+    - C:\Windows\System32\esentutl.exe
+    - C:\Windows\SysWOW64\esentutl.exe
+  tool_os:
+      - Windows
+- tool: expand
+  tool_type: exe
+  tool_description: Expand is a Microsoft utility which can be used to expand compressed files or retrieve compressed data from other disks.
+  tool_arguments:
+    - /r - Rename an expanded file.
+    - /d - Displays a list of files in the source location with no operations performed.
+    - /i - Renames expanded files but ignores directory structure.
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/expand
+  tool_locations:
+    - C:\Windows\System32\Expand.exe
+    - C:\Windows\SysWOW64\Expand.exe
+  tool_os:
+    - Windows
+- tool: explorer
+  tool_type: exe
+  tool_description: Explorer.exe is a Microsoft utility for managing files and system components within Windows.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\explorer.exe
+    - C:\Windows\SysWOW64\explorer.exe
+  tool_os:
+    - Windows
+- tool: extexport
+  tool_type: exe
+  tool_description: ExtExport is a part of Internet Explorer developed by Microsoft utility.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Program Files\Internet Explorer\Extexport.exe
+    - C:\Program Files (x86)\Internet Explorer\Extexport.exe
+  tool_os:
+    - Windows
+- tool: extrac32
+  tool_type: exe
+  tool_description: Extrac32.exe is a Microsoft utility designed to extract files from cabinet or source data - originally this was a part of Internet Explorer.
+  tool_arguments:
+    - /c - Copy source file to destination
+    - /d - Display cabinet directory
+    - /e - Extract Data
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/extract
+  tool_locations:
+    - C:\Windows\System32\extrac32.exe
+    - C:\Windows\SysWOW64\extrac32.exe
+  tool_os:
+    - Windows
+- tool: findstr
+  tool_type: exe
+  tool_description: findstr.exe is a Microsoft utility for pattern-matching in text-based files.  It offers a significant amount of functionality and features to achieve this.
+  tool_arguments:
+    - /b - Matches the pattern if it is at the beginning of a line.
+    - /e - Matches the pattern if it is at the end of a line.
+    - /l - Processes search strings literally.
+    - /s - Searches the current directory and all subdirectories.
+    - /x - Prints lines that match exactly.
+    - /v - Prints only lines that don't contain a match
+    - /m - Prints only the file name of a file containing matches.
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/findstr
+  tool_locations:
+    - C:\Windows\System32\findstr.exe
+    - C:\Windows\SysWOW64\findstr.exe
+  tool_os:
+    - Windows
+- tool: finger
+  tool_type: exe
+  tool_description: finger is a Microsoft utility which can display information about users on a specified remote computer that is running the finger service/daemon.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/finger
+  tool_locations:
+    - C:\windows\system32\finger.exe
+    - C:\windows\syswow64\finger.exe
+  tool_os:
+    - Windows
+- tool: fltmc
+  tool_type: exe
+  tool_description: fltmc is a Microsoft utility used for minifilter driver management operations.
+  tool_arguments:
+    - load - Loads a given driver by name
+    - unload - Unloads a given driver by name
+  tool_url: https://learn.microsoft.com/en-us/windows-hardware/drivers/ifs/development-and-testing-tools#fltmcexe-command
+  tool_locations:
+    - C:\Windows\System32\fltMC.exe
+  tool_os:
+    - Windows
+- tool: forfiles
+  tool_type: exe
+  tool_description: forfiles is a Microsoft utility which can select and run a command on one or more files, often used in batch file operations.
+  tool_arguments:
+    - /P - Path to start the file search (default is current working directory)
+    - /M - Searches for files matching the specified search mask
+    - /S - Performs a recursive subdirectory search
+    - /C - Runs the specified command on each file
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/forfiles
+  tool_locations:
+    - C:\Windows\System32\forfiles.exe
+    - C:\Windows\SysWOW64\forfiles.exe
+  tool_os:
+      - Windows
+- tool: ftp
+  tool_type: exe
+  tool_description: ftp is a Microsoft utility for transferring data to and from a computer running the File Transfer Protocol (ftp) server service.
+  tool_arguments:
+    - -v - Suppress remote server responses.
+    - -d - Enable debugging.
+    - -n - Suppress auto-login.
+    - -s - Specify a text file containing ftp commands run automatically after ftp starts.
+    - -A - logon as Anonymous
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/ftp
+  tool_locations:
+    - C:\Windows\System32\ftp.exe
+    - C:\Windows\SysWOW64\ftp.exe
+  tool_os:
+    - Windows
+- tool: gfxdownloadwrapper
+  tool_type: exe
+  tool_description: GfxDownloadWrapper.exe is a file used by the Intel Graphics Control Panel to download JSON data, usually from https://gameplayapi.intel.com.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - c:\windows\system32\driverstore\filerepository\*.inf_amd64_fc915899816dbc5d\
+  tool_os:
+    - Windows
+- tool: hh
+  tool_type: exe
+  tool_description: HTML Help (hh.exe) is a Microsoft utility designed to run Compiled Help (.chm) files or menu items inside the Help Viewer utility using ActiveX.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/previous-versions/windows/desktop/htmlhelp/about-the-html-help-executable-program
+  tool_locations:
+    - C:\Windows\hh.exe
+    - C:\Windows\SysWOW64\hh.exe
+  tool_os:
+    - Windows
+- tool: imewdbld
+  tool_type: exe
+  tool_description: Microsoft IME Open Extended Dictionary Module (IMEWDBLD) is a tool that typically attempts to load dictionary files for Microsoft Office and other applications.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\System32\IME\SHARED\IMEWDBLD.exe
+  tool_os:
+    - Windows
+- tool: ieexec
+  tool_type: exe
+  tool_description: IEExec is an undocumented Microsoft .NET application.  Among other functions, it allows for the execution of remotely-stored managed applications.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\Microsoft.NET\Framework\v2.0.50727\ieexec.exe
+    - C:\Windows\Microsoft.NET\Framework64\v2.0.50727\ieexec.exe
+  tool_os:
+    - Windows
+- tool: ilasm
+  tool_type: exe
+  tool_description: IL Assembler (ilasm.exe) is a Microsoft utility which can generate Portable Executable (PE) files from Intermediate Language (IL) assembly (typically C#).
+  tool_arguments:
+    - /dll - Produce a DLL instead of an EXE
+    - /exe - Produce an EXE (default)
+    - /include - Sets a path to search for files included with ##include
+  tool_url: https://learn.microsoft.com/en-us/dotnet/framework/tools/ilasm-exe-il-assembler
+  tool_locations:
+    - C:\Windows\Microsoft.NET\Framework\v4.0.30319\ilasm.exe
+    - C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ilasm.exe
+  tool_os:
+    - Windows
+- tool: infdefaultinstall
+  tool_type: exe
+  tool_description: INF DefaultInstall is a Microsoft application which supports installation activities based on descriptors within INF formatted files.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/windows-hardware/drivers/install/inf-defaultinstall-section
+  tool_locations:
+    - C:\Windows\System32\Infdefaultinstall.exe
+    - C:\Windows\SysWOW64\Infdefaultinstall.exe
+  tool_os:
+    - Windows
+- tool: installutil
+  tool_type: exe
+  tool_description: Installer Utility (installutil.exe) is a Microsoft utility which allows for the installation and uninstallation of server resources by executing components stored in targeted assemblies.  It is typically installed with Visual Studio.
+  tool_arguments:
+    - /u - Uninstall the specified assemblies
+  tool_url: https://learn.microsoft.com/en-us/dotnet/framework/tools/installutil-exe-installer-tool
+  tool_locations:
+    - C:\Windows\Microsoft.NET\Framework\v2.0.50727\InstallUtil.exe
+    - C:\Windows\Microsoft.NET\Framework64\v2.0.50727\InstallUtil.exe
+    - C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe
+    - C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe
+  tool_os:
+    - Windows
+- tool: jsc
+  tool_type: exe
+  tool_description: jsc.yml is a Microsoft utility used by the .NET Framework to compile JavaScript to .exe or .dll format.
+  tool_arguments:
+    - /t - Output type - use '/t:library' for a DLL instead of an EXE
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\Microsoft.NET\Framework\v4.0.30319\Jsc.exe
+    - C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Jsc.exe
+    - C:\Windows\Microsoft.NET\Framework\v2.0.50727\Jsc.exe
+    - C:\Windows\Microsoft.NET\Framework64\v2.0.50727\Jsc.exe
+  tool_os:
+    - Windows
+- tool: makecab
+  tool_type: exe
+  tool_description: Makecab.exe is a Microsoft utility used to package existing files into cabinet (.cab) files.
+  tool_arguments:
+    - /f - Specify a file with makecab directives.
+    - /l - Output directory.
+    - /v - Verbosity level (0, 1, 2, 3)
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/makecab
+  tool_locations:
+    - C:\Windows\System32\makecab.exe
+    - C:\Windows\SysWOW64\makecab.exe
+  tool_os:
+    - Windows
+- tool: MavInject
+  tool_type: exe
+  tool_description: MavInject is a Microsoft utility used by App-V in Windows.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\System32\mavinject.exe
+    - C:\Windows\SysWOW64\mavinject.exe
+  tool_os:
+    - Windows
+- tool: Microsoft.Workflow.Compiler
+  tool_type: exe
+  tool_description: Microsoft Workflow Compiler is a Microsoft .NET utility capable of compiling and executing C# or VisualBasic .NET source code.
+  tool_arguments:
+    - /target - Specify whether an assembly or exe should be created.
+    - /out - Output file name
+    - /debug - Emit full debugging information
+  tool_url: https://learn.microsoft.com/en-us/dotnet/framework/windows-workflow-foundation/wfc-exe-workflow-compiler-tool
+  tool_locations:
+    - C:\Windows\Microsoft.Net\Framework64\v4.0.30319\Microsoft.Workflow.Compiler.exe
+  tool_os:
+    - Windows
+- tool: mmc
+  tool_type: exe
+  tool_description: Microsoft Management Console (MMC.exe) is a Microsoft utility to create, save and open administrative consoles for managing hardware, software and network components of Windows.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/troubleshoot/windows-server/system-management-components/what-is-microsoft-management-console
+  tool_locations:
+    - C:\Windows\System32\mmc.exe
+    - C:\Windows\SysWOW64\mmc.exe
+  tool_os:
+    - Windows
+- tool: MpCmdRun
+  tool_type: exe
+  tool_description: MpCmdRun.exe is a part of Microsoft Defender Antivirus which can help with automating certain Defender Antivirus tasks.
+  tool_arguments:
+    - -Scan - Configure a Malware Scan
+    - -Trace - Starts diagnostic tracing
+    - -GetFiles - Collects support information
+    - -RemoveDefinitions -All - Restores Security Intelligence to a previous backup or to the default set.
+    - -ListAllDynamicSignatures - Lists the loaded dynamic Security Intelligence
+  tool_url: https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/command-line-arguments-microsoft-defender-antivirus?view=o365-worldwide
+  tool_locations:
+    - C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.2008.4-0\MpCmdRun.exe
+    - C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.2008.7-0\MpCmdRun.exe
+    - C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.2008.9-0\MpCmdRun.exe
+  tool_os:
+    - Windows
+- tool: MSBuild
+  tool_type: exe
+  tool_description: Microsoft Build Engine (MSBuild) is a Microsoft platform for building applications from source code - typically C, C# and C++.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/visualstudio/msbuild/msbuild?view=vs-2022
+  tool_locations:
+    - C:\Windows\Microsoft.NET\Framework\v2.0.50727\Msbuild.exe
+    - C:\Windows\Microsoft.NET\Framework64\v2.0.50727\Msbuild.exe
+    - C:\Windows\Microsoft.NET\Framework\v3.5\Msbuild.exe
+    - C:\Windows\Microsoft.NET\Framework64\v3.5\Msbuild.exe
+    - C:\Windows\Microsoft.NET\Framework\v4.0.30319\Msbuild.exe
+    - C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Msbuild.exe
+    - C:\Program Files (x86)\MSBuild\14.0\bin\MSBuild.exe
+  tool_os:
+      - Windows
+- tool: MSConfig
+  tool_type: exe
+  tool_description: MSConfig is a Microsoft utility used to temporarily disable or re-enable software, drivers or services launching during startup.
+  tool_arguments:
+    - N/A
+  tool_url: https://techcommunity.microsoft.com/t5/ask-the-performance-team/system-configuration-8211-aka-msconfig/ba-p/374932
+  tool_locations:
+    - C:\Windows\System32\msconfig.exe
+  tool_os:
+    - Windows
+- tool: Msdt
+  tool_type: exe
+  tool_description: Msdt.exe is a Microsoft utility which invokes troubleshooting packs for help resolve Windows OS and usage issues.
+  tool_arguments:
+    - /id - Specifies a diagnostic package to run.
+  tool_url: https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/ee424379(v=ws.11)
+  tool_locations:
+    - C:\Windows\System32\Msdt.exe
+    - C:\Windows\SysWOW64\Msdt.exe
+  tool_os:
+    - Windows
+- tool: MsiExec
+  tool_type: exe
+  tool_description: MsiExec is a Microsoft utility which enables users to install, modify and perform operations on Windows Installer files from the commandline.
+  tool_arguments:
+    - /i - Specifies normal installation.
+    - /a - Specifies administrative installation.
+    - /x - Uninstalls the package.
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/msiexec
+  tool_locations:
+    - C:\Windows\System32\msiexec.exe
+    - C:\Windows\SysWOW64\msiexec.exe
+  tool_os:
+      - Windows
+- tool: netsh
+  tool_type: exe
+  tool_description: Network Shell (netsh) is a Microsoft utility that allows for the configuration and display of various network communication server roles and components.
+  tool_arguments:
+    - add - Adds a configuration entry.
+    - exec - Runs a script file.
+    - firewall - Change to the netsh firewall context
+  tool_url: https://learn.microsoft.com/en-us/windows-server/networking/technologies/netsh/netsh
+  tool_locations:
+    - C:\WINDOWS\System32\Netsh.exe
+    - C:\WINDOWS\SysWOW64\Netsh.exe
+  tool_os:
+    - Windows
+- tool: odbcconf
+  tool_type: exe
+  tool_description: ODBCConf.exe is a Microsoft utility that provides functionality to configure ODBC drivers and data-source names.
+  tool_arguments:
+    - /C - Continue Processing if an action fails.
+    - /E - Erase the specified response file (/F) when processing is finished.
+    - /F - Use a response file such as test.rsp which may contain contents such as 'REGSVR C:\test.dll'
+    - /R - Perform specified action after a reboot
+    - /S - Silent Mode
+  tool_url: https://learn.microsoft.com/en-us/sql/odbc/odbcconf-exe?view=sql-server-ver16
+  tool_locations:
+    - C:\Windows\System32\odbcconf.exe
+    - C:\Windows\SysWOW64\odbcconf.exe
+  tool_os:
+      - Windows
+- tool: OfflineScannerShell
+  tool_type: exe
+  tool_description: Part of the Windows Defender program, designed to aid in the assistance of offline scanning functionality.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/microsoft-defender-offline?view=o365-worldwide
+  tool_locations:
+    - C:\Program Files\Windows Defender\Offline\OfflineScannerShell.exe
+  tool_os:
+    - Windows
+- tool: Pcalua
+  tool_type: exe
+  tool_description: Program Compatibility Assistant (Pcalua.exe) is a Microsoft utility designed to assist with enabling compatibility features for disabled or otherwise impaired users.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\System32\pcalua.exe
+  tool_os:
+    - Windows
+- tool: pcwrun
+  tool_type: exe
+  tool_description: Program Compatibility Wizard (pcwrun.exe) is a Microsoft utility which aids in enhancing cross-version software compatibility.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/windows/win32/w8cookbook/pca-scenarios-for-windows-8
+  tool_locations:
+    - C:\Windows\System32\pcwrun.exe
+  tool_os:
+      - Windows
+- tool: PktMon
+  tool_type: exe
+  tool_description: Packet Monitor is a Microsoft utility for capturing network data, available on certain newer OS versions.
+  tool_arguments:
+    - start - Start Packet Capturing
+    - stop - Stop Packet Capturing
+    - filter add -p [port] - Select Ports for Capture
+  tool_url: https://learn.microsoft.com/en-us/windows-server/networking/technologies/pktmon/pktmon
+  tool_locations:
+    - C:\windows\system32\pktmon.exe
+    - C:\windows\syswow64\pktmon.exe
+  tool_os:
+    - Windows
+- tool: PnPUtil
+  tool_type: exe
+  tool_description: Plug and Play Utility (PnPUtil.exe) is a Microsoft utility for performing administrative actions on driver packages such as installation, removal, enumeration, etc.
+  tool_arguments:
+    - /install - Install or Update matching drivers.
+    - /reboot - Reboot system if required to complete an operation.
+    - /force - Remove a driver even if it's in use by current devices.
+  tool_url: https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/pnputil
+  tool_locations:
+    - C:\Windows\system32\pnputil.exe
+  tool_os:
+      - Windows
+- tool: PresentationHost
+  tool_type: exe
+  tool_description: Windows Presentation Foundation (WPF) Host (PresentationHost.exe) is a Microsoft utility which enables WPF applications to be hosted in compatible browsers - typically utilizing .XAML or .XBAP data-types.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/dotnet/desktop/wpf/app-development/wpf-host-presentationhost-exe?view=netframeworkdesktop-4.8
+  tool_locations:
+    - C:\Windows\System32\Presentationhost.exe
+    - C:\Windows\SysWOW64\Presentationhost.exe
+  tool_os:
+      - Windows
+- tool: print
+  tool_type: exe
+  tool_description: Print is a Microsoft utility for sending text files to specified printers.
+  tool_arguments:
+    - /d - Specifies the printer for the current job
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/print
+  tool_locations:
+    - C:\Windows\System32\print.exe
+    - C:\Windows\SysWOW64\print.exe
+  tool_os:
+      - Windows
+- tool: PrintBrm
+  tool_type: exe
+  tool_description: Printer Migration is a Microsoft utility for migrating and backing up data related to printer services.
+  tool_arguments:
+    - -b - Backs up the server to a specified file
+    - -s - Specifies a destination server
+    - -o - Forces overwriting of existing objects
+    - -f - Specifies a backup file name
+  tool_url: https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134237(v=ws.11)
+  tool_locations:
+    - C:\Windows\System32\spool\tools\PrintBrm.exe
+  tool_os:
+    - Windows
+- tool: Psr
+  tool_type: exe
+  tool_description: Problem Steps Recorder (psr.exe) is a Microsoft utility used to record the active screen and clicks for troubleshooting assistance.
+  tool_arguments:
+    - /start - Start Recording
+    - /output - Provide an output file
+    - /gui - Enable or Disable GUI Creation
+  tool_url: https://learn.microsoft.com/en-us/office/troubleshoot/settings/how-to-use-problem-steps-recorder
+  tool_locations:
+    - C:\windows\system32\psr.exe
+    - C:\windows\syswow64\psr.exe
+  tool_os:
+    - Windows
+- tool: rdrleakdiag
+  tool_type: exe
+  tool_description: Resource Leak Diagnostic is a Microsoft utility for performing certain troubleshooting activities.
+  tool_arguments:
+    - /p - Target Process ID
+    - /o - Output Directory
+  tool_url: N/A
+  tool_locations:
+    - C:\windows\system32\rdrleakdiag.exe
+    - C:\Windows\SysWOW64\rdrleakdiag.exe
+  tool_os:
+    - Windows
+- tool: regasm
+  tool_type: exe
+  tool_description: Assembly Registration (regasm.exe) is a Microsoft utility which can scan assemblies and add necessary entities to the registry which enable COM clients to create .NET framework classes transparently.
+  tool_arguments:
+    - /regfile - Generates the specified .reg file for the assembly.
+    - /silent - Suppress success messages.
+    - /asmpath - Specifies a directory containing assembly references.
+  tool_url: https://learn.microsoft.com/en-us/dotnet/framework/tools/regasm-exe-assembly-registration-tool
+  tool_locations:
+    - C:\Windows\Microsoft.NET\Framework\v2.0.50727\regasm.exe
+    - C:\Windows\Microsoft.NET\Framework64\v2.0.50727\regasm.exe
+    - C:\Windows\Microsoft.NET\Framework\v4.0.30319\regasm.exe
+    - C:\Windows\Microsoft.NET\Framework64\v4.0.30319\regasm.exe
+  tool_os:
+      - Windows
+- tool: Register-cimprovider
+  tool_type: exe
+  tool_description: Register-CimProvider is a Microsoft utility used to register Windows Management Instrumentation (WMI) providers.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/previous-versions/windows/desktop/wmi_v2/how-to-register-an-mi-provider
+  tool_locations:
+    - C:\Windows\System32\Register-cimprovider.exe
+    - C:\Windows\SysWOW64\Register-cimprovider.exe
+  tool_os:
+    - Windows
+- tool: regsvcs
+  tool_type: exe
+  tool_description: RegSvcs is a Microsoft utility used to register .NET Component Object Model (COM) assemblies as appropriate.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/dotnet/framework/tools/regsvcs-exe-net-services-installation-tool
+  tool_locations:
+    - C:\Windows\System32\regsvcs.exe
+    - C:\Windows\SysWOW64\regsvcs.exe
+  tool_os:
+    - Windows
+- tool: RegSvr32
+  tool_type: exe
+  tool_description: RegSvr32.exe is a Microsoft utility which enables the registering of .DLL files as command components in the Windows Registry.
+  tool_arguments:
+    - /u - Unregisters the target server
+    - /s - Prevents displaying messages
+    - /n - Prevents calling DllRegisterServer
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/regsvr32
+  tool_locations:
+    - C:\Windows\System32\regsvr32.exe
+    - C:\Windows\SysWOW64\regsvr32.exe
+  tool_os:
+    - Windows
+- tool: replace
+  tool_type: exe
+  tool_description: Replace is a Microsoft utility for replacing existing files in a given directory.
+  tool_arguments:
+    - /a - Adds new files instead of replacing existing ones.
+    - /r - Replaces read-only and unprotected files.
+    - /s - Searches all subdirectories in the destination for matching files.
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/replace
+  tool_locations:
+    - C:\Windows\System32\replace.exe
+    - C:\Windows\SysWOW64\replace.exe
+  tool_os:
+    - Windows
+- tool: rpcping
+  tool_type: exe
+  tool_description: RPCPing is a Microsoft utility for confirming RPC Connectivity between computers running Exchange Server and Clients on an enterprise network.
+  tool_arguments:
+    - /t - Specifies the protocol sequence to use
+    - /S - Specifies the server address - local machine is used if not specified.
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/rpcping
+  tool_locations:
+    - C:\Windows\System32\rpcping.exe
+    - C:\Windows\SysWOW64\rpcping.exe
+  tool_os:
+    - Windows
+- tool: rundll32
+  tool_type: exe
+  tool_description: RunDLL32 is a Microsoft utility for loading and executing 32-bit Dynamic Link Libraries (DLLs).
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/rundll32
+  tool_locations:
+    - C:\Windows\System32\rundll32.exe
+    - C:\Windows\SysWOW64\rundll32.exe
+  tool_os:
+    - Windows
+- tool: RunOnce
+  tool_type: exe
+  tool_description: RunOnce.exe is a Microsoft utility which will execute a previously configured registry entry stored in the appropriate key.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\System32\runonce.exe
+    - C:\Windows\SysWOW64\runonce.exe
+  tool_os:
+    - Windows
+- tool: RunScriptHelper
+  tool_type: exe
+  tool_description: RunScriptHelper.exe is a Microsoft utility designed to aid in the execution of scripts.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\WinSxS\amd64_microsoft-windows-u..ed-telemetry-client_31bf3856ad364e35_10.0.16299.15_none_c2df1bba78111118\Runscripthelper.exe
+    - C:\Windows\WinSxS\amd64_microsoft-windows-u..ed-telemetry-client_31bf3856ad364e35_10.0.16299.192_none_ad4699b571e00c4a\Runscripthelper.exe
+  tool_os:
+    - Windows
+- tool: sc
+  tool_type: exe
+  tool_description: SC.exe is a Microsoft utility designed for management and control of Windows Services.
+  tool_arguments:
+    - start - Start a Service
+    - stop - Stop a Service
+  tool_url: https://learn.microsoft.com/en-us/windows/win32/services/controlling-a-service-using-sc
+  tool_locations:
+    - C:\Windows\System32\sc.exe
+    - C:\Windows\SysWOW64\sc.exe
+  tool_os:
+    - Windows
+- tool: schtasks
+  tool_type: exe
+  tool_description: SchTasks.exe is a Microsoft utility enabling the creation, deletion, query, modification, run and ending of scheduled tasks on both local and remote devices.
+  tool_arguments:
+    - /RU - User context to run task under
+    - /SC - Schedule frequency specifications
+    - /TR - Path and File name of task to execute
+  tool_url: https://learn.microsoft.com/en-us/windows/win32/taskschd/schtasks
+  tool_locations:
+    - C:\windows\system32\schtasks.exe
+    - C:\windows\syswow64\schtasks.exe
+  tool_os:
+    - Windows
+- tool: scriptrunner
+  tool_type: exe
+  tool_description: ScriptRunner is a Microsoft utility designed to execute other files.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\System32\scriptrunner.exe
+    - C:\Windows\SysWOW64\scriptrunner.exe
+  tool_os:
+    - Windows
+- tool: SettingSyncHost
+  tool_type: exe
+  tool_description: SettingsSyncHost is a Microsoft utility used to aid synchronization processes.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\System32\SettingSyncHost.exe
+    - C:\Windows\SysWOW64\SettingSyncHost.exe
+  tool_os:
+    - Windows
+- tool: SSH
+  tool_type: exe
+  tool_description: OpenSSH (ssh.exe) comes bundled with Windows on certain versions and enables usage of the SSH protocol to encrypt traffic between clients and servers.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_overview
+  tool_locations:
+    - c:\windows\system32\OpenSSH\ssh.exe
+  tool_os:
+    - Windows
+- tool: StorDiag
+  tool_type: exe
+  tool_description: Stordiag is a Microsoft utility used for diagnosing certain storage problems.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - c:\windows\system32\stordiag.exe
+    - c:\windows\syswow64\stordiag.exe
+  tool_os:
+    - Windows
+- tool: SyncAppvPublishingServer
+  tool_type: exe
+  tool_description: SyncAppvPublisherServer.exe is a Microsoft utility used by App-V to get App-V server lists.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/powershell/module/appvclient/sync-appvpublishingserver?view=windowsserver2022-ps
+  tool_locations:
+    - C:\Windows\System32\SyncAppvPublishingServer.exe
+    - C:\Windows\SysWOW64\SyncAppvPublishingServer.exe
+  tool_os:
+    - Windows
+- tool: TTDInject
+  tool_type: exe
+  tool_description: TTDInject.exe is a Microsoft utility used in Windows 1809 and newer to debug time travel - tracing a process as it executes and replaying events forward and backwards to discover issues.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/time-travel-debugging-overview
+  tool_locations:
+    - C:\Windows\System32\ttdinject.exe
+    - C:\Windows\Syswow64\ttdinject.exe
+  tool_os:
+    - Windows
+- tool: TTTracer
+  tool_type: exe
+  tool_description: Tttracer.exe is a Microsoft utility used in Windows 1809 and newer to debug time travel - tracing a process as it executes and replaying events forward and backwards to discover issues.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/time-travel-debugging-overview
+  tool_locations:
+    - C:\Windows\System32\tttracer.exe
+    - C:\Windows\SysWOW64\tttracer.exe
+  tool_os:
+    - Windows
+- tool: Unregmp2
+  tool_type: exe
+  tool_description: Unregmp2 is a Microsoft Utility for setting up Microsoft Windows Media Player.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\System32\unregmp2.exe
+    - C:\Windows\SysWOW64\unregmp2.exe
+  tool_os:
+    - Windows
+- tool: vbc
+  tool_type: exe
+  tool_description: Visual Basic Compiler (vbc.exe) is a Microsoft utility used to produce .exe, .dll and .netmodule files from Visual Basic code.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/visualstudio/msbuild/vbc-task?view=vs-2022
+  tool_locations:
+    - C:\Windows\Microsoft.NET\Framework64\v4.0.30319\vbc.exe
+    - C:\Windows\Microsoft.NET\Framework64\v3.5\vbc.exe
+  tool_os:
+    - Windows
+- tool: Verclsid
+  tool_type: exe
+  tool_description: Verclsid.exe is a Microsoft utility used to verify COM objects before being instantiated by Windows Explorer.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\System32\verclsid.exe
+    - C:\Windows\SysWOW64\verclsid.exe
+  tool_os:
+    - Windows
+- tool: Wab
+  tool_type: exe
+  tool_description: Windows Address Book (wab.exe) manager allows for the management of contact entries, storing information, searching contacts, editing information, importing contacts, etc.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/previous-versions/windows/desktop/wab/-wab-overview
+  tool_locations:
+    - C:\Program Files\Windows Mail\wab.exe
+    - C:\Program Files (x86)\Windows Mail\wab.exe
+  tool_os:
+    - Windows
+- tool: Wlrmdr
+  tool_type: exe
+  tool_description: Windows Logon Reminder (wlrmdr.exe) is a Microsoft utility.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - c:\windows\system32\wlrmdr.exe
+  tool_os:
+    - Windows
+- tool: WorkFolders
+  tool_type: exe
+  tool_description: WorkFolders is a service for file servers that provides a consistent way for users to access their work files from other devices.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/windows-server/storage/work-folders/work-folders-overview
+  tool_locations:
+    - C:\Windows\System32\WorkFolders.exe
+  tool_os:
+    - Windows
+- tool: Wscript
+  tool_type: exe
+  tool_description: Windows Script Host (wscript.exe) provides an execution environment for a variety of Windows scripting languages.
+  tool_arguments:
+    - /d - Starts the relevant debugger
+    - /e - Specifies the engine to use for running the target script
+    - /nologo - Suppresses the Windows Script Host banner
+    - /x - Starts target script in the debugger
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/wscript
+  tool_locations:
+    - C:\Windows\System32\wscript.exe
+    - C:\Windows\SysWOW64\wscript.exe
+  tool_os:
+    - Windows
+- tool: Wsreset
+  tool_type: exe
+  tool_description: WsReset.exe is a Microsoft utility for resetting Windows Store settings according to a given manifest file.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\System32\wsreset.exe
+  tool_os:
+    - Windows
+- tool: wuauclt
+  tool_type: exe
+  tool_description: WuAclt.exe is a Microsoft utility for controlling certain functions of the Windows Update Agent.
+  tool_arguments:
+    - /a - Initates background search for applicable updates
+    - /r - Sends all queued reporting events to the server
+  tool_url: https://learn.microsoft.com/fr-fr/security-updates/windowsupdateservices/21741556
+  tool_locations:
+    - C:\Windows\System32\wuauclt.exe
+  tool_os:
+    - Windows
+- tool: XWizard
+  tool_type: exe
+  tool_description: XWizard.exe is a Microsoft utility for executing custom classes added to the registry.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\System32\xwizard.exe
+    - C:\Windows\SysWOW64\xwizard.exe
+  tool_os:
+    - Windows
+- tool: fsutil
+  tool_description: File System Utility (fsutil.exe) is a Microsoft utility for performing tasks related to NTFS file systems and the File Allocation Table (FAT) such as managing reparse points, managing sparse files or dismounting volumes.
+  tool_type: exe
+  tool_arguments:
+    - usn - Manage the Update Sequence Journal (USN)
+    - volume - Manage a volume - dismount, query for space, find a file using a specified cluster.
+    - transaction - Commits a specified transaction
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/fsutil
+  tool_locations:
+    - C:\Windows\System32\fsutil.exe
+    - C:\Windows\SysWOW64\fsutil.exe
+  tool_os:
+    - Windows
+- tool: advpack
+  tool_description: Advpack.dll is a Microsoft utility for installing software and drivers with rundll32.exe.
+  tool_type: dll
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\windows\system32\advpack.dll
+    - C:\windows\syswow64\advpack.dll
+  tool_os:
+    - Windows
+- tool: desk
+  tool_description: Desk.cpl is a Microsoft Control Panel file used for adjusting and accessing Desktop settings.
+  tool_type: cpl
+  tool_arguments:
+    - N/A
+  tool_url: https://support.microsoft.com/en-us/topic/description-of-control-panel-cpl-files-4dc809cd-5063-6c6d-3bee-d3f18b2e0176
+  tool_locations:
+    - C:\Windows\System32\desk.cpl
+    - C:\Windows\SysWOW64\desk.cpl
+  tool_os:
+    - Windows
+- tool: dfshim
+  tool_description: Dfshim.dll is part of the ClickOnce functionality provided by Microsoft and Windows in .NET framework applications.
+  tool_type: dll
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/visualstudio/deployment/clickonce-unmanaged-api-reference?view=vs-2022
+  tool_locations:
+    - C:\Windows\Microsoft.NET\Framework\v2.0.50727\Dfsvc.exe
+    - C:\Windows\Microsoft.NET\Framework64\v2.0.50727\Dfsvc.exe
+    - C:\Windows\Microsoft.NET\Framework\v4.0.30319\Dfsvc.exe
+    - C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Dfsvc.exe
+  tool_os:
+    - Windows
+- tool: ieadvpack
+  tool_description: ieadvpack.dll is a Microsoft library used in the installation of .INF files for Internet Explorer, similar to advpack.dll.
+  tool_type: dll
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\windows\system32\ieadvpack.dll
+    - C:\windows\syswow64\ieadvpack.dll
+  tool_os:
+    - Windows
+- tool: ieframe
+  tool_description: ieframe.dll is a Microsoft Library used for translation of HTML code.
+  tool_type: dll
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\windows\system32\ieframe.dll
+    - C:\windows\syswow64\ieframe.dll
+  tool_os:
+    - Windows
+- tool: mshtml
+  tool_type: dll
+  tool_description: Microsoft HTML Viewer Library
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/windows/win32/devnotes/mshtml2
+  tool_locations:
+    - C:\windows\system32\mshtml.dll
+    - C:\windows\syswow64\mshtml.dll
+  tool_os:
+    - Windows
+- tool: pcwutl
+  tool_type: dll
+  tool_description: N/A
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\windows\system32\pcwutl.dll
+    - C:\windows\syswow64\pcwutl.dll
+  tool_os:
+    - Windows
+- tool: setupapi
+  tool_type: dll
+  tool_description: Windows Setup Application Programming Interface Library
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/windows-hardware/drivers/install/setupapi
+  tool_locations:
+    - C:\windows\system32\setupapi.dll
+    - C:\windows\syswow64\setupapi.dll
+  tool_os:
+    - Windows
+- tool: Shdocvw
+  tool_type: dll
+  tool_description: Microsoft Shell Doc Object and Control Library
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\windows\system32\shdocvw.dll
+    - C:\windows\syswow64\shdocvw.dll
+  tool_os:
+    - Windows
+- tool: Shell32
+  tool_type: dll
+  tool_description: Microsoft Windows Shell Common Library
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\windows\system32\shell32.dll
+    - C:\windows\syswow64\shell32.dll
+  tool_os:
+    - Windows
+- tool: syssetup
+  tool_type: dll
+  tool_description: Microsoft Windows NT System Setup Library
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\windows\system32\syssetup.dll
+    - C:\windows\syswow64\syssetup.dll
+  tool_os:
+    - Windows
+- tool: Url
+  tool_type: dll
+  tool_description: Microsoft's Internet Shortcut Shell Extension Library
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\windows\system32\url.dll
+    - C:\windows\syswow64\url.dll
+  tool_os:
+    - Windows
+- tool: Zipfldr
+  tool_type: dll
+  tool_description: Microsoft's Compressed Folder Library
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\windows\system32\zipfldr.dll
+    - C:\windows\syswow64\zipfldr.dll
+  tool_os:
+    - Windows
+- tool: Comsvcs
+  tool_type: dll
+  tool_description: Microsoft's COM+ Services
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\windows\system32\comsvcs.dll
+  tool_os:
+    - Windows
+- tool: AccCheckConsole
+  tool_type: exe
+  tool_description: AccCheckConsole.exe is a Microsoft utility for verifying the accessibility implementation of an application's UI.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/windows/win32/winauto/the-accchecker-console
+  tool_locations:
+    - C:\Program Files (x86)\Windows Kits\10\bin\10.0.22000.0\x86\AccChecker\AccCheckConsole.exe
+    - C:\Program Files (x86)\Windows Kits\10\bin\10.0.22000.0\x64\AccChecker\AccCheckConsole.exe
+    - C:\Program Files (x86)\Windows Kits\10\bin\10.0.22000.0\arm\AccChecker\AccCheckConsole.exe
+    - C:\Program Files (x86)\Windows Kits\10\bin\10.0.22000.0\arm64\AccChecker\AccCheckConsole.exe
+  tool_os:
+    - Windows
+- tool: adplus
+  tool_type: exe
+  tool_description: ADPlus.exe is a Microsoft utility included with Windows Debugging Tools designed to aid in the debugging of certain operations on Windows.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/archive/msdn-magazine/2005/july/techniques-for-rooting-out-elusive-production-bugs-in-csharp-and-c
+  tool_locations:
+    - C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\adplus.exe
+    - C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\adplus.exe
+  tool_os:
+    - Windows
+- tool: AgentExecutor
+  tool_type: exe
+  tool_description: AgentExecutor.exe is a Microsoft Intune Management Extension software included in Intune-Managed devices.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Program Files (x86)\Microsoft Intune Management Extension
+  tool_os:
+    - Windows
+- tool: Appvlp
+  tool_type: exe
+  tool_description: Appvlp.exe is the Microsoft 'Application Virtualization' utility included with Office 2016.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Program Files\Microsoft Office\root\client\appvlp.exe
+    - C:\Program Files (x86)\Microsoft Office\root\client\appvlp.exe
+  tool_os:
+      - Windows
+- tool: Bginfo
+  tool_type: exe
+  tool_description: BInfo.exe is a Microsoft / SysInternals Suite utility which is used to display system information in the desktop, taskbar or popup windows for administrators.
+  tool_arguments:
+    - /taskbar - BGInfo places an icon in the taskbar without updating the desktop.
+    - /all - Specifies BGInfo should change the wallpaper for any and all logged in users.
+  tool_url: https://learn.microsoft.com/en-us/sysinternals/downloads/bginfo
+  tool_locations:
+    - Varies
+  tool_os:
+      - Windows
+- tool: Cdb
+  tool_type: exe
+  tool_description: Microsoft Console Debugger (Cdb.exe) is a Microsoft utility used for debugging purposes.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/cdb-command-line-options
+  tool_locations:
+    - C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\cdb.exe
+    - C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\cdb.exe
+  tool_os:
+      - Windows
+- tool: coregen
+  tool_type: exe
+  tool_description: CoreCLR Native Image Generator (coregen.exe) is a Microsoft utility used in conjunction with Silverlight.
+  tool_arguments:
+    - N/A
+  tool_url:
+  tool_locations:
+    - C:\Program Files\Microsoft Silverlight\5.1.50918.0\coregen.exe
+    - C:\Program Files (x86)\Microsoft Silverlight\5.1.50918.0\coregen.exe
+  tool_os:
+      - Windows
+- tool: csi
+  tool_type: exe
+  tool_description: CSI.exe is a Microsoft utility which provides a commandline interface included with Visual Studio.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/archive/msdn-magazine/2016/january/essential-net-csharp-scripting
+  tool_locations:
+    - C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Roslyn\csi.exe
+    - C:\Program Files (x86)\Microsoft Web Tools\Packages\Microsoft.Net.Compilers.X.Y.Z\tools\csi.exe
+  tool_os:
+      - Windows
+- tool: DefaultPack
+  tool_type: exe
+  tool_description: DefaultPack.exe is included on devices if a user has Bing set as a default search provider alongside certain other downloads on the Microsoft website.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Program Files (x86)\Microsoft\DefaultPack\DefaultPack.exe
+  tool_os:
+      - Windows
+- tool: Devtoolslauncher
+  tool_type: exe
+  tool_description: Devtoolslauncher.exe is a Microsoft utility which will execute a specified binary - it is typically installed as part of Visual Studio or Visual Studio Code installations.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\windows\system32\devtoolslauncher.exe
+  tool_os:
+      - Windows
+- tool: dnx
+  tool_type: exe
+  tool_description: DNX.exe is a Microsoft utility used with .NET execution and environment tasks.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - Varies
+  tool_os:
+      - Windows
+- tool: Dotnet
+  tool_type: exe
+  tool_description: dotnet.exe is a Microsoft utility which provides various functionality related to .NET Command Line Interface capabilities.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet
+  tool_locations:
+    - C:\Program Files\dotnet\dotnet.exe
+  tool_os:
+      - Windows
+- tool: Dump64
+  tool_type: exe
+  tool_description: Dump64.exe is a Microsoft utility installed with Visual Studio which provides process memory dump functionality.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Program Files (x86)\Microsoft Visual Studio\Installer\Feedback\dump64.exe
+  tool_os:
+      - Windows
+- tool: Dxcap
+  tool_type: exe
+  tool_description: DXcap.exe is a Microsoft utility included with Visual Studio designed to provide graphics diagnostics capture and playback functionality for debugging purposes.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/visualstudio/debugger/graphics/command-line-capture-tool?view=vs-2022
+  tool_locations:
+    - C:\Windows\System32\dxcap.exe
+    - C:\Windows\SysWOW64\dxcap.exe
+  tool_os:
+      - Windows
+- tool: Excel
+  tool_type: exe
+  tool_description: Excel.exe is part of the Microsoft Office suite of productivity applications.
+  tool_arguments:
+    - N/A
+  tool_url: https://www.microsoft.com/en-us/microsoft-365/excel
+  tool_locations:
+    - C:\Program Files (x86)\Microsoft Office [VERSION]\ClientX86\Root\Office[VERSION]\Excel.exe
+    - C:\Program Files\Microsoft Office [VERSION]\ClientX64\Root\Office[VERSION]\Excel.exe
+    - C:\Program Files (x86)\Microsoft Office\Office[VERSION]\Excel.exe
+    - C:\Program Files\Microsoft Office\Office[VERSION]\Excel.exe
+  tool_os:
+      - Windows
+- tool: Fsi
+  tool_type: exe
+  tool_description: Fsi.exe is a Microsoft utility for interpreting 64bit FSharp (F#) source code and is included with Visual Studio and DotNet Core SDK.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/dotnet/fsharp/tools/fsharp-interactive/
+  tool_locations:
+    - C:\Program Files\dotnet\sdk\[sdk version]\FSharp\fsi.exe
+    - C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\FSharp\fsi.exe
+  tool_os:
+      - Windows
+- tool: FsiAnyCpu
+  tool_type: exe
+  tool_description: FsiAnyCpu.exe is a Microsoft utility for interpreting 32 or 64bit FSharp (F#) source code and is included with Visual Studio and DotNet Core SDK.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/dotnet/fsharp/tools/fsharp-interactive/
+  tool_locations:
+    - C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\FSharp\fsianycpu.exe
+  tool_os:
+      - Windows
+- tool: Mftrace
+  tool_type: exe
+  tool_description: Mftrace.exe is a Microsoft utility used for generating trace logs for Media Foundation applications.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/windows/win32/medfound/mftrace
+  tool_locations:
+    - C:\Program Files (x86)\Windows Kits\10\bin\10.0.16299.0\x86\mftrace.exe
+    - C:\Program Files (x86)\Windows Kits\10\bin\10.0.16299.0\x64\mftrace.exe
+    - C:\Program Files (x86)\Windows Kits\10\bin\x86\mftrace.exe
+    - C:\Program Files (x86)\Windows Kits\10\bin\x64\mftrace.exe
+  tool_os:
+      - Windows
+- tool: Msdeploy
+  tool_type: exe
+  tool_description: MsDeploy.exe (Web Deploy) is a Microsoft utility which simplifies deployment of Web applications and sites to IIS servers.
+  tool_arguments:
+    - N/A
+  tool_url: https://www.iis.net/downloads/microsoft/web-deploy
+  tool_locations:
+    - C:\Program Files (x86)\IIS\Microsoft Web Deploy V3\msdeploy.exe
+  tool_os:
+      - Windows
+- tool: msxsl
+  tool_type: exe
+  tool_description: MSXsl.exe is a Microsoft utility used to perform XSL-based transformations.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/dotnet/standard/data/xml/script-blocks-using-msxsl-script
+  tool_locations:
+    - Varies
+  tool_os:
+      - Windows
+- tool: ntdsutil
+  tool_type: exe
+  tool_description: NTDSUtil.exe is a Microsoft uutility which provides management capabilities for Active Directory Domain Services (AD DS) and Active Directory Lightweight Directory Services (AD LDS).
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc753343(v=ws.11)
+  tool_locations:
+    - C:\Windows\System32\ntdsutil.exe
+  tool_os:
+      - Windows
+- tool: Powerpnt
+  tool_type: exe
+  tool_description: PowerPoint is a Microsoft utility that is part of the Microsoft Office productivity suite of applications.
+  tool_arguments:
+    - N/A
+  tool_url: https://www.microsoft.com/en-us/microsoft-365/powerpoint
+  tool_locations:
+    - C:\Program Files (x86)\Microsoft Office [VERSION]\ClientX86\Root\Office[VERSION]\Powerpnt.exe
+    - C:\Program Files\Microsoft Office [VERSION]\ClientX64\Root\Office[VERSION]\Powerpnt.exe
+    - C:\Program Files (x86)\Microsoft Office\Office[VERSION]\Powerpnt.exe
+    - C:\Program Files\Microsoft Office\Office[VERSION]\Powerpnt.exe
+  tool_os:
+      - Windows
+- tool: rcsi
+  tool_type: exe
+  tool_description: rcsi.exe is a Microsoft utility that provides a non-interactive command line interface included with Visual Studio.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - Varies
+  tool_os:
+      - Windows
+- tool: remote
+  tool_type: exe
+  tool_description: Remote.exe is a Microsoft utility which provides the capability to run command-line software on remote systems through named-pipe STDIN and STDOUT redirections.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/the-remote-exe-utility
+  tool_locations:
+    - C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\remote.exe
+    - C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\remote.exe
+  tool_os:
+      - Windows
+- tool: Sqldumper
+  tool_type: exe
+  tool_description: Sqldumper.exe is a Microsoft utility included with Microsoft SQL for debugging purposes.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/troubleshoot/sql/tools/use-sqldumper-generate-dump-file
+  tool_locations:
+    - C:\Program Files\Microsoft SQL Server\90\Shared\SQLDumper.exe
+    - C:\Program Files (x86)\Microsoft Office\root\vfs\ProgramFilesX86\Microsoft Analysis\AS OLEDB\140\SQLDumper.exe
+  tool_os:
+      - Windows
+- tool: Sqlps
+  tool_type: exe
+  tool_description: Sqlps.exe is a Microsoft utility included with Microsoft SQL Server that is used to load SEL Server cmdlets - this is replaced by SQLToolsPS.exe in later versions.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/powershell/module/sqlps/?view=sqlserver-ps
+  tool_locations:
+    - C:\Program files (x86)\Microsoft SQL Server\[VERSION]\Tools\Binn\sqlps.exe
+  tool_os:
+      - Windows
+- tool: SQLToolsPS
+  tool_type: exe
+  tool_description: SQLToolsPS.exe is a Microsoft utility included with Microsoft SQL Server which enables the loading and usage of SQL Server Cmdlets.
+  tool_arguments:
+    - N/A
+  tool_url: https://docs.microsoft.com/en-us/sql/powershell/sql-server-powershell?view=sql-server-2017
+  tool_locations:
+    - C:\Program files (x86)\Microsoft SQL Server\130\Tools\Binn\sqlps.exe
+  tool_os:
+      - Windows
+- tool: Squirrel
+  tool_type: exe
+  tool_description: Squirrel.exe is a Microsoft utility used to update Nuget/Squirrel packages included in Microsoft Teams.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Users\*\AppData\Local\Microsoft\Teams\current\Squirrel.exe
+  tool_os:
+      - Windows
+- tool: te
+  tool_type: exe
+  tool_description: te.exe is a Microsoft utility which is included with the Microsoft Test Authoring and Execution Framework (TAEF).
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - Varies
+  tool_os:
+      - Windows
+- tool: Tracker
+  tool_type: exe
+  tool_description: Tracker is a Microsoft utility included with the .NET Framework.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - Varies
+  tool_os:
+      - Windows
+- tool: Update
+  tool_type: exe
+  tool_description: Update.exe is a Microsoft utility for updating installed Nuget/Squirrel packages as part of Microsoft Teams.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Users\*\AppData\Local\Microsoft\Teams\update.exe
+  tool_os:
+      - Windows
+- tool: VSIISExeLauncher
+  tool_type: exe
+  tool_description: VSIISExeLauncher is a Microsoft utility included as part of Visual Studio / Visual Studio Code installations.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Web Tools\ProjectSystem\VSIISExeLauncher.exe
+  tool_os:
+      - Windows
+- tool: VisualUiaVerifyNative
+  tool_type: exe
+  tool_description: VisualUiaVerifyNative.exe is a Microsoft utility that enables manual and automated testing of Microsoft UI Automation implementations and controls.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Program Files (x86)\Windows Kits\10\bin\[SDK version]\arm64\UIAVerify\VisualUiaVerifyNative.exe
+    - C:\Program Files (x86)\Windows Kits\10\bin\[SDK version]\x64\UIAVerify\VisualUiaVerifyNative.exe
+    - C:\Program Files (x86)\Windows Kits\10\bin\[SDK version]\UIAVerify\VisualUiaVerifyNative.exe
+  tool_os:
+      - Windows
+- tool: vsjitdebugger
+  tool_type: exe
+  tool_description: vsjitdebugger.exe is a Microsoft utility for Just-In-Time debugging included with Visual Studio.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\windows\system32\vsjitdebugger.exe
+  tool_os:
+      - Windows
+- tool: Wfc
+  tool_type: exe
+  tool_description: Workflow Commandline Compiler (wfc.exe) is a Microsoft utility included with the Windows Software Development Kit (SDK).
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/dotnet/framework/windows-workflow-foundation/wfc-exe-workflow-compiler-tool
+  tool_locations:
+    - C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\wfc.exe
+  tool_os:
+      - Windows
+- tool: Winword
+  tool_type: exe
+  tool_description: Word is a Microsoft application that is part of the Office Productivity Suite of tools.
+  tool_arguments:
+    - N/A
+  tool_url: https://www.microsoft.com/en-us/microsoft-365/word
+  tool_locations:
+    - C:\Program Files (x86)\Microsoft Office [VERSION]\ClientX86\Root\Office[VERSION]\winword.exe
+    - C:\Program Files\Microsoft Office [VERSION]\ClientX64\Root\Office[VERSION]\winword.exe
+    - C:\Program Files (x86)\Microsoft Office\Office[VERSION]\winword.exe
+    - C:\Program Files\Microsoft Office\Office[VERSION]\winword.exe
+  tool_os:
+      - Windows
+- tool: wsl
+  tool_type: exe
+  tool_description: Windows Subsystem for Linux (wsl.exe) is a Microsoft utility which enables users to run GNU/Linux environments from within Windows.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/windows/wsl/about
+  tool_locations:
+    - C:\Windows\System32\wsl.exe
+  tool_os:
+      - Windows
+- tool: CL_LoadAssembly
+  tool_type: ps1
+  tool_description: CL_LoadAssembly.ps1 is a Microsoft PowerShell Diagnostic Script.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\diagnostics\system\Audio\CL_LoadAssembly.ps1
+  tool_os:
+      - Windows
+- tool: CL_Mutexverifiers
+  tool_type: ps1
+  tool_description: Built-in Microsoft PowerShell Script.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\diagnostics\system\WindowsUpdate\CL_Mutexverifiers.ps1
+    - C:\Windows\diagnostics\system\Audio\CL_Mutexverifiers.ps1
+    - C:\Windows\diagnostics\system\Video\CL_Mutexverifiers.ps1
+    - C:\Windows\diagnostics\system\Speech\CL_Mutexverifiers.ps1
+  tool_os:
+      - Windows
+- tool: CL_Invocation
+  tool_type: ps1
+  tool_description:  Built-in Microsoft PowerShell Script for diagnosing Aero problems.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\diagnostics\system\AERO\CL_Invocation.ps1
+    - C:\Windows\diagnostics\system\Audio\CL_Invocation.ps1
+    - C:\Windows\diagnostics\system\WindowsUpdate\CL_Invocation.ps1
+  tool_os:
+      - Windows
+- tool: Manage-bde
+  tool_type: wsf
+  tool_description: Manage-bde.wsf is a Microsoft script used for managing certain aspects of BitLocker.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\System32\manage-bde.wsf
+  tool_os:
+      - Windows
+- tool: Pubprn
+  tool_type: vbs
+  tool_description: Pubprn.vbs is a Microsoft script.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\System32\Printing_Admin_Scripts\en-US\pubprn.vbs
+    - C:\Windows\SysWOW64\Printing_Admin_Scripts\en-US\pubprn.vbs
+  tool_os:
+      - Windows
+- tool: Syncappvpublishingserver_vbs
+  tool_type: vbs
+  tool_description: Syncappvpublishingserver.vbs is a Microsoft script used for managing certain functions of App-V and Publishing Server associations.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\System32\SyncAppvPublishingServer.vbs
+  tool_os:
+      - Windows
+- tool: UtilityFunctions
+  tool_type: ps1
+  tool_description: UtilityFunctions.ps1 is a Microsoft PowerShell Diagnostic Script.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\diagnostics\system\Networking\UtilityFunctions.ps1
+  tool_os:
+    - Windows
+- tool: winrm
+  tool_type: vbs
+  tool_description: winrm.vbs is a Microsoft script used for managing Windows Remote Management (WinRM) settings.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - C:\Windows\System32\winrm.vbs
+    - C:\Windows\SysWOW64\winrm.vbs
+  tool_os:
+      - Windows
+- tool: Pester
+  tool_type: bat
+  tool_description: Pester.bat is a Microsoft script used as part of the Pester test framework for PowerShell scripts.
+  tool_arguments:
+    - N/A
+  tool_url: https://devblogs.microsoft.com/scripting/what-is-pester-and-why-should-i-care/
+  tool_locations:
+    - C:\Program Files\WindowsPowerShell\Modules\Pester\3.4.0\bin\Pester.bat
+    - C:\Program Files\WindowsPowerShell\Modules\Pester\*\bin\Pester.bat
+  tool_os:
+      - Windows

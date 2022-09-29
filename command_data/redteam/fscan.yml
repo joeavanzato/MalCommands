@@ -1,0 +1,21 @@
+- command: fscan.exe -h 10.227.156.0/24 -nopoc -np -p 80,135,139,443,445,1433,3306,5432,6379,7001,8000,8080,3389
+  description: fscan is a Vulnerability Scanner, typically renamed in deployment - look for '-nopoc' or '-np' arguments in commandline.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Discovery:
+      - T1018
+    Reconnaissance:
+      - T1595.002
+  os:
+    - Windows
+  references:
+    - https://go.crowdstrike.com/rs/281-OBQ-266/images/2022OverWatchThreatHuntingReport.pdf
+  risk: High
+  risk_reason: Observation of 'fscan.exe' or arguments such as '-nopoc' in an unusual commandline are suspicious indicators.
+  fidelity: High
+  fidelity_reason:  This type of behavior is typically rare in most organizations.
+  tool: fscan
+  threatactors:
+    N/A:
+      - N/A

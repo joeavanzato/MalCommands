@@ -1,0 +1,84 @@
+- tool: arp_linux
+  tool_description: Arp is a utility which can be used to display and modify entries in the Address Resolution Protocol (ARP) cache.
+  tool_arguments:
+    - N/A
+  tool_url: N/A
+  tool_locations:
+    - Varies
+  tool_os:
+    - Linux
+- tool: iptables
+  tool_type: bin
+  tool_description: IPTables is a commonly-used package for configuring packet-filter rules within the Linux kernel.  It is often used in addition to a firewall to drop unwanted external traffic.
+  tool_arguments:
+    - N/A
+  tool_url: https://man7.org/linux/man-pages/man8/iptables.8.html
+  tool_locations:
+    - Varies
+  tool_os:
+    - Linux
+- tool: mv
+  tool_type: bin
+  tool_description: MV is a linux utility which is used to move and/or rename files on the target device.
+  tool_arguments:
+    - -f - Don't prompt before overwriting existing files.
+    - -n - Don't overwrite existing files.
+    - -i - Prompt before overwriting existing files.
+    - -v - Verbose Mode.
+  tool_url: https://man7.org/linux/man-pages/man1/mv.1.html
+  tool_locations:
+    - /usr/bin/mv
+  tool_os:
+    - Linux
+- tool: systemctl
+  tool_type: bin
+  tool_description: SystemCtl is used on Linux devices to control the systemd sub-system and the service manager.  It can be used to control the state of individual services.
+  tool_arguments:
+    - start [APP] - Starts all *.service files associated with the given application
+    - restart [APP.SERVICE] - Restarts a given service for an application.
+    - disable [APP.SERVICE] - Disables a given service for an application.
+  tool_url: https://man7.org/linux/man-pages/man1/systemctl.1.html
+  tool_locations:
+    - /lib/systemd/systemd
+  tool_os:
+    - Linux
+- tool: ufw
+  tool_type: bin
+  tool_description: Uncomplicated Firewall (UFW) is a frontend management utility for firewall rules in Arch, Debian or Ubuntu based Linux distributions.
+  tool_arguments:
+    - enable - Reloads firewall and enables it on boot.
+    - disable - Unloads the firewall and disables it on boot.
+    - show - Shows a report on the current running firewall.
+    - allow - Adds an allow-rule.
+    - allow [PORT] - Allows TCP/UDP from any address to [PORT]
+  tool_url: https://manpages.ubuntu.com/manpages/bionic/man8/ufw.8.html
+  tool_locations:
+    - Varies
+  tool_os:
+    - Linux
+- tool: yum
+  tool_type: bin
+  tool_description: Yum is a package management utility for RPM-based Linux distributions.  It can be used to install, uninstall or otherwise modify application 'packages' on a device.
+  tool_arguments:
+    - upgrade - Upgrade to the newest version of all currently installed packages.
+    - update - Re-synchronize package index files from configured sources.
+    - install - Install one or more packages from repositories.
+    - remove - Remove one or more currently installed packages.
+  tool_url: https://man7.org/linux/man-pages/man8/yum.8.html
+  tool_locations:
+    - Varies
+  tool_os:
+    - Linux
+- tool: apt-get
+  tool_type: bin
+  tool_description: Apt-Get is a common package management utility available on many Linux distributions.  It can be used to install, uninstall or otherwise modify application 'packages' on a device.
+  tool_arguments:
+    - upgrade - Upgrade to the newest version of all currently installed packages.
+    - update - Re-synchronize package index files from configured sources.
+    - install - Install one or more packages from repositories.
+    - remove - Remove one or more currently installed packages.
+  tool_url: https://linux.die.net/man/8/apt-get
+  tool_locations:
+    - Varies
+  tool_os:
+    - Linux

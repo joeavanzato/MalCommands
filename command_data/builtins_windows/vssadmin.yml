@@ -38,4 +38,23 @@
   threatactors:
     N/A:
       - N/A
+- command: “C:\Windows\System32\cmd.exe” /c vssadmin delete shadows /all /quiet & wmic shadowcopy delete & bcdedit /set {default} bootstatuspolicy ignoreallfailures & bcdedit /set {default} recoveryenabled no
+  description: Abuse vssadmin, wmic and bcdedit to delete shadow copies and impair system recovery options.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Impact:
+      - T1490
+  os:
+    - Windows
+  references:
+    - https://go.crowdstrike.com/rs/281-OBQ-266/images/2022OverWatchThreatHuntingReport.pdf
+  risk: Critical
+  risk_reason: A commandline involving all of these tools is extremely suspicious.
+  fidelity: High
+  fidelity_reason: This is a very rare activity for normal IT personnel and almost always indicates suspicious activity.
+  tool: vssadmin
+  threatactors:
+    N/A:
+      - N/A
 

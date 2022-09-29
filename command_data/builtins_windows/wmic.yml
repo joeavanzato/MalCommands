@@ -140,8 +140,6 @@
   killchain:
     - Actions on Objectives
   mitre:
-    Credential Access:
-      - T1003.003
     Defense Evasion:
       - T1218
     Execution:
@@ -154,6 +152,49 @@
   risk_reason: Using WMIC to launch an XSL file in this manner is a rare activity that should be treated as suspicious due to the potential for abuse.
   fidelity: High
   fidelity_reason: This type of activity is extremely rare for most users in typical organizations.
+  tool: wmic
+  threatactors:
+    N/A:
+      - N/A
+- command: wmic computersystem get name
+  description: Abuse wmic to discover system information such as hostname.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+    Discovery:
+      - T1082
+  os:
+    - Windows
+  references:
+    - https://go.crowdstrike.com/rs/281-OBQ-266/images/2022OverWatchThreatHuntingReport.pdf
+  risk: Low
+  risk_reason: Using WMIC to determine the localhost is neither a rare nor immediately suspicious activity but is used by cyber threats.
+  fidelity: Low
+  fidelity_reason: This type of activity is typically common in many organizations.
+  tool: wmic
+  threatactors:
+    N/A:
+      - N/A
+- command: wmic /node:“[TARGET]” process call create “powershell Enable-PSRemoting -Force -SkipNetworkProfileCheck”
+  description: Abuse wmic to enable PowerShell Remoting on TARGET device.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218
+    Execution:
+      - T1047
+      - T1569.002
+  os:
+    - Windows
+  references:
+    - https://go.crowdstrike.com/rs/281-OBQ-266/images/2022OverWatchThreatHuntingReport.pdf
+  risk: High
+  risk_reason: Using WMIC to enable additional Lateral Movement via PSRemoting is typically a suspicious activity.
+  fidelity: High
+  fidelity_reason: This type of activity is typically rare in most organizations.
   tool: wmic
   threatactors:
     N/A:

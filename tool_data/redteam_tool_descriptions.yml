@@ -1,0 +1,135 @@
+- tool: sharpshares
+  tool_type: exe
+  tool_description: SharpShares is a C#-based script which can enumerate network share information from all reachable machines in the current domain and determine whether the level of access available to the current user (read/write/none).
+  tool_arguments:
+    - /threads - Specifies the maximum number of parallel threads, defaulting to 25.
+    - /dc - Specified the Domain Controller to use if not executed on a domain-joined host.
+    - /ldap - Query hosts from specific LDAP filters, default=all (dc, exclude-dc, servers, server-exclude-dc)
+    - /ou - Specify the LDAP OU to query for enabled Computer objects
+    - /stealth - List Shares without checking read/write access
+    - /filter - List of comma-separated shares to exclude from enumeration (SYSVOL,NETLOGON,etc)
+    - /outfile - Specify file for writing output
+    - /verbose - Return unauthorized shares in addition to those with access.
+  tool_url: https://github.com/mitchmoser/SharpShares
+  tool_locations:
+    - Varies
+  tool_os:
+    - Windows
+- tool: adfind
+  tool_type: exe
+  tool_description: ADFind is a tool developed to query Active Directory - it utilizes a mixture of ldapsearch, search.vbs, ldp, dsquery and dsget along with other features.  It was developed prior to dsquery/dsget/etc by multiple years but adopts many of the same features.  The tool is written in C++ and is often used in some form by cyber threats during the information gathering phase of a compromise.
+  tool_arguments:
+    - basedn - Base DN to search on - defaults to NC
+    - filter - LDAP filter to use for query.
+    - attr list - List of specific attributes to return, defaults to * set.
+    - -h host:port - Host and port to use for a connection, defaults to 389 on default LDAP server.
+    - -gc - Search the Global Catalog on port 3268
+    - -p - Alternate port to connect on.
+    - -s - Scope of search base.
+    - -t - Timeout value for query, default of 120 seconds.
+    - See http://www.joeware.net/freetools/tools/adfind/usage.htm for all arguments.
+  tool_url: http://www.joeware.net/freetools/tools/adfind/
+  tool_locations:
+    - Varies
+  tool_os:
+    - Windows
+- tool: lazagne
+  tool_type: exe
+  tool_description: LaZagne is a utility for accessing and retrieving a wide variety of credential material on a local host.  It supports a wide-variety of credential stores such as Browsers, Chat Apps, Databases, Git, Mail Clients, WiFi and internal Windows mechanisms among others.
+  tool_arguments:
+    - all - Launch all contained modules
+    - browsers - Launch only the browsers module.
+    - browsers -firefox - Launch only a specific software script.
+    - -quiet - Launch in Quiet mode with no stdout.
+  tool_url: https://github.com/AlessandroZ/LaZagne
+  tool_locations:
+    - Varies
+  tool_os:
+    - Windows
+- tool: advanced ip scanner
+  tool_type: exe
+  tool_description: Advanced IP Scanner is a network scanning utility which is often used by both IT operators as well as cyber-threats for understanding network configurations and performing active reconnaissance operations.  If offers a GUI for ease of use as well as command-line arguments.
+  tool_arguments:
+    - /r - IP Range to Scan (10.10.10.0-253)
+    - /f - File to output scan information.
+    - /v - Verbose Mode
+  tool_url: https://www.advanced-ip-scanner.com/
+  tool_locations:
+    - C:\Program Files (x86)\Advanced IP Scanner\advanced_ip_scanner.exe
+    - C:\Users\[user]\AppData\Local\Temp\Advanced IP Scanner 2\advanced_ip_scanner.exe
+    - C:\Users\[user]\AppData\Local\Programs\Advanced IP Scanner Portable\advanced_ip_scanner.exe
+  tool_os:
+    - Windows
+- tool: seatbelt
+  tool_type: exe
+  tool_description: Seatbelt is a C# project that performs a number of security oriented host-survey "safety checks" relevant from both offensive and defensive security perspectives.
+  tool_arguments:
+    - -group=all - Run all available commands
+    - -group=user - Run a subset of commands focused on user activity.
+    - -group=system - Run a subset of commands focused on system activity.
+    - -computername=HOSTNAME - Run specified commands on a remote target.
+    - -outputfile=FILE - Specify an output file for reporting.
+  tool_url: https://github.com/GhostPack/Seatbelt
+  tool_locations:
+    - Varies
+  tool_os:
+    - Windows
+- tool: fscan
+  tool_type: many
+  tool_description: fscan is a utility developed to remotely scan devices to determine potential vulnerabilities or exposures which may be further exploited in offensive operations.
+  tool_arguments:
+    - N.A
+  tool_url: https://github.com/shadow1ng/fscan
+  tool_locations:
+    - Varies
+  tool_os:
+    - Windows
+    - Linux
+    - Mac
+- tool: frp
+  tool_type: exe
+  tool_description: Fast Reverse Proxy (ftp) is a Go-based utility often used for exposing local servers over the Internet.
+  tool_arguments:
+    - N/A
+  tool_url: https://github.com/fatedier/frp
+  tool_locations:
+    - Varies
+  tool_os:
+    - Windows
+    - Linux
+    - Mac
+- tool: ngrok
+  tool_type: many
+  tool_description: Ngrok is a utility most-often used to expose local servers or networks to the Internet through a cloud-based infrastructure.
+  tool_arguments:
+    - N/A
+  tool_url: https://ngrok.com/
+  tool_locations:
+    - Varies
+  tool_os:
+    - Windows
+    - Mac
+    - Linux
+- tool: nanodump
+  tool_type: exe
+  tool_description: NanoDump is a utility written in C which aids in dumping the process memory of LSASS.
+  tool_arguments:
+    - --write/-w - Specify the output filepath.
+    - --valid/-v - Generate a dump with a valid signature instead of an invalid one
+    - --seclogon-leak-local/-sll - Leak an LSASS handle into nanodump via seclogon
+    - --duplicate/-d - Duplicate an existing LSASS handle
+  tool_url: https://github.com/helpsystems/nanodump
+  tool_locations:
+    - Varies
+  tool_os:
+    - Windows
+- tool: Out-Minidump
+  tool_type: ps1
+  tool_description: Out-Minidump.ps1 is an offensive PowerShell script designed to dump process memory from a given process.
+  tool_arguments:
+    -  get-process [ProcessName] - Dump a given process name.
+  tool_url: https://github.com/PowerShellMafia/PowerSploit/blob/master/Exfiltration/Out-Minidump.ps1
+  tool_locations:
+    - Varies
+  tool_os:
+    - Windows

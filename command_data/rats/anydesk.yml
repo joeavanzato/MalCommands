@@ -1,0 +1,19 @@
+- command: powershell -c (New-Object Net.WebClient).DownloadFile('http://download.anydesk.com/AnyDesk.msi', 'AnyDesk.msi')
+  description: Download AnyDesk in preparation for remote access staging.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Command and Control:
+      - T1105
+  os:
+    - Windows
+  references:
+    - https://go.crowdstrike.com/rs/281-OBQ-266/images/2022OverWatchThreatHuntingReport.pdf
+  risk: High
+  risk_reason: Usage of a Remote Access Tool (RAT) such as AnyDesk is a suspicious action.
+  fidelity: High
+  fidelity_reason: This type of behavior should be rare for most organizations.
+  tool: AnyDesk
+  threatactors:
+    N/A:
+      - N/A
