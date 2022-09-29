@@ -3,21 +3,26 @@ import pymongo
 import os
 
 def import_tools_to_mongo():
-    f = "tool_descriptions.yml"
     client = pymongo.MongoClient()
     db = client.malcommands_dev
     tool_collection = db.tool_collection
-    print(f"Loading: {f}")
-    with open(f, 'r') as f:
-        data = yaml.safe_load(f)
-    if data is not None:
-        for i in data:
-            i['tool_lower'] = i['tool'].lower()
-            if db.tool_collection.count_documents({"tool":i['tool']}) > 0:
-                filter = {"tool":f"{i['tool']}"}
-                record = tool_collection.update_one(filter, {"$set":i})
-            else:
-                tool_collection.insert_one(i)
+    files = []
+    for root, dir, f in os.walk("tool_data"):
+        for i in f:
+            p = os.path.join(root, i)
+            files.append(p)
+    for f in files:
+        print(f"Loading: {f}")
+        with open(f, 'r') as f:
+            data = yaml.safe_load(f)
+        if data is not None:
+            for i in data:
+                i['tool_lower'] = i['tool'].lower()
+                if db.tool_collection.count_documents({"tool":i['tool']}) > 0:
+                    filter = {"tool":f"{i['tool']}"}
+                    record = tool_collection.update_one(filter, {"$set":i})
+                else:
+                    tool_collection.insert_one(i)
 
 
 def import_commands_to_mongo():
