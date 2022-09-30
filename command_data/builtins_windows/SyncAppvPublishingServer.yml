@@ -10,7 +10,7 @@
   os:
     - Windows
   references:
-    - url1
+    - https://lolbas-project.github.io/lolbas/Scripts/Syncappvpublishingserver/
   risk: Critical
   risk_reason: This is an extremely suspicious action.
   fidelity: High
