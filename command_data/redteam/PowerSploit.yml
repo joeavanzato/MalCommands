@@ -1,0 +1,76 @@
+- command: Get-Domain -Domain [DOMAIN]
+  description: Get-Domain is a PowerSploit module which is used to retrieve information about the current domain.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Discovery:
+      - T1018
+  os:
+    - Windows
+  references:
+    - https://powersploit.readthedocs.io/en/latest/Recon/Get-Domain/
+  risk: High
+  risk_reason: This is by-default a risky operation due to the implied hands-on-keyboard threat activity.
+  fidelity: High
+  fidelity_reason: This type of activity should never be observed by normal users.
+  tool: powersploit
+  threatactors:
+    N/A:
+      - N/A
+- command: Get-DomainDNSRecord -Domain [DOMAIN]
+  description: Get-DomainDNSRecord is a PowerSploit module which is used to retrieve information about the current domain.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Discovery:
+      - T1018
+  os:
+    - Windows
+  references:
+    - https://powersploit.readthedocs.io/en/latest/Recon/Get-DomainDNSRecord/
+  risk: High
+  risk_reason: This is by-default a risky operation due to the implied hands-on-keyboard threat activity.
+  fidelity: High
+  fidelity_reason: This type of activity should never be observed by normal users.
+  tool: powersploit
+  threatactors:
+    N/A:
+      - N/A
+- command: Get-Forest -Forest [FOREST]
+  description: Get-Forest is a PowerSploit module which is used to retrieve information about the specified domain forest.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Discovery:
+      - T1482
+  os:
+    - Windows
+  references:
+    - https://powersploit.readthedocs.io/en/latest/Recon/Get-Forest/
+  risk: High
+  risk_reason: This is by-default a risky operation due to the implied hands-on-keyboard threat activity.
+  fidelity: High
+  fidelity_reason: This type of activity should never be observed by normal users.
+  tool: powersploit
+  threatactors:
+    N/A:
+      - N/A
+- command: Get-DomainComputer -SearchBase [BASE}] -LDAPFilter [FILTER]
+  description: Get-DomainComputer is a PowerSploit module which is used to retrieve information about one or more domain-joined devices.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Discovery:
+      - T1018
+  os:
+    - Windows
+  references:
+    - https://powersploit.readthedocs.io/en/latest/Recon/Get-DomainComputer/
+  risk: High
+  risk_reason: This is by-default a risky operation due to the implied hands-on-keyboard threat activity.
+  fidelity: High
+  fidelity_reason: This type of activity should never be observed by normal users.
+  tool: powersploit
+  threatactors:
+    N/A:
+      - N/A

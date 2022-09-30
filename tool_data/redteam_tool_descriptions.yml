@@ -133,3 +133,13 @@
     - Varies
   tool_os:
     - Windows
+- tool: PowerSploit
+  tool_type: ps1
+  tool_description: PowerSploit is a PowerShell-based post-exploitation framework, components of which are commonly utilized by cyber-threats.
+  tool_arguments:
+    - N/A
+  tool_url: https://github.com/PowerShellMafia/PowerSploit
+  tool_locations:
+    - Varies
+  tool_os:
+    - Windows
