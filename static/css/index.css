@@ -1,0 +1,287 @@
+.layout {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid:
+    "header" auto
+    "main" 1fr
+    / 1fr;
+  gap: 5px;
+}
+
+.dataTables_filter input { height: 20px; width:200px; border: 2px solid;}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  /*background-color: #050626; */
+  background: linear-gradient( #050626, #021523);
+  background-repeat: repeat-x;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  height: 100%;
+  line-height: 1.2;
+}
+.main {
+  color: #8CCDAF;
+  grid-area: main;
+  padding: 1%;
+  height: 100%;
+  background: linear-gradient( #050626, #021523);
+  background-repeat: repeat-x;
+}
+
+#faq_content_inner {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  margin: 1%;
+}
+#faq_content_inner h4 {
+    color: #8AACC5;
+}
+
+/* Command Content Details */
+.command_data_header {
+  color: #8AACC5;
+}
+
+#command_content_inner {
+  margin: 1%;
+}
+
+
+.code_block {
+  font-size: 16px;
+  background-color: #05080D;
+  border: 1px solid #999;
+  display: block;
+  padding: 5px;
+}
+
+/* AJAX Loading Spinner */
+#loading_content {
+  background: none;
+  background-color: transparent;
+  position: fixed;
+  top: 75%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+/* Old Back Banner */
+#back_banner {
+  cursor: pointer;
+  border-style: solid solid solid solid;
+   /* border-color: #8CCDAF; */
+  border-width: 1px;;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  border-radius: 10px;
+}
+
+/* New Back Banner */
+#back_banner {
+  /* background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%); */
+  background-image: linear-gradient(92.88deg, #032C4E 9.16%, #190553 43.89%, #310351 64.72%);
+  border-radius: 8px;
+  border-color: #8CCDAF;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  height: 4rem;
+  padding: 0 1.6rem;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  transition: all .5s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  overflow: hidden;
+}
+#back_banner:hover {
+  /* box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px; */
+  box-shadow: rgba(255, 255, 255, 0.5) 0 1px 10px;
+  transition-duration: .1s;
+
+}
+#back_banner:hover {
+  background-color: #7879AD;
+  color: white;
+}
+#back_text {
+  margin: 5px;
+}
+
+/* Style the MITRE and Tool data windows in Command_pop.html */
+#mitre_attack {
+  border-style: solid solid solid solid;
+  border-color: #023F23;
+  border-width: 0px;
+}
+#each_mitre_tech {
+  border-style: solid solid solid solid;
+  border-color: #8CCDAF;
+  border-width: 1px;
+  padding: 5px;
+  margin: 0;
+}
+.mitre_technique_header{
+    margin: 0;
+}
+.mitre_technique_header:hover {
+  background-color: #0B0C40;
+  cursor: pointer;
+  color: floralwhite;
+}
+.mitre_technique_header:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+.active:after {
+  content: "\2212";
+}
+.mitre_technique_content {
+  margin-top: 5px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+/* Tool Data Styling */
+#tool_box {
+  border-style: solid solid solid solid;
+  border-color: #8CCDAF;
+  border-width: 1px;
+  padding: 1%;
+}
+
+/* Style the main datatable */
+.row_all {
+    color: #8CCDAF;
+    cursor: pointer;
+}
+.row_header {
+    color: #8AACC5;
+}
+.command_row {
+}
+#data {
+    font-size: 12px;
+}
+#data tr:hover {
+    /*background-color: #0B0C40;*/
+    background-color: #1130a8;
+    background-image: linear-gradient(to right,#1130a8, #0B0C40);
+    box-shadow: rgba(80, 63, 205, 0.5) 0 1px 10px;
+    transition-duration: .4s;
+}
+
+/* DT Header styling and background */
+.header {
+  grid-area: header;
+  border-style: none none solid none;
+  border-width: 1px;
+  border-color: #9698CE;
+  display: flex;
+  flex-direction: row;
+  min-height: 30px;
+  background-color: #0B0C40;
+  /*background-size:contain;
+  background-image: url('../images/header_galaxy.PNG'); */
+}
+
+/* Site Headers */
+#home_button {
+      cursor: pointer;
+}
+#contribute_button {
+      cursor: pointer;
+}
+#faq_button {
+      cursor: pointer;
+}
+.header_link {
+  color: #8CCDAF;
+  margin: 0px 2px 0px 2px;
+  padding: 5px;
+  font-family: Verdana, Geneva, sans-serif; font-size: 20px; font-style: normal; font-variant: small-caps; font-weight: 400; line-height: 20px;
+  text-decoration: none;
+}
+.header_link:hover {
+  background-color: #7879AD;
+  color: white;
+  transition-duration: .5s;
+}
+
+
+#table_content {
+}
+
+#command_content {
+}
+
+
+#contribute_content {
+    display: flex;
+    min-height: 100%;
+    height: 100%
+}
+#contribute_content_inner {
+    min-height: 100%;
+}
+#contribute_content_inner h4{
+    color: #8AACC5;
+}
+
+/* 404 Stuff */
+#404_content {
+  display: flex;
+  align-items: end;
+}
+
+
+/* Playing with DT -> Command Animations */
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 2s;
+}
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+.fade-out {
+	opacity: 1;
+	animation-name: fadeOutOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: .5s;
+}
+@keyframes fadeOutOpacity {
+	100% {
+		opacity: 1;
+	}
+	0% {
+		opacity: 0;
+	}
+}
