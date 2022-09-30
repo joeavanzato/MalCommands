@@ -1,10 +1,9 @@
-from pyattck import Attck
+
 import yaml
 import pymongo
 
-
-
 def build_yaml():
+    from pyattck import Attck
     # Iterate through PyAttck Technique details and extract relevant information for a YAML dump - could just insert directly here as well
     attack = Attck(nested_techniques=False)
     t_list = []
