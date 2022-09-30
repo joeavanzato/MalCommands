@@ -1,0 +1,17 @@
+# Tool Description/Argument Example YML
+# Tool should be a lower-case name of the tool without any extensions - just default file-name
+# Tool URL should be a link to the main tool repository or documentation source - Microsoft Learning Site, MAN pages or GitHub Repos, etc
+# Tool Locations should include any default install locations
+# Tool Arguments should include some of the most common default arguments for the tool
+# Tool OS should include any applicable operating systems - (Windows | Linux | Mac)
+
+- tool:
+  tool_type:
+  tool_description:
+  tool_arguments:
+    -
+  tool_url:
+  tool_locations:
+    -
+  tool_os:
+    -
