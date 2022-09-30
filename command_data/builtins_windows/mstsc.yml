@@ -1,0 +1,19 @@
+- command: mstsc.exe /control /noConsentPrompt /shadow:1 /v:localhost
+  description: Launch a silent remote connection - typically abused for stealthy remote control.
+  killchain:
+    - Actions on Objectives
+  mitre:
+    Lateral Movement:
+      - T1021
+  os:
+    - Windows
+  references:
+    - https://www.crowdstrike.com/wp-content/uploads/2022/09/2020-overwatch-threat-hunting-report.pdf
+  risk: High
+  risk_reason: This is a suspicious commands for normal users.
+  fidelity: High
+  fidelity_reason: This type of behavior is typically rare for normal users.
+  tool: mstsc
+  threatactors:
+    N/A:
+      - N/A

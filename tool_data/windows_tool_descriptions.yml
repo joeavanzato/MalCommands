@@ -2080,3 +2080,13 @@
     - C:\Program Files\WindowsPowerShell\Modules\Pester\*\bin\Pester.bat
   tool_os:
       - Windows
+- tool: mstsc
+  tool_type: exe
+  tool_description: mstsc.exe is a Microsoft utility that creates connections to Remote Desktop Session Host servers.
+  tool_arguments:
+    - N/A
+  tool_url: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/mstsc
+  tool_locations:
+    - N/A
+  tool_os:
+    - Windows
