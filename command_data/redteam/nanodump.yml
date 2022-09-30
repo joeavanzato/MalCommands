@@ -3,8 +3,8 @@
   killchain:
     - Actions on Objectives
   mitre:
-    tactic1:
-      - technique1
+    Credential Access:
+      - T1003.001
   os:
     - Windows
   references:
