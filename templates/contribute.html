@@ -1,7 +1,69 @@
 
 <div class="main" id="contribute_content_inner">
 <h4>How to Contribute</h4>
-<p>All command data is stored in a per-tool YML format - if you would like to be awesome and share new variations, examples, etc feel free to either shoot me an email with YML attachments to malcommands@gmail.com or submit a pull request against github.com/joeavanzato/malcommands </p>
+<p>All command data is stored in a per-tool YAML format - if you would like to be awesome and share new variations, examples, etc feel free to either shoot me an email with YML attachments to malcommands@gmail.com or submit a pull request against github.com/joeavanzato/malcommands </p>
+<p>The below code sample demonstrates an example command YAML object.</p>
+<code >
+    <pre style="background-color: #0A0D4F">
+# Command should contain the full commandline being documented.
+# Description should describe what the commandline is doing and how it is doing it - NOT documenting the tool being abused (that is done in tool documentation)
+# killchain should include any relevant Cyber Killchain Phases
+# MITRE Tactics/Techniques should be documented with new tactics as individual array-keys
+# OS should contain any relevant Operating Systems
+# References should contain a list of references for this specific command-line
+# Risk should contain (Low|Medium|High|Critical) based on the potential consequences of this particular command)
+# Risk Reason should contain the reasoning for the assigned risk
+# Fidelity should contain (Low|Medium|High) based upon the potential false-positives or noise from alerting on this particular commandline
+# Fidelity Reason should describe why the fidelity is rated as such - is the command rare for most orgs, is this particular sequence of arguments rare or common, is it a common tool that happens to be abused, etc.
+# tool should contain the name of the primary tool in use, without extensions
+# ThreatActors should contain Group ID from MITRE with relevant references for each group - then we will do a join in the future on an actors_collection data-sequence which contains additional Actor details such as Alias, etc.
+
+- command:
+  description:
+  killchain:
+    - Actions on Objectives
+  mitre:
+    tactic1:
+      - technique1
+  os:
+    - Windows
+  references:
+    - url1
+  risk:
+  risk_reason:
+  fidelity:
+  fidelity_reason:
+  tool:
+  threatactors:
+    N/A:
+      - N/A
+    </pre>
+</code>
+
+    <p>Additionally, upon first use, each distinct 'tool' requires a corresponding tool description YAML object - this is joined on the value present in 'tool' field above to pull the relevant descriptions, URLs, common-arguments and description for the tool in question.</p>
+<code>
+    <pre style="background-color: #0A0D4F">
+# Tool Description/Argument Example YML
+# Tool should be a lower-case name of the tool without any extensions - just default file-name
+# Tool URL should be a link to the main tool repository or documentation source - Microsoft Learning Site, MAN pages or GitHub Repos, etc
+# Tool Locations should include any default install locations
+# Tool Arguments should include some of the most common default arguments for the tool
+# Tool OS should include any applicable operating systems - (Windows | Linux | Mac)
+
+- tool:
+  tool_type:
+  tool_description:
+  tool_arguments:
+    -
+  tool_url:
+  tool_locations:
+    -
+  tool_os:
+    -
+
+    </pre>
+</code>
+
 </div>
 <script>
 window.history.pushState('', 'MalCommands - Contribute', '/');
